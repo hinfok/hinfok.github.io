@@ -1,78 +1,86 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html lang="zh-TW"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>hinfok · 潮流資訊 | Trend & Culture</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="hinfok 潮流資訊平台 — Pokémon 卡牌估價、Beyblade X 爆旋陀螺零件圖鑑、街頭文化與潮流穿搭。">
+<meta name="keywords" content="Pokemon card, 寶可夢卡牌估價, Beyblade X, 爆旋陀螺, 零件圖鑑, 潮流資訊, hinfok">
+<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs" />
+<meta property="og:title" content="hinfok · 潮流資訊平台">
+<meta property="og:description" content="Pokémon 卡牌估價、Beyblade X 零件圖鑑、潮流文化">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hinfok.com/">
+<link rel="icon" href="https://beys.hinfok.com/favicon.svg">
 <style>
-body{margin:0;font-family:system-ui,sans-serif;background:#f5f6f8;color:#1a1c20;min-height:100vh;display:flex;flex-direction:column}
-.main{flex:1;max-width:700px;margin:0 auto;padding:60px 24px}
-h1{font-size:28px;margin:0 0 4px}
-.sub{color:#6b6f78;margin-bottom:40px}
-.grid{display:grid;gap:16px}
-.card{background:#fff;border:1px solid #e2e4e8;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:box-shadow .2s;display:flex;align-items:center;gap:16px}
-.card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
-.card .icon{font-size:32px;width:48px;text-align:center}
-.card .info{flex:1}
-.card .info h2{margin:0 0 4px;font-size:17px}
-.card .info p{margin:0;font-size:13px;color:#6b6f78}
-.card .arrow{font-size:18px;color:#6b6f78}
-.add{background:transparent;border:2px dashed #e2e4e8;border-radius:12px;padding:20px;text-align:center;font-size:14px;color:#6b6f78;grid-column:1/-1}
-.footer{text-align:center;padding:24px;font-size:12px;color:#6b6f78}
-</style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6320148647438064" crossorigin="anonymous"></script>
-<style>/* Cookie Consent Banner */
-.cookie-consent{position:fixed;bottom:0;left:0;width:100%;background:#1a1c20;color:#f7fafc;padding:16px 24px;z-index:9999;display:none;box-shadow:0 -4px 16px rgba(0,0,0,.3);font-size:14px;line-height:1.5}
+:root{--bg:#1a1c20;--surface:#232529;--surf2:#2d2f34;--text:#f7fafc;--mut:#7f8390;--bdr:#33363d;--r:12px;--font:system-ui,sans-serif;--atk:#e53e3e;--def:#3182ce;--stm:#38a169;--bal:#d69e2e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+.mn{flex:1;max-width:720px;margin:0 auto;padding:60px 24px 40px;width:100%}
+h1{font-size:32px;font-weight:800;margin:0 0 4px;background:linear-gradient(90deg,#e53e3e,#d69e2e,#38a169);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sub{font-size:14px;color:var(--mut);margin-bottom:40px}
+.gr{display:grid;gap:14px}
+.crd{background:var(--surface);border:1px solid var(--bdr);border-radius:var(--r);padding:20px;text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s;display:flex;align-items:center;gap:16px}
+.crd:hover{border-color:var(--atk);box-shadow:0 4px 20px rgba(229,62,62,.15)}
+.crd .ic{font-size:30px;width:44px;text-align:center;flex-shrink:0}
+.crd .in{flex:1;min-width:0}
+.crd .in h2{margin:0 0 2px;font-size:17px;font-weight:700}
+.crd .in p{margin:0;font-size:12px;color:var(--mut);line-height:1.5}
+.crd .ar{font-size:16px;color:var(--mut);flex-shrink:0}
+.crd:hover .ar{color:var(--atk)}
+.add{background:transparent;border:2px dashed var(--bdr);border-radius:var(--r);padding:24px;text-align:center;font-size:13px;color:var(--mut)}
+h2{font-size:18px;font-weight:700;margin:0 0 10px}
+p{font-size:13px;line-height:1.7;color:var(--mut);margin:0 0 6px}
+a{color:#63b3ed}
+strong{color:var(--text)}
+.sec{margin-top:40px;padding-top:20px;border-top:1px solid var(--bdr)}
+.ft{padding:24px;font-size:11px;color:var(--mut);text-align:center;border-top:1px solid var(--bdr)}
+.cookie-consent{position:fixed;bottom:0;left:0;width:100%;background:var(--surface);color:var(--text);padding:16px 24px;z-index:9999;display:none;box-shadow:0 -4px 16px rgba(0,0,0,.3);font-size:13px;line-height:1.5;border-top:1px solid var(--bdr)}
 .cookie-consent.show{display:block}
-.cookie-consent .inner{max-width:800px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
-.cookie-consent p{flex:1;min-width:240px;margin:0}
-.cookie-consent a{color:#63b3ed;text-decoration:underline}
+.cookie-consent .in2{max-width:800px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.cookie-consent p{flex:1;min-width:240px;margin:0;font-size:13px;color:var(--mut)}
 .cookie-consent .btn-group{display:flex;gap:8px;flex-shrink:0}
-.cookie-consent .btn-acc{background:#e53e3e;color:#fff;border:none;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;font-family:system-ui,sans-serif;transition:background .15s}
-.cookie-consent .btn-acc:hover{background:#c53030}
-.cookie-consent .btn-dec{background:transparent;color:#a0aec0;border:1px solid #4a5568;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:14px;font-family:system-ui,sans-serif;transition:all .15s}
-.cookie-consent .btn-dec:hover{color:#f7fafc;border-color:#a0aec0}</style>
+.cookie-consent .btn-acc{background:var(--atk);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:var(--font)}
+.cookie-consent .btn-acc:hover{opacity:.85}
+.cookie-consent .btn-dec{background:transparent;color:var(--mut);border:1px solid var(--bdr);padding:8px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-family:var(--font)}
+.cookie-consent .btn-dec:hover{color:var(--text)}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6320148647438064" crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N86J1GTZH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8N86J1GTZH');
-</script>
-</head>
-<body>
-<div class="main">
-<h1>⚡ hinfok 潮流資訊</h1>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-8N86J1GTZH");</script>
+</head><body>
+<div class="mn">
+<h1>⚡ hinfok</h1>
 <div class="sub">潮流趨勢 · 卡牌估價 · 生活文化</div>
-<div class="grid">
-<a class="card" href="https://poke.hinfok.com">
-<div class="icon">🃏</div>
-<div class="info"><h2>PokeVal</h2><p>Pokémon card value estimator · Search cards, adjust condition &amp; grading, get reference prices</p></div>
-<div class="arrow">→</div>
+<div class="gr">
+<a class="crd" href="https://beys.hinfok.com/">
+<div class="ic">🌀</div>
+<div class="in"><h2>Beypedia</h2><p>Beyblade X 爆旋陀螺零件圖鑑 — 搜尋 Blade、Ratchet、Bit 完整數值、組合推薦、香港台灣比賽場地</p></div>
+<div class="ar">→</div>
 </a>
-<a class="card" href="https://beys.hinfok.com">
-<div class="icon">🌀</div>
-<div class="info"><h2>BeyVal</h2><p>Beyblade reference encyclopedia · Search Burst, Metal Fight &amp; Original series Beyblades</p></div>
-<div class="arrow">→</div>
+<a class="crd" href="https://poke.hinfok.com/">
+<div class="ic">🃏</div>
+<div class="in"><h2>PokeVal</h2><p>Pokémon 卡牌估價工具 — 搜尋卡牌、調整品相評級、參考市價</p></div>
+<div class="ar">→</div>
 </a>
-<div class="add">+ More projects coming soon...</div>
+<div class="add">更多新項目即將推出...</div>
 </div>
 </div>
 
-<div style="margin-top:48px;padding:20px 0;border-top:1px solid #e2e4e8">
-<h2 style="font-size:20px;margin:0 0 12px">About Us</h2>
-<p style="font-size:14px;line-height:1.7;color:#4a4d55;margin:0 0 8px">hinfok 係一個專注於潮流資訊嘅平台，為你帶來最新嘅街頭文化、潮流穿搭、波鞋資訊同生活風格內容。我哋致力發掘本地同國際嘅潮流趨勢，透過多元化嘅內容同工具，幫助你掌握潮流脈搏。</p>
-<p style="font-size:14px;line-height:1.7;color:#4a4d55;margin:0">我哋旗下包括 <strong>PokeVal</strong> — Pokémon 卡牌估價工具，為卡牌愛好者提供免費嘅價值參考服務。</p>
+<div class="sec" style="max-width:720px;margin:0 auto;padding:20px 24px">
+<h2>關於 hinfok</h2>
+<p>hinfok 係一個專注於潮流資訊嘅平台，為你帶來最新嘅街頭文化、潮流穿搭、波鞋資訊同生活風格內容。我哋致力發掘本地同國際嘅潮流趨勢，透過多元化嘅內容同工具，幫助你掌握潮流脈搏。</p>
+<p>我哋旗下包括 <strong>Beypedia</strong> — Beyblade X 爆旋陀螺零件圖鑑（零件資料庫、組合推薦、價格參考），以及 <strong>PokeVal</strong> — Pokémon 卡牌估價工具。</p>
 </div>
-<div style="margin-top:24px;padding:20px 0;border-top:1px solid #e2e4e8">
-<h2 style="font-size:20px;margin:0 0 12px">Contact Us</h2>
-<p style="font-size:14px;color:#4a4d55;margin:0">Email: <a href="mailto:informationinhk@gmail.com" style="color:#1a73e8;text-decoration:none">informationinhk@gmail.com</a></p>
+
+<div class="sec" style="max-width:720px;margin:0 auto;padding:20px 24px">
+<h2>聯絡我們</h2>
+<p>如有任何查詢或合作邀請，歡迎電郵至 <a href="mailto:informationinhk@gmail.com" style="color:#63b3ed;text-decoration:none">informationinhk@gmail.com</a></p>
 </div>
-<div class="footer">© 2026 hinfok · 潮流資訊平台</div>
+
+<footer class="ft">© 2026 hinfok · 潮流資訊平台 · <a href="mailto:informationinhk@gmail.com" style="color:var(--mut);text-decoration:underline">聯絡我們</a></footer>
+
 <div id="cookieConsent" class="cookie-consent">
-  <div class="inner">
-    <p>我哋使用 cookies 同類似技術嚟提供個人化廣告同改善體驗。繼續使用即表示你同意。 <a href="https://policies.google.com/technologies/cookies" target="_blank">了解更多</a></p>
+  <div class="in2">
+    <p>我哋使用 cookies 同類似技術嚟提供個人化廣告同改善體驗。繼續使用即表示你同意。 <a href="https://policies.google.com/technologies/cookies" target="_blank" style="color:#63b3ed">了解更多</a></p>
     <div class="btn-group">
       <button class="btn-dec" onclick="declineConsent()">拒絕</button>
       <button class="btn-acc" onclick="acceptConsent()">同意</button>
@@ -80,14 +88,13 @@ h1{font-size:28px;margin:0 0 4px}
   </div>
 </div>
 <script>
-var cn = 'hinfok_consent';
-function getConsent() { try { return localStorage.getItem(cn); } catch(e) { return null; } }
-function setConsent(v) { try { localStorage.setItem(cn, v); } catch(e) {} }
-function showConsent() { var el = document.getElementById('cookieConsent'); if(el) el.classList.add('show'); }
-function hideConsent() { var el = document.getElementById('cookieConsent'); if(el) el.classList.remove('show'); }
-function acceptConsent() { setConsent('accepted'); hideConsent(); }
-function declineConsent() { setConsent('declined'); hideConsent(); }
-(function(){ if(!getConsent()) showConsent(); })();
+var cn="hinfok_consent";
+function gC(){try{return localStorage.getItem(cn);}catch(e){return null;}}
+function sC(v){try{localStorage.setItem(cn,v);}catch(e){}}
+function showC(){var el=document.getElementById("cookieConsent");if(el)el.classList.add("show");}
+function hideC(){var el=document.getElementById("cookieConsent");if(el)el.classList.remove("show");}
+function acceptConsent(){sC("accepted");hideC();}
+function declineConsent(){sC("declined");hideC();}
+(function(){if(!gC())showC();})();
 </script>
-</body>
-</html>
+</body></html>
