@@ -1,0 +1,15 @@
+{
+  "step1": "註冊 data.gov.hk 賬號（免費）",
+  "step2": "獲取 API key，存入 GitHub Secrets 命名為 DATA_GOV_HK_KEY",
+  "step3": "fetch-data.py 會用 API key 自動拉數據",
+  "step4": "轉換數據格式入 article JSON",
+  "step5": "build.py 生成 HTML",
+  "api_gateway": "https://api.data.gov.hk/v1/",
+  "registration_url": "https://data.gov.hk/en/help/api",
+  "github_secret_name": "DATA_GOV_HK_KEY",
+  "alternative_sources": [
+    "https://github.com/mcp-open-data-hk/mcp-open-data-hk",
+    "https://github.com/JMSCHKU/HKOpenGovData",
+    "https://github.com/DemChing/hkopendata"
+  ]
+}

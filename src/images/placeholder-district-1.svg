@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="mapbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#mapbg)"/>
+  <circle cx="600" cy="280" r="180" fill="none" stroke="#457b9d" stroke-width="1" opacity="0.3"/>
+  <circle cx="600" cy="280" r="120" fill="none" stroke="#457b9d" stroke-width="1" opacity="0.3"/>
+  <circle cx="600" cy="280" r="60" fill="none" stroke="#457b9d" stroke-width="1" opacity="0.3"/>
+  <polygon points="520,200 640,180 700,250 680,350 580,370 500,320" fill="#1e3a5f" stroke="#457b9d" stroke-width="2" opacity="0.8"/>
+  <polygon points="500,320 580,370 560,450 450,430 420,370" fill="rgba(30,58,95,0.8)" stroke="#457b9d" stroke-width="2" opacity="0.8"/>
+  <polygon points="640,180 760,170 780,260 700,250" fill="rgba(30,58,95,0.8)" stroke="#457b9d" stroke-width="2" opacity="0.8"/>
+  <polygon points="680,350 700,250 780,260 820,360 750,420" fill="rgba(30,58,95,0.8)" stroke="#457b9d" stroke-width="2" opacity="0.8"/>
+  <polygon points="580,370 680,350 750,420 700,480 560,450" fill="rgba(30,58,95,0.8)" stroke="#457b9d" stroke-width="2" opacity="0.8"/>
+  <circle cx="560" cy="310" r="8" fill="#e63946" opacity="0.9"/>
+  <circle cx="650" cy="220" r="6" fill="#f4a261" opacity="0.8"/>
+  <circle cx="720" cy="300" r="7" fill="#457b9d" opacity="0.8"/>
+  <circle cx="500" cy="390" r="5" fill="#2a9d8f" opacity="0.8"/>
+  <circle cx="650" cy="400" r="6" fill="#a8dadc" opacity="0.8"/>
+  <text x="560" y="315" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" opacity="0.9">中西區 57.8%</text>
+  <text x="650" y="215" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" opacity="0.9">灣仔 58.2%</text>
+  <text x="720" y="305" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" opacity="0.9">東區 53.0%</text>
+  <text x="500" y="395" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" opacity="0.9">南區 51.8%</text>
+  <text x="650" y="405" font-family="sans-serif" font-size="10" fill="#fff" text-anchor="middle" opacity="0.9">觀塘 35.2%</text>
+  <text x="600" y="530" font-family="sans-serif" font-size="14" fill="#a8dadc" text-anchor="middle" opacity="0.5">18區自置居所比率 · 誰是業主誰是租客</text>
+</svg>

@@ -1,6 +1,6 @@
-{
-  "name": "hinfok · 潮流資訊",
-  "short_name": "hinfok",
+﻿{
+  "name": "HKInformation 香港資訊數據圖鑑",
+  "short_name": "HKInfo",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1a1c20",

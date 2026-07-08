@@ -1,0 +1,92 @@
+{
+  "site": {
+    "name": "HKInformation 香港資訊數據圖鑑",
+    "shortName": "HKInfo",
+    "tagline": "香港資訊數據圖鑑 — 樓市 · 經濟 · 民生 · 人口",
+    "description": "HKInformation 香港資訊數據圖鑑提供香港各項統計數據的深入分析與互動圖表，讓你用數據看懂香港。",
+    "baseUrl": "https://hinfok.com/",
+    "lang": "zh-HK",
+    "defaultOgImage": "/images/og-default.jpg",
+    "googleAnalyticsId": "",
+    "email": "informationinhk@gmail.com",
+    "footer": {
+      "copyright": "© 2026 HKInformation 香港資訊數據圖鑑",
+      "about": "HKInformation 是一個專注於香港統計數據視覺化的開放平台，數據主要來自政府統計處、差養物業估價署及各政府部門公開數據。",
+      "disclaimer": "本網站所有數據均來自香港政府公開資料，僅供參考。盡管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。"
+    }
+  },
+  "nav": [
+    {
+      "label": "首頁",
+      "href": "/",
+      "icon": "home"
+    },
+    {
+      "label": "樓市指標",
+      "href": "/rental-price-index",
+      "icon": "building"
+    },
+    {
+      "label": "公屋輪候",
+      "href": "/public-housing",
+      "icon": "home"
+    },
+    {
+      "label": "收入與樓價",
+      "href": "/income-vs-price",
+      "icon": "trending-up"
+    },
+    {
+      "label": "空置率分析",
+      "href": "/vacancy-rate",
+      "icon": "bar-chart"
+    },
+    {
+      "label": "18區自置比率",
+      "href": "/homeownership-district",
+      "icon": "map-pin"
+    },
+    {
+      "label": "關於我們",
+      "href": "/about",
+      "icon": "info"
+    },
+    {
+      "label": "私隱政策",
+      "href": "/privacy",
+      "icon": "shield"
+    }
+  ],
+  "seo": {
+    "defaultTitle": "HKInformation 香港資訊數據圖鑑 — 用數據看懂香港",
+    "defaultDescription": "香港資訊數據圖鑑平台，提供樓市、經濟、人口、房屋等各項統計數據的深入分析與互動圖表。",
+    "defaultKeywords": "香港數據,香港資訊,香港樓價走勢,香港公屋輪候,香港收入中位數,香港物業空置率,香港18區,香港經濟數據",
+    "googleSiteVerification": "",
+    "baiduSiteVerification": ""
+  },
+  "theme": {
+    "primaryColor": "#1e3a5f",
+    "secondaryColor": "#e63946",
+    "accentColor": "#457b9d",
+    "backgroundColor": "#f1faee",
+    "chartColors": [
+      "#1e3a5f",
+      "#e63946",
+      "#457b9d",
+      "#a8dadc",
+      "#f4a261",
+      "#2a9d8f",
+      "#e76f51",
+      "#264653"
+    ]
+  },
+  "author": {
+    "name": "HKInformation Team",
+    "url": "https://hinfok.com"
+  },
+  "adsense": {
+    "enabled": false,
+    "publisherId": "",
+    "adSlots": {}
+  }
+}

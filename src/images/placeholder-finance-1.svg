@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="finbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2b45"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#finbg)"/>
+  <text x="600" y="100" font-family="sans-serif" font-size="28" fill="#a8dadc" text-anchor="middle" opacity="0.6">收入 vs 樓價</text>
+  <line x1="100" y1="400" x2="1100" y2="400" stroke="#457b9d" stroke-width="2" opacity="0.5"/>
+  <line x1="100" y1="400" x2="100" y2="150" stroke="#457b9d" stroke-width="2" opacity="0.5"/>
+  <path d="M100,380 L200,370 L300,350 L400,330 L500,300 L600,280 L700,290 L800,310 L900,320 L1000,330 L1100,340" fill="none" stroke="#457b9d" stroke-width="3" opacity="0.8"/>
+  <path d="M100,350 L200,320 L300,290 L400,260 L500,230 L600,220 L700,210 L800,215 L900,225 L1000,235 L1100,240" fill="none" stroke="#e63946" stroke-width="3" opacity="0.8"/>
+  <rect x="200" y="370" width="20" height="30" fill="#457b9d" opacity="0.6" rx="2"/>
+  <rect x="400" y="330" width="20" height="70" fill="#457b9d" opacity="0.6" rx="2"/>
+  <rect x="600" y="280" width="20" height="120" fill="#e63946" opacity="0.6" rx="2"/>
+  <rect x="800" y="310" width="20" height="90" fill="#457b9d" opacity="0.6" rx="2"/>
+  <rect x="1000" y="330" width="20" height="70" fill="#457b9d" opacity="0.6" rx="2"/>
+  <circle cx="600" cy="280" r="8" fill="#e63946" opacity="0.9"/>
+  <circle cx="800" cy="310" r="8" fill="#457b9d" opacity="0.9"/>
+  <text x="300" y="450" font-family="sans-serif" font-size="12" fill="#a8dadc" text-anchor="middle" opacity="0.5">2015</text>
+  <text x="600" y="450" font-family="sans-serif" font-size="12" fill="#a8dadc" text-anchor="middle" opacity="0.5">2020</text>
+  <text x="900" y="450" font-family="sans-serif" font-size="12" fill="#a8dadc" text-anchor="middle" opacity="0.5">2025</text>
+  <text x="1050" y="220" font-family="sans-serif" font-size="14" fill="#e63946" opacity="0.8">樓價指數</text>
+  <text x="1050" y="320" font-family="sans-serif" font-size="14" fill="#457b9d" opacity="0.8">收入中位數</text>
+  <text x="600" y="530" font-family="sans-serif" font-size="14" fill="#a8dadc" text-anchor="middle" opacity="0.5">供樓負擔比率 · 收入與樓價的賽跑</text>
+</svg>

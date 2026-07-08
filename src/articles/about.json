@@ -1,0 +1,39 @@
+{
+  "slug": "about",
+  "title": "關於我們 | About HKInformation",
+  "seo": {
+    "title": "關於 HKInformation 香港資訊數據圖鑑 — 我們的使命與團隊",
+    "description": "了解HKInformation 香港資訊數據圖鑑的使命、數據來源及團隊。我們致力通過數據視覺化讓香港統計數據變得易懂、有趣、有用。",
+    "keywords": "關於我們,香港資訊數據圖鑑,HKInformation,香港數據平台,數據視覺化",
+    "ogImage": "/images/og-default.svg"
+  },
+  "lastUpdated": "2026-07-09",
+  "sections": [
+    {
+      "heading": "關於 HKInformation 香港資訊數據圖鑑",
+      "content": "<p>HKInformation 香港資訊數據圖鑑是一個專注於香港各項統計數據的視覺化平台。我們將政府公開數據轉化為易於理解的互動圖表與深入分析，讓每一位香港市民都能輕鬆掌握社會經濟的脈搏。</p>"
+    },
+    {
+      "heading": "我們的使命",
+      "content": "<p>在資訊泛濫的時代，真實、準確、易於理解的數據比以往任何時候都更重要。我們的使命是：</p><ul style='margin:12px 0 12px 24px; line-height:2;'><li><strong>數據透明化</strong> — 將複雜的政府統計數據轉化為市民容易理解的視覺化內容</li><li><strong>知識普及</strong> — 透過深入分析，幫助市民了解社會經濟趨勢背後的原因</li><li><strong>促進討論</strong> — 以數據為基礎，推動理性討論香港的房屋、經濟及社會政策</li><li><strong>持續更新</strong> — 每月更新數據，確保資訊的時效性</li></ul>"
+    },
+    {
+      "heading": "數據來源",
+      "content": "<p>所有數據均來自香港政府及相關機構的公開資料，主要來源包括：</p><ul style='margin:12px 0 12px 24px; line-height:2;'><li><strong>差餉物業估價署（RVD）</strong> — 物業市場統計、租金指數、空置率</li><li><strong>政府統計處（C&SD）</strong> — 綜合住戶統計調查、人口普查、中期人口統計</li><li><strong>房屋委員會（房委會）</strong> — 公屋輪候及供應統計</li><li><strong>運輸及房屋局</strong> — 長遠房屋策略</li><li><strong>香港金融管理局（HKMA）</strong> — 按揭及利率數據</li><li><strong>土地註冊處</strong> — 物業成交記錄</li></ul><p>我們會持續擴展數據來源，涵蓋更多範疇如GDP、就業、人口結構、教育及醫療等。</p>"
+    },
+    {
+      "heading": "聯絡我們",
+      "content": "<p>如有任何查詢、建議或數據更正要求，歡迎與我們聯繫：</p><p style='margin-top:12px;'>電子郵件：<a href='mailto:informationinhk@gmail.com'>informationinhk@gmail.com</a></p><p style='margin-top:8px;'>我們會盡快回覆您的查詢。</p>"
+    },
+    {
+      "heading": "免責聲明",
+      "content": "<p>本網站所有數據及分析僅供參考。儘管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。數據來源為香港政府公開資料，如有疑問請直接參考原始數據來源。</p><p>本網站與香港特別行政區政府沒有任何附屬或代理關係。</p>"
+    },
+    {
+      "heading": "加入我們",
+      "content": "<p>如果您對數據分析、視覺化或香港公共政策有興趣，歡迎聯絡我們。我們正在尋找志同道合的夥伴一起擴展這個平台，涵蓋更多有意義的數據指標。</p>"
+    }
+  ],
+  "charts": [],
+  "dataTables": {}
+}
