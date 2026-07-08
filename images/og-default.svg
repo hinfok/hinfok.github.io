@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1e3a5f"/>
+  <rect y="280" width="1200" height="80" fill="#457b9d" opacity="0.5"/>
+  <text x="600" y="260" font-family="sans-serif" font-size="52" fill="#f1faee" text-anchor="middle" font-weight="bold">HongKongData</text>
+  <text x="600" y="335" font-family="sans-serif" font-size="28" fill="#a8dadc" text-anchor="middle">香港數據圖鑑 — 用數據看懂香港</text>
+  <text x="600" y="520" font-family="sans-serif" font-size="18" fill="#457b9d" text-anchor="middle">樓市 · 經濟 · 民生 · 人口</text>
+</svg>
