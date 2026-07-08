@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港寫字樓空置率2025｜住宅空置率分析｜甲級商廈市道｜HongKongData</title>
+<meta name="description" content="全面分析香港商用物業與住宅物業空置率走勢，比較甲級寫字樓、各區商廈及住宅空置率變化，探討疫情及經濟轉型對物業市場的深遠影響。">
+<meta name="keywords" content="香港寫字樓空置率,住宅空置率,香港甲級商廈市道,香港商用物業空置,香港寫字樓供應過剩,疫情後商業地產,香港office空置率">
+<meta property="og:title" content="香港寫字樓空置率2025｜住宅空置率分析｜甲級商廈市道｜HongKongData">
+<meta property="og:description" content="全面分析香港商用物業與住宅物業空置率走勢，比較甲級寫字樓、各區商廈及住宅空置率變化，探討疫情及經濟轉型對物業市場的深遠影響。">
+<meta property="og:image" content="https://hinfok.com/images/placeholder-office-1.svg">
+<meta property="og:url" content="https://hinfok.com/vacancy-rate">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HKInformation 香港資訊數據圖鑑">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hinfok.com/vacancy-rate">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場", "description": "全面分析香港商用物業與住宅物業空置率走勢，比較甲級寫字樓、各區商廈及住宅空置率變化，探討疫情及經濟轉型對物業市場的深遠影響。", "dateModified": "2026-07-07", "author": {"@type": "Person", "name": "HKInformation Team"}, "publisher": {"@type": "Organization", "name": "HKInformation 香港資訊數據圖鑑"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hinfok.com/vacancy-rate"}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; 
+       background: #f0f4f8; color: #1a2332; line-height: 1.8; }
+.site-header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 0; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.site-logo { font-size: 22px; font-weight: 800; color: #fff; text-decoration: none; }
+.site-logo span { color: #f4a261; }
+.nav-links { display: flex; gap: 6px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.12); color: #fff; }
+.nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 64px 24px; text-align: center; position: relative; overflow: hidden; }
+.hero h1 { font-size: 32px; margin-bottom: 16px; line-height: 1.3; max-width: 800px; margin-left: auto; margin-right: auto; }
+.hero p { font-size: 16px; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+.hero-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-top: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.hero-caption { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 8px; text-align: center; }
+.page-hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 24px 32px; text-align: center; }
+.page-hero h1 { font-size: 28px; margin-bottom: 8px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 40px 0; }
+.section h2 { font-size: 24px; margin-bottom: 20px; color: #1e3a5f; padding-bottom: 8px; border-bottom: 3px solid #e63946; display: inline-block; }
+.section h3 { font-size: 18px; margin: 24px 0 12px; color: #2d5a87; }
+.section p { margin-bottom: 16px; line-height: 1.9; color: #2c3e50; }
+.chart-box { background: #fff; border-radius: 12px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.chart-box h3 { font-size: 16px; color: #1e3a5f; margin-bottom: 12px; }
+.data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.data-table th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; }
+.data-table td { padding: 10px 16px; border-bottom: 1px solid #eee; }
+.data-table tr:nth-child(even) { background: #f8fafc; }
+.summary-box { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; border-radius: 12px; padding: 28px; margin: 28px 0; }
+.summary-box h3 { color: #f4a261; margin-bottom: 12px; font-size: 18px; }
+.summary-box p { color: rgba(255,255,255,0.9); line-height: 1.8; }
+.meta-info { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; color: #666; margin: 16px 0; }
+.meta-info a { color: #457b9d; }
+.tag { display: inline-block; background: #e8edf3; color: #1e3a5f; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 2px; }
+.related-card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; display: block; color: inherit; transition: transform 0.2s; }
+.related-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.related-card h4 { color: #1e3a5f; font-size: 16px; margin-bottom: 8px; }
+.related-card p { font-size: 13px; color: #666; line-height: 1.5; }
+.site-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; margin-top: 48px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 24px; }
+.footer-grid h4 { color: #fff; font-size: 16px; margin-bottom: 12px; }
+.footer-grid p { font-size: 13px; line-height: 1.7; }
+.footer-grid ul { list-style: none; }
+.footer-grid li { margin-bottom: 6px; }
+.footer-grid a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; }
+.footer-grid a:hover { color: #f4a261; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; font-size: 12px; text-align: center; }
+.footer-bottom p { margin-bottom: 6px; }
+.breadcrumb { font-size: 13px; color: #888; margin-bottom: 16px; max-width: 1100px; margin-left: auto; margin-right: auto; padding: 0 24px; }
+.breadcrumb a { color: #457b9d; text-decoration: none; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { 
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #1e3a5f; padding: 16px; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: block; }
+    .hero h1 { font-size: 24px; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+.home-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: pointer; display: block; text-decoration: none; color: inherit; }
+.home-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+.home-card-img { width: 100%; height: 180px; object-fit: cover; }
+.home-card-body { padding: 20px; }
+.home-card-body h3 { font-size: 18px; color: #1e3a5f; margin-bottom: 8px; }
+.home-card-body p { font-size: 13px; color: #555; line-height: 1.6; }
+.home-card-body .tags { margin-top: 10px; }
+.index-hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #457b9d 100%); color: #fff; padding: 80px 24px; text-align: center; }
+.index-hero h1 { font-size: 42px; margin-bottom: 16px; }
+.index-hero p { font-size: 18px; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+.stat-bar { background: #fff; border-radius: 12px; padding: 20px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+.stat-bar .num { font-size: 28px; font-weight: 800; color: #1e3a5f; }
+.stat-bar .label { font-size: 13px; color: #888; }
+.plain-content { background: #fff; border-radius: 12px; padding: 32px; margin: 24px 0; box-shadow: 0 1px 12px rgba(0,0,0,0.05); }
+.plain-content ul, .plain-content ol { margin-left: 24px; line-height: 2; }
+.plain-content a { color: #457b9d; }
+#cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #1a2332; color: #fff; padding: 16px 24px; z-index: 999; display: none; font-size: 14px; line-height: 1.5; }
+#cookie-banner a { color: #f4a261; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">HK<span>Info</span> 香港資訊數據圖鑑</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links"><li><a href="/">首頁</a></li>
+<li><a href="/rental-price-index">樓市指標</a></li>
+<li><a href="/public-housing">公屋輪候</a></li>
+<li><a href="/income-vs-price">收入與樓價</a></li>
+<li><a href="/vacancy-rate" class="active">空置率分析</a></li>
+<li><a href="/homeownership-district">18區自置比率</a></li>
+<li><a href="/about">關於我們</a></li>
+<li><a href="/privacy">私隱政策</a></li></ul>
+  </div>
+</header>
+<div class="hero">
+  <h1>香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場</h1>
+  <p>香港甲級寫字樓空置率在2025年升至約16%的歷史高位，較2019年的3%急劇惡化，反映在家工作趨勢、企業縮減規模及新供應大增的疊加影響。住宅空置率則維持約4-5%的溫和水平，整體物業市場出現罕見的商住兩極化局面。...</p>
+  <img src="https://hinfok.com/images/placeholder-office-1.svg" alt="香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場" class="hero-img" onerror="this.style.display='none'">
+  <p class="hero-caption">商業地產市場的結構性轉變 — 甲級寫字樓空置率的時代變遷（圖片由 AI 生成）</p>
+</div>
+<div class="breadcrumb"><a href="/">首頁</a> › <span>香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場</span></div>
+<div class="container"><div class="summary-box"><h3>重點摘要</h3><p>香港甲級寫字樓空置率在2025年升至約16%的歷史高位，較2019年的3%急劇惡化，反映在家工作趨勢、企業縮減規模及新供應大增的疊加影響。住宅空置率則維持約4-5%的溫和水平，整體物業市場出現罕見的商住兩極化局面。</p></div></div>
+<div class="container"><div class="meta-info"><span>最後更新：2026-07-07</span><span>數據來源：<a href="https://www.rvd.gov.hk" target="_blank" rel="noopener">差餉物業估價署（RVD）香港物業報告</a></span></div></div>
+<div class="section container"><h2>甲級寫字樓空置率：十年間的驚天逆轉</h2><p>香港甲級寫字樓市場在過去十年經歷了由盛轉衰的戲劇性變化。2015至2019年期間，受惠於內地企業大量來港設立辦公室、金融服務業蓬勃發展及供應有限，甲級寫字樓空置率長期維持在3-5%的低位，市場甚至出現「一房難求」的局面。中環核心區的甲級寫字樓空置率更一度低至2%以下。</p><p>然而，情況在2020年後急轉直下。疫情帶來的工作模式轉變（在家工作及混合辦公）、企業成本控制、以及中國內地經濟放緩導致對辦公空間需求減少，使空置率大幅攀升。2022年甲級寫字樓空置率突破10%，2024年達到約14%，2025年進一步升至約16%的歷史高位。</p><p>更令人關注的是，市場上仍有大量新供應即將落成。中環海濱、九龍東（啟德及觀塘）及西九龍（高鐵站上蓋）等地區有超過500萬平方呎的甲級寫字樓新供應計劃於2026-2028年間落成。在需求未見明顯反彈的情況下，業界普遍預期空置率將在短期內繼續攀升，可能達到18-20%水平。</p></div>
+<div class="section container"><h2>分區寫字樓空置率：核心區 vs 非核心區</h2><p>不同區域的寫字樓空置率差異顯著。中環作為傳統核心商業區，2025年甲級寫字樓空置率約為12-13%，雖然較疫情前顯著上升，但仍然是全港空置率最低的地區。寫字樓租金由高峰期累計下跌約30-35%，部分業主願意提供更大議價空間以挽留租戶。</p><p>九龍東（包括觀塘及九龍灣）的情況最為嚴峻，空置率在2025年達到約20-22%，是全港空置率最高的商業區之一。這與該區過去十年大量新寫字樓供應落成有直接關係。即使租金已較高峰期下跌約40%，吸納情況仍然不理想。</p><p>港島東（包括鰂魚涌及太古）的空置率約為14-16%，介乎中環與九龍東之間。該區在疫情前吸納了不少由中環遷出的企業，但隨著整體需求萎縮，近年空置率亦明顯上升。</p><p>值得留意的是，新興商業區如西九龍（高鐵站上蓋發展項目）及啟德發展區尚未完全成形，未來數年將有大量新供應進入市場，可能會進一步推高整體空置率。</p></div>
+<div class="section container"><h2>住宅空置率：相對穩健的表現</h2><p>與寫字樓市場的慘淡表現形成對比，香港住宅空置率在過去十年一直維持在相對穩定的水平。根據差估署統計，2025年私人住宅整體空置率約為4.2%，略低於過去十年的平均（約4.5%）。這個水平在國際標準下屬於健康範圍（一般認為5%以下是供求平衡的表現）。</p><p>住宅空置率能維持低水平，主要受惠於高企的住屋需求、政府增加房屋供應有限，以及住宅新供應在過去數年實際落成量低於預期。此外，租賃市場活躍亦有效消化了部分空置單位。</p><p>按單位類型分析，小型單位（A、B類）的空置率最低（約3.0-3.5%），反映中小型住宅的剛性需求最強。大型單位（D、E類）的空置率相對較高（約5.5-6.5%），這與高端物業市場的流動性較低有關。</p></div>
+<div class="section container"><h2>商住兩極化：解讀背後的結構性因素</h2><p>香港物業市場出現罕見的商住兩極化局面。同一城市內，商業地產面臨歷史性空置危機，而住宅市場卻基本維持供需平衡，這個現象值得深入分析。</p><p>首先是需求端的結構性轉變。疫情大幅改變了全球的辦公模式，混合辦公（hybrid working）已成新常態。不少國際企業將香港辦公室面積縮減20-40%，並重新評估區域總部的選址。與此同時，中資企業的需求亦明顯降溫。相反的，住宅需求受惠於專才輸入計劃、本地家庭分戶需求及長期結構性的供應不足，仍然保持韌性。</p><p>其次是供應端的差異。寫字樓市場在2015至2025年間經歷了大規模的新供應浪潮，多個大型商業項目相繼落成。住宅市場雖然也有新供應，但政府透過賣地及改劃土地增加供應的幅度相對克制。</p><p>最後是資本流向。住宅物業對本地及內地投資者而言始終是較熟悉的投資類別，而商業物業的買家群體較窄，在市場氣氛轉弱時，流動性下降的幅度更大。</p></div>
+<div class="section container"><h2>商舖及工業物業空置率補充</h2><p>除了寫字樓及住宅外，其他物業類別的空置情況亦值得關注。零售店舖空置率在疫情高峰期（2021年）曾達到約18-20%的極高水平，隨著邊境重開及旅客回流，2025年已改善至約10-12%。然而，傳統旅遊區（如銅鑼灣、尖沙咀）的商舖空置率仍顯著高於民生區（如將軍澳、荃灣），反映零售市場正經歷結構性轉變，遊客消費模式與疫情前已有明顯不同。</p><p>工業物業（包括貨倉及工貿大廈）的空置率則維持在極低水平（約2-3%），受惠於電子商貿增長帶動的物流需求。數據中心及冷凍倉庫等特殊工業物業更出現供應短缺情況，成為商業地產市場中的亮點。</p></div>
+<div class="section container"><h2>數據來源說明</h2><p>本文空置率數據主要來自差餉物業估價署每年發布的《香港物業報告》。空置率的定義為在每年年底（12月31日）正在空置的單位/樓面面積佔整體存量的百分比。甲級寫字樓定義為具有優質規格及管理的新式寫字樓大廈。住宅空置率涵蓋所有私人住宅單位。</p></div>
+
+<div class="container"><div class="chart-box"><h3>甲級寫字樓空置率走勢（2015-2025）</h3><div id="chart-office-vacancy" data-chart-id="chart-office-vacancy" style="width:100%;height:400px"></div></div></div>
+<div class="container"><div class="chart-box"><h3>各區寫字樓空置率對比（2025年）</h3><div id="chart-vacancy-by-area" data-chart-id="chart-vacancy-by-area" style="width:100%;height:350px"></div></div></div>
+<div class="container"><div class="chart-box"><h3>住宅空置率走勢 vs 寫字樓空置率（2015-2025）</h3><div id="chart-residential-vacancy" data-chart-id="chart-residential-vacancy" style="width:100%;height:400px"></div></div></div>
+<div class="container"><div class="chart-box"><h3>零售店舖空置率走勢（2015-2025）</h3><div id="chart-retail-vacancy" data-chart-id="chart-retail-vacancy" style="width:100%;height:350px"></div></div></div>
+
+<div class="container"><div class="section"><h2>各類物業空置率詳表</h2><div style="overflow-x:auto"><table class="data-table"><thead><tr><th>年份</th><th>甲級寫字樓 (%)</th><th>住宅 (%)</th><th>零售（核心區）(%)</th><th>工業 (%)</th></tr></thead><tbody><tr><td>2015</td><td>4.5</td><td>4.2</td><td>4.0</td><td>3.0</td></tr><tr><td>2016</td><td>4.0</td><td>4.0</td><td>4.5</td><td>2.5</td></tr><tr><td>2017</td><td>3.5</td><td>3.8</td><td>4.0</td><td>2.3</td></tr><tr><td>2018</td><td>3.0</td><td>3.7</td><td>3.5</td><td>2.0</td></tr><tr><td>2019</td><td>3.2</td><td>3.9</td><td>5.0</td><td>2.2</td></tr><tr><td>2020</td><td>7.0</td><td>4.5</td><td>15.0</td><td>3.5</td></tr><tr><td>2021</td><td>9.5</td><td>5.0</td><td>20.0</td><td>3.2</td></tr><tr><td>2022</td><td>11.0</td><td>4.5</td><td>18.0</td><td>2.8</td></tr><tr><td>2023</td><td>13.0</td><td>4.3</td><td>14.0</td><td>2.5</td></tr><tr><td>2024</td><td>14.5</td><td>4.0</td><td>12.0</td><td>2.3</td></tr><tr><td>2025</td><td>16.0</td><td>4.2</td><td>10.0</td><td>2.0</td></tr></tbody></table></div></div></div>
+
+<div class="section container"><h2>相關分析</h2><div class="grid-2"><a href="/rental-price-index" class="related-card"><h4>香港私樓租金指數與樓價指數走勢分析（2015-2025）...</h4><p>過去十年香港私樓租金與樓價走勢出現明顯背離。樓價指數從2015年的246點攀升至2021年高位約330點，隨後回落至2025年的約290點；而租金指數則在2020年短暫下跌後穩步回升，從2020年低位的178點反彈至2025年的185點。租...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a><a href="/income-vs-price" class="related-card"><h4>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析...</h4><p>香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a></div></div>
+<script>window.__charts = window.__charts || {};
+window.__charts['chart-office-vacancy'] = {"tooltip": {"trigger": "axis"}, "grid": {"left": 60, "right": 30, "top": 30, "bottom": 40}, "xAxis": {"type": "category", "data": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]}, "yAxis": {"type": "value", "name": "空置率 (%)", "min": 0, "max": 20}, "series": [{"name": "甲級寫字樓", "type": "line", "data": [4.5, 4.0, 3.5, 3.0, 3.2, 7.0, 9.5, 11.0, 13.0, 14.5, 16.0], "smooth": true, "lineStyle": {"width": 3, "color": "#e63946"}, "areaStyle": {"color": {"type": "linear", "x": 0, "y": 0, "x2": 0, "y2": 1, "colorStops": [{"offset": 0, "color": "rgba(230,57,70,0.3)"}, {"offset": 1, "color": "rgba(230,57,70,0.02)"}]}}, "markPoint": {"data": [{"type": "min", "name": "最低", "symbolSize": 55}, {"type": "max", "name": "最高", "symbolSize": 55}]}}]};
+window.__charts['chart-vacancy-by-area'] = {"tooltip": {"trigger": "axis"}, "grid": {"left": 100, "right": 30, "top": 20, "bottom": 40}, "xAxis": {"type": "value", "name": "空置率 (%)", "max": 25}, "yAxis": {"type": "category", "data": ["九龍東", "港島東", "西九龍", "中環", "銅鑼灣/灣仔", "尖沙咀", "葵涌/荃灣"], "axisLabel": {"fontSize": 11}}, "series": [{"name": "空置率", "type": "bar", "data": [21, 15, 14, 12.5, 13, 14.5, 16], "itemStyle": {"color": {"type": "linear", "x": 0, "y": 0, "x2": 1, "y2": 0, "colorStops": [{"offset": 0, "color": "#f4a261"}, {"offset": 1, "color": "#e63946"}]}}, "label": {"show": true, "position": "right", "formatter": "{c}%"}}]};
+window.__charts['chart-residential-vacancy'] = {"tooltip": {"trigger": "axis"}, "legend": {"data": ["住宅空置率", "甲級寫字樓空置率"], "top": 0}, "grid": {"left": 60, "right": 30, "top": 40, "bottom": 40}, "xAxis": {"type": "category", "data": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]}, "yAxis": {"type": "value", "name": "空置率 (%)", "min": 0, "max": 20}, "series": [{"name": "住宅空置率", "type": "line", "data": [4.2, 4.0, 3.8, 3.7, 3.9, 4.5, 5.0, 4.5, 4.3, 4.0, 4.2], "smooth": true, "lineStyle": {"width": 3, "color": "#457b9d"}, "areaStyle": {"color": "rgba(69,123,157,0.15)"}}, {"name": "甲級寫字樓空置率", "type": "line", "data": [4.5, 4.0, 3.5, 3.0, 3.2, 7.0, 9.5, 11.0, 13.0, 14.5, 16.0], "smooth": true, "lineStyle": {"width": 3, "color": "#e63946"}, "areaStyle": {"color": "rgba(230,57,70,0.15)"}}]};
+window.__charts['chart-retail-vacancy'] = {"tooltip": {"trigger": "axis"}, "legend": {"data": ["核心旅遊區", "民生區"], "top": 0}, "grid": {"left": 60, "right": 30, "top": 40, "bottom": 40}, "xAxis": {"type": "category", "data": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]}, "yAxis": {"type": "value", "name": "空置率 (%)", "min": 0, "max": 25}, "series": [{"name": "核心旅遊區", "type": "line", "data": [4.0, 4.5, 4.0, 3.5, 5.0, 15.0, 20.0, 18.0, 14.0, 12.0, 10.0], "smooth": true, "lineStyle": {"width": 3, "color": "#e63946"}, "areaStyle": {"color": "rgba(230,57,70,0.15)"}}, {"name": "民生區", "type": "line", "data": [3.0, 3.0, 2.8, 2.5, 3.0, 6.0, 7.0, 5.5, 4.5, 4.0, 3.5], "smooth": true, "lineStyle": {"width": 3, "color": "#2a9d8f"}, "areaStyle": {"color": "rgba(42,157,143,0.15)"}}]};
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+    var charts=document.querySelectorAll('[data-chart-id]');
+    charts.forEach(function(el){
+        var id=el.getAttribute('data-chart-id');
+        if(window.__charts&&window.__charts[id]){var chart=echarts.init(el);chart.setOption(window.__charts[id]);window.addEventListener('resize',function(){chart.resize();})}
+    });
+});
+</script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><h4>HKInformation 香港資訊數據圖鑑</h4><p>HKInformation 是一個專注於香港統計數據視覺化的開放平台，數據主要來自政府統計處、差養物業估價署及各政府部門公開數據。</p></div>
+      <div><h4>快速連結</h4><ul><li><a href="/">首頁</a></li><li><a href="/rental-price-index">樓市指標</a></li><li><a href="/public-housing">公屋輪候</a></li><li><a href="/income-vs-price">收入與樓價</a></li><li><a href="/vacancy-rate">空置率分析</a></li><li><a href="/homeownership-district">18區自置比率</a></li><li><a href="/about">關於我們</a></li><li><a href="/privacy">私隱政策</a></li></ul></div>
+      <div><h4>免責聲明</h4><p>本網站所有數據均來自香港政府公開資料，僅供參考。盡管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 HKInformation 香港資訊數據圖鑑</p>
+      <p>數據來源：政府統計處、差餉物業估價署、房屋委員會及相關政府部門</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>本網站使用 Cookie 來改善您的瀏覽體驗及顯示個人化廣告。繼續使用即表示您同意 <a href="/privacy">私隱政策</a>。</span>
+    <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_consent','true')" style="background:#f4a261;border:none;color:#1a2332;padding:10px 24px;border-radius:8px;font-weight:600;cursor:pointer;white-space:nowrap;">我了解</button>
+  </div>
+</div>
+<script>
+if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='block'}
+</script>
+</body>
+</html>

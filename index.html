@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HKInformation 香港資訊數據圖鑑 — 用數據看懂香港</title>
+<meta name="description" content="香港資訊數據圖鑑平台，提供樓市、經濟、人口、房屋等各項統計數據的深入分析與互動圖表。">
+<meta name="keywords" content="香港數據,香港資訊,香港樓價走勢,香港公屋輪候,香港收入中位數,香港物業空置率,香港18區,香港經濟數據">
+<meta property="og:title" content="HKInformation 香港資訊數據圖鑑 — 用數據看懂香港">
+<meta property="og:description" content="香港資訊數據圖鑑平台，提供樓市、經濟、人口、房屋等各項統計數據的深入分析與互動圖表。">
+<meta property="og:image" content="https://hinfok.com/images/og-default.svg">
+<meta property="og:url" content="https://hinfok.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HKInformation 香港資訊數據圖鑑">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hinfok.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "HKInformation 香港資訊數據圖鑑", "description": "HKInformation 香港資訊數據圖鑑提供香港各項統計數據的深入分析與互動圖表，讓你用數據看懂香港。", "url": "https://hinfok.com/", "author": {"@type": "Person", "name": "HKInformation Team"}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; 
+       background: #f0f4f8; color: #1a2332; line-height: 1.8; }
+.site-header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 0; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.site-logo { font-size: 22px; font-weight: 800; color: #fff; text-decoration: none; }
+.site-logo span { color: #f4a261; }
+.nav-links { display: flex; gap: 6px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.12); color: #fff; }
+.nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 64px 24px; text-align: center; position: relative; overflow: hidden; }
+.hero h1 { font-size: 32px; margin-bottom: 16px; line-height: 1.3; max-width: 800px; margin-left: auto; margin-right: auto; }
+.hero p { font-size: 16px; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+.hero-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-top: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.hero-caption { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 8px; text-align: center; }
+.page-hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 24px 32px; text-align: center; }
+.page-hero h1 { font-size: 28px; margin-bottom: 8px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 40px 0; }
+.section h2 { font-size: 24px; margin-bottom: 20px; color: #1e3a5f; padding-bottom: 8px; border-bottom: 3px solid #e63946; display: inline-block; }
+.section h3 { font-size: 18px; margin: 24px 0 12px; color: #2d5a87; }
+.section p { margin-bottom: 16px; line-height: 1.9; color: #2c3e50; }
+.chart-box { background: #fff; border-radius: 12px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.chart-box h3 { font-size: 16px; color: #1e3a5f; margin-bottom: 12px; }
+.data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.data-table th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; }
+.data-table td { padding: 10px 16px; border-bottom: 1px solid #eee; }
+.data-table tr:nth-child(even) { background: #f8fafc; }
+.summary-box { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; border-radius: 12px; padding: 28px; margin: 28px 0; }
+.summary-box h3 { color: #f4a261; margin-bottom: 12px; font-size: 18px; }
+.summary-box p { color: rgba(255,255,255,0.9); line-height: 1.8; }
+.meta-info { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; color: #666; margin: 16px 0; }
+.meta-info a { color: #457b9d; }
+.tag { display: inline-block; background: #e8edf3; color: #1e3a5f; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 2px; }
+.related-card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; display: block; color: inherit; transition: transform 0.2s; }
+.related-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.related-card h4 { color: #1e3a5f; font-size: 16px; margin-bottom: 8px; }
+.related-card p { font-size: 13px; color: #666; line-height: 1.5; }
+.site-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; margin-top: 48px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 24px; }
+.footer-grid h4 { color: #fff; font-size: 16px; margin-bottom: 12px; }
+.footer-grid p { font-size: 13px; line-height: 1.7; }
+.footer-grid ul { list-style: none; }
+.footer-grid li { margin-bottom: 6px; }
+.footer-grid a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; }
+.footer-grid a:hover { color: #f4a261; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; font-size: 12px; text-align: center; }
+.footer-bottom p { margin-bottom: 6px; }
+.breadcrumb { font-size: 13px; color: #888; margin-bottom: 16px; max-width: 1100px; margin-left: auto; margin-right: auto; padding: 0 24px; }
+.breadcrumb a { color: #457b9d; text-decoration: none; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { 
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #1e3a5f; padding: 16px; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: block; }
+    .hero h1 { font-size: 24px; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+.home-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: pointer; display: block; text-decoration: none; color: inherit; }
+.home-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+.home-card-img { width: 100%; height: 180px; object-fit: cover; }
+.home-card-body { padding: 20px; }
+.home-card-body h3 { font-size: 18px; color: #1e3a5f; margin-bottom: 8px; }
+.home-card-body p { font-size: 13px; color: #555; line-height: 1.6; }
+.home-card-body .tags { margin-top: 10px; }
+.index-hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #457b9d 100%); color: #fff; padding: 80px 24px; text-align: center; }
+.index-hero h1 { font-size: 42px; margin-bottom: 16px; }
+.index-hero p { font-size: 18px; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+.stat-bar { background: #fff; border-radius: 12px; padding: 20px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+.stat-bar .num { font-size: 28px; font-weight: 800; color: #1e3a5f; }
+.stat-bar .label { font-size: 13px; color: #888; }
+.plain-content { background: #fff; border-radius: 12px; padding: 32px; margin: 24px 0; box-shadow: 0 1px 12px rgba(0,0,0,0.05); }
+.plain-content ul, .plain-content ol { margin-left: 24px; line-height: 2; }
+.plain-content a { color: #457b9d; }
+#cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #1a2332; color: #fff; padding: 16px 24px; z-index: 999; display: none; font-size: 14px; line-height: 1.5; }
+#cookie-banner a { color: #f4a261; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">HK<span>Info</span> 香港資訊數據圖鑑</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links"><li><a href="/" class="active">首頁</a></li>
+<li><a href="/rental-price-index">樓市指標</a></li>
+<li><a href="/public-housing">公屋輪候</a></li>
+<li><a href="/income-vs-price">收入與樓價</a></li>
+<li><a href="/vacancy-rate">空置率分析</a></li>
+<li><a href="/homeownership-district">18區自置比率</a></li>
+<li><a href="/about">關於我們</a></li>
+<li><a href="/privacy">私隱政策</a></li></ul>
+  </div>
+</header>
+<div class="index-hero">
+  <h1>HKInformation 香港資訊數據圖鑑</h1>
+  <p>香港資訊數據圖鑑 — 樓市 · 經濟 · 民生 · 人口</p>
+  <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">📈 樓價分析</span>
+    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🏠 公屋輪候</span>
+    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">💰 收入分析</span>
+    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🏢 空置率</span>
+    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🗺️ 18區數據</span>
+  </div>
+</div>
+<div class="container" style="margin-top:-30px;position:relative;z-index:10;">
+  <div class="grid-3">
+    <div class="stat-bar"><div class="num">5</div><div class="label">分析指標</div></div>
+    <div class="stat-bar"><div class="num">18區</div><div class="label">全港覆蓋</div></div>
+    <div class="stat-bar"><div class="num">2015-2025</div><div class="label">十年數據</div></div>
+  </div>
+</div>
+<div class="section container"><h2>分析指標</h2><div class="grid-2"><a href="/rental-price-index" class="home-card">  <img src="/images/placeholder-cityscape-1.svg" alt="香港私樓租金指數與樓價指數走勢分析（2015-2025）" class="home-card-img" onerror="this.style.display='none'" style="background:#1e3a5f;height:180px;">  <div class="home-card-body">    <h3>香港私樓租金指數與樓價指數走勢分析（2015-2025）</h3>    <p>過去十年香港私樓租金與樓價走勢出現明顯背離。樓價指數從2015年的246點攀升至2021年高位約330點，隨後回落至2025年的約290點；而租金指數則在2020年短暫下跌後穩步回升，從2020年低位的178點反彈至2025年的185點。租金回報率持續受壓，反映樓市正經歷結構性調整。...</p>    <div class="tags"><span class="tag">香港樓價走勢</span><span class="tag">私樓租金指數10年對比</span><span class="tag">香港樓市跌緊定升緊</span></div>  </div></a><a href="/public-housing" class="home-card">  <img src="/images/placeholder-estate-1.svg" alt="香港公屋輪候時間與供應趨勢分析" class="home-card-img" onerror="this.style.display='none'" style="background:#1e3a5f;height:180px;">  <div class="home-card-body">    <h3>香港公屋輪候時間與供應趨勢分析</h3>    <p>香港公屋平均輪候時間在2021年達到歷史高位5.8年，近年隨著政府加大供應已回落至約4.8年，但仍遠高於政府3年目標。一般申請者高達13萬宗，而每年可供編配的公屋單位僅約2-3萬伙，供求失衡問題嚴峻。...</p>    <div class="tags"><span class="tag">公屋輪候時間</span><span class="tag">公屋申請進度趨勢</span><span class="tag">香港入伙公屋要等幾耐</span></div>  </div></a><a href="/income-vs-price" class="home-card">  <img src="/images/placeholder-finance-1.svg" alt="香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析" class="home-card-img" onerror="this.style.display='none'" style="background:#1e3a5f;height:180px;">  <div class="home-card-body">    <h3>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析</h3>    <p>香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。...</p>    <div class="tags"><span class="tag">香港買樓負擔指數</span><span class="tag">收入樓價比率</span><span class="tag">香港月入中位數供樓</span></div>  </div></a><a href="/vacancy-rate" class="home-card">  <img src="/images/placeholder-office-1.svg" alt="香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場" class="home-card-img" onerror="this.style.display='none'" style="background:#1e3a5f;height:180px;">  <div class="home-card-body">    <h3>香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場</h3>    <p>香港甲級寫字樓空置率在2025年升至約16%的歷史高位，較2019年的3%急劇惡化，反映在家工作趨勢、企業縮減規模及新供應大增的疊加影響。住宅空置率則維持約4-5%的溫和水平，整體物業市場出現罕見的商住兩極化局面。...</p>    <div class="tags"><span class="tag">香港寫字樓空置率</span><span class="tag">住宅空置率</span><span class="tag">香港甲級商廈市道</span></div>  </div></a><a href="/homeownership-district" class="home-card">  <img src="/images/placeholder-district-1.svg" alt="香港18區自置居所比率全面分析：邊區最多業主？" class="home-card-img" onerror="this.style.display='none'" style="background:#1e3a5f;height:180px;">  <div class="home-card-body">    <h3>香港18區自置居所比率全面分析：邊區最多業主？</h3>    <p>香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。...</p>    <div class="tags"><span class="tag">香港邊一區最多人買樓</span><span class="tag">香港18區財富分佈</span><span class="tag">香港最富貴區域</span></div>  </div></a></div></div>
+<div class="section container">
+  <h2>關於 HKInfo</h2>
+  <p>HKInformation 香港資訊數據圖鑑提供香港各項統計數據的深入分析與互動圖表，讓你用數據看懂香港。</p>
+  <p>我們的主要數據來源包括：</p>
+  <ul style="margin:12px 0 0 20px;line-height:2;">
+    <li>差餉物業估價署（RVD）— 物業市場統計</li>
+    <li>政府統計處（C&SD）— 綜合住戶統計、人口普查</li>
+    <li>房屋委員會 — 公屋輪候及供應數據</li>
+    <li>其他政府部門公開數據</li>
+  </ul>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><h4>HKInformation 香港資訊數據圖鑑</h4><p>HKInformation 是一個專注於香港統計數據視覺化的開放平台，數據主要來自政府統計處、差養物業估價署及各政府部門公開數據。</p></div>
+      <div><h4>快速連結</h4><ul><li><a href="/">首頁</a></li><li><a href="/rental-price-index">樓市指標</a></li><li><a href="/public-housing">公屋輪候</a></li><li><a href="/income-vs-price">收入與樓價</a></li><li><a href="/vacancy-rate">空置率分析</a></li><li><a href="/homeownership-district">18區自置比率</a></li><li><a href="/about">關於我們</a></li><li><a href="/privacy">私隱政策</a></li></ul></div>
+      <div><h4>免責聲明</h4><p>本網站所有數據均來自香港政府公開資料，僅供參考。盡管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 HKInformation 香港資訊數據圖鑑</p>
+      <p>數據來源：政府統計處、差餉物業估價署、房屋委員會及相關政府部門</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>本網站使用 Cookie 來改善您的瀏覽體驗及顯示個人化廣告。繼續使用即表示您同意 <a href="/privacy">私隱政策</a>。</span>
+    <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_consent','true')" style="background:#f4a261;border:none;color:#1a2332;padding:10px 24px;border-radius:8px;font-weight:600;cursor:pointer;white-space:nowrap;">我了解</button>
+  </div>
+</div>
+<script>
+if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='block'}
+</script>
+</body>
+</html>
