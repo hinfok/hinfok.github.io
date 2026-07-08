@@ -12,7 +12,7 @@
   "lastUpdated": "2026-07-07",
   "dataSource": "差餉物業估價署（RVD）香港物業報告",
   "dataSourceUrl": "https://www.rvd.gov.hk",
-  "summary": "香港甲級寫字樓空置率在2025年升至約16%的歷史高位，較2019年的3%急劇惡化，反映在家工作趨勢、企業縮減規模及新供應大增的疊加影響。住宅空置率則維持約4-5%的溫和水平，整體物業市場出現罕見的商住兩極化局面。",
+  "summary": "根據差餉物業估價署數據，甲級寫字樓空置率由2015年7.8%飆升至2025年18.4%歷史高位，較2019年的9.0%翻倍。住宅空置率維持3.7-4.5%的健康水平，整體物業市場出現罕見的商住兩極化局面。",
   "sections": [
     {
       "heading": "甲級寫字樓空置率：十年間的驚天逆轉",
@@ -46,21 +46,90 @@
       "type": "line",
       "height": 400,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "grid": { "left": 60, "right": 30, "top": 30, "bottom": 40 },
-        "xAxis": { "type": "category", "data": ["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"] },
-        "yAxis": { "type": "value", "name": "空置率 (%)", "min": 0, "max": 20 },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": 60,
+          "right": 30,
+          "top": 30,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "空置率 (%)",
+          "min": 0,
+          "max": 20
+        },
         "series": [
           {
-            "name": "甲級寫字樓", "type": "line",
-            "data": [4.5, 4.0, 3.5, 3.0, 3.2, 7.0, 9.5, 11.0, 13.0, 14.5, 16.0],
+            "name": "甲級寫字樓",
+            "type": "line",
+            "data": [
+              7.8,
+              8.0,
+              9.6,
+              8.7,
+              9.0,
+              11.8,
+              12.5,
+              15.1,
+              16.0,
+              17.4,
+              18.4
+            ],
             "smooth": true,
-            "lineStyle": { "width": 3, "color": "#e63946" },
-            "areaStyle": { "color": { "type": "linear", "x": 0, "y": 0, "x2": 0, "y2": 1, "colorStops": [{ "offset": 0, "color": "rgba(230,57,70,0.3)" }, { "offset": 1, "color": "rgba(230,57,70,0.02)" }] } },
+            "lineStyle": {
+              "width": 3,
+              "color": "#e63946"
+            },
+            "areaStyle": {
+              "color": {
+                "type": "linear",
+                "x": 0,
+                "y": 0,
+                "x2": 0,
+                "y2": 1,
+                "colorStops": [
+                  {
+                    "offset": 0,
+                    "color": "rgba(230,57,70,0.3)"
+                  },
+                  {
+                    "offset": 1,
+                    "color": "rgba(230,57,70,0.02)"
+                  }
+                ]
+              }
+            },
             "markPoint": {
               "data": [
-                { "type": "min", "name": "最低", "symbolSize": 55 },
-                { "type": "max", "name": "最高", "symbolSize": 55 }
+                {
+                  "type": "min",
+                  "name": "最低",
+                  "symbolSize": 55
+                },
+                {
+                  "type": "max",
+                  "name": "最高",
+                  "symbolSize": 55
+                }
               ]
             }
           }
@@ -73,12 +142,73 @@
       "type": "bar",
       "height": 350,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "grid": { "left": 100, "right": 30, "top": 20, "bottom": 40 },
-        "xAxis": { "type": "value", "name": "空置率 (%)", "max": 25 },
-        "yAxis": { "type": "category", "data": ["九龍東", "港島東", "西九龍", "中環", "銅鑼灣/灣仔", "尖沙咀", "葵涌/荃灣"], "axisLabel": { "fontSize": 11 } },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": 100,
+          "right": 30,
+          "top": 20,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "空置率 (%)",
+          "max": 25
+        },
+        "yAxis": {
+          "type": "category",
+          "data": [
+            "九龍東",
+            "港島東",
+            "西九龍",
+            "中環",
+            "銅鑼灣/灣仔",
+            "尖沙咀",
+            "葵涌/荃灣"
+          ],
+          "axisLabel": {
+            "fontSize": 11
+          }
+        },
         "series": [
-          { "name": "空置率", "type": "bar", "data": [21, 15, 14, 12.5, 13, 14.5, 16], "itemStyle": { "color": { "type": "linear", "x": 0, "y": 0, "x2": 1, "y2": 0, "colorStops": [{ "offset": 0, "color": "#f4a261" }, { "offset": 1, "color": "#e63946" }] } }, "label": { "show": true, "position": "right", "formatter": "{c}%" } }
+          {
+            "name": "空置率",
+            "type": "bar",
+            "data": [
+              21,
+              15,
+              14,
+              12.5,
+              13,
+              14.5,
+              16
+            ],
+            "itemStyle": {
+              "color": {
+                "type": "linear",
+                "x": 0,
+                "y": 0,
+                "x2": 1,
+                "y2": 0,
+                "colorStops": [
+                  {
+                    "offset": 0,
+                    "color": "#f4a261"
+                  },
+                  {
+                    "offset": 1,
+                    "color": "#e63946"
+                  }
+                ]
+              }
+            },
+            "label": {
+              "show": true,
+              "position": "right",
+              "formatter": "{c}%"
+            }
+          }
         ]
       }
     },
@@ -88,14 +218,95 @@
       "type": "line",
       "height": 400,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "legend": { "data": ["住宅空置率", "甲級寫字樓空置率"], "top": 0 },
-        "grid": { "left": 60, "right": 30, "top": 40, "bottom": 40 },
-        "xAxis": { "type": "category", "data": ["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"] },
-        "yAxis": { "type": "value", "name": "空置率 (%)", "min": 0, "max": 20 },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "住宅空置率",
+            "甲級寫字樓空置率"
+          ],
+          "top": 0
+        },
+        "grid": {
+          "left": 60,
+          "right": 30,
+          "top": 40,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "空置率 (%)",
+          "min": 0,
+          "max": 20
+        },
         "series": [
-          { "name": "住宅空置率", "type": "line", "data": [4.2, 4.0, 3.8, 3.7, 3.9, 4.5, 5.0, 4.5, 4.3, 4.0, 4.2], "smooth": true, "lineStyle": { "width": 3, "color": "#457b9d" }, "areaStyle": { "color": "rgba(69,123,157,0.15)" } },
-          { "name": "甲級寫字樓空置率", "type": "line", "data": [4.5, 4.0, 3.5, 3.0, 3.2, 7.0, 9.5, 11.0, 13.0, 14.5, 16.0], "smooth": true, "lineStyle": { "width": 3, "color": "#e63946" }, "areaStyle": { "color": "rgba(230,57,70,0.15)" } }
+          {
+            "name": "住宅空置率",
+            "type": "line",
+            "data": [
+              3.7,
+              3.8,
+              3.7,
+              4.3,
+              3.7,
+              4.3,
+              4.1,
+              4.4,
+              4.1,
+              4.5,
+              4.3
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "width": 3,
+              "color": "#457b9d"
+            },
+            "areaStyle": {
+              "color": "rgba(69,123,157,0.15)"
+            }
+          },
+          {
+            "name": "甲級寫字樓空置率",
+            "type": "line",
+            "data": [
+              7.8,
+              8.0,
+              9.6,
+              8.7,
+              9.0,
+              11.8,
+              12.5,
+              15.1,
+              16.0,
+              17.4,
+              18.4
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "width": 3,
+              "color": "#e63946"
+            },
+            "areaStyle": {
+              "color": "rgba(230,57,70,0.15)"
+            }
+          }
         ]
       }
     },
@@ -105,35 +316,191 @@
       "type": "line",
       "height": 350,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "legend": { "data": ["核心旅遊區", "民生區"], "top": 0 },
-        "grid": { "left": 60, "right": 30, "top": 40, "bottom": 40 },
-        "xAxis": { "type": "category", "data": ["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"] },
-        "yAxis": { "type": "value", "name": "空置率 (%)", "min": 0, "max": 25 },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "核心旅遊區",
+            "民生區"
+          ],
+          "top": 0
+        },
+        "grid": {
+          "left": 60,
+          "right": 30,
+          "top": 40,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "空置率 (%)",
+          "min": 0,
+          "max": 25
+        },
         "series": [
-          { "name": "核心旅遊區", "type": "line", "data": [4.0, 4.5, 4.0, 3.5, 5.0, 15.0, 20.0, 18.0, 14.0, 12.0, 10.0], "smooth": true, "lineStyle": { "width": 3, "color": "#e63946" }, "areaStyle": { "color": "rgba(230,57,70,0.15)" } },
-          { "name": "民生區", "type": "line", "data": [3.0, 3.0, 2.8, 2.5, 3.0, 6.0, 7.0, 5.5, 4.5, 4.0, 3.5], "smooth": true, "lineStyle": { "width": 3, "color": "#2a9d8f" }, "areaStyle": { "color": "rgba(42,157,143,0.15)" } }
+          {
+            "name": "核心旅遊區",
+            "type": "line",
+            "data": [
+              4.0,
+              4.5,
+              4.0,
+              3.5,
+              5.0,
+              15.0,
+              20.0,
+              18.0,
+              14.0,
+              12.0,
+              10.0
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "width": 3,
+              "color": "#e63946"
+            },
+            "areaStyle": {
+              "color": "rgba(230,57,70,0.15)"
+            }
+          },
+          {
+            "name": "民生區",
+            "type": "line",
+            "data": [
+              3.0,
+              3.0,
+              2.8,
+              2.5,
+              3.0,
+              6.0,
+              7.0,
+              5.5,
+              4.5,
+              4.0,
+              3.5
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "width": 3,
+              "color": "#2a9d8f"
+            },
+            "areaStyle": {
+              "color": "rgba(42,157,143,0.15)"
+            }
+          }
         ]
       }
     }
   ],
-  "relatedArticles": ["rental-price-index", "income-vs-price"],
+  "relatedArticles": [
+    "rental-price-index",
+    "income-vs-price"
+  ],
   "dataTables": {
     "vacancyTable": {
       "title": "各類物業空置率詳表",
-      "headers": ["年份", "甲級寫字樓 (%)", "住宅 (%)", "零售（核心區）(%)", "工業 (%)"],
+      "headers": [
+        "年份",
+        "甲級寫字樓 (%)",
+        "住宅 (%)",
+        "零售（核心區）(%)",
+        "工業 (%)"
+      ],
       "rows": [
-        ["2015", "4.5", "4.2", "4.0", "3.0"],
-        ["2016", "4.0", "4.0", "4.5", "2.5"],
-        ["2017", "3.5", "3.8", "4.0", "2.3"],
-        ["2018", "3.0", "3.7", "3.5", "2.0"],
-        ["2019", "3.2", "3.9", "5.0", "2.2"],
-        ["2020", "7.0", "4.5", "15.0", "3.5"],
-        ["2021", "9.5", "5.0", "20.0", "3.2"],
-        ["2022", "11.0", "4.5", "18.0", "2.8"],
-        ["2023", "13.0", "4.3", "14.0", "2.5"],
-        ["2024", "14.5", "4.0", "12.0", "2.3"],
-        ["2025", "16.0", "4.2", "10.0", "2.0"]
+        [
+          "2015",
+          "7.8",
+          "3.7",
+          "",
+          ""
+        ],
+        [
+          "2016",
+          "8.0",
+          "3.8",
+          "",
+          ""
+        ],
+        [
+          "2017",
+          "9.6",
+          "3.7",
+          "",
+          ""
+        ],
+        [
+          "2018",
+          "8.7",
+          "4.3",
+          "",
+          ""
+        ],
+        [
+          "2019",
+          "9.0",
+          "3.7",
+          "",
+          ""
+        ],
+        [
+          "2020",
+          "11.8",
+          "4.3",
+          "",
+          ""
+        ],
+        [
+          "2021",
+          "12.5",
+          "4.1",
+          "",
+          ""
+        ],
+        [
+          "2022",
+          "15.1",
+          "4.4",
+          "",
+          ""
+        ],
+        [
+          "2023",
+          "16.0",
+          "4.1",
+          "",
+          ""
+        ],
+        [
+          "2024",
+          "17.4",
+          "4.5",
+          "",
+          ""
+        ],
+        [
+          "2025",
+          "18.4",
+          "4.3",
+          "",
+          ""
+        ]
       ]
     }
   }

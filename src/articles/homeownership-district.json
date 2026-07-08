@@ -9,7 +9,7 @@
   },
   "heroImage": "placeholder-district-1",
   "heroCaption": "香港18區自置居所比率地圖 — 從業主比率看各區財富分佈（圖片由 AI 生成）",
-  "lastUpdated": "2026-07-07",
+  "lastUpdated": "2026-07-09",
   "dataSource": "政府統計處（C&SD）人口普查及中期人口統計",
   "dataSourceUrl": "https://www.censtatd.gov.hk",
   "summary": "香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。",
@@ -50,35 +50,165 @@
       "type": "bar",
       "height": 500,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "grid": { "left": 100, "right": 80, "top": 20, "bottom": 40 },
-        "xAxis": { "type": "value", "name": "自置居所比率 (%)", "max": 70 },
-        "yAxis": { "type": "category", "data": ["觀塘", "深水埗", "葵青", "黃大仙", "油尖旺", "九龍城", "屯門", "北區", "元朗", "荃灣", "沙田", "大埔", "南區", "東區", "中西區", "離島", "西貢", "灣仔"], "axisLabel": { "fontSize": 11 } },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": 100,
+          "right": 80,
+          "top": 20,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "自置居所比率 (%)",
+          "max": 70
+        },
+        "yAxis": {
+          "type": "category",
+          "data": [
+            "觀塘",
+            "深水埗",
+            "葵青",
+            "黃大仙",
+            "油尖旺",
+            "九龍城",
+            "屯門",
+            "北區",
+            "元朗",
+            "荃灣",
+            "沙田",
+            "大埔",
+            "南區",
+            "東區",
+            "中西區",
+            "離島",
+            "西貢",
+            "灣仔"
+          ],
+          "axisLabel": {
+            "fontSize": 11
+          }
+        },
         "series": [
           {
             "name": "自置居所比率",
             "type": "bar",
             "data": [
-              { "value": 35.2, "itemStyle": { "color": "#e63946" } },
-              { "value": 38.5, "itemStyle": { "color": "#f4a261" } },
-              { "value": 39.8, "itemStyle": { "color": "#f4a261" } },
-              { "value": 41.2, "itemStyle": { "color": "#f4a261" } },
-              { "value": 42.5, "itemStyle": { "color": "#f4a261" } },
-              { "value": 44.8, "itemStyle": { "color": "#e76f51" } },
-              { "value": 46.2, "itemStyle": { "color": "#e76f51" } },
-              { "value": 47.0, "itemStyle": { "color": "#e76f51" } },
-              { "value": 47.5, "itemStyle": { "color": "#e76f51" } },
-              { "value": 48.0, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 49.2, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 50.5, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 51.8, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 53.0, "itemStyle": { "color": "#457b9d" } },
-              { "value": 55.2, "itemStyle": { "color": "#457b9d" } },
-              { "value": 55.8, "itemStyle": { "color": "#457b9d" } },
-              { "value": 56.5, "itemStyle": { "color": "#457b9d" } },
-              { "value": 58.2, "itemStyle": { "color": "#1e3a5f" } }
+              {
+                "value": 35.2,
+                "itemStyle": {
+                  "color": "#e63946"
+                }
+              },
+              {
+                "value": 38.5,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 39.8,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 41.2,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 42.5,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 44.8,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": 46.2,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": 47.0,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": 47.5,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": 48.0,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 49.2,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 50.5,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 51.8,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 53.0,
+                "itemStyle": {
+                  "color": "#457b9d"
+                }
+              },
+              {
+                "value": 55.2,
+                "itemStyle": {
+                  "color": "#457b9d"
+                }
+              },
+              {
+                "value": 55.8,
+                "itemStyle": {
+                  "color": "#457b9d"
+                }
+              },
+              {
+                "value": 56.5,
+                "itemStyle": {
+                  "color": "#457b9d"
+                }
+              },
+              {
+                "value": 58.2,
+                "itemStyle": {
+                  "color": "#1e3a5f"
+                }
+              }
             ],
-            "label": { "show": true, "position": "right", "formatter": "{c}%" }
+            "label": {
+              "show": true,
+              "position": "right",
+              "formatter": "{c}%"
+            }
           }
         ]
       }
@@ -89,37 +219,175 @@
       "type": "scatter",
       "height": 400,
       "option": {
-        "tooltip": { "formatter": "{b}<br/>自置比率: {c}%" },
-        "grid": { "left": 70, "right": 30, "top": 30, "bottom": 50 },
-        "xAxis": { "type": "value", "name": "家庭月入中位數（千元）", "min": 20, "max": 60 },
-        "yAxis": { "type": "value", "name": "自置居所比率 (%)", "min": 30, "max": 65 },
+        "tooltip": {
+          "formatter": "{b}<br/>自置比率: {c}%"
+        },
+        "grid": {
+          "left": 70,
+          "right": 30,
+          "top": 30,
+          "bottom": 50
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "家庭月入中位數（千元）",
+          "min": 20,
+          "max": 60
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "自置居所比率 (%)",
+          "min": 30,
+          "max": 65
+        },
         "series": [
           {
             "type": "scatter",
             "symbolSize": 18,
             "data": [
-              { "value": [52, 58.2], "name": "灣仔" },
-              { "value": [53, 57.8], "name": "中西區" },
-              { "value": [42, 56.5], "name": "西貢" },
-              { "value": [48, 55.8], "name": "離島" },
-              { "value": [44, 55.2], "name": "中西區" },
-              { "value": [38, 53.0], "name": "東區" },
-              { "value": [36, 51.8], "name": "南區" },
-              { "value": [35, 50.5], "name": "大埔" },
-              { "value": [34, 49.2], "name": "沙田" },
-              { "value": [33, 48.0], "name": "荃灣" },
-              { "value": [32, 47.5], "name": "元朗" },
-              { "value": [31, 47.0], "name": "北區" },
-              { "value": [30, 46.2], "name": "屯門" },
-              { "value": [35, 44.8], "name": "九龍城" },
-              { "value": [31, 42.5], "name": "油尖旺" },
-              { "value": [29, 41.2], "name": "黃大仙" },
-              { "value": [30, 39.8], "name": "葵青" },
-              { "value": [29, 38.5], "name": "深水埗" },
-              { "value": [28, 35.2], "name": "觀塘" }
+              {
+                "value": [
+                  52,
+                  58.2
+                ],
+                "name": "灣仔"
+              },
+              {
+                "value": [
+                  53,
+                  57.8
+                ],
+                "name": "中西區"
+              },
+              {
+                "value": [
+                  42,
+                  56.5
+                ],
+                "name": "西貢"
+              },
+              {
+                "value": [
+                  48,
+                  55.8
+                ],
+                "name": "離島"
+              },
+              {
+                "value": [
+                  44,
+                  55.2
+                ],
+                "name": "中西區"
+              },
+              {
+                "value": [
+                  38,
+                  53.0
+                ],
+                "name": "東區"
+              },
+              {
+                "value": [
+                  36,
+                  51.8
+                ],
+                "name": "南區"
+              },
+              {
+                "value": [
+                  35,
+                  50.5
+                ],
+                "name": "大埔"
+              },
+              {
+                "value": [
+                  34,
+                  49.2
+                ],
+                "name": "沙田"
+              },
+              {
+                "value": [
+                  33,
+                  48.0
+                ],
+                "name": "荃灣"
+              },
+              {
+                "value": [
+                  32,
+                  47.5
+                ],
+                "name": "元朗"
+              },
+              {
+                "value": [
+                  31,
+                  47.0
+                ],
+                "name": "北區"
+              },
+              {
+                "value": [
+                  30,
+                  46.2
+                ],
+                "name": "屯門"
+              },
+              {
+                "value": [
+                  35,
+                  44.8
+                ],
+                "name": "九龍城"
+              },
+              {
+                "value": [
+                  31,
+                  42.5
+                ],
+                "name": "油尖旺"
+              },
+              {
+                "value": [
+                  29,
+                  41.2
+                ],
+                "name": "黃大仙"
+              },
+              {
+                "value": [
+                  30,
+                  39.8
+                ],
+                "name": "葵青"
+              },
+              {
+                "value": [
+                  29,
+                  38.5
+                ],
+                "name": "深水埗"
+              },
+              {
+                "value": [
+                  28,
+                  35.2
+                ],
+                "name": "觀塘"
+              }
             ],
-            "itemStyle": { "color": "#457b9d" },
-            "label": { "show": true, "formatter": "{@[2]}", "position": "top", "fontSize": 10 }
+            "itemStyle": {
+              "color": "#457b9d"
+            },
+            "label": {
+              "show": true,
+              "formatter": "{@[2]}",
+              "position": "top",
+              "fontSize": 10
+            }
           }
         ]
       }
@@ -130,21 +398,72 @@
       "type": "bar",
       "height": 350,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "grid": { "left": 60, "right": 30, "top": 20, "bottom": 40 },
-        "xAxis": { "type": "category", "data": ["25-34歲", "35-44歲", "45-54歲", "55-64歲", "65歲以上"] },
-        "yAxis": { "type": "value", "name": "自置比率 (%)", "min": 0, "max": 80 },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": 60,
+          "right": 30,
+          "top": 20,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "25-34歲",
+            "35-44歲",
+            "45-54歲",
+            "55-64歲",
+            "65歲以上"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "自置比率 (%)",
+          "min": 0,
+          "max": 80
+        },
         "series": [
           {
-            "name": "自置居所比率", "type": "bar",
+            "name": "自置居所比率",
+            "type": "bar",
             "data": [
-              { "value": 22, "itemStyle": { "color": "#f4a261" } },
-              { "value": 38, "itemStyle": { "color": "#e76f51" } },
-              { "value": 55, "itemStyle": { "color": "#457b9d" } },
-              { "value": 68, "itemStyle": { "color": "#1e3a5f" } },
-              { "value": 72, "itemStyle": { "color": "#1e3a5f" } }
+              {
+                "value": 22,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 38,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": 55,
+                "itemStyle": {
+                  "color": "#457b9d"
+                }
+              },
+              {
+                "value": 68,
+                "itemStyle": {
+                  "color": "#1e3a5f"
+                }
+              },
+              {
+                "value": 72,
+                "itemStyle": {
+                  "color": "#1e3a5f"
+                }
+              }
             ],
-            "label": { "show": true, "position": "top", "formatter": "{c}%" }
+            "label": {
+              "show": true,
+              "position": "top",
+              "formatter": "{c}%"
+            }
           }
         ]
       }
@@ -155,63 +474,310 @@
       "type": "bar",
       "height": 450,
       "option": {
-        "tooltip": { "trigger": "axis" },
-        "grid": { "left": 100, "right": 30, "top": 20, "bottom": 40 },
-        "xAxis": { "type": "value", "name": "變化（百分點）" },
-        "yAxis": { "type": "category", "data": ["離島", "北區", "屯門", "觀塘", "深水埗", "葵青", "元朗", "荃灣", "沙田", "黃大仙", "西貢", "大埔", "油尖旺", "東區", "九龍城", "南區", "中西區", "灣仔"], "axisLabel": { "fontSize": 11 } },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": 100,
+          "right": 30,
+          "top": 20,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "變化（百分點）"
+        },
+        "yAxis": {
+          "type": "category",
+          "data": [
+            "離島",
+            "北區",
+            "屯門",
+            "觀塘",
+            "深水埗",
+            "葵青",
+            "元朗",
+            "荃灣",
+            "沙田",
+            "黃大仙",
+            "西貢",
+            "大埔",
+            "油尖旺",
+            "東區",
+            "九龍城",
+            "南區",
+            "中西區",
+            "灣仔"
+          ],
+          "axisLabel": {
+            "fontSize": 11
+          }
+        },
         "series": [
           {
-            "name": "變化（百分點）", "type": "bar",
+            "name": "變化（百分點）",
+            "type": "bar",
             "data": [
-              { "value": 5.0, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 3.5, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 2.8, "itemStyle": { "color": "#2a9d8f" } },
-              { "value": 2.0, "itemStyle": { "color": "#f4a261" } },
-              { "value": 1.8, "itemStyle": { "color": "#f4a261" } },
-              { "value": 1.5, "itemStyle": { "color": "#f4a261" } },
-              { "value": 1.0, "itemStyle": { "color": "#f4a261" } },
-              { "value": 0.5, "itemStyle": { "color": "#a8dadc" } },
-              { "value": 0.0, "itemStyle": { "color": "#a8dadc" } },
-              { "value": -0.5, "itemStyle": { "color": "#e76f51" } },
-              { "value": -1.0, "itemStyle": { "color": "#e76f51" } },
-              { "value": -1.5, "itemStyle": { "color": "#e76f51" } },
-              { "value": -2.0, "itemStyle": { "color": "#e63946" } },
-              { "value": -2.5, "itemStyle": { "color": "#e63946" } },
-              { "value": -3.0, "itemStyle": { "color": "#e63946" } },
-              { "value": -3.5, "itemStyle": { "color": "#e63946" } },
-              { "value": -4.0, "itemStyle": { "color": "#c1121f" } },
-              { "value": -5.0, "itemStyle": { "color": "#c1121f" } }
+              {
+                "value": 5.0,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 3.5,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 2.8,
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 2.0,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 1.8,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 1.5,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 1.0,
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 0.5,
+                "itemStyle": {
+                  "color": "#a8dadc"
+                }
+              },
+              {
+                "value": 0.0,
+                "itemStyle": {
+                  "color": "#a8dadc"
+                }
+              },
+              {
+                "value": -0.5,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": -1.0,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": -1.5,
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": -2.0,
+                "itemStyle": {
+                  "color": "#e63946"
+                }
+              },
+              {
+                "value": -2.5,
+                "itemStyle": {
+                  "color": "#e63946"
+                }
+              },
+              {
+                "value": -3.0,
+                "itemStyle": {
+                  "color": "#e63946"
+                }
+              },
+              {
+                "value": -3.5,
+                "itemStyle": {
+                  "color": "#e63946"
+                }
+              },
+              {
+                "value": -4.0,
+                "itemStyle": {
+                  "color": "#c1121f"
+                }
+              },
+              {
+                "value": -5.0,
+                "itemStyle": {
+                  "color": "#c1121f"
+                }
+              }
             ],
-            "label": { "show": true, "position": "right", "formatter": "{c}" }
+            "label": {
+              "show": true,
+              "position": "right",
+              "formatter": "{c}"
+            }
           }
         ]
       }
     }
   ],
-  "relatedArticles": ["income-vs-price", "public-housing"],
+  "relatedArticles": [
+    "income-vs-price",
+    "public-housing"
+  ],
   "dataTables": {
     "districtTable": {
       "title": "香港18區自置居所比率詳表",
-      "headers": ["地區", "自置比率 (%)", "月入中位數（千元）", "人口（萬）", "公共房屋比例 (%)"],
+      "headers": [
+        "地區",
+        "自置比率 (%)",
+        "月入中位數（千元）",
+        "人口（萬）",
+        "公共房屋比例 (%)"
+      ],
       "rows": [
-        ["灣仔", "58.2", "52.0", "15.2", "18"],
-        ["中西區", "57.8", "53.0", "24.3", "15"],
-        ["西貢", "56.5", "42.0", "49.0", "42"],
-        ["離島", "55.8", "48.0", "20.5", "38"],
-        ["南區", "51.8", "36.0", "27.5", "28"],
-        ["東區", "53.0", "38.0", "55.0", "32"],
-        ["大埔", "50.5", "35.0", "32.0", "35"],
-        ["沙田", "49.2", "34.0", "70.0", "48"],
-        ["荃灣", "48.0", "33.0", "32.5", "30"],
-        ["元朗", "47.5", "32.0", "65.0", "40"],
-        ["北區", "47.0", "31.0", "35.0", "45"],
-        ["屯門", "46.2", "30.0", "50.0", "48"],
-        ["九龍城", "44.8", "35.0", "42.0", "22"],
-        ["油尖旺", "42.5", "31.0", "35.0", "25"],
-        ["黃大仙", "41.2", "29.0", "42.0", "58"],
-        ["葵青", "39.8", "30.0", "52.0", "55"],
-        ["深水埗", "38.5", "29.0", "42.0", "40"],
-        ["觀塘", "35.2", "28.0", "68.0", "60"]
+        [
+          "灣仔",
+          "58.2",
+          "52.0",
+          "15.2",
+          "18"
+        ],
+        [
+          "中西區",
+          "57.8",
+          "53.0",
+          "24.3",
+          "15"
+        ],
+        [
+          "西貢",
+          "56.5",
+          "42.0",
+          "49.0",
+          "42"
+        ],
+        [
+          "離島",
+          "55.8",
+          "48.0",
+          "20.5",
+          "38"
+        ],
+        [
+          "南區",
+          "51.8",
+          "36.0",
+          "27.5",
+          "28"
+        ],
+        [
+          "東區",
+          "53.0",
+          "38.0",
+          "55.0",
+          "32"
+        ],
+        [
+          "大埔",
+          "50.5",
+          "35.0",
+          "32.0",
+          "35"
+        ],
+        [
+          "沙田",
+          "49.2",
+          "34.0",
+          "70.0",
+          "48"
+        ],
+        [
+          "荃灣",
+          "48.0",
+          "33.0",
+          "32.5",
+          "30"
+        ],
+        [
+          "元朗",
+          "47.5",
+          "32.0",
+          "65.0",
+          "40"
+        ],
+        [
+          "北區",
+          "47.0",
+          "31.0",
+          "35.0",
+          "45"
+        ],
+        [
+          "屯門",
+          "46.2",
+          "30.0",
+          "50.0",
+          "48"
+        ],
+        [
+          "九龍城",
+          "44.8",
+          "35.0",
+          "42.0",
+          "22"
+        ],
+        [
+          "油尖旺",
+          "42.5",
+          "31.0",
+          "35.0",
+          "25"
+        ],
+        [
+          "黃大仙",
+          "41.2",
+          "29.0",
+          "42.0",
+          "58"
+        ],
+        [
+          "葵青",
+          "39.8",
+          "30.0",
+          "52.0",
+          "55"
+        ],
+        [
+          "深水埗",
+          "38.5",
+          "29.0",
+          "42.0",
+          "40"
+        ],
+        [
+          "觀塘",
+          "35.2",
+          "28.0",
+          "68.0",
+          "60"
+        ]
       ]
     }
   }
