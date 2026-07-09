@@ -100,6 +100,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .plain-content a { color: #457b9d; }
 #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #1a2332; color: #fff; padding: 16px 24px; z-index: 999; display: none; font-size: 14px; line-height: 1.5; }
 #cookie-banner a { color: #f4a261; }
+
+.toc-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px 28px; margin:28px 0; }
+.toc-box h3 { font-size:16px; color:#1e3a5f; margin-bottom:12px; }
+.toc-box ol { list-style:none; padding:0; margin:0; }
+.toc-box li { margin:6px 0; }
+.toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
+.toc-box a:hover { background:#e8edf3; }
+.section h2 { scroll-margin-top:80px; }
+.key-insight { background:#fff8e1; border-left:4px solid #f4a261; padding:16px 20px; margin:16px 0; border-radius:0 8px 8px 0; }
 </style>"""
 
 COOKIE_JS = """
