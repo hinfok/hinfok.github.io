@@ -109,6 +109,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .toc-box a:hover { background:#e8edf3; }
 .section h2 { scroll-margin-top:80px; }
 .key-insight { background:#fff8e1; border-left:4px solid #f4a261; padding:16px 20px; margin:16px 0; border-radius:0 8px 8px 0; }
+.toc-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px 28px; margin:28px 0; }
+.toc-box h3 { font-size:16px; color:#1e3a5f; margin-bottom:12px; }
+.toc-box ol { list-style:none; padding:0; margin:0; }
+.toc-box li { margin:6px 0; }
+.toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
+.toc-box a:hover { background:#e8edf3; }
+.section h2 { scroll-margin-top:80px; }
 </style>"""
 
 COOKIE_JS = """
@@ -227,9 +234,19 @@ def build_article_page(article):
     
     breadcrumb = f'<div class="breadcrumb"><a href="/">首頁</a> › <span>{title}</span></div>'
     
+    # Generate table of contents
+    toc_items = ""
+    for ti, tsec in enumerate(article["sections"]):
+        short_title = tsec["heading"][:45]
+        if len(tsec["heading"]) > 45: short_title += "..."
+        toc_items += '<li><a href="#sec-' + str(ti) + '">' + short_title + '</a></li>' + "\n"
+    toc_html = '<div class="container"><div class="toc-box"><h3>' + chr(30446) + chr(24465) + '</h3><ol>' + toc_items + '</ol></div></div>'
+
     sections_html = ""
-    for sec in article["sections"]:
-        sections_html += f'<div class="section container"><h2>{sec["heading"]}</h2>{sec["content"]}</div>\n'
+    charts_js = "window.__charts = window.__charts || {};\n"
+    interleaved_charts = set()
+    for idx, sec in enumerate(article["sections"]):
+        sections_html += f'<div class="section container"><h2 id="sec-{idx}">{sec["heading"]}</h2>{sec["content"]}</div>\n'
     
     summary = f'<div class="container"><div class="summary-box"><h3>重點摘要</h3><p>{article["summary"]}</p></div></div>'
     meta = f'<div class="container"><div class="meta-info"><span>最後更新：{article.get("lastUpdated","")}</span><span>數據來源：<a href="{article.get("dataSourceUrl","#")}" target="_blank" rel="noopener">{article.get("dataSource","")}</a></span></div></div>'
