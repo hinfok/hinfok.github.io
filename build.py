@@ -16,6 +16,7 @@ SEO = config["seo"]
 THEME = config["theme"]
 AUTHOR = config["author"]
 ADSENSE = config.get("adsense", {"enabled": False, "publisherId": ""})
+ADS_ID = ADSENSE.get("publisherId", "") if ADSENSE.get("enabled") else ""
 EMAIL = SITE.get("email", "")
 
 HEADER_CSS = """
@@ -194,6 +195,7 @@ def build_head(title, desc, keywords, og_image, full_url, json_ld_str, is_home=F
         extra_meta,
         '<script src="https://cdn.tailwindcss.com"></script>',
         '<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>',
+        ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADS_ID + '" crossorigin="anonymous"></script>') if ADS_ID else '',
         HEADER_CSS,
         '</head>'
     ]
@@ -596,7 +598,7 @@ def main():
     if pid:
         ads = f"google.com, {pid}, DIRECT, f08c47fec0942fa0\n"
     else:
-        ads = "# Please set adsense.publisherId in src/data/config.json"
+        ads = ("google.com, " + ADS_ID + ", DIRECT, f08c47fec0942fa0\n") if ADS_ID else "# Set adsense.publisherId in config.json\n"
     with open(OUTPUT_DIR / "ads.txt", "w", encoding="utf-8") as f:
         f.write(ads)
     

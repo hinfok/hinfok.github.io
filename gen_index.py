@@ -8,6 +8,8 @@ out = os.path.join(base, 'output')
 config = json.load(open(os.path.join(cd, 'config.json'), encoding='utf-8'))
 cats = json.load(open(os.path.join(cd, 'categories.json'), encoding='utf-8'))['categories']
 S = config['site']; SE = config['seo']
+ADS = config.get('adsense', {'enabled': False, 'publisherId': ''})
+ADS_ID = ADS.get('publisherId', '') if ADS.get('enabled') else ''
 
 articles = []
 for f in os.listdir(ad):
@@ -42,6 +44,12 @@ html.append('<meta property="og:description" content="' + esc(SE['defaultDescrip
 html.append('<meta property="og:type" content="website">')
 html.append('<meta property="og:site_name" content="' + esc(S['name']) + '">')
 html.append('<link rel="canonical" href="' + S['baseUrl'] + '/">')
+html.append('<meta name="robots" content="index, follow">')
+if SE.get('googleSiteVerification'):
+    html.append('<meta name="google-site-verification" content="' + SE['googleSiteVerification'] + '">')
+if ADS_ID:
+    html.append('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADS_ID + '" crossorigin="anonymous"></script>')
+
 html.append('<title>HKInformation 香港資訊數據圖鑑 — 用數據看懂香港</title>')
 jld = {"@context":"https://schema.org","@type":"WebSite","name":S['name'],"url":S['baseUrl'],"description":SE['defaultDescription'],"potentialAction":{"@type":"SearchAction","target":S['baseUrl']+'/?s={search_term_string}',"query-input":"required name=search_term_string"}}
 html.append('<script type="application/ld+json">' + json.dumps(jld, ensure_ascii=False) + '</script>')
@@ -141,7 +149,8 @@ for c in cats:
 
 # Footer
 html.append('<footer>')
-html.append('<p>' + S['name'] + '</p><p>' + S['footer']['disclaimer'] + '</p><p>' + S['footer']['copyright'] + '</p>')
+html.append('<p style="margin-bottom:12px"><a href="/about">關於我們</a> · <a href="/privacy">私隱政策</a> · <a href="/sitemap.xml">網站地圖</a></p>')
+html.append('<p>' + S['name'] + '</p><p style="font-size:12px;opacity:0.7;max-width:700px;margin:8px auto">' + S['footer']['disclaimer'] + '</p><p style="margin-top:8px">' + S['footer']['copyright'] + '</p>')
 html.append('</footer>')
 
 # JS
@@ -153,6 +162,8 @@ html.append('if(m.length===0){e.innerHTML="<a style=\\"color:#999;cursor:default
 html.append('e.innerHTML=m.map(a=>"<a href=\'/" + a.slug + "\'>" + a.title + "<span class=\\"c\\">" + a.cat_name + "</span></a>").join("");e.style.display="block"}')
 html.append('document.addEventListener("click",function(e){if(!e.target.closest(".sbw")&&!e.target.closest(".hsb")){document.querySelectorAll(".sr,.hsr").forEach(el=>{el.style.display="none"})}})')
 html.append('</script>')
+html.append('<div id="ck" style="position:fixed;bottom:0;left:0;right:0;background:#1a2332;color:#fff;padding:14px 20px;z-index:999;display:none;font-size:13px"><div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>本網站使用 Cookie 以改善體驗及顯示廣告。繼續使用即表示同意我們的 <a href="/privacy" style="color:#f4a261">私隱政策</a>。</span><button onclick="document.getElementById(\'ck\').style.display=\'none\';localStorage.setItem(\'ck\',1)" style="background:#f4a261;border:none;color:#1a2332;padding:8px 20px;border-radius:6px;font-weight:600;cursor:pointer;white-space:nowrap">我了解</button></div></div>')
+html.append('<script>if(!localStorage.getItem("ck")){document.getElementById("ck").style.display="block"}</script>')
 html.append('</body></html>')
 
 with open(os.path.join(out, 'index.html'), 'w', encoding='utf-8') as f:
