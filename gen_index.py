@@ -57,7 +57,6 @@ html.append('.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padd
 html.append('.nav-links a:hover{background:rgba(255,255,255,0.12)}')
 html.append('.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}')
 html.append('@media(max-width:768px){.nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:#1e3a5f;padding:16px;flex-direction:column}.nav-links.open{display:flex}.nav-toggle{display:block}.hdr{flex-wrap:wrap}.sbw{order:3}}')
-)
 html.append('.logo{font-size:20px;font-weight:800;color:#fff;text-decoration:none}')
 html.append('.logo span{color:#f4a261}')
 html.append('.sbw{position:relative;max-width:250px}')
@@ -108,7 +107,7 @@ html.append('<a href="/#cat-culture">文化與交通</a>')
 html.append('<a href="/#cat-medical">醫療與環境</a>')
 html.append('</nav>')
 # nav toggle
-html.append('<button class="nav-toggle" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">☰</button>')
+html.append('<button class="nav-toggle" onclick="var n=document.querySelector(\'.nav-links\');if(n)n.classList.toggle(\'open\')">\u2630</button>')
 
 html.append('</div></header>')
 

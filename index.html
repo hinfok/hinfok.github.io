@@ -3,224 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HKInformation 香港資訊數據圖鑑 — 用數據看懂香港</title>
 <meta name="description" content="香港資訊數據圖鑑平台，提供樓市、經濟、人口、房屋等各項統計數據的深入分析與互動圖表。">
-<meta name="keywords" content="香港數據,香港資訊,香港樓價走勢,香港公屋輪候,香港收入中位數,香港物業空置率,香港18區,香港經濟數據">
 <meta property="og:title" content="HKInformation 香港資訊數據圖鑑 — 用數據看懂香港">
 <meta property="og:description" content="香港資訊數據圖鑑平台，提供樓市、經濟、人口、房屋等各項統計數據的深入分析與互動圖表。">
-<meta property="og:image" content="https://hinfok.com/images/og-default.svg">
-<meta property="og:url" content="https://hinfok.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HKInformation 香港資訊數據圖鑑">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://hinfok.com/">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "HKInformation 香港資訊數據圖鑑", "description": "HKInformation 香港資訊數據圖鑑提供香港各項統計數據的深入分析與互動圖表，讓你用數據看懂香港。", "url": "https://hinfok.com/", "author": {"@type": "Person", "name": "HKInformation Team"}}</script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-
+<link rel="canonical" href="https://hinfok.com//">
+<title>HKInformation 香港資訊數據圖鑑 — 用數據看懂香港</title>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "HKInformation 香港資訊數據圖鑑", "url": "https://hinfok.com/", "description": "香港資訊數據圖鑑平台，提供樓市、經濟、人口、房屋等各項統計數據的深入分析與互動圖表。", "potentialAction": {"@type": "SearchAction", "target": "https://hinfok.com//?s={search_term_string}", "query-input": "required name=search_term_string"}}</script>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; 
-       background: #f0f4f8; color: #1a2332; line-height: 1.8; }
-.site-header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 0; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.site-logo { font-size: 22px; font-weight: 800; color: #fff; text-decoration: none; }
-.site-logo span { color: #f4a261; }
-.nav-links { display: flex; gap: 6px; list-style: none; }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.12); color: #fff; }
-.nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
-.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 64px 24px; text-align: center; position: relative; overflow: hidden; }
-.hero h1 { font-size: 32px; margin-bottom: 16px; line-height: 1.3; max-width: 800px; margin-left: auto; margin-right: auto; }
-.hero p { font-size: 16px; opacity: 0.85; max-width: 650px; margin: 0 auto; }
-.hero-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-top: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
-.hero-caption { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 8px; text-align: center; }
-.page-hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 24px 32px; text-align: center; }
-.page-hero h1 { font-size: 28px; margin-bottom: 8px; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 40px 0; }
-.section h2 { font-size: 24px; margin-bottom: 20px; color: #1e3a5f; padding-bottom: 8px; border-bottom: 3px solid #e63946; display: inline-block; }
-.section h3 { font-size: 18px; margin: 24px 0 12px; color: #2d5a87; }
-.section p { margin-bottom: 16px; line-height: 1.9; color: #2c3e50; }
-.chart-box { background: #fff; border-radius: 12px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.chart-box h3 { font-size: 16px; color: #1e3a5f; margin-bottom: 12px; }
-.data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
-.data-table th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; }
-.data-table td { padding: 10px 16px; border-bottom: 1px solid #eee; }
-.data-table tr:nth-child(even) { background: #f8fafc; }
-.summary-box { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; border-radius: 12px; padding: 28px; margin: 28px 0; }
-.summary-box h3 { color: #f4a261; margin-bottom: 12px; font-size: 18px; }
-.summary-box p { color: rgba(255,255,255,0.9); line-height: 1.8; }
-.meta-info { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; color: #666; margin: 16px 0; }
-.meta-info a { color: #457b9d; }
-.tag { display: inline-block; background: #e8edf3; color: #1e3a5f; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 2px; }
-.related-card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; display: block; color: inherit; transition: transform 0.2s; }
-.related-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-.related-card h4 { color: #1e3a5f; font-size: 16px; margin-bottom: 8px; }
-.related-card p { font-size: 13px; color: #666; line-height: 1.5; }
-.site-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; margin-top: 48px; }
-.footer-inner { max-width: 1100px; margin: 0 auto; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 24px; }
-.footer-grid h4 { color: #fff; font-size: 16px; margin-bottom: 12px; }
-.footer-grid p { font-size: 13px; line-height: 1.7; }
-.footer-grid ul { list-style: none; }
-.footer-grid li { margin-bottom: 6px; }
-.footer-grid a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; }
-.footer-grid a:hover { color: #f4a261; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; font-size: 12px; text-align: center; }
-.footer-bottom p { margin-bottom: 6px; }
-.breadcrumb { font-size: 13px; color: #888; margin-bottom: 16px; max-width: 1100px; margin-left: auto; margin-right: auto; padding: 0 24px; }
-.breadcrumb a { color: #457b9d; text-decoration: none; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-@media (max-width: 768px) { 
-    .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #1e3a5f; padding: 16px; z-index: 100; }
-    .nav-links.open { display: flex; }
-    .nav-toggle { display: block; }
-    .hero h1 { font-size: 24px; }
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
-}
-.home-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: pointer; display: block; text-decoration: none; color: inherit; }
-.home-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
-.home-card-img { width: 100%; height: 180px; object-fit: cover; }
-.home-card-body { padding: 20px; }
-.home-card-body h3 { font-size: 18px; color: #1e3a5f; margin-bottom: 8px; }
-.home-card-body p { font-size: 13px; color: #555; line-height: 1.6; }
-.home-card-body .tags { margin-top: 10px; }
-.index-hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #457b9d 100%); color: #fff; padding: 80px 24px; text-align: center; }
-.index-hero h1 { font-size: 42px; margin-bottom: 16px; }
-.index-hero p { font-size: 18px; opacity: 0.85; max-width: 650px; margin: 0 auto; }
-.stat-bar { background: #fff; border-radius: 12px; padding: 20px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
-.stat-bar .num { font-size: 28px; font-weight: 800; color: #1e3a5f; }
-.stat-bar .label { font-size: 13px; color: #888; }
-.plain-content { background: #fff; border-radius: 12px; padding: 32px; margin: 24px 0; box-shadow: 0 1px 12px rgba(0,0,0,0.05); }
-.plain-content ul, .plain-content ol { margin-left: 24px; line-height: 2; }
-.plain-content a { color: #457b9d; }
-#cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #1a2332; color: #fff; padding: 16px 24px; z-index: 999; display: none; font-size: 14px; line-height: 1.5; }
-#cookie-banner a { color: #f4a261; }
-
-.toc-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px 28px; margin:28px 0; }
-.toc-box h3 { font-size:16px; color:#1e3a5f; margin-bottom:12px; }
-.toc-box ol { list-style:none; padding:0; margin:0; }
-.toc-box li { margin:6px 0; }
-.toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
-.toc-box a:hover { background:#e8edf3; }
-.section h2 { scroll-margin-top:80px; }
-.key-insight { background:#fff8e1; border-left:4px solid #f4a261; padding:16px 20px; margin:16px 0; border-radius:0 8px 8px 0; }
-.toc-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px 28px; margin:28px 0; }
-.toc-box h3 { font-size:16px; color:#1e3a5f; margin-bottom:12px; }
-.toc-box ol { list-style:none; padding:0; margin:0; }
-.toc-box li { margin:6px 0; }
-.toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
-.toc-box a:hover { background:#e8edf3; }
-.section h2 { scroll-margin-top:80px; }
-
-.article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 36px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.article-main { min-width: 0; }
-.article-main .container { max-width: 100%; padding: 0; }
-.article-sidebar { position: sticky; top: 80px; align-self: start; }
-.article-sidebar .sc { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
-.article-sidebar .sc h4 { font-size: 14px; color: #1e3a5f; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #e63946; }
-.article-sidebar .sc ul { list-style: none; padding: 0; margin: 0; }
-.article-sidebar .sc li { margin: 5px 0; }
-.article-sidebar .sc a { color: #457b9d; text-decoration: none; font-size: 13px; display: block; padding: 4px 0; }
-.article-sidebar .sc a:hover { color: #1e3a5f; }
-.side-stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
-.side-stat .num { font-weight: 700; color: #1e3a5f; }
-.side-stat .lbl { color: #666; }
-.side-meta { font-size: 12px; color: #999; line-height: 1.6; }
-@media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
-
-/* === HKInformation Layout Overrides === */
-.article-layout { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 300px; gap: 40px; }
-.article-main { min-width: 0; }
-.article-sidebar { position: sticky; top: 80px; align-self: start; }
-.home-card { display: flex; flex-direction: column; height: 100%; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.06); transition: transform 0.2s; }
-.home-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
-.home-card-body { padding: 16px 20px; flex: 1; display: flex; flex-direction: column; }
-.home-card-body h3 { font-size: 16px; color: #1e3a5f; margin-bottom: 6px; line-height: 1.3; }
-.home-card-body p { font-size: 13px; color: #555; flex: 1; }
-.home-card-img { width: 100%; height: 160px; object-fit: cover; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.section { padding: 32px 0; }
-.section h2 { font-size: 22px; margin-bottom: 16px; color: #1e3a5f; }
-.hero { padding: 48px 24px; }
-.hero h1 { font-size: 28px; }
-@media (max-width: 1000px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
-@media (max-width: 650px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } .hero h1 { font-size: 22px; } }
-</style>
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">HK<span>Info</span> 香港資訊數據圖鑑</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links"><li><a href="/" class="active">首頁</a></li>
-<li><a href="/#cat-housing">🏠 樓市與房屋</a></li>
-<li><a href="/#cat-population">👥 人口與社會</a></li>
-<li><a href="/#cat-economy">💰 經濟與零售</a></li>
-<li><a href="/#cat-labour">💼 職場與教育</a></li>
-<li><a href="/#cat-culture">🎭 文化與交通</a></li>
-<li><a href="/#cat-medical">🏥 醫療與環境</a></li>
-<li><a href="/about">關於我們</a></li>
-<li><a href="/privacy">私隱政策</a></li></ul>
-  </div>
-</header>
-<div class="index-hero">
-  <h1>HKInformation 香港資訊數據圖鑑</h1>
-  <p>香港資訊數據圖鑑 — 樓市 · 經濟 · 民生 · 人口</p>
-  <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">📈 樓價分析</span>
-    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🏠 公屋輪候</span>
-    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">💰 收入分析</span>
-    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🏢 空置率</span>
-    <span class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">🗺️ 18區數據</span>
-  </div>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:#f0f4f8;color:#1a2332;line-height:1.7}
+header{background:linear-gradient(135deg,#1e3a5f,#2d5a87);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.15)}
+.hdr{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px}
+.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;white-space:nowrap;transition:.2s}
+.nav-links a:hover{background:rgba(255,255,255,0.12)}
+.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:#1e3a5f;padding:16px;flex-direction:column}.nav-links.open{display:flex}.nav-toggle{display:block}.hdr{flex-wrap:wrap}.sbw{order:3}}
+.logo{font-size:20px;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#f4a261}
+.sbw{position:relative;max-width:250px}
+.sbw input{width:100%;padding:8px 12px;border:none;border-radius:8px;font-size:13px;background:rgba(255,255,255,0.15);color:#fff;outline:none}
+.sbw input::placeholder{color:rgba(255,255,255,0.5)}
+.sbw input:focus{background:rgba(255,255,255,0.25)}
+.sr{position:absolute;top:100%;right:0;width:350px;background:#fff;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.15);max-height:350px;overflow-y:auto;display:none;z-index:200}
+.sr a{display:block;padding:10px 14px;text-decoration:none;color:#333;border-bottom:1px solid #eee;font-size:13px}
+.sr a:hover{background:#f0f4f8};.sr .c{font-size:11px;color:#888}
+.hero{background:linear-gradient(135deg,#1e3a5f,#2d5a87 50%,#457b9d);color:#fff;padding:50px 24px;text-align:center}
+.hero h1{font-size:34px;margin-bottom:8px;font-weight:800}
+.hero p{font-size:16px;opacity:.85;margin:0 auto 24px;max-width:600px}
+.sts{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.st{text-align:center}
+.st .n{font-size:26px;font-weight:800}
+.st .l{font-size:13px;opacity:.7}
+.hsb{max-width:480px;margin:0 auto;position:relative}
+.hsb input{width:100%;padding:12px 18px;border:none;border-radius:10px;font-size:15px;outline:none;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+.hsr{position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:0 0 10px 10px;box-shadow:0 8px 30px rgba(0,0,0,0.15);max-height:320px;overflow-y:auto;display:none}
+.hsr a{display:block;padding:12px 18px;text-decoration:none;color:#333;border-bottom:1px solid #eee;font-size:14px}
+.hsr a:hover{background:#f0f4f8};.hsr .c{font-size:11px;color:#888}
+.sc{max-width:1200px;margin:0 auto;padding:32px 24px}
+.sc h2{font-size:22px;color:#1e3a5f;margin-bottom:8px}
+.sc p{color:#888;font-size:14px;margin-bottom:16px}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cd{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.06);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:.2s}
+.cd:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,0.1)}
+.cdb{padding:14px 16px;flex:1;display:flex;flex-direction:column}
+.cdb h3{font-size:15px;color:#1e3a5f;margin-bottom:6px;line-height:1.3}
+.cdb p{font-size:13px;color:#555;flex:1}
+.tag{display:inline-block;background:#e8edf3;color:#1e3a5f;padding:2px 8px;border-radius:12px;font-size:11px;margin:4px 2px 0 0}
+footer{background:#1a2332;color:rgba(255,255,255,0.7);padding:28px 24px;text-align:center;font-size:13px}
+footer a{color:#f4a261;text-decoration:none}
+@media(max-width:900px){.cg{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:28px}}
+@media(max-width:650px){.cg{grid-template-columns:1fr}.hero h1{font-size:22px}.hdr{height:auto;padding:12px 16px;flex-wrap:wrap}.sbw{max-width:100%;width:100%;order:3}}
+</style></head><body>
+<header><div class="hdr">
+<a href="/" class="logo">HK<span>Info</span> 香港資訊數據圖鑑</a>
+<div class="sbw"><input type="text" id="hs" placeholder="搜尋..." oninput="q(this.value,1)"><div id="sr1" class="sr"></div></div>
+<nav class="nav-links">
+<a href="/#cat-housing">樓市與房屋</a>
+<a href="/#cat-population">人口與社會</a>
+<a href="/#cat-economy">經濟與零售</a>
+<a href="/#cat-labour">職場與教育</a>
+<a href="/#cat-culture">文化與交通</a>
+<a href="/#cat-medical">醫療與環境</a>
+</nav>
+<button class="nav-toggle" onclick="var n=document.querySelector('.nav-links');if(n)n.classList.toggle('open')">☰</button>
+</div></header>
+<section class="hero">
+<h1>HKInformation 香港資訊數據圖鑑</h1>
+<p>香港資訊數據圖鑑 — 樓市 · 經濟 · 民生 · 人口</p>
+<div class="sts">
+<div class="st"><div class="n">30+</div><div class="l">分析文章</div></div>
+<div class="st"><div class="n">6</div><div class="l">大分類</div></div>
+<div class="st"><div class="n">2015-2025</div><div class="l">十年數據</div></div>
 </div>
-<div class="container" style="margin-top:-30px;position:relative;z-index:10;">
-  <div class="grid-3">
-    <div class="stat-bar"><div class="num">30+</div><div class="label">分析文章</div></div>
-    <div class="stat-bar"><div class="num">18區</div><div class="label">大分類</div></div>
-    <div class="stat-bar"><div class="num">2015-2025</div><div class="label">十年數據</div></div>
-  </div>
-</div>
-<div class="section container"><h2>🏠 樓市與房屋</h2><p style="color:#888;font-size:14px;margin-bottom:16px;">樓價走勢、公屋輪候、負擔能力及空置率分析</p><div class="grid-3"><a href='/rental-price-index' class=home-card><div class=home-card-body><h3>香港私樓租金指數與樓價指數走勢分析（2015-2025）</h3><p>香港私樓售價指數從2015年326.7點攀升至2021年高位436.2點後回落，2025年跌至309.7點，累計跌幅約29%。租金指數反而由2015年187.4點穩步升至2025年216.0點。租金回報率近年回升，從2021年低位2.4%去到2025年3.7%，但主要因為樓價跌而唔係租金升。...</p></div></a><a href='/public-housing' class=home-card><div class=home-card-body><h3>香港公屋輪候時間與供應趨勢分析</h3><p>香港公屋平均輪候時間在2021年達到歷史高位5.8年，近年隨著政府加大供應已回落至約4.8年，但仍遠高於政府3年目標。一般申請者高達13萬宗，而每年可供編配的公屋單位僅約2-3萬伙，供求失衡問題嚴峻。...</p></div></a><a href='/income-vs-price' class=home-card><div class=home-card-body><h3>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析</h3><p>香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。...</p></div></a><a href='/vacancy-rate' class=home-card><div class=home-card-body><h3>香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場</h3><p>根據差餉物業估價署數據，甲級寫字樓空置率由2015年7.8%飆升至2025年18.4%歷史高位，較2019年的9.0%翻倍。住宅空置率維持3.7-4.5%的健康水平，整體物業市場出現罕見的商住兩極化局面。...</p></div></a><a href='/homeownership-district' class=home-card><div class=home-card-body><h3>香港18區自置居所比率全面分析：邊區最多業主？</h3><p>香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。...</p></div></a></div></div><div class="section container"><h2>👥 人口與社會</h2><p style="color:#888;font-size:14px;margin-bottom:16px;">出生率、死亡率、婚姻、壽命及移民數據</p><div class="grid-3"><a href='/birth-death-rate' class=home-card><div class=home-card-body><h3>香港出生率 vs 死亡率走勢：銀髮海嘯大對比</h3><p>出生率由2015年8.5‰跌至2025年6.7‰，死亡率由7.2‰升至10.1‰。人口自然增長自2020年起轉負，2025年達-3.4‰。...</p></div></a><a href='/marriage-divorce' class=home-card><div class=home-card-body><h3>香港結婚及離婚率20年走勢：點解愈來愈遲婚？</h3><p>結婚率由2015年8.2‰下降至2025年7.0‰，女性初婚中位數由29.3歲推遲至30.8歲。離婚率維持約2.6-3.1‰水平。...</p></div></a><a href='/life-expectancy' class=home-card><div class=home-card-body><h3>香港人平均壽命趨勢：全球最長壽秘密</h3><p>香港人均壽命持續位居全球首位。男性出生時預期壽命由2015年81.2歲升至2025年82.9歲，女性由87.3歲升至88.3歲，男女壽命差距約5.4歲。...</p></div></a><a href='/foreign-domestic-helpers' class=home-card><div class=home-card-body><h3>香港外籍家庭傭工人口變動分析</h3><p>香港外籍家庭傭工人數由2015年約33萬人增至2025年約38萬人。疫情期間曾短暫下跌，其後快速回升。...</p></div></a><a href='/net-migration' class=home-card><div class=home-card-body><h3>香港人口淨遷移與離港人數估算</h3><p>香港人口淨遷移由2015年淨流入約1萬人，轉為2020年起淨流出，2022年流出達高峰約7萬人。2024年起隨專才輸入，淨流出收窄至約2-3萬人。...</p></div></a></div></div><div class="section container"><h2>💰 經濟與零售</h2><p style="color:#888;font-size:14px;margin-bottom:16px;">零售、旅遊、電商、餐飲及通脹趨勢</p><div class="grid-3"><a href='/retail-sales' class=home-card><div class=home-card-body><h3>香港零售業銷貨價值：奢侈品 vs 民生</h3><p>零售業銷貨總值由2015年高峰4,800億跌至2023年低位，2025年回升至約5,500億。奢侈品佔比由2015年35%降至25%，民生必需品比例上升。...</p></div></a><a href='/tourist-arrivals' class=home-card><div class=home-card-body><h3>訪港旅客數字與消費力走勢</h3><p>訪港旅客由2018年6,500萬人次高峰急跌至2021年僅90人次，2025年逐步回升至5,200萬。旅客消費結構改變，高端購物減少，文化深度遊增加。...</p></div></a><a href='/ecommerce-rate' class=home-card><div class=home-card-body><h3>香港網上零售（E-commerce）vs 實體店比率</h3><p>網上零售佔總零售額比率由2015年約3%持續攀升至2025年約11%，增長超過3倍。疫情期間加速了大眾對網購的接受度。...</p></div></a><a href='/restaurant-turnover' class=home-card><div class=home-card-body><h3>香港食肆收益與飲食業興衰趨勢</h3><p>食肆總收益由2015年1,100億升至2019年1,280億高峰，2020-2022年急跌至約850億，2025年回升至約1,250億，仍未回復2019年水平。...</p></div></a><a href='/consumer-price-index' class=home-card><div class=home-card-body><h3>綜合消費物價指數（通脹追蹤）</h3><p>香港通脹率由2015年3.0%逐步回落至2020年0.3%低位，其後回升至2025年約2.5%。食品及住房類別通脹壓力最大。...</p></div></a></div></div><div class="section container"><h2>💼 職場與教育</h2><p style="color:#888;font-size:14px;margin-bottom:16px;">薪酬、就業、學生人數、工時分析</p><div class="grid-3"><a href='/salary-median' class=home-card><div class=home-card-body><h3>各行業及男女薪酬中位數分析</h3><p>整體月入中位數由2015年25,000元升至2025年34,000元。金融保險業最高（52,000元），零售餐飲業最低（約28,000元），行業差距持續擴大。...</p></div></a><a href='/unemployment-age' class=home-card><div class=home-card-body><h3>按年齡組別劃分失業率：青年失業問題</h3><p>整體失業率由2015年3.2%升至2021年5.5%疫情高峰，2025年回落至約2.6%極低水平。青年失業率（15-24歲）仍高於整體，約7.0%。...</p></div></a><a href='/student-numbers' class=home-card><div class=home-card-body><h3>香港學生人數變動：縮班殺校危機</h3><p>小學學生人數由2015年55萬跌至2025年45萬，中學由36萬跌至31萬，跌幅分別達18%及14%。縮班殺校危機持續發酵。...</p></div></a><a href='/graduate-employment' class=home-card><div class=home-card-body><h3>大學畢業生就業率及薪酬走勢</h3><p>大學畢業生就業率由2015年85%升至2025年88%，疫情期間曾跌至75%。畢業生平均起薪點由18,000元升至約19,500元。...</p></div></a><a href='/work-hours' class=home-card><div class=home-card-body><h3>各行業工時長度分析：全港邊行返工最捱得</h3><p>香港整體每周工時約42-44小時。建築業、運輸業及餐飲業工時最長（平均50+小時）。年長勞工超時工作比例較高。...</p></div></a></div></div><div class="section container"><h2>🏥 醫療與環境</h2><p style="color:#888;font-size:14px;margin-bottom:16px;">致命疾病、病床使用、氣候變化、廢物及空氣</p><div class="grid-3"><a href='/top-diseases' class=home-card><div class=home-card-body><h3>十大致命疾病趨勢：癌症與都市病</h3><p>癌症居十大死因首位(約30%)，心臟病(15%)及肺炎(10%)分列二三。...</p></div></a><a href='/hospital-bed-occupancy' class=home-card><div class=home-card-body><h3>公立 vs 私家醫院病床佔用率</h3><p>公立醫院病床佔用率長期超90%，冬季高峰期達105%+。私家醫院約60-70%。...</p></div></a><a href='/hot-days' class=home-card><div class=home-card-body><h3>氣候變化：香港酷熱天氣與熱夜日數</h3><p>酷熱日數由20天增至40天，熱夜由15天增至30天。...</p></div></a><a href='/solid-waste' class=home-card><div class=home-card-body><h3>都市固體廢物棄置量與回收率</h3><p>棄置量由10,000噸/日降至約9,000噸/日，回收率由35%升至約42%。...</p></div></a><a href='/air-quality' class=home-card><div class=home-card-body><h3>香港空氣質素健康指數歷年數據對比</h3><p>路邊AQHI由4.5改善至3.5，一般站由3.8改善至3.0。發電燃料轉變及車輛排放標準提升是主因。...</p></div></a></div></div>
-<div class="section container">
-  <h2>關於 HKInfo</h2>
-  <p>HKInformation 香港資訊數據圖鑑提供香港各項統計數據的深入分析與互動圖表，讓你用數據看懂香港。</p>
-  <p>我們的主要數據來源包括：</p>
-  <ul style="margin:12px 0 0 20px;line-height:2;">
-    <li>差餉物業估價署（RVD）— 物業市場統計</li>
-    <li>政府統計處（C&SD）— 綜合住戶統計、人口普查</li>
-    <li>房屋委員會 — 公屋輪候及供應數據</li>
-    <li>其他政府部門公開數據</li>
-  </ul>
-</div>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div><h4>HKInformation 香港資訊數據圖鑑</h4><p>HKInformation 是一個專注於香港統計數據視覺化的開放平台，數據主要來自政府統計處、差養物業估價署及各政府部門公開數據。</p></div>
-      <div><h4>快速連結</h4><ul><li><a href="/">首頁</a></li><li><a href="/#cat-housing">🏠 樓市與房屋</a></li><li><a href="/#cat-population">👥 人口與社會</a></li><li><a href="/#cat-economy">💰 經濟與零售</a></li><li><a href="/#cat-labour">💼 職場與教育</a></li><li><a href="/#cat-culture">🎭 文化與交通</a></li><li><a href="/#cat-medical">🏥 醫療與環境</a></li><li><a href="/about">關於我們</a></li><li><a href="/privacy">私隱政策</a></li></ul></div>
-      <div><h4>免責聲明</h4><p>本網站所有數據均來自香港政府公開資料，僅供參考。盡管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。</p></div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 HKInformation 香港資訊數據圖鑑</p>
-      <p>數據來源：政府統計處、差餉物業估價署、房屋委員會及相關政府部門</p>
-    </div>
-  </div>
+<div class="hsb"><input type="text" id="hs2" placeholder="搜尋分析文章，例如樓價、出生率、通脹..." oninput="q(this.value,2)"><div id="sr2" class="hsr"></div></div>
+</section>
+<section class="sc" id="cat-housing">
+<h2>🏠 樓市與房屋</h2>
+<p>樓價走勢、公屋輪候、負擔能力及空置率分析</p><div class="cg">
+<a href="/homeownership-district" class="cd"><div class="cdb">
+<h3>香港18區自置居所比率全面分析：邊區最多業主？</h3>
+<p>香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。...</p>
+<div><span class="tag">香港邊一區最多人買樓</span><span class="tag">香港18區財富分佈</span></div>
+</div></a>
+<a href="/income-vs-price" class="cd"><div class="cdb">
+<h3>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析</h3>
+<p>香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。...</p>
+<div><span class="tag">香港買樓負擔指數</span><span class="tag">收入樓價比率</span></div>
+</div></a>
+<a href="/public-housing" class="cd"><div class="cdb">
+<h3>香港公屋輪候時間與供應趨勢分析</h3>
+<p>香港公屋平均輪候時間在2021年達到歷史高位5.8年，近年隨著政府加大供應已回落至約4.8年，但仍遠高於政府3年目標。一般申請者高達13萬宗，而每年可供編配的公屋單位僅約2-3萬伙，供求失衡問題嚴峻。...</p>
+<div><span class="tag">公屋輪候時間</span><span class="tag">公屋申請進度趨勢</span></div>
+</div></a>
+<a href="/rental-price-index" class="cd"><div class="cdb">
+<h3>香港私樓租金指數與樓價指數走勢分析（2015-2025）</h3>
+<p>香港私樓售價指數從2015年326.7點攀升至2021年高位436.2點後回落，2025年跌至309.7點，累計跌幅約29%。租金指數反而由2015年187.4點穩步升至2025年216.0點。租金回報率近年回升，從2021年低位2.4%去到2025年3.7%，但主要因為樓價跌而唔係租金升。...</p>
+<div><span class="tag">香港樓價走勢</span><span class="tag">私樓租金指數10年對比</span></div>
+</div></a>
+<a href="/vacancy-rate" class="cd"><div class="cdb">
+<h3>香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場</h3>
+<p>根據差餉物業估價署數據，甲級寫字樓空置率由2015年7.8%飆升至2025年18.4%歷史高位，較2019年的9.0%翻倍。住宅空置率維持3.7-4.5%的健康水平，整體物業市場出現罕見的商住兩極化局面。...</p>
+<div><span class="tag">香港寫字樓空置率</span><span class="tag">住宅空置率</span></div>
+</div></a>
+</div></section>
+<section class="sc" id="cat-population">
+<h2>👥 人口與社會</h2>
+<p>出生率、死亡率、婚姻、壽命及移民數據</p><div class="cg">
+<a href="/birth-death-rate" class="cd"><div class="cdb">
+<h3>香港出生率 vs 死亡率走勢：銀髮海嘯大對比</h3>
+<p>出生率由2015年8.5‰跌至2025年6.7‰，死亡率由7.2‰升至10.1‰。人口自然增長自2020年起轉負，2025年達-3.4‰。...</p>
+<div><span class="tag">香港出生率下跌</span><span class="tag">香港人口老化數據</span></div>
+</div></a>
+<a href="/foreign-domestic-helpers" class="cd"><div class="cdb">
+<h3>香港外籍家庭傭工人口變動分析</h3>
+<p>香港外籍家庭傭工人數由2015年約33萬人增至2025年約38萬人。疫情期間曾短暫下跌，其後快速回升。...</p>
+<div><span class="tag">香港外傭人數</span><span class="tag">菲傭印傭人口趨勢</span></div>
+</div></a>
+<a href="/life-expectancy" class="cd"><div class="cdb">
+<h3>香港人平均壽命趨勢：全球最長壽秘密</h3>
+<p>香港人均壽命持續位居全球首位。男性出生時預期壽命由2015年81.2歲升至2025年82.9歲，女性由87.3歲升至88.3歲，男女壽命差距約5.4歲。...</p>
+<div><span class="tag">香港平均壽命排名</span><span class="tag">點解香港人全球最長壽</span></div>
+</div></a>
+<a href="/marriage-divorce" class="cd"><div class="cdb">
+<h3>香港結婚及離婚率20年走勢：點解愈來愈遲婚？</h3>
+<p>結婚率由2015年8.2‰下降至2025年7.0‰，女性初婚中位數由29.3歲推遲至30.8歲。離婚率維持約2.6-3.1‰水平。...</p>
+<div><span class="tag">香港離婚率統計</span><span class="tag">香港平均結婚年齡</span></div>
+</div></a>
+<a href="/net-migration" class="cd"><div class="cdb">
+<h3>香港人口淨遷移與離港人數估算</h3>
+<p>香港人口淨遷移由2015年淨流入約1萬人，轉為2020年起淨流出，2022年流出達高峰約7萬人。2024年起隨專才輸入，淨流出收窄至約2-3萬人。...</p>
+<div><span class="tag">香港移民人口統計</span><span class="tag">香港淨遷移人數</span></div>
+</div></a>
+</div></section>
+<section class="sc" id="cat-economy">
+<h2>💰 經濟與零售</h2>
+<p>零售、旅遊、電商、餐飲及通脹趨勢</p><div class="cg">
+<a href="/consumer-price-index" class="cd"><div class="cdb">
+<h3>綜合消費物價指數（通脹追蹤）</h3>
+<p>香港通脹率由2015年3.0%逐步回落至2020年0.3%低位，其後回升至2025年約2.5%。食品及住房類別通脹壓力最大。...</p>
+<div><span class="tag">香港通脹率</span><span class="tag">香港生活成本轉變</span></div>
+</div></a>
+<a href="/ecommerce-rate" class="cd"><div class="cdb">
+<h3>香港網上零售（E-commerce）vs 實體店比率</h3>
+<p>網上零售佔總零售額比率由2015年約3%持續攀升至2025年約11%，增長超過3倍。疫情期間加速了大眾對網購的接受度。...</p>
+<div><span class="tag">香港網購市場規模</span><span class="tag">網上零售增長率</span></div>
+</div></a>
+<a href="/restaurant-turnover" class="cd"><div class="cdb">
+<h3>香港食肆收益與飲食業興衰趨勢</h3>
+<p>食肆總收益由2015年1,100億升至2019年1,280億高峰，2020-2022年急跌至約850億，2025年回升至約1,250億，仍未回復2019年水平。...</p>
+<div><span class="tag">香港餐飲業營業額</span><span class="tag">快餐店高級餐廳收益</span></div>
+</div></a>
+<a href="/retail-sales" class="cd"><div class="cdb">
+<h3>香港零售業銷貨價值：奢侈品 vs 民生</h3>
+<p>零售業銷貨總值由2015年高峰4,800億跌至2023年低位，2025年回升至約5,500億。奢侈品佔比由2015年35%降至25%，民生必需品比例上升。...</p>
+<div><span class="tag">香港零售業市道</span><span class="tag">名牌奢侈品銷貨趨勢</span></div>
+</div></a>
+<a href="/tourist-arrivals" class="cd"><div class="cdb">
+<h3>訪港旅客數字與消費力走勢</h3>
+<p>訪港旅客由2018年6,500萬人次高峰急跌至2021年僅90人次，2025年逐步回升至5,200萬。旅客消費結構改變，高端購物減少，文化深度遊增加。...</p>
+<div><span class="tag">大陸旅客訪港人數</span><span class="tag">過夜旅客消費趨勢</span></div>
+</div></a>
+</div></section>
+<section class="sc" id="cat-labour">
+<h2>💼 職場與教育</h2>
+<p>薪酬、就業、學生人數、工時分析</p><div class="cg">
+<a href="/graduate-employment" class="cd"><div class="cdb">
+<h3>大學畢業生就業率及薪酬走勢</h3>
+<p>大學畢業生就業率由2015年85%升至2025年88%，疫情期間曾跌至75%。畢業生平均起薪點由18,000元升至約19,500元。...</p>
+<div><span class="tag">香港邊科畢業生人工最高</span><span class="tag">三大畢業生薪酬</span></div>
+</div></a>
+<a href="/salary-median" class="cd"><div class="cdb">
+<h3>各行業及男女薪酬中位數分析</h3>
+<p>整體月入中位數由2015年25,000元升至2025年34,000元。金融保險業最高（52,000元），零售餐飲業最低（約28,000元），行業差距持續擴大。...</p>
+<div><span class="tag">香港各行業平均人工</span><span class="tag">香港大學生畢業人工</span></div>
+</div></a>
+<a href="/student-numbers" class="cd"><div class="cdb">
+<h3>香港學生人數變動：縮班殺校危機</h3>
+<p>小學學生人數由2015年55萬跌至2025年45萬，中學由36萬跌至31萬，跌幅分別達18%及14%。縮班殺校危機持續發酵。...</p>
+<div><span class="tag">香港小學生人數下跌</span><span class="tag">中學縮班殺校名單趨勢</span></div>
+</div></a>
+<a href="/unemployment-age" class="cd"><div class="cdb">
+<h3>按年齡組別劃分失業率：青年失業問題</h3>
+<p>整體失業率由2015年3.2%升至2021年5.5%疫情高峰，2025年回落至約2.6%極低水平。青年失業率（15-24歲）仍高於整體，約7.0%。...</p>
+<div><span class="tag">香港青年失業率</span><span class="tag">最新香港失業數字</span></div>
+</div></a>
+<a href="/work-hours" class="cd"><div class="cdb">
+<h3>各行業工時長度分析：全港邊行返工最捱得</h3>
+<p>香港整體每周工時約42-44小時。建築業、運輸業及餐飲業工時最長（平均50+小時）。年長勞工超時工作比例較高。...</p>
+<div><span class="tag">香港平均工作時數</span><span class="tag">香港邊行工時最長</span></div>
+</div></a>
+</div></section>
+<section class="sc" id="cat-medical">
+<h2>🏥 醫療與環境</h2>
+<p>致命疾病、病床使用、氣候變化、廢物及空氣</p><div class="cg">
+<a href="/air-quality" class="cd"><div class="cdb">
+<h3>香港空氣質素健康指數歷年數據對比</h3>
+<p>路邊AQHI由4.5改善至3.5，一般站由3.8改善至3.0。發電燃料轉變及車輛排放標準提升是主因。...</p>
+<div><span class="tag">香港空氣污染</span><span class="tag">AQHI歷史數據</span></div>
+</div></a>
+<a href="/hospital-bed-occupancy" class="cd"><div class="cdb">
+<h3>公立 vs 私家醫院病床佔用率</h3>
+<p>公立醫院病床佔用率長期超90%，冬季高峰期達105%+。私家醫院約60-70%。...</p>
+<div><span class="tag">醫管局病床佔用率</span><span class="tag">急症室輪候</span></div>
+</div></a>
+<a href="/hot-days" class="cd"><div class="cdb">
+<h3>氣候變化：香港酷熱天氣與熱夜日數</h3>
+<p>酷熱日數由20天增至40天，熱夜由15天增至30天。...</p>
+<div><span class="tag">香港熱夜日數</span><span class="tag">香港全球暖化</span></div>
+</div></a>
+<a href="/solid-waste" class="cd"><div class="cdb">
+<h3>都市固體廢物棄置量與回收率</h3>
+<p>棄置量由10,000噸/日降至約9,000噸/日，回收率由35%升至約42%。...</p>
+<div><span class="tag">香港垃圾棄置量</span><span class="tag">膠袋徵費成效</span></div>
+</div></a>
+<a href="/top-diseases" class="cd"><div class="cdb">
+<h3>十大致命疾病趨勢：癌症與都市病</h3>
+<p>癌症居十大死因首位(約30%)，心臟病(15%)及肺炎(10%)分列二三。...</p>
+<div><span class="tag">香港十大死因</span><span class="tag">香港癌症發病率</span></div>
+</div></a>
+</div></section>
+<footer>
+<p>HKInformation 香港資訊數據圖鑑</p><p>本網站所有數據均來自香港政府公開資料，僅供參考。盡管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。</p><p>© 2026 HKInformation 香港資訊數據圖鑑</p>
 </footer>
-
-<div id="cookie-banner">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-    <span>本網站使用 Cookie 來改善您的瀏覽體驗及顯示個人化廣告。繼續使用即表示您同意 <a href="/privacy">私隱政策</a>。</span>
-    <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_consent','true')" style="background:#f4a261;border:none;color:#1a2332;padding:10px 24px;border-radius:8px;font-weight:600;cursor:pointer;white-space:nowrap;">我了解</button>
-  </div>
-</div>
 <script>
-if(!localStorage.getItem('cookie_consent')){document.getElementById('cookie-banner').style.display='block'}
+const idx=[{"slug": "air-quality", "title": "香港空氣質素健康指數歷年數據對比", "summary": "路邊AQHI由4.5改善至3.5，一般站由3.8改善至3.0。發電燃料轉變及車輛排放標準提升是主因。", "keywords": "香港空氣污染,AQHI歷史數據,邊區空氣最好", "category": "medical", "cat_name": "醫療與環境"}, {"slug": "birth-death-rate", "title": "香港出生率 vs 死亡率走勢：銀髮海嘯大對比", "summary": "出生率由2015年8.5‰跌至2025年6.7‰，死亡率由7.2‰升至10.1‰。人口自然增長自2020年起轉負，2025年達-3.4‰。", "keywords": "香港出生率下跌,香港人口老化數據,香港死亡人數對比出生人數", "category": "population", "cat_name": "人口與社會"}, {"slug": "consumer-price-index", "title": "綜合消費物價指數（通脹追蹤）", "summary": "香港通脹率由2015年3.0%逐步回落至2020年0.3%低位，其後回升至2025年約2.5%。食品及住房類別通脹壓力最大。", "keywords": "香港通脹率,香港生活成本轉變,兩電加價食品通脹指數", "category": "economy", "cat_name": "經濟與零售"}, {"slug": "ecommerce-rate", "title": "香港網上零售（E-commerce）vs 實體店比率", "summary": "網上零售佔總零售額比率由2015年約3%持續攀升至2025年約11%，增長超過3倍。疫情期間加速了大眾對網購的接受度。", "keywords": "香港網購市場規模,網上零售增長率,實體店網店銷貨對比,香港電商發展", "category": "economy", "cat_name": "經濟與零售"}, {"slug": "foreign-domestic-helpers", "title": "香港外籍家庭傭工人口變動分析", "summary": "香港外籍家庭傭工人數由2015年約33萬人增至2025年約38萬人。疫情期間曾短暫下跌，其後快速回升。", "keywords": "香港外傭人數,菲傭印傭人口趨勢,香港工人姐姐薪金統計,香港外傭政策", "category": "population", "cat_name": "人口與社會"}, {"slug": "graduate-employment", "title": "大學畢業生就業率及薪酬走勢", "summary": "大學畢業生就業率由2015年85%升至2025年88%，疫情期間曾跌至75%。畢業生平均起薪點由18,000元升至約19,500元。", "keywords": "香港邊科畢業生人工最高,三大畢業生薪酬,香港大學生就業率,大學畢業生月入", "category": "labour", "cat_name": "職場與教育"}, {"slug": "homeownership-district", "title": "香港18區自置居所比率全面分析：邊區最多業主？", "summary": "香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。", "keywords": "香港邊一區最多人買樓,香港18區財富分佈,香港最富貴區域,香港自置居所比率,香港業主比率排名,香港18區比較,香港房屋統計", "category": "housing", "cat_name": "樓市與房屋"}, {"slug": "hospital-bed-occupancy", "title": "公立 vs 私家醫院病床佔用率", "summary": "公立醫院病床佔用率長期超90%，冬季高峰期達105%+。私家醫院約60-70%。", "keywords": "醫管局病床佔用率,急症室輪候,公立醫院爆滿", "category": "medical", "cat_name": "醫療與環境"}, {"slug": "hot-days", "title": "氣候變化：香港酷熱天氣與熱夜日數", "summary": "酷熱日數由20天增至40天，熱夜由15天增至30天。", "keywords": "香港熱夜日數,香港全球暖化,極端天氣", "category": "medical", "cat_name": "醫療與環境"}, {"slug": "income-vs-price", "title": "香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析", "summary": "香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。", "keywords": "香港買樓負擔指數,收入樓價比率,香港月入中位數供樓,供樓負擔比率,香港置業難度,收入追唔追得上樓價,房屋負擔能力", "category": "housing", "cat_name": "樓市與房屋"}, {"slug": "life-expectancy", "title": "香港人平均壽命趨勢：全球最長壽秘密", "summary": "香港人均壽命持續位居全球首位。男性出生時預期壽命由2015年81.2歲升至2025年82.9歲，女性由87.3歲升至88.3歲，男女壽命差距約5.4歲。", "keywords": "香港平均壽命排名,點解香港人全球最長壽,香港男女壽命差距,香港人均預期壽命", "category": "population", "cat_name": "人口與社會"}, {"slug": "marriage-divorce", "title": "香港結婚及離婚率20年走勢：點解愈來愈遲婚？", "summary": "結婚率由2015年8.2‰下降至2025年7.0‰，女性初婚中位數由29.3歲推遲至30.8歲。離婚率維持約2.6-3.1‰水平。", "keywords": "香港離婚率統計,香港平均結婚年齡,點解香港人愈黎愈遲婚,香港婚姻趨勢", "category": "population", "cat_name": "人口與社會"}, {"slug": "net-migration", "title": "香港人口淨遷移與離港人數估算", "summary": "香港人口淨遷移由2015年淨流入約1萬人，轉為2020年起淨流出，2022年流出達高峰約7萬人。2024年起隨專才輸入，淨流出收窄至約2-3萬人。", "keywords": "香港移民人口統計,香港淨遷移人數,香港人口回升定減少,香港移民潮數據", "category": "population", "cat_name": "人口與社會"}, {"slug": "public-housing", "title": "香港公屋輪候時間與供應趨勢分析", "summary": "香港公屋平均輪候時間在2021年達到歷史高位5.8年，近年隨著政府加大供應已回落至約4.8年，但仍遠高於政府3年目標。一般申請者高達13萬宗，而每年可供編配的公屋單位僅約2-3萬伙，供求失衡問題嚴峻。", "keywords": "公屋輪候時間,公屋申請進度趨勢,香港入伙公屋要等幾耐,公屋供應量,香港房屋政策,簡約公屋,公屋輪候冊", "category": "housing", "cat_name": "樓市與房屋"}, {"slug": "rental-price-index", "title": "香港私樓租金指數與樓價指數走勢分析（2015-2025）", "summary": "香港私樓售價指數從2015年326.7點攀升至2021年高位436.2點後回落，2025年跌至309.7點，累計跌幅約29%。租金指數反而由2015年187.4點穩步升至2025年216.0點。租金回報率近年回升，從2021年低位2.4%去到2025年3.7%，但主要因為樓價跌而唔係租金升。", "keywords": "香港樓價走勢,私樓租金指數10年對比,香港樓市跌緊定升緊,差估署樓價指數,香港私樓租金2025,香港住宅樓市分析", "category": "housing", "cat_name": "樓市與房屋"}, {"slug": "restaurant-turnover", "title": "香港食肆收益與飲食業興衰趨勢", "summary": "食肆總收益由2015年1,100億升至2019年1,280億高峰，2020-2022年急跌至約850億，2025年回升至約1,250億，仍未回復2019年水平。", "keywords": "香港餐飲業營業額,快餐店高級餐廳收益,香港餐廳結業潮數據,飲食業復甦", "category": "economy", "cat_name": "經濟與零售"}, {"slug": "retail-sales", "title": "香港零售業銷貨價值：奢侈品 vs 民生", "summary": "零售業銷貨總值由2015年高峰4,800億跌至2023年低位，2025年回升至約5,500億。奢侈品佔比由2015年35%降至25%，民生必需品比例上升。", "keywords": "香港零售業市道,名牌奢侈品銷貨趨勢,香港消費指數,香港零售業復甦", "category": "economy", "cat_name": "經濟與零售"}, {"slug": "salary-median", "title": "各行業及男女薪酬中位數分析", "summary": "整體月入中位數由2015年25,000元升至2025年34,000元。金融保險業最高（52,000元），零售餐飲業最低（約28,000元），行業差距持續擴大。", "keywords": "香港各行業平均人工,香港大學生畢業人工,香港男女薪酬差距,香港收入中位數", "category": "labour", "cat_name": "職場與教育"}, {"slug": "solid-waste", "title": "都市固體廢物棄置量與回收率", "summary": "棄置量由10,000噸/日降至約9,000噸/日，回收率由35%升至約42%。", "keywords": "香港垃圾棄置量,膠袋徵費成效,人均垃圾量", "category": "medical", "cat_name": "醫療與環境"}, {"slug": "student-numbers", "title": "香港學生人數變動：縮班殺校危機", "summary": "小學學生人數由2015年55萬跌至2025年45萬，中學由36萬跌至31萬，跌幅分別達18%及14%。縮班殺校危機持續發酵。", "keywords": "香港小學生人數下跌,中學縮班殺校名單趨勢,幼稚園適齡人口危機,香港教育危機", "category": "labour", "cat_name": "職場與教育"}, {"slug": "top-diseases", "title": "十大致命疾病趨勢：癌症與都市病", "summary": "癌症居十大死因首位(約30%)，心臟病(15%)及肺炎(10%)分列二三。", "keywords": "香港十大死因,香港癌症發病率,香港心臟病年輕化", "category": "medical", "cat_name": "醫療與環境"}, {"slug": "tourist-arrivals", "title": "訪港旅客數字與消費力走勢", "summary": "訪港旅客由2018年6,500萬人次高峰急跌至2021年僅90人次，2025年逐步回升至5,200萬。旅客消費結構改變，高端購物減少，文化深度遊增加。", "keywords": "大陸旅客訪港人數,過夜旅客消費趨勢,香港旅遊業復甦數據,香港旅客數字", "category": "economy", "cat_name": "經濟與零售"}, {"slug": "unemployment-age", "title": "按年齡組別劃分失業率：青年失業問題", "summary": "整體失業率由2015年3.2%升至2021年5.5%疫情高峰，2025年回落至約2.6%極低水平。青年失業率（15-24歲）仍高於整體，約7.0%。", "keywords": "香港青年失業率,最新香港失業數字,香港邊行最缺人,香港就業市場", "category": "labour", "cat_name": "職場與教育"}, {"slug": "vacancy-rate", "title": "香港商業與住宅物業空置率分析：甲級寫字樓 vs 住宅市場", "summary": "根據差餉物業估價署數據，甲級寫字樓空置率由2015年7.8%飆升至2025年18.4%歷史高位，較2019年的9.0%翻倍。住宅空置率維持3.7-4.5%的健康水平，整體物業市場出現罕見的商住兩極化局面。", "keywords": "香港寫字樓空置率,住宅空置率,香港甲級商廈市道,香港商用物業空置,香港寫字樓供應過剩,疫情後商業地產,香港office空置率", "category": "housing", "cat_name": "樓市與房屋"}, {"slug": "work-hours", "title": "各行業工時長度分析：全港邊行返工最捱得", "summary": "香港整體每周工時約42-44小時。建築業、運輸業及餐飲業工時最長（平均50+小時）。年長勞工超時工作比例較高。", "keywords": "香港平均工作時數,香港邊行工時最長,香港過勞死統計,香港OT文化", "category": "labour", "cat_name": "職場與教育"}];
+function q(v,t){const e=document.getElementById("sr"+t);if(!v||v.length<2){e.style.display="none";e.innerHTML="";return}
+const m=idx.filter(a=>a.title.includes(v)||a.summary.includes(v)).slice(0,6);
+if(m.length===0){e.innerHTML="<a style=\"color:#999;cursor:default\">無結果</a>";e.style.display="block";return}
+e.innerHTML=m.map(a=>"<a href='/" + a.slug + "'>" + a.title + "<span class=\"c\">" + a.cat_name + "</span></a>").join("");e.style.display="block"}
+document.addEventListener("click",function(e){if(!e.target.closest(".sbw")&&!e.target.closest(".hsb")){document.querySelectorAll(".sr,.hsr").forEach(el=>{el.style.display="none"})}})
 </script>
-</body>
-</html>
+</body></html>
