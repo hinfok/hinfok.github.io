@@ -25,6 +25,7 @@ jobs:
 
       - name: Build site
         run: python build.py
+          python gen_index.py
 
       - name: Copy output to root
         run: |
