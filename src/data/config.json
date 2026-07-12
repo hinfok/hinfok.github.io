@@ -23,32 +23,32 @@
     },
     {
       "label": "🏠 樓市與房屋",
-      "href": "/",
+      "href": "/#cat-housing",
       "icon": "building"
     },
     {
       "label": "👥 人口與社會",
-      "href": "/",
+      "href": "/#cat-population",
       "icon": "users"
     },
     {
       "label": "💰 經濟與零售",
-      "href": "/",
+      "href": "/#cat-economy",
       "icon": "trending-up"
     },
     {
       "label": "💼 職場與教育",
-      "href": "/",
+      "href": "/#cat-labour",
       "icon": "briefcase"
     },
     {
       "label": "🎭 文化與交通",
-      "href": "/",
+      "href": "/#cat-culture",
       "icon": "map"
     },
     {
       "label": "🏥 醫療與環境",
-      "href": "/",
+      "href": "/#cat-medical",
       "icon": "heart"
     },
     {
