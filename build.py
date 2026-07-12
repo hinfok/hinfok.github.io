@@ -116,6 +116,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
 .toc-box a:hover { background:#e8edf3; }
 .section h2 { scroll-margin-top:80px; }
+
+.article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 36px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.article-main { min-width: 0; }
+.article-main .container { max-width: 100%; padding: 0; }
+.article-sidebar { position: sticky; top: 80px; align-self: start; }
+.article-sidebar .sc { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.article-sidebar .sc h4 { font-size: 14px; color: #1e3a5f; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #e63946; }
+.article-sidebar .sc ul { list-style: none; padding: 0; margin: 0; }
+.article-sidebar .sc li { margin: 5px 0; }
+.article-sidebar .sc a { color: #457b9d; text-decoration: none; font-size: 13px; display: block; padding: 4px 0; }
+.article-sidebar .sc a:hover { color: #1e3a5f; }
+.side-stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.side-stat .num { font-weight: 700; color: #1e3a5f; }
+.side-stat .lbl { color: #666; }
+.side-meta { font-size: 12px; color: #999; line-height: 1.6; }
+@media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
 </style>"""
 
 COOKIE_JS = """
@@ -232,7 +248,7 @@ def build_article_page(article):
     ]
     hero_html = "\n".join(hero_parts)
     
-    breadcrumb = f'<div class="breadcrumb"><a href="/">首頁</a> › <span>{title}</span></div>'
+    breadcrumb = f'<div class="breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 24px;"><a href="/">首頁</a> › <span>{title}</span></div>'
     
     # Generate table of contents
     toc_items = ""
@@ -272,7 +288,44 @@ def build_article_page(article):
             related_parts.append(f'<a href="/{rel["slug"]}" class="related-card"><h4>{rel["title"][:50]}...</h4><p>{rel["summary"][:120]}...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a>')
     related_section = f'<div class="section container"><h2>相關分析</h2><div class="grid-2">{"".join(related_parts)}</div></div>' if related_parts else ""
     
-    body_content = "\n".join([hero_html, breadcrumb, summary, meta, sections_html, charts_html, tables_html, related_section])
+        # Sidebar HTML
+    sidebar_parts = []
+    # TOC
+    toc_items = ""
+    for si, sec in enumerate(article.get("sections", [])):
+        sh = sec["heading"][:28]
+        if len(sec["heading"]) > 28: sh += "..."
+        toc_items += f"<li><a href=\"#sec-{si}\">{sh}</a></li>"
+    if toc_items:
+        sidebar_parts.append(f"<div class=\"sc\"><h4>本篇導讀</h4><ul>{toc_items}</ul></div>")
+    # Stats from data tables
+    for key, tbl in article.get("dataTables", {}).items():
+        rows = tbl.get("rows", [])
+        if rows and len(rows) > 0:
+            stats = "".join(f"<div class=\"side-stat\"><span class=\"lbl\">{r[0]}</span><span class=\"num\">{r[1]}</span></div>" for r in rows[-4:])
+            sidebar_parts.append(f"<div class=\"sc\"><h4>重點數據</h4>{stats}</div>")
+        break
+    # Related
+    rel_items = ""
+    for rs in article.get("relatedArticles", []):
+        try:
+            rp = os.path.join(os.path.dirname(__file__), "src", "articles", rs + ".json")
+            with open(rp, "r", encoding="utf-8") as rf:
+                ra = json.load(rf)
+            rel_items += f"<li><a href=\"/{rs}\">{ra.get('title','?')[:35]}</a></li>"
+        except:
+            pass
+    if rel_items:
+        sidebar_parts.append(f"<div class=\"sc\"><h4>相關分析</h4><ul>{rel_items}</ul></div>")
+    # Meta
+    lu = article.get("lastUpdated", "")
+    ds = article.get("dataSource", "")
+    meta_side = f"<div class=\"sc\"><h4>資訊標籤</h4><div class=\"side-meta\"><p>最後更新: {lu}</p><p>數據來源: {ds}</p></div></div>"
+    sidebar_parts.append(meta_side)
+    sidebar_html = "".join(sidebar_parts)
+    
+    main_content = "\n".join([summary, meta, sections_html, charts_html, tables_html])
+    body_content = "\n".join([hero_html, breadcrumb, "<div class=\"article-layout\"><div class=\"article-main\">", main_content, "</div><div class=\"article-sidebar\">", sidebar_html, "</div></div>", related_section])
     body_content += f'\n<script>{charts_js}</script>\n'
     body_content += '''
 <script>
@@ -310,7 +363,7 @@ def build_page(article):
     hero_img = SITE["baseUrl"].rstrip("/") + "/images/og-default.svg"
     
     hero_html = f'<div class="page-hero"><h1>{title}</h1></div>'
-    breadcrumb = f'<div class="breadcrumb"><a href="/">首頁</a> › <span>{title}</span></div>'
+    breadcrumb = f'<div class="breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 24px;"><a href="/">首頁</a> › <span>{title}</span></div>'
     
     content_html = f'<div class="container"><div class="plain-content">'
     for sec in article["sections"]:
