@@ -1,0 +1,145 @@
+{
+  "slug": "solid-waste",
+  "title": "都市固體廢物棄置量與回收率",
+  "category": "medical",
+  "seo": {
+    "title": "香港垃圾棄置量2025｜膠袋徵費成效",
+    "description": "棄置量由10,000噸/日降至9,000噸/日，回收率35%升至42%。",
+    "keywords": "香港垃圾棄置量,膠袋徵費成效,人均垃圾量"
+  },
+  "heroImage": "placeholder-medical",
+  "lastUpdated": "2026-07-12",
+  "dataSource": "相關政府部門",
+  "dataSourceUrl": "https://www.gov.hk",
+  "summary": "棄置量由10,000噸/日降至約9,000噸/日，回收率由35%升至約42%。",
+  "sections": [
+    {
+      "heading": "廢物管理",
+      "content": "<p>都市固體廢物棄置量下降約10%。回收率升至42%。廚餘仍佔棄置量30%。垃圾收費計劃長遠有望推動減廢。</p>"
+    }
+  ],
+  "charts": [
+    {
+      "id": "c29",
+      "title": "廢物棄置量及回收率",
+      "type": "line",
+      "height": 350,
+      "option": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": 60,
+          "right": 30,
+          "top": 20,
+          "bottom": 40
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "噸/日"
+          },
+          {
+            "type": "value",
+            "name": "%",
+            "max": 50
+          }
+        ],
+        "series": [
+          {
+            "name": "棄置量",
+            "type": "line",
+            "data": [
+              10000,
+              9800,
+              9600,
+              9500,
+              9300,
+              9200,
+              9000,
+              8800,
+              8700,
+              8800,
+              9000
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "color": "#1e3a5f",
+              "width": 3
+            }
+          },
+          {
+            "name": "回收率",
+            "type": "line",
+            "yAxisIndex": 1,
+            "data": [
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              42,
+              42
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "color": "#2a9d8f",
+              "width": 3
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "relatedArticles": [
+    "hot-days",
+    "air-quality"
+  ],
+  "dataTables": {
+    "t1": {
+      "headers": [
+        "年份",
+        "棄置量(噸/日)",
+        "回收率(%)"
+      ],
+      "rows": [
+        [
+          "2015",
+          "10,000",
+          35
+        ],
+        [
+          "2020",
+          "9,200",
+          40
+        ],
+        [
+          "2025",
+          "9,000",
+          42
+        ]
+      ],
+      "title": "數據摘要"
+    }
+  }
+}

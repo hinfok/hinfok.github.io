@@ -483,7 +483,7 @@ def main():
         shutil.rmtree(OUTPUT_DIR, ignore_errors=True)
     OUTPUT_DIR.mkdir(parents=True)
     
-    article_slugs = ["rental-price-index", "public-housing", "income-vs-price", "vacancy-rate", "homeownership-district"]
+    article_slugs = ["rental-price-index", "public-housing", "income-vs-price", "vacancy-rate", "homeownership-district", "birth-death-rate", "marriage-divorce", "life-expectancy", "foreign-domestic-helpers", "net-migration", "retail-sales", "tourist-arrivals", "ecommerce-rate", "restaurant-turnover", "consumer-price-index", "salary-median", "unemployment-age", "student-numbers", "graduate-employment", "work-hours", "museum-attendance", "library-borrowing", "public-transport", "private-car-ev", "traffic-accidents", "top-diseases", "hospital-bed-occupancy", "hot-days", "solid-waste", "air-quality"]
     articles = []
     for slug in article_slugs:
         art = load_article(slug)

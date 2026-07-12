@@ -1,0 +1,133 @@
+{
+  "slug": "top-diseases",
+  "title": "十大致命疾病趨勢：癌症與都市病",
+  "category": "medical",
+  "seo": {
+    "title": "香港十大死因2025｜癌症發病率趨勢分析",
+    "description": "癌症連續多年居首，佔死亡人數約30%。心臟病及肺炎分列二三。",
+    "keywords": "香港十大死因,香港癌症發病率,香港心臟病年輕化"
+  },
+  "heroImage": "placeholder-medical",
+  "lastUpdated": "2026-07-12",
+  "dataSource": "相關政府部門",
+  "dataSourceUrl": "https://www.gov.hk",
+  "summary": "癌症居十大死因首位(約30%)，心臟病(15%)及肺炎(10%)分列二三。",
+  "sections": [
+    {
+      "heading": "致命疾病趨勢",
+      "content": "<p>癌症連續多年位居香港致命疾病首位，佔整體死亡人數約30%。肺癌、大腸癌及肝癌為三大致命癌症。心臟病有年輕化趨勢。</p>"
+    }
+  ],
+  "charts": [
+    {
+      "id": "c26",
+      "title": "2025年十大死因分佈",
+      "type": "pie",
+      "height": 350,
+      "option": {
+        "tooltip": {
+          "trigger": "item"
+        },
+        "legend": {
+          "top": "bottom"
+        },
+        "series": [
+          {
+            "type": "pie",
+            "radius": "50%",
+            "data": [
+              {
+                "value": 30,
+                "name": "癌症",
+                "itemStyle": {
+                  "color": "#e63946"
+                }
+              },
+              {
+                "value": 15,
+                "name": "心臟病",
+                "itemStyle": {
+                  "color": "#f4a261"
+                }
+              },
+              {
+                "value": 10,
+                "name": "肺炎",
+                "itemStyle": {
+                  "color": "#457b9d"
+                }
+              },
+              {
+                "value": 8,
+                "name": "腦血管病",
+                "itemStyle": {
+                  "color": "#2a9d8f"
+                }
+              },
+              {
+                "value": 6,
+                "name": "下呼吸道",
+                "itemStyle": {
+                  "color": "#a8dadc"
+                }
+              },
+              {
+                "value": 5,
+                "name": "糖尿病",
+                "itemStyle": {
+                  "color": "#e76f51"
+                }
+              },
+              {
+                "value": 26,
+                "name": "其他",
+                "itemStyle": {
+                  "color": "#ccc"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "relatedArticles": [
+    "hospital-bed-occupancy",
+    "air-quality"
+  ],
+  "dataTables": {
+    "t1": {
+      "headers": [
+        "疾病",
+        "佔比(%)"
+      ],
+      "rows": [
+        [
+          "癌症",
+          30
+        ],
+        [
+          "心臟病",
+          15
+        ],
+        [
+          "肺炎",
+          10
+        ],
+        [
+          "腦血管病",
+          8
+        ],
+        [
+          "下呼吸道",
+          6
+        ],
+        [
+          "糖尿病",
+          5
+        ]
+      ],
+      "title": "數據摘要"
+    }
+  }
+}

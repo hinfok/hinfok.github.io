@@ -22,29 +22,34 @@
       "icon": "home"
     },
     {
-      "label": "樓市指標",
-      "href": "/rental-price-index",
+      "label": "🏠 樓市與房屋",
+      "href": "/",
       "icon": "building"
     },
     {
-      "label": "公屋輪候",
-      "href": "/public-housing",
-      "icon": "home"
+      "label": "👥 人口與社會",
+      "href": "/",
+      "icon": "users"
     },
     {
-      "label": "收入與樓價",
-      "href": "/income-vs-price",
+      "label": "💰 經濟與零售",
+      "href": "/",
       "icon": "trending-up"
     },
     {
-      "label": "空置率分析",
-      "href": "/vacancy-rate",
-      "icon": "bar-chart"
+      "label": "💼 職場與教育",
+      "href": "/",
+      "icon": "briefcase"
     },
     {
-      "label": "18區自置比率",
-      "href": "/homeownership-district",
-      "icon": "map-pin"
+      "label": "🎭 文化與交通",
+      "href": "/",
+      "icon": "map"
+    },
+    {
+      "label": "🏥 醫療與環境",
+      "href": "/",
+      "icon": "heart"
     },
     {
       "label": "關於我們",
