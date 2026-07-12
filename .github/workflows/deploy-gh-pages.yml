@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write
-      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,17 +23,16 @@ jobs:
 
       - name: Build site
         run: python build.py
-          python gen_index.py
 
-      - name: Copy output to root
+      - name: Generate homepage
+        run: python gen_index.py
+
+      - name: Copy to root and deploy
         run: |
+          # Copy generated files to repo root
           cp -r output/* .
           rm -rf output
-          cp -r images/. . 2>/dev/null || true
-          rm -rf images
-
-      - name: Commit and push
-        run: |
+          # Keep source files, add generated files
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
