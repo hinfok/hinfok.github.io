@@ -115,6 +115,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
 .toc-box a:hover { background:#e8edf3; }
 .section h2 { scroll-margin-top:80px; }
+
+.article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 36px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.article-main { min-width: 0; }
+.article-main .container { max-width: 100%; padding: 0; }
+.article-sidebar { position: sticky; top: 80px; align-self: start; }
+.article-sidebar .sc { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.article-sidebar .sc h4 { font-size: 14px; color: #1e3a5f; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #e63946; }
+.article-sidebar .sc ul { list-style: none; padding: 0; margin: 0; }
+.article-sidebar .sc li { margin: 5px 0; }
+.article-sidebar .sc a { color: #457b9d; text-decoration: none; font-size: 13px; display: block; padding: 4px 0; }
+.article-sidebar .sc a:hover { color: #1e3a5f; }
+.side-stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.side-stat .num { font-weight: 700; color: #1e3a5f; }
+.side-stat .lbl { color: #666; }
+.side-meta { font-size: 12px; color: #999; line-height: 1.6; }
+@media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
 </style>
 </head>
 <body>
@@ -138,7 +154,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
   <img src="https://hinfok.com/images/placeholder-finance-1.svg" alt="香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析" class="hero-img" onerror="this.style.display='none'">
   <p class="hero-caption">收入與樓價的賽跑 — 香港買樓負擔能力的十年演變（圖片由 AI 生成）</p>
 </div>
-<div class="breadcrumb"><a href="/">首頁</a> › <span>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析</span></div>
+<div class="breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 24px;"><a href="/">首頁</a> › <span>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析</span></div>
+<div class="article-layout"><div class="article-main">
 <div class="container"><div class="summary-box"><h3>重點摘要</h3><p>香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。</p></div></div>
 <div class="container"><div class="meta-info"><span>最後更新：2026-07-07</span><span>數據來源：<a href="https://www.censtatd.gov.hk" target="_blank" rel="noopener">政府統計處（C&SD）綜合住戶統計調查及差餉物業估價署樓價數據</a></span></div></div>
 <div class="section container"><h2 id="sec-0">房價收入比：香港長期位居全球最難負擔城市榜首</h2><p>房價收入比（Price-to-Income Ratio）是衡量置業負擔能力的核心指標，計算方式為住宅樓價中位數除以家庭年收入中位數。國際共識認為，3至5倍屬於可負擔水平，5.1至8倍為「嚴重難以負擔」，而香港長期維持在20倍以上，連續多年被國際調查評為全球最難負擔的城市。</p><p>根據我們的數據分析，香港的房價收入比從2015年的約17.5倍持續攀升，2019年達到高峰約21.5倍，隨後在高位徘徊。即使2022至2025年間樓價有所回落，但由於家庭收入增長有限，房價收入比仍維持在約18-19倍水平，遠超其他國際城市如新加坡（約12倍）、倫敦（約14倍）、紐約（約10倍）及東京（約11倍）。</p><p>這意味一個香港家庭要不吃不喝近19年，才能買到一個中位數價格的住宅單位。如果扣除基本生活開支，實際所需的儲蓄年期更長達30-40年。</p></div>
@@ -155,6 +172,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 
 <div class="container"><div class="section"><h2>收入與樓價對比詳表</h2><div style="overflow-x:auto"><table class="data-table"><thead><tr><th>年份</th><th>月入中位數（千元）</th><th>售價指數</th><th>房價收入比（倍）</th><th>供樓負擔比率 %</th></tr></thead><tbody><tr><td>2015</td><td>26.0</td><td>246.0</td><td>17.5</td><td>52</td></tr><tr><td>2016</td><td>27.0</td><td>260.0</td><td>18.0</td><td>55</td></tr><tr><td>2017</td><td>28.5</td><td>280.0</td><td>18.8</td><td>60</td></tr><tr><td>2018</td><td>29.5</td><td>310.0</td><td>19.5</td><td>65</td></tr><tr><td>2019</td><td>31.0</td><td>320.0</td><td>21.5</td><td>68</td></tr><tr><td>2020</td><td>31.5</td><td>305.0</td><td>21.0</td><td>55</td></tr><tr><td>2021</td><td>32.0</td><td>330.0</td><td>22.0</td><td>58</td></tr><tr><td>2022</td><td>31.5</td><td>325.0</td><td>21.5</td><td>62</td></tr><tr><td>2023</td><td>32.5</td><td>315.0</td><td>20.0</td><td>75</td></tr><tr><td>2024</td><td>33.0</td><td>300.0</td><td>19.0</td><td>70</td></tr><tr><td>2025</td><td>33.0</td><td>290.0</td><td>18.5</td><td>68</td></tr></tbody></table></div></div></div>
 
+</div><div class="article-sidebar">
+<div class="sc"><h4>本篇導讀</h4><ul><li><a href="#sec-0">房價收入比：香港長期位居全球最難負擔城市榜首</a></li><li><a href="#sec-1">供樓負擔比率：加息後的沉重壓力</a></li><li><a href="#sec-2">收入增長 vs 樓價增長：差距持續擴大</a></li><li><a href="#sec-3">不同物業類型的負擔能力分析</a></li><li><a href="#sec-4">國際比較：香港是不是最難上車的城市？</a></li><li><a href="#sec-5">數據來源與統計方法</a></li></ul></div><div class="sc"><h4>重點數據</h4><div class="side-stat"><span class="lbl">2022</span><span class="num">31.5</span></div><div class="side-stat"><span class="lbl">2023</span><span class="num">32.5</span></div><div class="side-stat"><span class="lbl">2024</span><span class="num">33.0</span></div><div class="side-stat"><span class="lbl">2025</span><span class="num">33.0</span></div></div><div class="sc"><h4>相關分析</h4><ul><li><a href="/rental-price-index">香港私樓租金指數與樓價指數走勢分析（2015-2025）</a></li><li><a href="/homeownership-district">香港18區自置居所比率全面分析：邊區最多業主？</a></li></ul></div><div class="sc"><h4>資訊標籤</h4><div class="side-meta"><p>最後更新: 2026-07-07</p><p>數據來源: 政府統計處（C&SD）綜合住戶統計調查及差餉物業估價署樓價數據</p></div></div>
+</div></div>
 <div class="section container"><h2>相關分析</h2><div class="grid-2"><a href="/rental-price-index" class="related-card"><h4>香港私樓租金指數與樓價指數走勢分析（2015-2025）...</h4><p>香港私樓售價指數從2015年326.7點攀升至2021年高位436.2點後回落，2025年跌至309.7點，累計跌幅約29%。租金指數反而由2015年187.4點穩步升至2025年216.0點。租金回報率近年回升，從2021年低位2.4%去...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a><a href="/homeownership-district" class="related-card"><h4>香港18區自置居所比率全面分析：邊區最多業主？...</h4><p>香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a></div></div>
 <script>window.__charts = window.__charts || {};
 window.__charts['chart-price-income-ratio'] = {"tooltip": {"trigger": "axis"}, "grid": {"left": 60, "right": 30, "top": 30, "bottom": 40}, "xAxis": {"type": "category", "data": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]}, "yAxis": {"type": "value", "name": "房價收入比（倍）", "min": 0, "max": 25}, "series": [{"name": "房價收入比", "type": "line", "data": [18.0, 18.5, 19.2, 20.0, 21.0, 20.5, 21.0, 20.2, 19.0, 18.5, 18.2], "smooth": true, "lineStyle": {"width": 3, "color": "#e63946"}, "areaStyle": {"color": {"type": "linear", "x": 0, "y": 0, "x2": 0, "y2": 1, "colorStops": [{"offset": 0, "color": "rgba(230,57,70,0.3)"}, {"offset": 1, "color": "rgba(230,57,70,0.02)"}]}}, "markLine": {"data": [{"yAxis": 5, "label": {"formatter": "可負擔 5倍"}, "lineStyle": {"type": "dashed", "color": "#2a9d8f"}}, {"yAxis": 8, "label": {"formatter": "嚴重難以負擔 8倍"}, "lineStyle": {"type": "dashed", "color": "#f4a261"}}]}}]};

@@ -115,6 +115,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
 .toc-box a:hover { background:#e8edf3; }
 .section h2 { scroll-margin-top:80px; }
+
+.article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 36px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.article-main { min-width: 0; }
+.article-main .container { max-width: 100%; padding: 0; }
+.article-sidebar { position: sticky; top: 80px; align-self: start; }
+.article-sidebar .sc { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.article-sidebar .sc h4 { font-size: 14px; color: #1e3a5f; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #e63946; }
+.article-sidebar .sc ul { list-style: none; padding: 0; margin: 0; }
+.article-sidebar .sc li { margin: 5px 0; }
+.article-sidebar .sc a { color: #457b9d; text-decoration: none; font-size: 13px; display: block; padding: 4px 0; }
+.article-sidebar .sc a:hover { color: #1e3a5f; }
+.side-stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.side-stat .num { font-weight: 700; color: #1e3a5f; }
+.side-stat .lbl { color: #666; }
+.side-meta { font-size: 12px; color: #999; line-height: 1.6; }
+@media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
 </style>
 </head>
 <body>
@@ -133,7 +149,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
   </div>
 </header>
 <div class="page-hero"><h1>私隱政策 | Privacy Policy</h1></div>
-<div class="breadcrumb"><a href="/">首頁</a> › <span>私隱政策 | Privacy Policy</span></div>
+<div class="breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 24px;"><a href="/">首頁</a> › <span>私隱政策 | Privacy Policy</span></div>
 <div class="container"><div class="plain-content"><h2>引言</h2><p>HKInformation 香港資訊數據圖鑑（以下簡稱「本網站」）重視您的私隱。本私隱政策說明我們如何收集、使用、儲存及保護您的個人資料。使用本網站即表示您同意本私隱政策的條款。</p>
 <h2>我們收集的資料</h2><h3>自動收集的資料</h3><p>當您瀏覽本網站時，我們的伺服器會自動記錄以下資料：</p><ul style='margin:12px 0 12px 24px; line-height:2;'><li>瀏覽器類型及版本</li><li>操作系統</li><li>瀏覽的頁面及停留時間</li><li>來源網站（如有）</li><li>IP地址（經匿名化處理）</li></ul><h3>Cookie及追蹤技術</h3><p>本網站使用Cookie及類似追蹤技術來改善用戶體驗及提供個人化廣告。您可以在瀏覽器設定中管理Cookie偏好。</p>
 <h2>Google AdSense</h2><p>本網站使用 Google AdSense 廣告服務。Google 及其合作夥伴可能會使用 Cookie 向您展示基於您過往瀏覽記錄的個人化廣告。您可以透過 <a href='https://adssettings.google.com' target='_blank' rel='noopener'>Google 廣告設定</a> 管理個人化廣告偏好。</p><p>Google 作為第三方供應商，使用 Cookie 來放送廣告。Google 使用 DART Cookie 使其能夠根據您對本網站及互聯網上其他網站的瀏覽記錄，向您放送廣告。</p><p>您可以選擇在 <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 廣告及私隱</a> 頁面停用 DART Cookie。</p>

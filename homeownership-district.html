@@ -115,6 +115,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .toc-box a { color:#457b9d; text-decoration:none; font-size:14px; display:block; padding:4px 8px; border-radius:6px; }
 .toc-box a:hover { background:#e8edf3; }
 .section h2 { scroll-margin-top:80px; }
+
+.article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 36px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.article-main { min-width: 0; }
+.article-main .container { max-width: 100%; padding: 0; }
+.article-sidebar { position: sticky; top: 80px; align-self: start; }
+.article-sidebar .sc { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.article-sidebar .sc h4 { font-size: 14px; color: #1e3a5f; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #e63946; }
+.article-sidebar .sc ul { list-style: none; padding: 0; margin: 0; }
+.article-sidebar .sc li { margin: 5px 0; }
+.article-sidebar .sc a { color: #457b9d; text-decoration: none; font-size: 13px; display: block; padding: 4px 0; }
+.article-sidebar .sc a:hover { color: #1e3a5f; }
+.side-stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.side-stat .num { font-weight: 700; color: #1e3a5f; }
+.side-stat .lbl { color: #666; }
+.side-meta { font-size: 12px; color: #999; line-height: 1.6; }
+@media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
 </style>
 </head>
 <body>
@@ -138,7 +154,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
   <img src="https://hinfok.com/images/placeholder-district-1.svg" alt="香港18區自置居所比率全面分析：邊區最多業主？" class="hero-img" onerror="this.style.display='none'">
   <p class="hero-caption">香港18區自置居所比率地圖 — 從業主比率看各區財富分佈（圖片由 AI 生成）</p>
 </div>
-<div class="breadcrumb"><a href="/">首頁</a> › <span>香港18區自置居所比率全面分析：邊區最多業主？</span></div>
+<div class="breadcrumb" style="max-width:1200px;margin:0 auto;padding:0 24px;"><a href="/">首頁</a> › <span>香港18區自置居所比率全面分析：邊區最多業主？</span></div>
+<div class="article-layout"><div class="article-main">
 <div class="container"><div class="summary-box"><h3>重點摘要</h3><p>香港整體自置居所比率約為50.5%，但18區之間差異巨大。灣仔區以約58%的自置比率位居榜首，而觀塘區則以約35%位居末席。自置比率與地區收入水平、住宅類型及公共房屋比例有高度相關性，反映香港居住空間的階級分層現象。</p></div></div>
 <div class="container"><div class="meta-info"><span>最後更新：2026-07-09</span><span>數據來源：<a href="https://www.censtatd.gov.hk" target="_blank" rel="noopener">政府統計處（C&SD）人口普查及中期人口統計</a></span></div></div>
 <div class="section container"><h2 id="sec-0">香港整體自置居所比率趨勢：半世紀的變化</h2><p>香港的自置居所比率（即自住業主所佔住戶比例）在過去半世紀經歷了顯著變化。1970年代，隨著政府大力推動公共房屋及居者有其屋（居屋）計劃，自置比率由約20%逐步上升。2011年達到高峰約53%，其後輕微回落至2025年的約50.5%。</p><p>與其他國際城市比較，香港的自置比率屬偏低水平（新加坡約90%、中國內地城市約80-90%、英國約65%、美國約66%），這與香港獨特的高樓價、高密度居住模式及大量公共房屋供應有關。</p><p>值得注意的是，自置比率在過去十年的變化並不單純反映置業意願，也受到家庭結構變化（獨居及單親家庭增加）、人口老化（長者業主保留物業但子女另覓居所）以及樓市周期（高樓價阻礙年輕一代置業）等複雜因素的影響。</p></div>
@@ -156,6 +173,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 
 <div class="container"><div class="section"><h2>香港18區自置居所比率詳表</h2><div style="overflow-x:auto"><table class="data-table"><thead><tr><th>地區</th><th>自置比率 (%)</th><th>月入中位數（千元）</th><th>人口（萬）</th><th>公共房屋比例 (%)</th></tr></thead><tbody><tr><td>灣仔</td><td>58.2</td><td>52.0</td><td>15.2</td><td>18</td></tr><tr><td>中西區</td><td>57.8</td><td>53.0</td><td>24.3</td><td>15</td></tr><tr><td>西貢</td><td>56.5</td><td>42.0</td><td>49.0</td><td>42</td></tr><tr><td>離島</td><td>55.8</td><td>48.0</td><td>20.5</td><td>38</td></tr><tr><td>南區</td><td>51.8</td><td>36.0</td><td>27.5</td><td>28</td></tr><tr><td>東區</td><td>53.0</td><td>38.0</td><td>55.0</td><td>32</td></tr><tr><td>大埔</td><td>50.5</td><td>35.0</td><td>32.0</td><td>35</td></tr><tr><td>沙田</td><td>49.2</td><td>34.0</td><td>70.0</td><td>48</td></tr><tr><td>荃灣</td><td>48.0</td><td>33.0</td><td>32.5</td><td>30</td></tr><tr><td>元朗</td><td>47.5</td><td>32.0</td><td>65.0</td><td>40</td></tr><tr><td>北區</td><td>47.0</td><td>31.0</td><td>35.0</td><td>45</td></tr><tr><td>屯門</td><td>46.2</td><td>30.0</td><td>50.0</td><td>48</td></tr><tr><td>九龍城</td><td>44.8</td><td>35.0</td><td>42.0</td><td>22</td></tr><tr><td>油尖旺</td><td>42.5</td><td>31.0</td><td>35.0</td><td>25</td></tr><tr><td>黃大仙</td><td>41.2</td><td>29.0</td><td>42.0</td><td>58</td></tr><tr><td>葵青</td><td>39.8</td><td>30.0</td><td>52.0</td><td>55</td></tr><tr><td>深水埗</td><td>38.5</td><td>29.0</td><td>42.0</td><td>40</td></tr><tr><td>觀塘</td><td>35.2</td><td>28.0</td><td>68.0</td><td>60</td></tr></tbody></table></div></div></div>
 
+</div><div class="article-sidebar">
+<div class="sc"><h4>本篇導讀</h4><ul><li><a href="#sec-0">香港整體自置居所比率趨勢：半世紀的變化</a></li><li><a href="#sec-1">18區自置比率排名：最富貴 vs 最基層</a></li><li><a href="#sec-2">業主比率與收入水平的關係</a></li><li><a href="#sec-3">十年變化：哪些區的業主比率變化最大？</a></li><li><a href="#sec-4">年齡層與自置比率：年輕一代的上車夢</a></li><li><a href="#sec-5">自置居所比率的社會意義</a></li><li><a href="#sec-6">數據來源與定義</a></li></ul></div><div class="sc"><h4>重點數據</h4><div class="side-stat"><span class="lbl">黃大仙</span><span class="num">41.2</span></div><div class="side-stat"><span class="lbl">葵青</span><span class="num">39.8</span></div><div class="side-stat"><span class="lbl">深水埗</span><span class="num">38.5</span></div><div class="side-stat"><span class="lbl">觀塘</span><span class="num">35.2</span></div></div><div class="sc"><h4>相關分析</h4><ul><li><a href="/income-vs-price">香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析</a></li><li><a href="/public-housing">香港公屋輪候時間與供應趨勢分析</a></li></ul></div><div class="sc"><h4>資訊標籤</h4><div class="side-meta"><p>最後更新: 2026-07-09</p><p>數據來源: 政府統計處（C&SD）人口普查及中期人口統計</p></div></div>
+</div></div>
 <div class="section container"><h2>相關分析</h2><div class="grid-2"><a href="/income-vs-price" class="related-card"><h4>香港住戶收入中位數 vs 樓價：供樓負擔比率深度分析...</h4><p>香港樓價中位數對收入中位數比率（房價收入比）長期維持在20倍以上，遠超國際公認可負擔水平（3-5倍）。按揭供款佔入息比率在加息週期後升至約70%，意味一個家庭需以接近七成收入供樓，置業難度居全球前列。...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a><a href="/public-housing" class="related-card"><h4>香港公屋輪候時間與供應趨勢分析...</h4><p>香港公屋平均輪候時間在2021年達到歷史高位5.8年，近年隨著政府加大供應已回落至約4.8年，但仍遠高於政府3年目標。一般申請者高達13萬宗，而每年可供編配的公屋單位僅約2-3萬伙，供求失衡問題嚴峻。...</p><span style="color:#457b9d;font-size:13px;">閱讀更多 →</span></a></div></div>
 <script>window.__charts = window.__charts || {};
 window.__charts['chart-district-ranking'] = {"tooltip": {"trigger": "axis"}, "grid": {"left": 100, "right": 80, "top": 20, "bottom": 40}, "xAxis": {"type": "value", "name": "自置居所比率 (%)", "max": 70}, "yAxis": {"type": "category", "data": ["觀塘", "深水埗", "葵青", "黃大仙", "油尖旺", "九龍城", "屯門", "北區", "元朗", "荃灣", "沙田", "大埔", "南區", "東區", "中西區", "離島", "西貢", "灣仔"], "axisLabel": {"fontSize": 11}}, "series": [{"name": "自置居所比率", "type": "bar", "data": [{"value": 35.2, "itemStyle": {"color": "#e63946"}}, {"value": 38.5, "itemStyle": {"color": "#f4a261"}}, {"value": 39.8, "itemStyle": {"color": "#f4a261"}}, {"value": 41.2, "itemStyle": {"color": "#f4a261"}}, {"value": 42.5, "itemStyle": {"color": "#f4a261"}}, {"value": 44.8, "itemStyle": {"color": "#e76f51"}}, {"value": 46.2, "itemStyle": {"color": "#e76f51"}}, {"value": 47.0, "itemStyle": {"color": "#e76f51"}}, {"value": 47.5, "itemStyle": {"color": "#e76f51"}}, {"value": 48.0, "itemStyle": {"color": "#2a9d8f"}}, {"value": 49.2, "itemStyle": {"color": "#2a9d8f"}}, {"value": 50.5, "itemStyle": {"color": "#2a9d8f"}}, {"value": 51.8, "itemStyle": {"color": "#2a9d8f"}}, {"value": 53.0, "itemStyle": {"color": "#457b9d"}}, {"value": 55.2, "itemStyle": {"color": "#457b9d"}}, {"value": 55.8, "itemStyle": {"color": "#457b9d"}}, {"value": 56.5, "itemStyle": {"color": "#457b9d"}}, {"value": 58.2, "itemStyle": {"color": "#1e3a5f"}}], "label": {"show": true, "position": "right", "formatter": "{c}%"}}]};
