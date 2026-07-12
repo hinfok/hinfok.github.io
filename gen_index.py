@@ -51,7 +51,7 @@ html.append('<style>')
 html.append('*{margin:0;padding:0;box-sizing:border-box}')
 html.append('body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:#f0f4f8;color:#1a2332;line-height:1.7}')
 html.append('header{background:linear-gradient(135deg,#1e3a5f,#2d5a87);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.15)}')
-html.append('.hdr{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px}'
+html.append('.hdr{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px}')
 html.append('.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0}')
 html.append('.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;white-space:nowrap;transition:.2s}')
 html.append('.nav-links a:hover{background:rgba(255,255,255,0.12)}')
