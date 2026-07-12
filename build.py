@@ -386,7 +386,28 @@ def build_page(article):
         hero_img, "/" + slug, json_ld, body_content
     )
 
+
+def load_categories():
+    """Load categories from categories.json"""
+    try:
+        import json as j
+        with open(os.path.join(os.path.dirname(__file__), "src", "data", "categories.json"), "r", encoding="utf-8") as f:
+            return j.load(f).get("categories", [])
+    except:
+        return []
+
 def build_index_page(articles):
+    cats = load_categories()
+    cat_map = {c["id"]: c for c in cats}
+    
+    # Group articles by category
+    art_by_cat = {}
+    for art in articles:
+        cat = art.get("category", "uncategorized")
+        if cat not in art_by_cat:
+            art_by_cat[cat] = []
+        art_by_cat[cat].append(art)
+
     hero_parts = [
         '<div class="index-hero">',
         f'  <h1>{SITE["name"]}</h1>',
