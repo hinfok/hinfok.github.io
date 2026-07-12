@@ -426,7 +426,7 @@ def build_index_page(articles):
     stats = [
         '<div class="container" style="margin-top:-30px;position:relative;z-index:10;">',
         '  <div class="grid-3">',
-        '    <div class="stat-bar"><div class="num">5</div><div class="label">分析指標</div></div>',
+        '    <div class="stat-bar"><div class="num">30+</div><div class="label">分析文章</div></div>',
         '    <div class="stat-bar"><div class="num">18區</div><div class="label">全港覆蓋</div></div>',
         '    <div class="stat-bar"><div class="num">2015-2025</div><div class="label">十年數據</div></div>',
         '  </div>',
@@ -447,7 +447,34 @@ def build_index_page(articles):
         cards.append(f'  </div>')
         cards.append(f'</a>')
     
-    cards_grid = f'<div class="section container"><h2>分析指標</h2><div class="grid-2">{"".join(cards)}</div></div>'
+    # Category sections
+    try:
+        with open(os.path.join(os.path.dirname(__file__), "src", "data", "categories.json"), "r", encoding="utf-8") as fcat:
+            clist = json.load(fcat).get("categories", [])
+        acat = {}
+        for art in articles:
+            c = art.get("category", "x")
+            if c not in acat: acat[c] = []
+            acat[c].append(art)
+        cat_html = ""
+        for cat in clist:
+            cid = cat["id"]
+            if cid in acat and acat[cid]:
+                cards = ""
+                for art in acat[cid]:
+                    cards += chr(60) + "a href='/" + art["slug"] + "' class=home-card" + chr(62)
+                    cards += chr(60) + "div class=home-card-body" + chr(62)
+                    cards += chr(60) + "h3" + chr(62) + art["title"] + chr(60) + "/h3" + chr(62)
+                    cards += chr(60) + "p" + chr(62) + art["summary"][:150] + "..." + chr(60) + "/p" + chr(62)
+                    cards += chr(60) + "/div" + chr(62) + chr(60) + "/a" + chr(62)
+                cat_html += chr(60) + "div class=\"section container\"" + chr(62)
+                cat_html += chr(60) + "h2" + chr(62) + cat.get("icon","") + " " + cat["name"] + chr(60) + "/h2" + chr(62)
+                cat_html += chr(60) + "p style=\"color:#888;font-size:14px;margin-bottom:16px;\"" + chr(62) + cat.get("desc","") + chr(60) + "/p" + chr(62)
+                cat_html += chr(60) + "div class=\"grid-3\"" + chr(62) + cards + chr(60) + "/div" + chr(62) + chr(60) + "/div" + chr(62)
+        cards_grid = cat_html
+    except:
+        cards_grid = ""
+
     
     about = [
         '<div class="section container">',
