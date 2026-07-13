@@ -571,5 +571,7 @@
       ]
     }
   },
-  "category": "housing"
+  "category": "housing",
+  "dataVerified": true,
+  "verifiedSource": "Table 130-06606 家庭月入中位數"
 }

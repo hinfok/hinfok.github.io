@@ -507,5 +507,7 @@
       ]
     }
   },
-  "category": "housing"
+  "category": "housing",
+  "dataVerified": true,
+  "verifiedSource": "RVD 差餉物業估價署 CSV"
 }
