@@ -4,6 +4,7 @@ base = r'C:\Users\ckyeung\OneDrive\桌面\賺錢\hinfok\main'
 ad = os.path.join(base, 'src', 'articles')
 cd = os.path.join(base, 'src', 'data')
 out = os.path.join(base, 'output')
+os.makedirs(out, exist_ok=True)
 
 config = json.load(open(os.path.join(cd, 'config.json'), encoding='utf-8'))
 cats = json.load(open(os.path.join(cd, 'categories.json'), encoding='utf-8'))['categories']
