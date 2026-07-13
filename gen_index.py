@@ -1,6 +1,6 @@
 import json, os, html as htm
 
-base = r'C:\Users\ckyeung\OneDrive\桌面\賺錢\hinfok\main'
+base = os.path.dirname(os.path.abspath(__file__))
 ad = os.path.join(base, 'src', 'articles')
 cd = os.path.join(base, 'src', 'data')
 out = os.path.join(base, 'output')
