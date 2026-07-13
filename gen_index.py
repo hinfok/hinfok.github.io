@@ -1,4 +1,4 @@
-﻿import json, os, html as htm
+import json, os, html as htm
 
 base = r'C:\Users\ckyeung\OneDrive\桌面\賺錢\hinfok\main'
 ad = os.path.join(base, 'src', 'articles')

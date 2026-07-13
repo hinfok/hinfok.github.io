@@ -1,4 +1,4 @@
-﻿import json, os, shutil, html
+import json, os, shutil, html
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
