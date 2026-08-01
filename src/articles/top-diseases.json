@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-medical",
   "lastUpdated": "2026-07-12",
-  "dataSource": "相關政府部門",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "衞生署（DH）健康統計",
+  "dataSourceUrl": "https://www.dh.gov.hk",
   "summary": "癌症居十大死因首位(約30%)，心臟病(15%)及肺炎(10%)分列二三。",
   "sections": [
     {

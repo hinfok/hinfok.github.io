@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-medical",
   "lastUpdated": "2026-07-12",
-  "dataSource": "相關政府部門",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "環境保護署（EPD）空氣質素健康指數（AQHI）",
+  "dataSourceUrl": "https://www.epd.gov.hk",
   "summary": "路邊AQHI由4.5改善至3.5，一般站由3.8改善至3.0。發電燃料轉變及車輛排放標準提升是主因。",
   "sections": [
     {

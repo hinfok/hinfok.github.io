@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg-med" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a6d8f"/>
+      <stop offset="100%" stop-color="#1a2332"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg-med)"/>
+  <rect x="200" y="180" width="180" height="220" rx="16" fill="#f1faee" opacity="0.95"/>
+  <rect x="262" y="242" width="56" height="96" fill="#e63946"/>
+  <rect x="242" y="262" width="96" height="56" fill="#e63946"/>
+  <rect x="520" y="160" width="160" height="240" rx="14" fill="#f1faee" opacity="0.9"/>
+  <path d="M540 240 h120 M600 200 v80" stroke="#2a9d8f" stroke-width="10" stroke-linecap="round"/>
+  <rect x="820" y="200" width="190" height="200" rx="16" fill="#f1faee" opacity="0.95"/>
+  <path d="M880 240 l30 50 l40 -90 l40 90 l30 -30" stroke="#f4a261" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="555" font-family="sans-serif" font-size="24" fill="#f1faee" text-anchor="middle" opacity="0.9">🏥 香港醫療環境 · 疾病、病床、天氣與空氣</text>
+</svg>

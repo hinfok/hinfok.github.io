@@ -46,6 +46,10 @@ html.append('<meta property="og:title" content="HKInformation 香港資訊數據
 html.append('<meta property="og:description" content="' + esc(SE['defaultDescription']) + '">')
 html.append('<meta property="og:type" content="website">')
 html.append('<meta property="og:site_name" content="' + esc(S['name']) + '">')
+html.append('<meta property="og:image" content="' + S['baseUrl'].rstrip('/') + '/images/og-default.svg">')
+html.append('<meta name="twitter:card" content="summary_large_image">')
+html.append('<meta name="twitter:title" content="HKInformation 香港資訊數據圖鑑 — 用數據看懂香港">')
+html.append('<meta name="twitter:description" content="' + esc(SE['defaultDescription']) + '">')
 html.append('<link rel="canonical" href="' + S['baseUrl'].rstrip('/') + '/">')
 html.append('<meta name="robots" content="index, follow">')
 if SE.get('googleSiteVerification'):
@@ -195,7 +199,7 @@ html.append('</div></section>')
 
 # Footer
 html.append('<footer>')
-html.append('<p style="margin-bottom:12px"><a href="/data-sources">數據來源總覽</a> · <a href="/data-updates">數據更新日誌</a> · <a href="/about">關於我們</a> · <a href="/privacy">私隱政策</a> · <a href="/sitemap.xml">網站地圖</a></p>')
+html.append('<p style="margin-bottom:12px"><a href="/data-sources">數據來源總覽</a> · <a href="/data-updates">數據更新日誌</a> · <a href="/about">關於我們</a> · <a href="/privacy">私隱政策</a> · <a href="mailto:informationinhk@gmail.com">聯絡我們</a> · <a href="/sitemap.xml">網站地圖</a></p>')
 html.append('<p>' + S['name'] + '</p><p style="font-size:12px;opacity:0.7;max-width:700px;margin:8px auto">' + S['footer']['disclaimer'] + '</p><p style="margin-top:8px">' + S['footer']['copyright'] + '</p>')
 html.append('</footer>')
 

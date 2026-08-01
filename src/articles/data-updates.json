@@ -15,7 +15,7 @@
     },
     {
       "heading": "2026 年 8 月更新",
-      "content": "<ul style='margin:12px 0 12px 24px; line-height:2;'><li>加入 Google Search Console 網站驗證，方便 Google 準確索引內容。</li><li>加入 Google Analytics 流量統計，用嚟了解讀者最想睇咩主題。</li><li>新增<a href='/data-sources'>數據來源總覽</a>：列出全部 30 個指標嘅官方來源、更新頻率同連結。</li><li>新增本頁<a href='/data-updates'>數據更新日誌</a>，之後每次更新都會喺度留低紀錄。</li><li>首頁新增「最新更新」「數據來源」「常見問題」三個區塊，方便讀者快速理解網站點運作。</li></ul>"
+      "content": "<ul style='margin:12px 0 12px 24px; line-height:2;'><li>加入 Google Search Console 網站驗證，方便 Google 準確索引內容。</li><li>加入 Google Analytics 流量統計，用嚟了解讀者最想睇咩主題。</li><li>新增<a href='/data-sources'>數據來源總覽</a>：列出全部 30 個指標嘅官方來源、更新頻率同連結。</li><li>新增本頁<a href='/data-updates'>數據更新日誌</a>，之後每次更新都會喺度留低紀錄。</li><li>首頁新增「最新更新」「數據來源」「常見問題」三個區塊，方便讀者快速理解網站點運作。</li><li>修正 5 張缺失嘅主題圖片，而家全部文章圖表齊全。</li><li>將 15 篇文章嘅數據來源由「相關政府部門」改成具體部門（教育局、運輸署、康文署、天文台、環保署、衞生署、醫管局等），方便讀者核對。</li><li>加入 404 頁面同頁尾聯絡電郵，提升網站完整性。</li></ul>"
     },
     {
       "heading": "2026 年 7 月更新",

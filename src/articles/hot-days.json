@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-medical",
   "lastUpdated": "2026-07-12",
-  "dataSource": "相關政府部門",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "香港天文台（HKO）氣候數據",
+  "dataSourceUrl": "https://www.hko.gov.hk",
   "summary": "酷熱日數由20天增至40天，熱夜由15天增至30天。",
   "sections": [
     {

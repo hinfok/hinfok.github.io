@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-culture",
   "lastUpdated": "2026-07-13",
-  "dataSource": "相關政府部門公開數據",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "運輸署（TD）公共交通統計",
+  "dataSourceUrl": "https://www.td.gov.hk",
   "summary": "港鐵日均載客量由2015年約400萬人次升至2025年約420萬，佔公共交通約42%，巴士約33%，小巴約15%。",
   "sections": [
     {

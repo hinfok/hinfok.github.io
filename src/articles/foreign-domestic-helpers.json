@@ -9,7 +9,7 @@
   },
   "heroImage": "placeholder-population",
   "lastUpdated": "2026-07-12",
-  "dataSource": "政府統計處（C&SD）",
+  "dataSource": "政府統計處（C&SD）勞動人口統計",
   "dataSourceUrl": "https://www.censtatd.gov.hk",
   "summary": "香港外籍家庭傭工人數由2015年約33萬人增至2025年約38萬人。疫情期間曾短暫下跌，其後快速回升。",
   "sections": [

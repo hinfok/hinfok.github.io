@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-labour",
   "lastUpdated": "2026-07-12",
-  "dataSource": "政府統計處（C&SD）",
-  "dataSourceUrl": "https://www.censtatd.gov.hk",
+  "dataSource": "教育局（EDB）學生人數統計",
+  "dataSourceUrl": "https://www.edb.gov.hk",
   "summary": "小學學生人數由2015年55萬跌至2025年45萬，中學由36萬跌至31萬，跌幅分別達18%及14%。縮班殺校危機持續發酵。",
   "sections": [
     {

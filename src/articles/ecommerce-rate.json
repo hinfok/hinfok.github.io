@@ -9,7 +9,7 @@
   },
   "heroImage": "placeholder-economy",
   "lastUpdated": "2026-07-12",
-  "dataSource": "政府統計處（C&SD）",
+  "dataSource": "政府統計處（C&SD）零售業網上銷售統計",
   "dataSourceUrl": "https://www.censtatd.gov.hk",
   "summary": "網上零售佔總零售額比率由2015年約3%持續攀升至2025年約11%，增長超過3倍。疫情期間加速了大眾對網購的接受度。",
   "sections": [

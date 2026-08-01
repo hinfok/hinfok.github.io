@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-culture",
   "lastUpdated": "2026-07-13",
-  "dataSource": "相關政府部門公開數據",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "運輸署（TD）交通意外統計",
+  "dataSourceUrl": "https://www.td.gov.hk",
   "summary": "交通意外宗數由2015年18,500宗降至疫情期間低位，2025年約18,200宗。死亡人數由130人降至約118人。",
   "sections": [
     {

@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-culture",
   "lastUpdated": "2026-07-13",
-  "dataSource": "相關政府部門公開數據",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "運輸署（TD）車輛登記及電動車統計",
+  "dataSourceUrl": "https://www.td.gov.hk",
   "summary": "私家車登記約68萬輛。電動車由2015年2,000輛急增至2025年8萬輛，佔新登記比例由2%升至約35%。",
   "sections": [
     {

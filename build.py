@@ -259,6 +259,7 @@ def build_footer():
     <div class="footer-bottom">
       <p>{ftr["copyright"]}</p>
       <p>數據來源：政府統計處、差餉物業估價署、房屋委員會及相關政府部門</p>
+      <p>聯絡：<a href="mailto:{EMAIL}" style="color:#f4a261;">{EMAIL}</a></p>
     </div>
   </div>
 </footer>'''
@@ -445,6 +446,22 @@ def build_page(article):
         hero_img, "/" + slug, json_ld, body_content
     )
 
+def build_404():
+    content = '<div class="container" style="text-align:center;padding:80px 24px;"><h1 style="font-size:44px;color:#1e3a5f;">404</h1><p style="font-size:18px;margin:16px 0;">搵唔到呢一頁，可能係連結過期或者網址打錯。</p><p><a href="/" style="color:#457b9d;font-weight:600;">返回首頁</a> · <a href="/data-sources" style="color:#457b9d;font-weight:600;">數據來源總覽</a> · <a href="/sitemap.xml" style="color:#457b9d;font-weight:600;">網站地圖</a></p></div>'
+    json_ld = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "404 找不到頁面",
+        "url": SITE["baseUrl"].rstrip("/") + "/404.html"
+    }
+    return wrap_html(
+        "404 找不到頁面 | HKInformation 香港資訊數據圖鑑",
+        "此頁面不存在，請返回首頁瀏覽香港統計數據分析。",
+        "404,香港統計數據,香港資訊數據圖鑑",
+        SITE["baseUrl"].rstrip("/") + "/images/og-default.svg",
+        "/404.html", json_ld, content
+    )
+
 
 def load_categories():
     """Load categories from categories.json"""
@@ -589,13 +606,27 @@ def clear_output():
     """Remove generated output, tolerating read-only files (OneDrive on Windows)."""
     if not OUTPUT_DIR.exists():
         return
+    try:
+        os.chmod(OUTPUT_DIR, 0o777)
+    except OSError:
+        pass
     for root, dirs, files in os.walk(OUTPUT_DIR, topdown=False):
         for name in files + dirs:
             try:
                 os.chmod(os.path.join(root, name), 0o777)
             except OSError:
                 pass
-    shutil.rmtree(OUTPUT_DIR)
+    try:
+        shutil.rmtree(OUTPUT_DIR)
+    except OSError:
+        for item in OUTPUT_DIR.iterdir():
+            if item.is_dir() and not item.is_symlink():
+                shutil.rmtree(item, ignore_errors=True)
+            else:
+                try:
+                    item.unlink()
+                except OSError:
+                    pass
 
 def main():
     clear_output()
@@ -632,6 +663,9 @@ def main():
         print(f"Generating page: {name}...")
         with open(OUTPUT_DIR / f"{p['slug']}.html", "w", encoding="utf-8") as f:
             f.write(build_page(p))
+
+    with open(OUTPUT_DIR / "404.html", "w", encoding="utf-8") as f:
+        f.write(build_404())
     
     sitemap = build_sitemap(articles, pages)
     with open(OUTPUT_DIR / "sitemap.xml", "w", encoding="utf-8") as f:

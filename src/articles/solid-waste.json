@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-medical",
   "lastUpdated": "2026-07-12",
-  "dataSource": "相關政府部門",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "環境保護署（EPD）固體廢物監察報告",
+  "dataSourceUrl": "https://www.epd.gov.hk",
   "summary": "棄置量由10,000噸/日降至約9,000噸/日，回收率由35%升至約42%。",
   "sections": [
     {

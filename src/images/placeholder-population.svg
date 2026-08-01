@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg-pop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#2a9d8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg-pop)"/>
+  <circle cx="300" cy="230" r="95" fill="#f4a261" opacity="0.85"/>
+  <circle cx="530" cy="180" r="120" fill="#e9c46a" opacity="0.9"/>
+  <circle cx="800" cy="240" r="85" fill="#a8dadc" opacity="0.9"/>
+  <rect x="150" y="360" width="80" height="130" fill="#1e3a5f" opacity="0.9"/>
+  <rect x="260" y="320" width="80" height="170" fill="#1e3a5f" opacity="0.8"/>
+  <rect x="470" y="300" width="90" height="190" fill="#1e3a5f" opacity="0.85"/>
+  <rect x="620" y="330" width="80" height="160" fill="#1e3a5f" opacity="0.9"/>
+  <rect x="800" y="360" width="85" height="130" fill="#1e3a5f" opacity="0.85"/>
+  <text x="600" y="550" font-family="sans-serif" font-size="24" fill="#f1faee" text-anchor="middle" opacity="0.9">👥 香港人口社會 · 出生、壽命與遷移</text>
+</svg>

@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-culture",
   "lastUpdated": "2026-07-13",
-  "dataSource": "相關政府部門公開數據",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "康樂及文化事務署（LCSD）公共圖書館統計",
+  "dataSourceUrl": "https://www.lcsd.gov.hk",
   "summary": "實體書借閱量由2015年4,000萬跌至2025年3,600萬，電子書由200萬增至600萬，佔比升至約14%。",
   "sections": [
     {

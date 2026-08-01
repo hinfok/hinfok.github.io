@@ -9,8 +9,8 @@
   },
   "heroImage": "placeholder-medical",
   "lastUpdated": "2026-07-12",
-  "dataSource": "相關政府部門",
-  "dataSourceUrl": "https://www.gov.hk",
+  "dataSource": "醫院管理局（HA）醫療服務統計",
+  "dataSourceUrl": "https://www.ha.org.hk",
   "summary": "公立醫院病床佔用率長期超90%，冬季高峰期達105%+。私家醫院約60-70%。",
   "sections": [
     {
