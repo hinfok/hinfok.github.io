@@ -1,0 +1,73 @@
+{
+  "slug": "data-sources",
+  "title": "數據來源總覽 | HKInformation 香港資訊數據圖鑑",
+  "seo": {
+    "title": "香港統計數據來源總覽：政府統計處、差餉物業估價署等 30 個官方數據庫",
+    "description": "一次過睇清 HKInformation 30 篇分析文章所用嘅官方數據來源、更新頻率同資料連結，全部來自政府統計處、差餉物業估價署、房屋委員會等政府部門。",
+    "keywords": "香港統計數據來源,政府統計處,差餉物業估價署,data.gov.hk,香港開放數據,香港官方統計",
+    "ogImage": "/images/og-default.svg"
+  },
+  "lastUpdated": "2026-08-01",
+  "sections": [
+    {
+      "heading": "點解要有呢一頁",
+      "content": "<p>HKInformation 香港資訊數據圖鑑嘅每一篇分析，都係用香港政府部門嘅公開數據，唔靠估、唔靠傳聞。呢一頁將全部 30 個指標嘅官方來源、更新頻率同查證方法一次過列晒出嚟，等讀者可以自己上來源核對，亦令網站嘅每一粒數字都有根有據。</p><p>原則好簡單：所有圖表都必須可以喺政府網站搵到原始數據；任何一項數據搵唔到官方來源，就寧願唔出。</p>"
+    },
+    {
+      "heading": "查證原則",
+      "content": "<ul style='margin:12px 0 12px 24px; line-height:2;'><li><strong>只用官方數據</strong>：以政府統計處（C&SD）、差餉物業估價署（RVD）、房屋委員會、運輸署、醫院管理局、天文台、環保署等政府機構嘅公開數字為準。</li><li><strong>寫明來源</strong>：每篇文章都列出數據來源同最後更新日期，讀者可以按連結查返原表。</li><li><strong>唔作估算</strong>：除非官方有公布估算（例如人口淨遷移），否則唔會自製「大約數」。</li><li><strong>每月覆核</strong>：政府公布新一期數字後，相關文章會喺一個月內更新，並記錄喺<a href='/data-updates'>數據更新日誌</a>。</li></ul>"
+    },
+    {
+      "heading": "更新機制",
+      "content": "<p>政府各部門公布時間唔同：樓價指數同零售數據多數每月出，失業率同人口估算多數每季或每年出，人口普查就每五年一次。網站會按照每個指標嘅官方公布節奏，喺新數字上線後盡快更新文章，並喺每頁頂部顯示「最後更新」日期。</p><p>如果你發現任何數字同官方網站有出入，歡迎電郵 <a href='mailto:informationinhk@gmail.com'>informationinhk@gmail.com</a> 話畀我哋知，我哋會核對後更正。</p>"
+    },
+    {
+      "heading": "常見問題",
+      "content": "<h3>數據係咪一定準？</h3><p>所有數字均直接取自政府官方公布，但我哋建議重要決定前再上原始來源核對一次，因為政府有時會修訂早前數字。</p><h3>點解有啲文章仲未更新到最新一期？</h3><p>因為唔同部門公布時間唔同，部分數據要等官方出齊先更新；每篇文嘅「最後更新」日期就係最近一次覆核日期。</p><h3>可以轉載你哋嘅圖表嗎？</h3><p>可以，只要註明來源係 HKInformation 香港資訊數據圖鑑，並附上原文連結就可以。</p>"
+    }
+  ],
+  "charts": [],
+  "dataTables": {
+    "sourcesTable": {
+      "title": "30 個指標數據來源一覽",
+      "headers": [
+        "分析主題",
+        "官方數據來源",
+        "更新頻率",
+        "官方連結"
+      ],
+      "rows": [
+        ["私樓租金與樓價指數走勢", "差餉物業估價署 物業市場統計", "每月", "<a href='https://www.rvd.gov.hk' target='_blank' rel='noopener'>RVD</a>"],
+        ["公屋輪候時間與供應趨勢", "房屋委員會 公屋輪候及供應統計", "每季/年度", "<a href='https://www.housingauthority.gov.hk' target='_blank' rel='noopener'>房委會</a>"],
+        ["住戶收入中位數 vs 樓價", "政府統計處 綜合住戶統計調查 130-06606 + RVD", "每季/每月", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["商業與住宅物業空置率", "差餉物業估價署 香港物業報告", "每年", "<a href='https://www.rvd.gov.hk' target='_blank' rel='noopener'>RVD</a>"],
+        ["18 區自置居所比率", "政府統計處 人口普查及中期人口統計", "每 5 年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["出生率 vs 死亡率", "政府統計處 人口增長組成 110-01003", "每年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["結婚及離婚率走勢", "政府統計處 生命事件統計 115-01011", "每年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["平均壽命趨勢", "政府統計處 生命事件統計 115-01011", "每年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["外籍家庭傭工人口變動", "政府統計處 勞動人口統計", "每季", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["人口淨遷移與離港人數", "政府統計處 人口增長組成 110-01003", "每年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["零售業銷貨價值", "政府統計處 零售業總銷貨額 620-67001", "每月", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["訪港旅客數字與消費力", "政府統計處 訪港旅客統計 650-80001", "每月", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["網上零售 vs 實體店比率", "政府統計處 零售業網上銷售統計", "每月/每季", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["食肆收益與飲食業趨勢", "政府統計處 食肆收益及購貨額調查 625-68001", "每季", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["綜合消費物價指數", "政府統計處 消費物價指數 510-60001", "每月", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["各行業及男女薪酬中位數", "政府統計處 就業收入中位數 210-06314", "每年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["按年齡組別劃分失業率", "政府統計處 綜合住戶統計調查 210-06101", "每月/每季", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["學生人數 vs 學校數目", "教育局 學生人數及學校統計", "每年", "<a href='https://www.edb.gov.hk' target='_blank' rel='noopener'>教育局</a>"],
+        ["大學畢業生就業及薪酬", "政府統計處 就業及教育統計", "每年", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["各行業工時長度", "政府統計處 綜合住戶統計調查", "每月/每季", "<a href='https://www.censtatd.gov.hk' target='_blank' rel='noopener'>C&SD</a>"],
+        ["博物館入場人數對比", "康樂及文化事務署 博物館統計", "每年", "<a href='https://www.lcsd.gov.hk' target='_blank' rel='noopener'>康文署</a>"],
+        ["公共圖書館借閱趨勢", "康文署 公共圖書館統計", "每月/每年", "<a href='https://www.lcsd.gov.hk' target='_blank' rel='noopener'>康文署</a>"],
+        ["公共交通市場佔有率", "運輸署 公共交通統計", "每年", "<a href='https://www.td.gov.hk' target='_blank' rel='noopener'>運輸署</a>"],
+        ["私家車增長 vs 電動車", "運輸署 車輛登記及檢驗統計", "每月/每年", "<a href='https://www.td.gov.hk' target='_blank' rel='noopener'>運輸署</a>"],
+        ["交通意外與傷亡人數", "運輸署 交通意外統計", "每年", "<a href='https://www.td.gov.hk' target='_blank' rel='noopener'>運輸署</a>"],
+        ["十大致命疾病趨勢", "衞生署 死因及疾病統計", "每年", "<a href='https://www.dh.gov.hk' target='_blank' rel='noopener'>衞生署</a>"],
+        ["公立 vs 私家醫院病床佔用率", "醫院管理局 醫院統計", "每年/每月", "<a href='https://www.ha.org.hk' target='_blank' rel='noopener'>醫管局</a>"],
+        ["酷熱天氣與熱夜日數", "香港天文台 氣候數據", "每日/每年", "<a href='https://www.hko.gov.hk' target='_blank' rel='noopener'>天文台</a>"],
+        ["固體廢物棄置量與回收率", "環境保護署 固體廢物監察報告", "每年", "<a href='https://www.epd.gov.hk' target='_blank' rel='noopener'>環保署</a>"],
+        ["空氣質素健康指數 AQHI", "環境保護署 空氣質素統計", "每小時/每年", "<a href='https://www.epd.gov.hk' target='_blank' rel='noopener'>環保署</a>"]
+      ]
+    }
+  }
+}

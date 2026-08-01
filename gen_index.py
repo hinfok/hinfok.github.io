@@ -11,10 +11,12 @@ cats = json.load(open(os.path.join(cd, 'categories.json'), encoding='utf-8'))['c
 S = config['site']; SE = config['seo']
 ADS = config.get('adsense', {'enabled': False, 'publisherId': ''})
 ADS_ID = ADS.get('publisherId', '') if ADS.get('enabled') else ''
+GA_RAW = S.get('googleAnalyticsId', '').strip()
+PAGE_SLUGS = ['privacy.json', 'about.json', 'data-sources.json', 'data-updates.json']
 
 articles = []
 for f in os.listdir(ad):
-    if f.endswith('.json') and f not in ['privacy.json','about.json']:
+    if f.endswith('.json') and f not in PAGE_SLUGS:
         articles.append(json.load(open(os.path.join(ad, f), encoding='utf-8')))
 
 by_cat = {}
@@ -44,15 +46,24 @@ html.append('<meta property="og:title" content="HKInformation 香港資訊數據
 html.append('<meta property="og:description" content="' + esc(SE['defaultDescription']) + '">')
 html.append('<meta property="og:type" content="website">')
 html.append('<meta property="og:site_name" content="' + esc(S['name']) + '">')
-html.append('<link rel="canonical" href="' + S['baseUrl'] + '/">')
+html.append('<link rel="canonical" href="' + S['baseUrl'].rstrip('/') + '/">')
 html.append('<meta name="robots" content="index, follow">')
 if SE.get('googleSiteVerification'):
     html.append('<meta name="google-site-verification" content="' + SE['googleSiteVerification'] + '">')
 if ADS_ID:
     html.append('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADS_ID + '" crossorigin="anonymous"></script>')
+if GA_RAW:
+    tid = GA_RAW if (GA_RAW.startswith('G-') or GA_RAW.startswith('UA-')) else 'UA-' + GA_RAW + '-1'
+    html.append('<script async src="https://www.googletagmanager.com/gtag/js?id=' + tid + '"></script>')
+    html.append('<script>')
+    html.append('window.dataLayer = window.dataLayer || [];')
+    html.append('function gtag(){dataLayer.push(arguments);}')
+    html.append("gtag('js', new Date());")
+    html.append("gtag('config', '" + tid + "');")
+    html.append('</script>')
 
 html.append('<title>HKInformation 香港資訊數據圖鑑 — 用數據看懂香港</title>')
-jld = {"@context":"https://schema.org","@type":"WebSite","name":S['name'],"url":S['baseUrl'],"description":SE['defaultDescription'],"potentialAction":{"@type":"SearchAction","target":S['baseUrl']+'/?s={search_term_string}',"query-input":"required name=search_term_string"}}
+jld = {"@context":"https://schema.org","@type":"WebSite","name":S['name'],"url":S['baseUrl'].rstrip('/'),"description":SE['defaultDescription'],"potentialAction":{"@type":"SearchAction","target":S['baseUrl'].rstrip('/')+'/?s={search_term_string}',"query-input":"required name=search_term_string"}}
 html.append('<script type="application/ld+json">' + json.dumps(jld, ensure_ascii=False) + '</script>')
 
 # CSS
@@ -97,6 +108,18 @@ html.append('.cdb{padding:14px 16px;flex:1;display:flex;flex-direction:column}')
 html.append('.cdb h3{font-size:15px;color:#1e3a5f;margin-bottom:6px;line-height:1.3}')
 html.append('.cdb p{font-size:13px;color:#555;flex:1}')
 html.append('.tag{display:inline-block;background:#e8edf3;color:#1e3a5f;padding:2px 8px;border-radius:12px;font-size:11px;margin:4px 2px 0 0}')
+html.append('.lu{display:grid;gap:10px}')
+html.append('.lu-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-radius:8px;padding:12px 16px;text-decoration:none;color:inherit;box-shadow:0 1px 6px rgba(0,0,0,.05)}')
+html.append('.lu-item:hover{box-shadow:0 4px 14px rgba(0,0,0,.1)}')
+html.append('.lu-item .t{font-size:14px;color:#1e3a5f;font-weight:600}')
+html.append('.lu-item .d{font-size:12px;color:#888;white-space:nowrap}')
+html.append('.src-band{display:flex;gap:10px;flex-wrap:wrap}')
+html.append('.src-band a{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 16px;text-decoration:none;color:#1e3a5f;font-size:14px;font-weight:600}')
+html.append('.src-band a:hover{background:#1e3a5f;color:#fff}')
+html.append('.faq{display:grid;gap:12px}')
+html.append('.faq-item{background:#fff;border-left:4px solid #2a9d8f;border-radius:8px;padding:14px 18px}')
+html.append('.faq-item h3{font-size:15px;color:#1e3a5f;margin-bottom:4px}')
+html.append('.faq-item p{font-size:14px;color:#555;margin:0}')
 html.append('footer{background:#1a2332;color:rgba(255,255,255,0.7);padding:28px 24px;text-align:center;font-size:13px}')
 html.append('footer a{color:#f4a261;text-decoration:none}')
 html.append('@media(max-width:900px){.cg{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:28px}}')
@@ -148,9 +171,31 @@ for c in cats:
         html.append('</div></a>')
     html.append('</div></section>')
 
+# Latest updates
+latest = sorted(articles, key=lambda a: a.get('lastUpdated',''), reverse=True)[:6]
+html.append('<section class="sc"><h2>📅 最新更新</h2><p>每月跟進政府統計處最新公布，文章會持續更新</p><div class="lu">')
+for a in latest:
+    html.append('<a href="/' + a['slug'] + '" class="lu-item"><span class="t">' + esc(a['title']) + '</span><span class="d">' + a.get('lastUpdated','') + '</span></a>')
+html.append('</div></section>')
+
+# Data sources band
+html.append('<section class="sc"><h2>🔍 數據來源</h2><p>所有文章均使用香港政府官方數據，每篇都列明來源及更新日期</p><div class="src-band">')
+html.append('<a href="/data-sources">數據來源總覽</a>')
+html.append('<a href="/data-updates">數據更新日誌</a>')
+html.append('<a href="/about">編輯及查證方針</a>')
+html.append('<a href="/privacy">私隱政策</a>')
+html.append('</div></section>')
+
+# FAQ
+html.append('<section class="sc"><h2>❓ 常見問題</h2><div class="faq">')
+html.append('<div class="faq-item"><h3>數據幾耐更新一次？</h3><p>原則上每月更新一次，跟政府統計處及相關部門最新公布同步，每篇文章會顯示「最後更新」日期。</p></div>')
+html.append('<div class="faq-item"><h3>數據來源係咩？</h3><p>全部來自政府統計處、差餉物業估價署、房屋委員會等政府官方公開數據，唔會用估算數字，詳情可睇<a href="/data-sources">數據來源總覽</a>。</p></div>')
+html.append('<div class="faq-item"><h3>點解要睇香港統計數據？</h3><p>樓價、租金、人口、就業、醫療等數據直接影響日常生活同投資決定，用數據分析可以避免被單一新聞帶風向。</p></div>')
+html.append('</div></section>')
+
 # Footer
 html.append('<footer>')
-html.append('<p style="margin-bottom:12px"><a href="/about">關於我們</a> · <a href="/privacy">私隱政策</a> · <a href="/sitemap.xml">網站地圖</a></p>')
+html.append('<p style="margin-bottom:12px"><a href="/data-sources">數據來源總覽</a> · <a href="/data-updates">數據更新日誌</a> · <a href="/about">關於我們</a> · <a href="/privacy">私隱政策</a> · <a href="/sitemap.xml">網站地圖</a></p>')
 html.append('<p>' + S['name'] + '</p><p style="font-size:12px;opacity:0.7;max-width:700px;margin:8px auto">' + S['footer']['disclaimer'] + '</p><p style="margin-top:8px">' + S['footer']['copyright'] + '</p>')
 html.append('</footer>')
 

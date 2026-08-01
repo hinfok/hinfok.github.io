@@ -40,6 +40,18 @@
 GitHub Actions 每月 1 日自動執行 build + deploy。
 也可手動觸發：GitHub Repo → Actions → Deploy to GitHub Pages → Run workflow
 
+## Google AdSense / Analytics / Search Console
+
+所有 Google 設定集中喺 `src/data/config.json`：
+
+| 設定 | 位置 |
+|------|------|
+| AdSense publisher ID | `adsense.publisherId` |
+| Google Analytics ID | `site.googleAnalyticsId`（GA4 用 `G-XXXXXXX`；只填數字會當 `UA-XXXXXXX-1`） |
+| Search Console 驗證 | `seo.googleSiteVerification` |
+
+改完執行 `python build.py` + `python gen_index.py`，再將 `output/` 內容複製到 repo root 並 push，所有頁面就會自動加入 AdSense script、Google Analytics gtag 同驗證 meta tag。
+
 ## 未來計劃
 
 - [ ] 連接 data.gov.hk API 自動獲取最新數據

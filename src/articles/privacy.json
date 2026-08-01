@@ -42,8 +42,12 @@
       "content": "<p>如對本私隱政策有任何疑問，請透過以下方式聯絡我們：</p><p style='margin-top:12px;'>電子郵件：<a href='mailto:informationinhk@gmail.com'>informationinhk@gmail.com</a></p>"
     },
     {
+      "heading": "Google Analytics",
+      "content": "<p>本網站使用 Google Analytics（透過 gtag.js）收集匿名使用數據，例如瀏覽頁面、停留時間、裝置類型及大概地區，目的係了解讀者最需要邊類數據分析，從而改善網站內容。Google Analytics 會使用 Cookie；本網站已停用廣告功能，並以匿名方式處理 IP 地址。</p><p>你可以透過 <a href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel='noopener'>Google Analytics Opt-out Browser Add-on</a> 停用被追蹤，或喺瀏覽器設定封鎖第三方 Cookie。</p>"
+    },
+    {
       "heading": "政策更新",
-      "content": "<p>本私隱政策可能不時更新。任何變更將在本頁面發布，並會更新頁面頂部的「最後更新」日期。建議您定期查閱本政策。</p><p>最後更新日期：2026年7月9日</p>"
+      "content": "<p>本私隱政策可能不時更新。任何變更將在本頁面發布，並會更新頁面頂部的「最後更新」日期。建議您定期查閱本政策。</p><p>最後更新日期：2026年8月1日</p>"
     }
   ],
   "charts": [],

@@ -6,6 +6,7 @@
 <title>關於 HKInformation 香港資訊數據圖鑑 — 我們的使命與團隊</title>
 <meta name="description" content="了解HKInformation 香港資訊數據圖鑑的使命、數據來源及團隊。我們致力通過數據視覺化讓香港統計數據變得易懂、有趣、有用。">
 <meta name="keywords" content="關於我們,香港資訊數據圖鑑,HKInformation,香港數據平台,數據視覺化">
+<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
 <meta property="og:title" content="關於 HKInformation 香港資訊數據圖鑑 — 我們的使命與團隊">
 <meta property="og:description" content="了解HKInformation 香港資訊數據圖鑑的使命、數據來源及團隊。我們致力通過數據視覺化讓香港統計數據變得易懂、有趣、有用。">
 <meta property="og:image" content="https://hinfok.com/images/og-default.svg">
@@ -18,6 +19,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-398765735-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-398765735-1');
+</script>
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -149,6 +157,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .section h2 { font-size: 22px; margin-bottom: 16px; color: #1e3a5f; }
 .hero { padding: 48px 24px; }
 .hero h1 { font-size: 28px; }
+.source-box { background:#fff; border:1px solid #e2e8f0; border-left:4px solid #2a9d8f; border-radius:10px; padding:20px 24px; margin:24px 0; }
+.source-box h3 { font-size:15px; color:#1e3a5f; margin-bottom:8px; }
+.source-box p { font-size:13px; color:#444; line-height:1.8; margin:4px 0; }
+.source-box a { color:#457b9d; }
 @media (max-width: 1000px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
 @media (max-width: 650px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } .hero h1 { font-size: 22px; } }
@@ -178,12 +190,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 <h2>聯絡我們</h2><p>如有任何查詢、建議或數據更正要求，歡迎與我們聯繫：</p><p style='margin-top:12px;'>電子郵件：<a href='mailto:informationinhk@gmail.com'>informationinhk@gmail.com</a></p><p style='margin-top:8px;'>我們會盡快回覆您的查詢。</p>
 <h2>免責聲明</h2><p>本網站所有數據及分析僅供參考。儘管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。數據來源為香港政府公開資料，如有疑問請直接參考原始數據來源。</p><p>本網站與香港特別行政區政府沒有任何附屬或代理關係。</p>
 <h2>加入我們</h2><p>如果您對數據分析、視覺化或香港公共政策有興趣，歡迎聯絡我們。我們正在尋找志同道合的夥伴一起擴展這個平台，涵蓋更多有意義的數據指標。</p>
+<h2>編輯及數據方針</h2><p>HKInformation 只使用香港政府官方公開數據，包括政府統計處、差餉物業估價署、房屋委員會等部門嘅統計。網站唔會為咗吸引點擊而自製數字：任何圖表、指數或者趨勢，都必須可以喺官方網站搵到原始數據。</p><p>文章用廣東話書寫，貼地講人話，將複雜統計轉譯成大家關心的問題，例如樓價跌咗幾多、公屋要等幾耐、人工中位數係幾多。</p>
+<h2>數據查證流程</h2><p>每篇文章上線前都會做三件事：第一，從官方網站下載原始數據；第二，將文章內所有數字同原表逐格核對；第三，喺頁面寫明數據來源同最後更新日期。</p><p>政府公布新數字後，相關文章會喺一個月內更新。所有改動都會記錄喺<a href='/data-updates'>數據更新日誌</a>，方便讀者追蹤。</p>
 </div></div>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
       <div><h4>HKInformation 香港資訊數據圖鑑</h4><p>HKInformation 是一個專注於香港統計數據視覺化的開放平台，數據主要來自政府統計處、差養物業估價署及各政府部門公開數據。</p></div>
-      <div><h4>快速連結</h4><ul><li><a href="/">首頁</a></li><li><a href="/#cat-housing">🏠 樓市與房屋</a></li><li><a href="/#cat-population">👥 人口與社會</a></li><li><a href="/#cat-economy">💰 經濟與零售</a></li><li><a href="/#cat-labour">💼 職場與教育</a></li><li><a href="/#cat-culture">🎭 文化與交通</a></li><li><a href="/#cat-medical">🏥 醫療與環境</a></li><li><a href="/about">關於我們</a></li><li><a href="/privacy">私隱政策</a></li></ul></div>
+      <div><h4>快速連結</h4><ul><li><a href="/">首頁</a></li><li><a href="/#cat-housing">🏠 樓市與房屋</a></li><li><a href="/#cat-population">👥 人口與社會</a></li><li><a href="/#cat-economy">💰 經濟與零售</a></li><li><a href="/#cat-labour">💼 職場與教育</a></li><li><a href="/#cat-culture">🎭 文化與交通</a></li><li><a href="/#cat-medical">🏥 醫療與環境</a></li><li><a href="/about">關於我們</a></li><li><a href="/privacy">私隱政策</a></li><li><a href="/data-sources">數據來源總覽</a></li><li><a href="/data-updates">數據更新日誌</a></li></ul></div>
       <div><h4>免責聲明</h4><p>本網站所有數據均來自香港政府公開資料，僅供參考。盡管我們致力確保數據準確，但對於任何因使用本網站資料而導致的損失概不負責。</p></div>
     </div>
     <div class="footer-bottom">

@@ -19,6 +19,29 @@ ADSENSE = config.get("adsense", {"enabled": False, "publisherId": ""})
 ADS_ID = ADSENSE.get("publisherId", "") if ADSENSE.get("enabled") else ""
 EMAIL = SITE.get("email", "")
 
+GA_RAW = SITE.get("googleAnalyticsId", "").strip()
+
+def ga_tracking_id():
+    if not GA_RAW:
+        return ""
+    if GA_RAW.startswith("G-") or GA_RAW.startswith("UA-"):
+        return GA_RAW
+    return "UA-" + GA_RAW + "-1"
+
+def build_analytics():
+    tid = ga_tracking_id()
+    if not tid:
+        return ""
+    return "\n".join([
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={tid}"></script>',
+        "<script>",
+        "window.dataLayer = window.dataLayer || [];",
+        "function gtag(){dataLayer.push(arguments);}",
+        "gtag('js', new Date());",
+        f"gtag('config', '{tid}');",
+        "</script>"
+    ])
+
 HEADER_CSS = """
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -150,6 +173,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC
 .section h2 { font-size: 22px; margin-bottom: 16px; color: #1e3a5f; }
 .hero { padding: 48px 24px; }
 .hero h1 { font-size: 28px; }
+.source-box { background:#fff; border:1px solid #e2e8f0; border-left:4px solid #2a9d8f; border-radius:10px; padding:20px 24px; margin:24px 0; }
+.source-box h3 { font-size:15px; color:#1e3a5f; margin-bottom:8px; }
+.source-box p { font-size:13px; color:#444; line-height:1.8; margin:4px 0; }
+.source-box a { color:#457b9d; }
 @media (max-width: 1000px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
 @media (max-width: 650px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } .hero h1 { font-size: 22px; } }
@@ -196,6 +223,7 @@ def build_head(title, desc, keywords, og_image, full_url, json_ld_str, is_home=F
         '<script src="https://cdn.tailwindcss.com"></script>',
         '<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>',
         ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADS_ID + '" crossorigin="anonymous"></script>') if ADS_ID else '',
+        build_analytics(),
         HEADER_CSS,
         '</head>'
     ]
@@ -220,6 +248,7 @@ def build_header(nav_html):
 def build_footer():
     ftr = SITE["footer"]
     nav_links = "".join(f'<li><a href="{item["href"]}">{item["label"]}</a></li>' for item in NAV)
+    nav_links += '<li><a href="/data-sources">數據來源總覽</a></li><li><a href="/data-updates">數據更新日誌</a></li>'
     return f'''<footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -288,6 +317,7 @@ def build_article_page(article):
     
     summary = f'<div class="container"><div class="summary-box"><h3>重點摘要</h3><p>{article["summary"]}</p></div></div>'
     meta = f'<div class="container"><div class="meta-info"><span>最後更新：{article.get("lastUpdated","")}</span><span>數據來源：<a href="{article.get("dataSourceUrl","#")}" target="_blank" rel="noopener">{article.get("dataSource","")}</a></span></div></div>'
+    source_box = f'<div class="container"><div class="source-box"><h3>資料來源及更新</h3><p>本文數據取自 {article.get("dataSource","")}（官方公開數據），最後更新日期為 {article.get("lastUpdated","")}。所有數字均可喺官方網站查證。</p><p><a href="{article.get("dataSourceUrl","#")}" target="_blank" rel="noopener">前往官方數據來源</a> · <a href="/data-sources">查看全部 30 個數據來源</a> · <a href="/data-updates">數據更新日誌</a></p></div></div>'
     
     charts_js = "window.__charts = window.__charts || {};\n"
     charts_html = ""
@@ -346,7 +376,7 @@ def build_article_page(article):
     sidebar_parts.append(meta_side)
     sidebar_html = "".join(sidebar_parts)
     
-    main_content = "\n".join([summary, meta, sections_html, charts_html, tables_html])
+    main_content = "\n".join([summary, meta, source_box, sections_html, charts_html, tables_html])
     body_content = "\n".join([hero_html, breadcrumb, "<div class=\"article-layout\"><div class=\"article-main\">", main_content, "</div><div class=\"article-sidebar\">", sidebar_html, "</div></div>", related_section])
     body_content += f'\n<script>{charts_js}</script>\n'
     body_content += '''
@@ -366,6 +396,7 @@ document.addEventListener('DOMContentLoaded',function(){
         "headline": title,
         "description": seo_data["description"],
         "dateModified": article.get("lastUpdated", ""),
+        "datePublished": article.get("lastUpdated", ""),
         "author": {"@type": "Person", "name": AUTHOR["name"]},
         "publisher": {"@type": "Organization", "name": SITE["name"]},
         "mainEntityOfPage": {"@type": "WebPage", "@id": SITE["baseUrl"].rstrip("/") + "/" + slug}
@@ -392,7 +423,13 @@ def build_page(article):
         content_html += f'<h2>{sec["heading"]}</h2>{sec["content"]}\n'
     content_html += f'</div></div>'
     
-    body_content = "\n".join([hero_html, breadcrumb, content_html])
+    tables_html = ""
+    for key, tbl in article.get("dataTables", {}).items():
+        headers = "".join(f"<th>{h}</th>" for h in tbl["headers"])
+        rows = "".join(f"<tr>{''.join(f'<td>{c}</td>' for c in row)}</tr>" for row in tbl["rows"])
+        tables_html += f'<div class="container"><div class="section"><h2>{tbl["title"]}</h2><div style="overflow-x:auto"><table class="data-table"><thead><tr>{headers}</tr></thead><tbody>{rows}</tbody></table></div></div></div>\n'
+    
+    body_content = "\n".join([hero_html, breadcrumb, content_html, tables_html])
     
     json_ld = {
         "@context": "https://schema.org",
@@ -548,9 +585,20 @@ def build_sitemap(articles, pages):
     lines.append('</urlset>')
     return "\n".join(lines)
 
+def clear_output():
+    """Remove generated output, tolerating read-only files (OneDrive on Windows)."""
+    if not OUTPUT_DIR.exists():
+        return
+    for root, dirs, files in os.walk(OUTPUT_DIR, topdown=False):
+        for name in files + dirs:
+            try:
+                os.chmod(os.path.join(root, name), 0o777)
+            except OSError:
+                pass
+    shutil.rmtree(OUTPUT_DIR)
+
 def main():
-    if OUTPUT_DIR.exists():
-        shutil.rmtree(OUTPUT_DIR, ignore_errors=True)
+    clear_output()
     OUTPUT_DIR.mkdir(parents=True)
     
     article_slugs = ["rental-price-index", "public-housing", "income-vs-price", "vacancy-rate", "homeownership-district", "birth-death-rate", "marriage-divorce", "life-expectancy", "foreign-domestic-helpers", "net-migration", "retail-sales", "tourist-arrivals", "ecommerce-rate", "restaurant-turnover", "consumer-price-index", "salary-median", "unemployment-age", "student-numbers", "graduate-employment", "work-hours", "museum-attendance", "library-borrowing", "public-transport", "private-car-ev", "traffic-accidents", "top-diseases", "hospital-bed-occupancy", "hot-days", "solid-waste", "air-quality"]
@@ -561,7 +609,7 @@ def main():
             articles.append(art)
             print(f"  Loaded: {art['title']}")
     
-    page_slugs = ["privacy", "about"]
+    page_slugs = ["privacy", "about", "data-sources", "data-updates"]
     pages = []
     for slug in page_slugs:
         p = load_article(slug)

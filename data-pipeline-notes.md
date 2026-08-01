@@ -23,6 +23,11 @@
 # - hk-censtatd-median-domestic-household-income (C&SD)
 # - hk-housing-authority-public-rental-housing (HA)
 #
+# Google integrations (2026-08):
+# - AdSense: ca-pub-0408433589148621, ads.txt served at https://hinfok.com/ads.txt
+# - Analytics: site.googleAnalyticsId in src/data/config.json (398765735 -> UA-398765735-1)
+# - Search Console: seo.googleSiteVerification = GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs
+#
 # GitHub repos with HK gov data tools:
 # - mcp-open-data-hk/mcp-open-data-hk (MCP server)
 # - JMSCHKU/HKOpenGovData (HKU project)
