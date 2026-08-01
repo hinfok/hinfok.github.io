@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://hinfok.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://hinfok.com/rental-price-index</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-07</lastmod></url>
-  <url><loc>https://hinfok.com/public-housing</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-09</lastmod></url>
+  <url><loc>https://hinfok.com/public-housing</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/income-vs-price</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://hinfok.com/vacancy-rate</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-07</lastmod></url>
-  <url><loc>https://hinfok.com/homeownership-district</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-09</lastmod></url>
+  <url><loc>https://hinfok.com/homeownership-district</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/birth-death-rate</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://hinfok.com/marriage-divorce</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://hinfok.com/life-expectancy</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
@@ -19,18 +19,18 @@
   <url><loc>https://hinfok.com/salary-median</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://hinfok.com/unemployment-age</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://hinfok.com/student-numbers</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://hinfok.com/graduate-employment</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
+  <url><loc>https://hinfok.com/graduate-employment</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/work-hours</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://hinfok.com/museum-attendance</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-13</lastmod></url>
-  <url><loc>https://hinfok.com/library-borrowing</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-13</lastmod></url>
-  <url><loc>https://hinfok.com/public-transport</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-13</lastmod></url>
-  <url><loc>https://hinfok.com/private-car-ev</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-13</lastmod></url>
-  <url><loc>https://hinfok.com/traffic-accidents</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-13</lastmod></url>
-  <url><loc>https://hinfok.com/top-diseases</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
+  <url><loc>https://hinfok.com/museum-attendance</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/library-borrowing</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/public-transport</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/private-car-ev</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/traffic-accidents</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/top-diseases</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/hospital-bed-occupancy</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://hinfok.com/hot-days</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://hinfok.com/solid-waste</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://hinfok.com/air-quality</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-07-12</lastmod></url>
+  <url><loc>https://hinfok.com/hot-days</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/solid-waste</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/air-quality</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/privacy</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/about</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/data-sources</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>

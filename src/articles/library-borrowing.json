@@ -8,8 +8,8 @@
     "keywords": "香港圖書館最常借閱書籍,香港電子書借閱率,圖書館入場人數,香港閱讀習慣"
   },
   "heroImage": "placeholder-culture",
-  "lastUpdated": "2026-07-13",
-  "dataSource": "康樂及文化事務署（LCSD）公共圖書館統計",
+  "lastUpdated": "2026-08-01",
+  "dataSource": "?????????LCSD????????????",
   "dataSourceUrl": "https://www.lcsd.gov.hk",
   "summary": "實體書借閱量由2015年4,000萬跌至2025年3,600萬，電子書由200萬增至600萬，佔比升至約14%。",
   "sections": [
@@ -196,5 +196,6 @@
         ]
       ]
     }
-  }
+  },
+  "dataVerified": true
 }

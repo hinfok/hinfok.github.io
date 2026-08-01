@@ -8,8 +8,8 @@
     "keywords": "香港邊科畢業生人工最高,三大畢業生薪酬,香港大學生就業率,大學畢業生月入"
   },
   "heroImage": "placeholder-labour",
-  "lastUpdated": "2026-07-12",
-  "dataSource": "政府統計處（C&SD）就業及教育統計",
+  "lastUpdated": "2026-08-01",
+  "dataSource": "??????C&SD????????? Table 210-06314",
   "dataSourceUrl": "https://www.censtatd.gov.hk",
   "summary": "大學畢業生就業率由2015年85%升至2025年88%，疫情期間曾跌至75%。畢業生平均起薪點由18,000元升至約19,500元。",
   "sections": [
@@ -173,5 +173,6 @@
       ],
       "title": "數據摘要"
     }
-  }
+  },
+  "dataVerified": true
 }
