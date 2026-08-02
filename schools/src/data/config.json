@@ -1,0 +1,27 @@
+{
+  "site": {
+    "name": "HKSchools 全港學校資訊網",
+    "shortName": "HKSchools",
+    "tagline": "全港學校資訊一覽 — 幼稚園、小學、中學、國際學校",
+    "description": "香港教育局開放數據學校資訊，按地區、資助類型、授課時間、宗教等篩選，3489間學校詳細資料。",
+    "baseUrl": "https://schools.hkinfo.hk/",
+    "lang": "zh-HK",
+    "googleAnalyticsId": "",
+    "email": "informationinhk@gmail.com",
+    "footer": {
+      "copyright": "© 2026 HKSchools 全港學校資訊網",
+      "about": "HKSchools 提供教育局公開學校數據，方便家長比較全港學校。",
+      "disclaimer": "本網站數據來自教育局公開資料，僅供參考。如有疑問請以教育局網站為準。"
+    }
+  },
+  "seo": {
+    "defaultTitle": "HKSchools 全港學校資訊網 — 幼稚園、小學、中學一覽",
+    "defaultDescription": "全港3489間學校資訊，按地區、資助類型、學校類別、授課時間篩選。教育局開放數據實時更新。",
+    "defaultKeywords": "香港學校,幼稚園,小學,中學,國際學校,資助學校,官立學校,直資學校,十八區學校",
+    "googleSiteVerification": "GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs"
+  },
+  "adsense": {
+    "enabled": true,
+    "publisherId": "ca-pub-0408433589148621"
+  }
+}
