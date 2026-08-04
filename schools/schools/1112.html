@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>粉嶺官立中學 | 香港学校数据库</title>
+<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
+.logo span { color: #ffd43b; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.15); }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+.stat { text-align: center; }
+.stat .n { font-size: 32px; font-weight: 800; }
+.stat .l { font-size: 13px; opacity: 0.8; }
+.search-box { max-width: 550px; margin: 24px auto; position: relative; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
+.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
+.search-results a:hover { background: #f5f7fa; }
+.search-results .result-name { font-weight: 600; font-size: 14px; }
+.search-results .result-detail { font-size: 12px; color: #718096; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 32px 0; }
+.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
+.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
+.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
+.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
+.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<header><div class="hdr">
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
+<nav class="nav-links">
+<a href="../index.html#level">学校类别</a>
+<a href="../index.html#district">地区分类</a>
+<a href="../index.html#finance">资助种类</a>
+</nav></div></header>
+<div class="container"><div class="section"><div class="detail-grid"><div class="detail-card"><h1>粉嶺官立中學</h1><p class="sub">FANLING GOVERNMENT SECONDARY SCHOOL</p><div class="detail-row"><div class="detail-label">学校类别</div><div class="detail-value">中学 / SECONDARY</div></div><div class="detail-row"><div class="detail-label">所属区域</div><div class="detail-value">北区 / NORTH</div></div><div class="detail-row"><div class="detail-label">资助种类</div><div class="detail-value">官立 / GOVERNMENT</div></div><div class="detail-row"><div class="detail-label">授课时间</div><div class="detail-value">全日</div></div><div class="detail-row"><div class="detail-label">学生性别</div><div class="detail-value">男女</div></div><div class="detail-row"><div class="detail-label">中文地址</div><div class="detail-value">新界粉嶺一鳴路27號</div></div><div class="detail-row"><div class="detail-label">英文地址</div><div class="detail-value">27 YAT MING ROAD FANLING NEW TERRITORIES</div></div><div class="detail-row"><div class="detail-label">联系电话</div><div class="detail-value">26776778</div></div><div class="detail-row"><div class="detail-label">传真号码</div><div class="detail-value">26776588</div></div><div class="detail-row"><div class="detail-label">宗教</div><div class="detail-value">無</div></div><div class="detail-row"><div class="detail-label">网站</div><div class="detail-value">http://www.fgss.edu.hk</div></div></div><div><div class="detail-card"><h3 style="margin-bottom:12px;color:#1e3a5f;">位置信息</h3><p style="font-size:12px;color:#718096;margin-bottom:12px;">纬度: 22.48634346<br>经度: 114.14459264</p><div style="height:300px;background:#e6f0fa;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#4a5568;font-size:13px;">学校位置地图</div></div></div></div></div></div><footer>
+<p style="margin-bottom: 12px;"><a href="../index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
+</footer>
+</body>
+</html>

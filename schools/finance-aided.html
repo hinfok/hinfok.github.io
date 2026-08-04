@@ -3,366 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIDED 學校一覽 | HKSchools</title>
-<meta name="description" content="AIDED學校資訊，共956間學校詳細資料。">
-<meta name="keywords" content="<_io.TextIOWrapper name='C:\\Users\\ckyeung\\OneDrive\\桌面\\賺錢\\hinfok\\hk-schools\\output\\finance-aided.html' mode='w' encoding='utf-8'>,學校,資助類型">
-<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
-<meta property="og:title" content="AIDED 學校一覽 | HKSchools">
-<meta property="og:description" content="AIDED學校資訊，共956間學校詳細資料。">
-<meta property="og:image" content="https://schools.hkinfo.hk/images/og-default.svg">
-<meta property="og:url" content="https://schools.hkinfo.hk/finance-aided.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HKSchools 全港學校資訊網">
-<link rel="canonical" href="https://schools.hkinfo.hk/finance-aided.html">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<title>资助学校列表 | 香港学校数据库</title>
+<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f0f4f8; color: #1a2332; line-height: 1.8; }
-header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; }
-.logo span { color: #ffc107; }
-.nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.12); }
-.hero { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; padding: 56px 24px; text-align: center; }
-.hero h1 { font-size: 32px; margin-bottom: 12px; }
-.hero p { font-size: 16px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-.stats { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
+.logo span { color: #ffd43b; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.15); }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
 .stat { text-align: center; }
-.stat .n { font-size: 36px; font-weight: 800; }
-.stat .l { font-size: 14px; opacity: 0.8; }
-.search-box { max-width: 600px; margin: 24px auto; }
-.search-box input { width: 100%; padding: 14px 20px; border: none; border-radius: 10px; font-size: 16px; outline: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 40px 0; }
-.section h2 { font-size: 24px; margin-bottom: 20px; color: #0d47a1; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
-.card:hover { transform: translateY(-3px); }
-.card h3 { font-size: 18px; color: #0d47a1; margin-bottom: 8px; }
-.card p { font-size: 14px; color: #666; margin-bottom: 12px; }
-.card .tag { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin: 2px 4px 2px 0; }
-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; text-align: center; margin-top: 48px; }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); }}
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; }}
+.stat .n { font-size: 32px; font-weight: 800; }
+.stat .l { font-size: 13px; opacity: 0.8; }
+.search-box { max-width: 550px; margin: 24px auto; position: relative; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
+.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
+.search-results a:hover { background: #f5f7fa; }
+.search-results .result-name { font-weight: 600; font-size: 14px; }
+.search-results .result-detail { font-size: 12px; color: #718096; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 32px 0; }
+.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
+.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
+.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
+.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
+.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
 </style>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
-</head><body><header><div class="hdr">
-<a href="./index.html" class="logo">HK<span>Schools</span> 全港學校資訊</a>
+</head>
+<body>
+<header><div class="hdr">
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
 <nav class="nav-links">
-<a href="./index.html#level">學校類別</a>
-<a href="./index.html#district">地區分類</a>
-<a href="./index.html#finance">資助類型</a>
-<a href="#session">授課時間</a>
-</nav></div></header><div class='container'><section class="section">
-<h1>💰 AIDED 學校一覽</h1>
-<p>共 956 間學校</p>
-<div class="grid"><div class="card">
-<h3>FR. CUCCHIARA MEMORIAL SCHOOL</h3>
-<p>5 LAI YING STREET, SHAM SHUI PO, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>PO LEUNG KUK SIU HON-SUM PRIMARY SCHOOL</h3>
-<p>3 AU PUI WAN STREET, FO TAN, SHA TIN, NEW TERRITOR...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>NEW TERRITORIES WOMEN & JUVENILES WELFARE ASSOCIATION CHRISTIAN REMEMBRANCE OF GRACE PRIMARY SCHOOL</h3>
-<p>ESTATE PRIMARY SCHOOL NO. 1, TAI YUEN ESTATE, TAI ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>SALESIAN SCHOOL</h3>
-<p>16 CHAI WAN ROAD SHAUKEIWAN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>TAI PO BAPTIST PUBLIC SCHOOL</h3>
-<p>ROOMS 301, 305-307, 312, 401, 501-503, 506-508 AND...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>TAI PO BAPTIST PUBLIC SCHOOL</h3>
-<p>ROOMS 201-204 AND ROOMS 501-504, NTWJWA CHRISTIAN ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>STEWARDS POOI KEI PRIMARY SCHOOL</h3>
-<p>ECO-GARDEN CUM PLANT NURSERY LOK LIN PATH SHA TIN ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>TUNG WAH GROUP OF HOSPITALS HOK SHAN SCHOOL</h3>
-<p>5 WAH LAM PATH, WAH FU ESTATE, POKFULAM, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>YAN CHAI HOSPITAL CHOI HIN TO PRIMARY SCHOOL</h3>
-<p>WAN TAU TONG ESTATE, AREA 6, TAI PO, NEW TERRITORI...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>YAN OI TONG MADAM LAU WONG FAT PRIMARY SCHOOL</h3>
-<p>ESTATE PRIMARY SCHOOL NO 6 ON TING ESTATE AREA 13 ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>FREE METHODIST MEI LAM PRIMARY SCHOOL</h3>
-<p>MEI SHING COURT, TAI WAI, SHATIN, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>HOLY FAMILY CANOSSIAN SCHOOL</h3>
-<p>G/F 99 FUK LO TSUN ROAD KOWLOON CITY KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>HONG KONG TAOIST ASSOCIATION WUN TSUEN SCHOOL</h3>
-<p>2 ON YAN STREET, KWUN TONG, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>BAPTIST HUNG HIN SHIU RAINBOW PRIMARY SCHOOL</h3>
-<p>CHUK YUEN SOUTH ESTATE WONG TAI SIN KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WONG TAI SIN</span>
-</div><div class="card">
-<h3>ALLIANCE PRIMARY SCHOOL, TAI HANG TUNG</h3>
-<p>13 & 23 TONG YAM STREET TAI HANG TUNG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>CUHK FEDERATION OF ALUMNI ASSOCIATION THOMAS CHEUNG SCHOOL</h3>
-<p>KA TIN COURT HIN KENG ESTATE SHATIN NEW TERRITORIE...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>T.W.G.HS KO HO NING MEMORIAL PRIMARY SCHOOL</h3>
-<p>LAI YIU ESTATE KWAI CHUNG NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWAI TSING</span>
-</div><div class="card">
-<h3>S.K.H. LEE SHIU KEUNG PRIMARY SCHOOL</h3>
-<p>SCHOOL NO. 1 ON TIN STREET PING TIN ESTATE LAM TIN...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>ASBURY METHODIST PRIMARY SCHOOL</h3>
-<p>ESTATE SCHOOL NO. 2 LAI KING ESTATE KWAI CHUNG NEW...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWAI TSING</span>
-</div><div class="card">
-<h3>S.K.H. KEI LOK PRIMARY SCHOOL</h3>
-<p>ESTATE PRIMARY SCHOOL LOK WAH ESTATE PHASE I NGAU ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>HOP YAT CHURCH SCHOOL</h3>
-<p>7 PRINCESS MARGARET ROAD HOMANTIN KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>THE CHURCH OF CHRIST IN CHINA KEI WA PRIMARY SCHOOL (KOWLOON TONG)</h3>
-<p>1B OXFORD ROAD KOWLOON TONG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>CHRISTIAN PUI YAN PRIMARY SCHOOL</h3>
-<p>2 TIN YIP ROAD TIN SHUI WAI YUEN LONG NEW TERRITOR...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>THE CHURCH OF CHRIST IN CHINA CHUEN YUEN FIRST PRIMARY SCHOOL</h3>
-<p>36 WING SHUN STREET, TSUEN WAN, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TSUEN WAN</span>
-</div><div class="card">
-<h3>THE CHURCH OF CHRIST IN CHINA MONG WONG FAR YOK MEMORIAL PRIMARY SCHOOL</h3>
-<p>TIN KING ESTATE AREA 1 TUEN MUN NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>SHA TIN METHODIST PRIMARY SCHOOL</h3>
-<p>KWONG YUEN ESTATE, SHATIN, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>TUNG CHUNG CATHOLIC SCHOOL</h3>
-<p>8 YAT TUNG STREET YAT TUNG (2) ESTATE TUNG CHUNG L...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>TUNG KOON SCHOOL</h3>
-<p>JOCKEY CLUB ROAD, SHEUNG SHUI, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">NORTH</span>
-</div><div class="card">
-<h3>HOP YAT CHURCH SCHOOL</h3>
-<p>6 PERTH STREET HOMANTIN KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>THE PENTECOSTAL HOLINESS CHURCH WING KWONG JUNIOR SCHOOL</h3>
-<p>10 CHOI TIP STREET, TAI PO, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>SACRED HEART CANOSSIAN SCHOOL</h3>
-<p>26 CAINE ROAD HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>CHEUNG SHA WAN CATHOLIC PRIMARY SCHOOL</h3>
-<p>7 TONKIN STREET, CHEUNG SHA WAN, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>THE SALVATION ARMY TIN KA PING SCHOOL</h3>
-<p>POK HONG ESTATE, SHATIN, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>MENG TAK CATHOLIC SCHOOL</h3>
-<p>11 CHEUNG MAN ROAD CHAI WAN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>PUI TAK CANOSSIAN PRIMARY SCHOOL</h3>
-<p>180 ABERDEEN MAIN ROAD HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>SHA TIN WAI DR. CATHERINE F. WOO MEMORIAL SCHOOL</h3>
-<p>2 JAT MIN CHUEN STREET, SHATIN, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>ST. STEPHEN'S GIRLS' PRIMARY SCHOOL</h3>
-<p>33 PARK ROAD HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>THE CHURCH OF CHRIST IN CHINA CHEUNG CHAU CHURCH KAM KONG PRIMARY SCHOOL</h3>
-<p>NO.1 PEAK ROAD WEST CHEUNG CHAU NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>S.K.H. TSING YI CHU YAN PRIMARY SCHOOL</h3>
-<p>CHEUNG WANG ESTATE TSING YI NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWAI TSING</span>
-</div><div class="card">
-<h3>S.K.H. CHU YAN PRIMARY SCHOOL</h3>
-<p>ESTATE SCHOOL NO 2 KWAI SHING ESTATE KWAI SHING NE...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWAI TSING</span>
-</div><div class="card">
-<h3>CNEC LUI MING CHOI PRIMARY SCHOOL</h3>
-<p>CHEUNG FAT ESTATE TSING YI NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWAI TSING</span>
-</div><div class="card">
-<h3>CARMEL LEUNG SING TAK SCHOOL</h3>
-<p>ESTATE SCHOOL NO 2 SHUN ON ESTATE KWUN TONG KOWLOO...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>LUI CHEUNG KWONG LUTHERAN PRIMARY SCHOOL</h3>
-<p>ON TING ESTATE TUEN MUN NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>SUNG TAK WONG KIN SHEUNG MEMORIAL SCHOOL</h3>
-<p>TUNG CHEONG STREET TAI PO NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>HKFYG LEE SHAU KEE PRIMARY SCHOOL</h3>
-<p>11 TIN WING ROAD TIN SHUI WAI YUEN LONG NEW TERRIT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>LOK WAH CATHOLIC PRIMARY SCHOOL</h3>
-<p>81 CHUN WAH ROAD KWUN TONG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>S.K.H. YAN LAAP MEMORIAL PRIMARY SCHOOL</h3>
-<p>13 SHEUNG KOK STREET KWAI CHUNG NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWAI TSING</span>
-</div><div class="card">
-<h3>TAOIST CHING CHUNG PRIMARY SCHOOL</h3>
-<p>SHAN KING ESTATE AREA 7 & 8 TUEN MUN NEW TERRITORI...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>CHING CHUNG HAU PO WOON PRIMARY SCHOOL</h3>
-<p>FU TUNG ESTATE TUNG CHUNG LANTAU ISLAND NEW TERRIT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>PO LEUNG KUK FUNG CHING MEMORIAL PRIMARY SCHOOL</h3>
-<p>2 PUI SHING ROAD TSEUNG KWAN O NEW TERRITORIES (EX...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>HHCKLA BUDDHIST WONG CHO SUM SCHOOL</h3>
-<p>KING LAM ESTATE TSEUNG KWAN O NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>SIR ROBERT BLACK COLLEGE OF EDUCATION PAST STUDENTS' ASSOCIATION HO SAU KI SCHOOL</h3>
-<p>ESTATE SCHOOL NO. 1, TIN KING ESTATE, TUEN MUN, NE...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>FANLING PUBLIC SCHOOL</h3>
-<p>FANLING VILLAGE, FANLING, NEW TERRITORIES & COVERE...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">NORTH</span>
-</div><div class="card">
-<h3>CARMEL ALISON LAM PRIMARY SCHOOL</h3>
-<p>ESTATE PRIMARY SCHOOL, HIN KENG ESTATE, SHATIN, NE...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>NG CLAN'S ASSOCIATION TAI PAK MEMORIAL SCHOOL</h3>
-<p>KAM YING COURT, MA ON SHAN, SHATIN, NEW TERRITORIE...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>TOI SHAN ASSOCIATION PRIMARY SCHOOL</h3>
-<p>14 & 16 SHEK PAI TAU ROAD, TUEN MUN, NEW TERRITORI...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>PENTECOSTAL YU LEUNG FAT PRIMARY SCHOOL</h3>
-<p>16 FAI MING ROAD, FANLING, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">NORTH</span>
-</div><div class="card">
-<h3>SAM SHUI NATIVES ASSOCIATION HUEN KING WING SCHOOL</h3>
-<p>ESTATE PRIMARY SCHOOL NO 1, FU SHIN ESTATE, TAI PO...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>SHATIN TSUNG TSIN SCHOOL</h3>
-<p>ESTATE SCHOOL 1, LEK YUEN ESTATE SHATIN NT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>YAN CHAI HOSPITAL CHAN IU SENG PRIMARY SCHOOL</h3>
-<p>YUK MING COURT TSEUNG KWAN O NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div></div></section></div><footer>
-<p style="margin-bottom: 12px;"><a href="./index.html">首頁</a> · <a href="/about.html">關於我們</a> · <a href="/privacy.html">私隱政策</a></p>
-<p style="margin-bottom: 12px;">數據來源：香港教育局 (EDB) 學校位置及資訊開放數據</p>
-<p>© 2026 HKSchools 全港學校資訊網</p>
-<p style="font-size: 12px; opacity: 0.7; max-width: 700px; margin: 8px auto;">本網站數據來自教育局公開資料，僅供參考。如有疑問請以教育局網站為準。</p>
-</footer></body></html>
+<a href="../index.html#level">学校类别</a>
+<a href="../index.html#district">地区分类</a>
+<a href="../index.html#finance">资助种类</a>
+</nav></div></header>
+<div class="container"><section class="section"><h1>资助学校列表</h1><p>共 956 所学校</p><div class="grid"><a href="schools/0.html" class="card"><h3>郭怡雅神父紀念學校</h3><p>FR. CUCCHIARA MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍深水埗荔盈街5號</p></a><a href="schools/1.html" class="card"><h3>保良局蕭漢森小學</h3><p>PO LEUNG KUK SIU HON-SUM PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田火炭坳背灣街3號</p></a><a href="schools/2.html" class="card"><h3>新界婦孺福利會基督教銘恩小學</h3><p>NEW TERRITORIES WOMEN & JUVENILES WELFARE ASSOCIATION CHRISTIAN REMEMBRANCE OF GRACE PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大元邨屋邨第一小學(201至204室及501至504室除外)(於2025年12月3日至2026年8月31日)</p></a><a href="schools/3.html" class="card"><h3>慈幼學校</h3><p>SALESIAN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣柴灣道16號</p></a><a href="schools/4.html" class="card"><h3>大埔浸信會公立學校</h3><p>TAI PO BAPTIST PUBLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大埔太和路八號大埔官立小學301室、305至307室、312室、401室、501至503室、506至508室及602至607室(於2025年12月3日至2026年8月31日)</p></a><a href="schools/5.html" class="card"><h3>大埔浸信會公立學校</h3><p>TAI PO BAPTIST PUBLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大元邨屋邨第一小學新界婦孺福利會基督教銘恩小學201至204室及501至504室(於2025年12月3日至2026年8月31日)</p></a><a href="schools/6.html" class="card"><h3>培基小學</h3><p>STEWARDS POOI KEI PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田樂蓮徑生態花園暨植物苗圃</p></a><a href="schools/7.html" class="card"><h3>東華三院鶴山學校</h3><p>TUNG WAH GROUP OF HOSPITALS HOK SHAN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林華富邨華林徑5號</p></a><a href="schools/8.html" class="card"><h3>仁濟醫院蔡衍濤小學</h3><p>YAN CHAI HOSPITAL CHOI HIN TO PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔第六區運頭塘邨</p></a><a href="schools/9.html" class="card"><h3>仁愛堂劉皇發夫人小學</h3><p>YAN OI TONG MADAM LAU WONG FAT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門13區安定邨屋邨小學第六校舍</p></a><a href="schools/10.html" class="card"><h3>循理會美林小學</h3><p>FREE METHODIST MEI LAM PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田大圍美城苑</p></a><a href="schools/11.html" class="card"><h3>嘉諾撒聖家學校</h3><p>HOLY FAMILY CANOSSIAN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍城福佬村道99號地下</p></a><a href="schools/12.html" class="card"><h3>香港道教聯合會雲泉學校</h3><p>HONG KONG TAOIST ASSOCIATION WUN TSUEN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍觀塘安茵街2號</p></a><a href="schools/13.html" class="card"><h3>浸信會孔憲紹天虹小學</h3><p>BAPTIST HUNG HIN SHIU RAINBOW PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍黃大仙竹園南邨</p></a><a href="schools/14.html" class="card"><h3>大坑東宣道小學</h3><p>ALLIANCE PRIMARY SCHOOL, TAI HANG TUNG</p><p style="font-size:11px;color:#a0aec0;">九龍大坑東棠蔭街十三及廿三號</p></a><a href="schools/15.html" class="card"><h3>香港中文大學校友會聯會張煊昌學校</h3><p>CUHK FEDERATION OF ALUMNI ASSOCIATION THOMAS CHEUNG SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田顯徑邨嘉田苑</p></a><a href="schools/16.html" class="card"><h3>東華三院高可寧紀念小學</h3><p>T.W.G.HS KO HO NING MEMORIAL PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界葵涌麗瑤邨</p></a><a href="schools/17.html" class="card"><h3>聖公會李兆強小學</h3><p>S.K.H. LEE SHIU KEUNG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍觀塘藍田平田邨安田街第一校舍</p></a><a href="schools/18.html" class="card"><h3>亞斯理衛理小學</h3><p>ASBURY METHODIST PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界葵涌茘景邨第二校舍</p></a><a href="schools/19.html" class="card"><h3>聖公會基樂小學</h3><p>S.K.H. KEI LOK PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍牛頭角樂華邨第一期</p></a><a href="schools/20.html" class="card"><h3>合一堂學校</h3><p>HOP YAT CHURCH SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍公主道七號</p></a><a href="schools/21.html" class="card"><h3>中華基督教會基華小學(九龍塘)</h3><p>THE CHURCH OF CHRIST IN CHINA KEI WA PRIMARY SCHOOL (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘牛津道1號B</p></a><a href="schools/22.html" class="card"><h3>基督教培恩小學</h3><p>CHRISTIAN PUI YAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界元朗天水圍天業路2號</p></a><a href="schools/23.html" class="card"><h3>中華基督教會全完第一小學</h3><p>THE CHURCH OF CHRIST IN CHINA CHUEN YUEN FIRST PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界荃灣永順街36號</p></a><a href="schools/24.html" class="card"><h3>中華基督教會蒙黃花沃紀念小學</h3><p>THE CHURCH OF CHRIST IN CHINA MONG WONG FAR YOK MEMORIAL PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門一區田景邨</p></a><a href="schools/25.html" class="card"><h3>沙田循道衛理小學</h3><p>SHA TIN METHODIST PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田廣源邨</p></a><a href="schools/26.html" class="card"><h3>東涌天主教學校</h3><p>TUNG CHUNG CATHOLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山東涌逸東街8號逸東(二)邨</p></a><a href="schools/27.html" class="card"><h3>東莞學校</h3><p>TUNG KOON SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界上水馬會道</p></a><a href="schools/28.html" class="card"><h3>合一堂學校</h3><p>HOP YAT CHURCH SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍何文田巴富街6號</p></a><a href="schools/29.html" class="card"><h3>五旬節聖潔會永光小學</h3><p>THE PENTECOSTAL HOLINESS CHURCH WING KWONG JUNIOR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔彩蝶街10號</p></a><a href="schools/30.html" class="card"><h3>嘉諾撒聖心學校</h3><p>SACRED HEART CANOSSIAN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港堅道26號</p></a><a href="schools/31.html" class="card"><h3>長沙灣天主教小學</h3><p>CHEUNG SHA WAN CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍長沙灣東京街7號</p></a><a href="schools/32.html" class="card"><h3>救世軍田家炳學校</h3><p>THE SALVATION ARMY TIN KA PING SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田博康邨</p></a><a href="schools/33.html" class="card"><h3>天主教明德學校</h3><p>MENG TAK CATHOLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港柴灣祥民道11號</p></a><a href="schools/34.html" class="card"><h3>嘉諾撒培德學校</h3><p>PUI TAK CANOSSIAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔大道180號</p></a><a href="schools/35.html" class="card"><h3>沙田圍胡素貞博士紀念學校</h3><p>SHA TIN WAI DR. CATHERINE F. WOO MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田乙明邨街2號</p></a><a href="schools/36.html" class="card"><h3>聖士提反女子中學附屬小學</h3><p>ST. STEPHEN'S GIRLS' PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港柏道三十三號</p></a><a href="schools/37.html" class="card"><h3>中華基督教會長洲堂錦江小學</h3><p>THE CHURCH OF CHRIST IN CHINA CHEUNG CHAU CHURCH KAM KONG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界長洲山頂道西一號</p></a><a href="schools/38.html" class="card"><h3>聖公會青衣主恩小學</h3><p>S.K.H. TSING YI CHU YAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界青衣長宏邨</p></a><a href="schools/39.html" class="card"><h3>聖公會主恩小學</h3><p>S.K.H. CHU YAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界葵盛葵盛西邨第二號校舍</p></a><a href="schools/40.html" class="card"><h3>中華傳道會呂明才小學</h3><p>CNEC LUI MING CHOI PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界青衣長發邨</p></a><a href="schools/41.html" class="card"><h3>迦密梁省德學校</h3><p>CARMEL LEUNG SING TAK SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍順安邨第二座校舍</p></a><a href="schools/42.html" class="card"><h3>路德會呂祥光小學</h3><p>LUI CHEUNG KWONG LUTHERAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門安定邨</p></a><a href="schools/43.html" class="card"><h3>大埔崇德黃建常紀念學校</h3><p>SUNG TAK WONG KIN SHEUNG MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔東昌街</p></a><a href="schools/44.html" class="card"><h3>香港青年協會李兆基小學</h3><p>HKFYG LEE SHAU KEE PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界元朗天水圍天榮路十一號</p></a><a href="schools/45.html" class="card"><h3>樂華天主教小學</h3><p>LOK WAH CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍觀塘振華道八十一號</p></a><a href="schools/46.html" class="card"><h3>聖公會仁立紀念小學</h3><p>S.K.H. YAN LAAP MEMORIAL PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界葵涌上角街十三號</p></a><a href="schools/47.html" class="card"><h3>道教青松小學</h3><p>TAOIST CHING CHUNG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門第七及第八區山景邨</p></a><a href="schools/48.html" class="card"><h3>青松侯寶垣小學</h3><p>CHING CHUNG HAU PO WOON PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山東涌富東邨</p></a><a href="schools/49.html" class="card"><h3>保良局馮晴紀念小學</h3><p>PO LEUNG KUK FUNG CHING MEMORIAL PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界將軍澳培成路2號(101–106 401–406號課室108–109 408–409號洗手間及301電腦室(星期一至六下午3：30至9：00)除外)</p></a><a href="schools/50.html" class="card"><h3>香海正覺蓮社佛教黃藻森學校</h3><p>HHCKLA BUDDHIST WONG CHO SUM SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界 將軍澳 景林邨</p></a><a href="schools/51.html" class="card"><h3>柏立基教育學院校友會何壽基學校</h3><p>SIR ROBERT BLACK COLLEGE OF EDUCATION PAST STUDENTS' ASSOCIATION HO SAU KI SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門田景邨屋邨小學Nｏ． 1學校校舍</p></a><a href="schools/52.html" class="card"><h3>粉嶺公立學校</h3><p>FANLING PUBLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺粉嶺村及有蓋操場</p></a><a href="schools/53.html" class="card"><h3>迦密愛禮信小學</h3><p>CARMEL ALISON LAM PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田顯徑邨</p></a><a href="schools/54.html" class="card"><h3>吳氏宗親總會泰伯紀念學校</h3><p>NG CLAN'S ASSOCIATION TAI PAK MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田馬鞍山錦英苑</p></a><a href="schools/55.html" class="card"><h3>台山商會學校</h3><p>TOI SHAN ASSOCIATION PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門石排頭路14號</p></a><a href="schools/56.html" class="card"><h3>五旬節于良發小學</h3><p>PENTECOSTAL YU LEUNG FAT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺暉明路16號</p></a><a href="schools/57.html" class="card"><h3>三水同鄉會禤景榮學校</h3><p>SAM SHUI NATIVES ASSOCIATION HUEN KING WING SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔富善邨屋邨小學第一校舍</p></a><a href="schools/58.html" class="card"><h3>沙田崇真學校</h3><p>SHATIN TSUNG TSIN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">ESTATE SCHOOL 1, LEK YUEN ESTATE SHATIN NT</p></a><a href="schools/59.html" class="card"><h3>仁濟醫院陳耀星小學</h3><p>YAN CHAI HOSPITAL CHAN IU SENG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界 將軍澳 煜明苑</p></a><a href="schools/60.html" class="card"><h3>仁濟醫院趙曾學韞小學</h3><p>YAN CHAI HOSPITAL CHIU TSANG HOK WAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界青衣青衣邨第二期屋邨小學</p></a><a href="schools/61.html" class="card"><h3>柏立基教育學院校友會盧光輝紀念學校</h3><p>SIR ROBERT BLACK COLLEGE OF EDUCATION PAST STUDENTS' ASSOCIATION LU KWONG FAI MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界葵涌葵盛圍221號</p></a><a href="schools/62.html" class="card"><h3>保良局王賜豪(田心谷)小學</h3><p>PO LEUNG KUK DR. JIMMY WONG CHI-HO (TIN SUM VALLEY) PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田二甲地段隆亨邨屋邨小學校舍(4樓406-409室及5樓506-509室星期一至星期五下午3時30分至下午9時星期六、日及公眾假期上午8時至下午7時除外)</p></a><a href="schools/63.html" class="card"><h3>寶覺小學</h3><p>PO KOK PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港跑馬地山光道9號地下至5樓及山光道11號</p></a><a href="schools/64.html" class="card"><h3>通德學校</h3><p>TUNG TAK SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界元朗錦田城門新村</p></a><a href="schools/65.html" class="card"><h3>香港教育大學賽馬會小學</h3><p>THE EDUCATION UNIVERSITY OF HONG KONG JOCKEY CLUB PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔露屏路10號香港教育大學</p></a><a href="schools/66.html" class="card"><h3>中華基督教會基華小學</h3><p>THE CHURCH OF CHRIST IN CHINA KEI WA PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍黃大仙黃菊路3號彩虹邨</p></a><a href="schools/67.html" class="card"><h3>石籬聖若望天主教小學</h3><p>SHEK LEI ST. JOHN'S CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界葵涌大白田街99號</p></a><a href="schools/68.html" class="card"><h3>保良局西區婦女福利會馮李佩瑤小學</h3><p>PO LEUNG KUK WOMEN'S WELFARE CLUB WESTERN DISTRICT FUNG LEE PUI YIU PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門掃管笏管青路11號</p></a><a href="schools/69.html" class="card"><h3>東華三院馬錦燦紀念小學</h3><p>TUNG WAH GROUP OF HOSPITALS MA KAM CHAN MEMORIAL PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界上水清城路2號</p></a><a href="schools/70.html" class="card"><h3>中華基督教會協和小學(長沙灣)</h3><p>THE CHURCH OF CHRIST IN CHINA HEEP WOH PRIMARY SCHOOL (CHEUNG SHA WAN)</p><p style="font-size:11px;color:#a0aec0;">九龍深水埗東京街18號</p></a><a href="schools/71.html" class="card"><h3>順德聯誼總會李金小學</h3><p>SHUN TAK FRATERNAL ASSOCIATION LEE KAM PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門掃管笏路23號</p></a><a href="schools/72.html" class="card"><h3>九龍塘天主教華德學校</h3><p>KOWLOON TONG BISHOP WALSH CATHOLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍延文禮士道39號</p></a><a href="schools/73.html" class="card"><h3>聖公會阮鄭夢芹銀禧小學</h3><p>S.K.H. YUEN CHEN MAUN CHEN JUBILEE PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔富亨邨第四期第八區屋邨小學</p></a><a href="schools/74.html" class="card"><h3>道教青松小學(湖景邨)</h3><p>TAOIST CHING CHUNG PRIMARY SCHOOL (WU KING ESTATE)</p><p style="font-size:11px;color:#a0aec0;">新界屯門第28區湖景邨第一期屋邨小學第1號校舍</p></a><a href="schools/75.html" class="card"><h3>深井天主教小學</h3><p>SHAM TSENG CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界荃灣青山公路深井段37號</p></a><a href="schools/76.html" class="card"><h3>丹拿山循道學校</h3><p>CHINESE METHODIST SCHOOL, TANNER HILL</p><p style="font-size:11px;color:#a0aec0;">香港北角百福道4號</p></a><a href="schools/77.html" class="card"><h3>佛教陳榮根紀念學校</h3><p>BUDDHIST CHAN WING KAN MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界元朗馬田欖口村路23號</p></a><a href="schools/78.html" class="card"><h3>瑪利諾神父教會學校(小學部)</h3><p>MARYKNOLL FATHERS' SCHOOL (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">九龍深水埗海麗街11號</p></a><a href="schools/79.html" class="card"><h3>佐敦谷聖若瑟天主教小學</h3><p>JORDAN VALLEY ST. JOSEPH'S CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍彩霞道80號</p></a><a href="schools/80.html" class="card"><h3>中華基督教會全完第二小學</h3><p>THE CHURCH OF CHRIST IN CHINA CHUEN YUEN SECOND PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界荃灣大窩口上角街三號</p></a><a href="schools/81.html" class="card"><h3>荃灣公立何傳耀紀念小學</h3><p>TSUEN WAN PUBLIC HO CHUEN YIU MEMORIAL PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界荃灣石圍角邨屋邨第一小學</p></a><a href="schools/82.html" class="card"><h3>華德學校</h3><p>BISHOP WALSH PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍聯合道150號</p></a><a href="schools/83.html" class="card"><h3>中華基督教會基全小學</h3><p>THE CHURCH OF CHRIST IN CHINA KEI TSUN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍大角咀道150號</p></a><a href="schools/84.html" class="card"><h3>循道學校</h3><p>METHODIST SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍衛理道12號(包括4樓及5樓天台操場)</p></a><a href="schools/85.html" class="card"><h3>鮮魚行學校</h3><p>FRESH FISH TRADERS' SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍大角咀詩歌舞街33號</p></a><a href="schools/86.html" class="card"><h3>九龍婦女福利會李炳紀念學校</h3><p>KOWLOON WOMEN'S WELFARE CLUB LI PING MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍衛理道33號</p></a><a href="schools/87.html" class="card"><h3>基督教香港信義會信愛學校</h3><p>THE EVANGELICAL LUTHERAN CHURCH OF HONG KONG FAITH LOVE LUTHERAN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港柴灣漁灣邨第二座校舍</p></a><a href="schools/88.html" class="card"><h3>寶血小學</h3><p>PRECIOUS BLOOD PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港跑馬地成和道72號</p></a><a href="schools/89.html" class="card"><h3>華富邨寶血小學</h3><p>PRECIOUS BLOOD PRIMARY SCHOOL (WAH FU ESTATE)</p><p style="font-size:11px;color:#a0aec0;">香港華富邨瀑布灣道27號</p></a><a href="schools/90.html" class="card"><h3>鳳溪第一小學</h3><p>FUNG KAI NO.1 PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界上水馬會道15號及19號</p></a><a href="schools/91.html" class="card"><h3>九龍靈光小學</h3><p>EMMANUEL PRIMARY SCHOOL, KOWLOON</p><p style="font-size:11px;color:#a0aec0;">九龍馬頭圍盛德街36至38號</p></a><a href="schools/92.html" class="card"><h3>中華基督教會元朗真光小學</h3><p>THE CHURCH OF CHRIST IN CHINA CHUN KWONG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界元朗鐘聲徑</p></a><a href="schools/93.html" class="card"><h3>循理會白普理基金循理小學</h3><p>FREE METHODIST BRADBURY CHUN LEI PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界沙田新翠邨</p></a><a href="schools/94.html" class="card"><h3>博愛醫院歷屆總理聯誼會鄭任安夫人學校</h3><p>THE ASSOCIATION OF DIRECTORS & FORMER DIRECTORS OF POK OI HOSPITAL LTD MRS CHENG YAM ON SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門屯利街3號</p></a><a href="schools/95.html" class="card"><h3>長洲聖心學校</h3><p>CHEUNG CHAU SACRED HEART SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界長洲教堂路長洲地段第916及1092號</p></a><a href="schools/96.html" class="card"><h3>東華三院羅裕積小學</h3><p>TUNG WAH GROUP OF HOSPITALS LO YU CHIK PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍油麻地碧街51號</p></a><a href="schools/97.html" class="card"><h3>東華三院姚達之紀念小學(元朗)</h3><p>TUNG WAH GROUP OF HOSPITALS YIU DAK CHI MEMORIAL PRIMARY SCHOOL (YUEN LONG)</p><p style="font-size:11px;color:#a0aec0;">新界天水圍天瑞邨第一期屋邨小學</p></a><a href="schools/98.html" class="card"><h3>天佑小學</h3><p>MARY OF PROVIDENCE PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">荃灣河背街六十八號</p></a><a href="schools/99.html" class="card"><h3>聖公會基榮小學</h3><p>S.K.H. KEI WING PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍荔枝角道23號</p></a><a href="schools/100.html" class="card"><h3>聖公會蒙恩小學</h3><p>S.K.H. MUNG YAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門景峰徑1號</p></a></div></section></div><footer>
+<p style="margin-bottom: 12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
+</footer>
+</body>
+</html>

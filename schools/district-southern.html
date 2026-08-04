@@ -3,366 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOUTHERN 學校一覽 | HKSchools</title>
-<meta name="description" content="SOUTHERN地區學校資訊，共131間學校詳細資料。">
-<meta name="keywords" content="SOUTHERN,學校,香港學校">
-<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
-<meta property="og:title" content="SOUTHERN 學校一覽 | HKSchools">
-<meta property="og:description" content="SOUTHERN地區學校資訊，共131間學校詳細資料。">
-<meta property="og:image" content="https://schools.hkinfo.hk/images/og-default.svg">
-<meta property="og:url" content="https://schools.hkinfo.hk/district-southern.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HKSchools 全港學校資訊網">
-<link rel="canonical" href="https://schools.hkinfo.hk/district-southern.html">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<title>南区学校列表 | 香港学校数据库</title>
+<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f0f4f8; color: #1a2332; line-height: 1.8; }
-header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; }
-.logo span { color: #ffc107; }
-.nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.12); }
-.hero { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; padding: 56px 24px; text-align: center; }
-.hero h1 { font-size: 32px; margin-bottom: 12px; }
-.hero p { font-size: 16px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-.stats { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
+.logo span { color: #ffd43b; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.15); }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
 .stat { text-align: center; }
-.stat .n { font-size: 36px; font-weight: 800; }
-.stat .l { font-size: 14px; opacity: 0.8; }
-.search-box { max-width: 600px; margin: 24px auto; }
-.search-box input { width: 100%; padding: 14px 20px; border: none; border-radius: 10px; font-size: 16px; outline: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 40px 0; }
-.section h2 { font-size: 24px; margin-bottom: 20px; color: #0d47a1; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
-.card:hover { transform: translateY(-3px); }
-.card h3 { font-size: 18px; color: #0d47a1; margin-bottom: 8px; }
-.card p { font-size: 14px; color: #666; margin-bottom: 12px; }
-.card .tag { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin: 2px 4px 2px 0; }
-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; text-align: center; margin-top: 48px; }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); }}
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; }}
+.stat .n { font-size: 32px; font-weight: 800; }
+.stat .l { font-size: 13px; opacity: 0.8; }
+.search-box { max-width: 550px; margin: 24px auto; position: relative; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
+.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
+.search-results a:hover { background: #f5f7fa; }
+.search-results .result-name { font-weight: 600; font-size: 14px; }
+.search-results .result-detail { font-size: 12px; color: #718096; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 32px 0; }
+.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
+.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
+.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
+.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
+.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
 </style>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
-</head><body><header><div class="hdr">
-<a href="./index.html" class="logo">HK<span>Schools</span> 全港學校資訊</a>
+</head>
+<body>
+<header><div class="hdr">
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
 <nav class="nav-links">
-<a href="./index.html#level">學校類別</a>
-<a href="./index.html#district">地區分類</a>
-<a href="./index.html#finance">資助類型</a>
-<a href="#session">授課時間</a>
-</nav></div></header><div class='container'><section class="section">
-<h1>🗺️ SOUTHERN 學校一覽</h1>
-<p>共 131 間學校</p>
-<div class="grid"><div class="card">
-<h3>TUNG WAH GROUP OF HOSPITALS HOK SHAN SCHOOL</h3>
-<p>5 WAH LAM PATH, WAH FU ESTATE, POKFULAM, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>PUI TAK CANOSSIAN PRIMARY SCHOOL</h3>
-<p>180 ABERDEEN MAIN ROAD HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>PRECIOUS BLOOD PRIMARY SCHOOL (WAH FU ESTATE)</h3>
-<p>27 WATERFALL BAY ROAD WAH FU ESTATE HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>S.K.H. CHI FU CHI NAM PRIMARY SCHOOL</h3>
-<p>3 CHI FU CLOSE CHI FU FA YUEN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>S.K.H. TIN WAN CHI NAM PRIMARY SCHOOL</h3>
-<p>5 TIN WAN NEW STREET ABERDEEN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>ST. PETER'S CATHOLIC PRIMARY SCHOOL</h3>
-<p>PHASE 2 LEI TUNG ESTATE AP LEI CHAU HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>PRECIOUS BLOOD PRIMARY SCHOOL (SOUTH HORIZONS)</h3>
-<p>355 AP LEI CHAU BRIDGE ROAD AP LEI CHAU HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>ABERDEEN ST PETER'S CATHOLIC PRIMARY SCHOOL</h3>
-<p>SHEK PAI WAN ESTATE HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>APLICHAU KAIFONG PRIMARY SCHOOL</h3>
-<p>9 LEI TUNG ESTATE ROAD LEI TUNG ESTATE APLICHAU HO...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>ST. PETER'S SECONDARY SCHOOL</h3>
-<p>21 ABERDEEN RESERVOIR ROAD ABERDEEN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>PUI TAK CANOSSIAN COLLEGE</h3>
-<p>200 PEEL RISE ABERDEEN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>PUI YING SECONDARY SCHOOL</h3>
-<p>55 WAH FU ROAD POKFULAM HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>SACRED HEART CANOSSIAN COLLEGE</h3>
-<p>LG/F - 6/F 2 CHI FU CLOSE CHI FU FA YUEN POKFULAM ...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG SEA SCHOOL</h3>
-<p>13 - 15 TUNG TAU WAN ROAD STANLEY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>SHENG KUNG HUI LUI MING CHOI SECONDARY SCHOOL</h3>
-<p>2ND LOWER G/F FL - 6TH FLS 57 WAH FU ROAD WAH FU E...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>CARITAS CHONG YUET MING SECONDARY SCHOOL</h3>
-<p>53 WAH FU ROAD WAH FU ESTATE POKFULAM HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>SAN WUI COMMERCIAL SOCIETY CHAN PAK SHA SCHOOL</h3>
-<p>1 SHUM WAN ROAD ABERDEEN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>ABERDEEN BAPTIST LUI MING CHOI COLLEGE</h3>
-<p>18 LEI TUNG ESTATE RD AP LEI CHAU HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG TRUE LIGHT COLLEGE</h3>
-<p>1 LEI TUNG ESTATE ROAD APLEICHAU HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>ABERDEEN TECHNICAL SCHOOL</h3>
-<p>1 WONG CHUK HANG ROAD ABERDEEN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>YU CHUN KEUNG MEMORIAL COLLEGE NO. 2</h3>
-<p>1 CHI FU CLOSE POKFULAM HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG RED CROSS JOHN F. KENNEDY CENTRE (PRIMARY SECTION)</h3>
-<p>15 & 17 SANDY BAY ROAD SANDY BAY HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG RED CROSS JOHN F. KENNEDY CENTRE (SECONDARY SECTION)</h3>
-<p>15 & 17 SANDY BAY ROAD SANDY BAY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>EBENEZER NEW HOPE SCHOOL (PRIMARY SECTION)</h3>
-<p>131 POKFULAM ROAD, POKFULAM, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>TUNG WAH GROUP OF HOSPITALS TSUI TSIN TONG SCHOOL (PRIMARY SECTION)</h3>
-<p>25 WATERFALL BAY ROAD WAH FU ESTATE HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>MARYCOVE SCHOOL (PRIMARY SECTION)</h3>
-<p>32 NAM LONG SHAN ROAD ABERDEEN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>TUNG WAH GROUP OF HOSPITALS TSUI TSIN TONG SCHOOL (SECONDARY SECTION)</h3>
-<p>25 WATERFALL BAY ROAD WAH FU ESTATE HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>EBENEZER NEW HOPE SCHOOL (SECONDARY SECTION)</h3>
-<p>131 POKFULAM ROAD, POKFULAM, HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG JUVENILE CARE CENTRE CHAN NAM CHEONG MEMORIAL SCHOOL</h3>
-<p>38 NAM LONG SHAN ROAD ABERDEEN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>MARYCOVE SCHOOL (SECONDARY SECTION)</h3>
-<p>32 NAM LONG SHAN ROAD ABERDEEN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>EBENEZER SCHOOL (SECONDARY SECTION)</h3>
-<p>131 POKFULAM ROAD POKFULAM HONG KONG (EXCLUDING 1S...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>EBENEZER SCHOOL (PRIMARY SECTION)</h3>
-<p>131 POKFULAM ROAD POKFULAM HONG KONG (EXCLUDING 1S...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION)</h3>
-<p>THE DUCHESS OF KENT CHILDREN'S HOSPITAL AT SANDY B...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION)</h3>
-<p>THE DUCHESS OF KENT CHILDREN'S HOSPITAL AT SANDY B...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION)</h3>
-<p>QUEEN MARY HOSPITAL 102 POKFULAM ROAD HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION)</h3>
-<p>QUEEN MARY HOSPITAL 102 POKFULAM ROAD HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">AIDED</span>
-</div><div class="card">
-<h3>ST. PAUL'S CO-EDUCATIONAL COLLEGE PRIMARY SCHOOL</h3>
-<p>11 NAM FUNG PATH, WONG CHUK HANG, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">DIRECT SUBSIDY SCHEME</span>
-</div><div class="card">
-<h3>ST. PAUL'S COLLEGE PRIMARY SCHOOL</h3>
-<p>777 VICTORIA ROAD HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">DIRECT SUBSIDY SCHEME</span>
-</div><div class="card">
-<h3>HKUGA COLLEGE</h3>
-<p>9 NAM FUNG ROAD WONG CHUK HANG HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">DIRECT SUBSIDY SCHEME</span>
-</div><div class="card">
-<h3>ST. STEPHEN'S COLLEGE</h3>
-<p>22 TUNG TAU WAN ROAD STANLEY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">DIRECT SUBSIDY SCHEME</span>
-</div><div class="card">
-<h3>KENNEDY SCHOOL</h3>
-<p>19 SHA WAN DRIVE SANDY BAY HONG KONG (IL 8635)...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ENGLISH SCHOOLS FOUNDATION</span>
-</div><div class="card">
-<h3>THE SOUTH ISLAND SCHOOL</h3>
-<p>50 NAM FUNG ROAD, HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">ENGLISH SCHOOLS FOUNDATION</span>
-</div><div class="card">
-<h3>WEST ISLAND SCHOOL</h3>
-<p>250 VICTORIA ROAD POKFULAM HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">ENGLISH SCHOOLS FOUNDATION</span>
-</div><div class="card">
-<h3>HONG KONG SOUTHERN DISTRICT GOVERNMENT PRIMARY SCHOOL</h3>
-<p>325, APLEICHAU BRIDGE RD, APLEICHAU, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">GOVERNMENT</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</h3>
-<p>MA HANG ESTATE PHASE III STANLEY HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>THE HARBOUR SCHOOL</h3>
-<p>SCHOOL NO.332, AP LEI CHAU BRIDGE ROAD, AP LEI CHA...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>KELLETT SCHOOL</h3>
-<p>2 WAH LOK PATH, PHASE 1, STAGE I & STAGE II, G/F -...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>GERMAN SWISS INTERNATIONAL SCHOOL</h3>
-<p>162 POK FU LAM ROAD, POK FU LAM, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</h3>
-<p>23 NAM LONG SHAN ROAD, ABERDEEN, HONG KONG (INCLUD...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>HONG KONG INTERNATIONAL SCHOOL</h3>
-<p>NO. 6 & 23 SOUTH BAY CLOSE REPULSE BAY HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>THE HARBOUR SCHOOL</h3>
-<p>SHOP A-D ON LG/F. & SHOP D-E ON UG/F., AP LEI CHAU...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</h3>
-<p>MA HANG ESTATE PHASE III STANLEY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>THE HARBOUR SCHOOL</h3>
-<p>SHOP A-D ON LG/F. & SHOP D-E ON UG/F., AP LEI CHAU...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</h3>
-<p>2 POLICE SCHOOL ROAD WONG CHUK HANG HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>HONG KONG INTERNATIONAL SCHOOL</h3>
-<p>NO. 1 RED HILL ROAD TAI TAM HONG KONG (EXCLUDING F...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">KINDERGARTEN</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">KINDERGARTEN</span>
-<span class="tag">PRIVATE</span>
-</div><div class="card">
-<h3>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</h3>
-<p>MA HANG ESTATE PHASE III STANLEY HONG KONG...</p>
-<span class="tag">KINDERGARTEN</span>
-<span class="tag">PRIVATE</span>
-</div></div></section></div><footer>
-<p style="margin-bottom: 12px;"><a href="./index.html">首頁</a> · <a href="/about.html">關於我們</a> · <a href="/privacy.html">私隱政策</a></p>
-<p style="margin-bottom: 12px;">數據來源：香港教育局 (EDB) 學校位置及資訊開放數據</p>
-<p>© 2026 HKSchools 全港學校資訊網</p>
-<p style="font-size: 12px; opacity: 0.7; max-width: 700px; margin: 8px auto;">本網站數據來自教育局公開資料，僅供參考。如有疑問請以教育局網站為準。</p>
-</footer></body></html>
+<a href="../index.html#level">学校类别</a>
+<a href="../index.html#district">地区分类</a>
+<a href="../index.html#finance">资助种类</a>
+</nav></div></header>
+<div class="container"><section class="section"><h1>南区学校列表</h1><p>共 131 所学校</p><div class="grid"><a href="schools/7.html" class="card"><h3>東華三院鶴山學校</h3><p>TUNG WAH GROUP OF HOSPITALS HOK SHAN SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林華富邨華林徑5號</p></a><a href="schools/34.html" class="card"><h3>嘉諾撒培德學校</h3><p>PUI TAK CANOSSIAN PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔大道180號</p></a><a href="schools/89.html" class="card"><h3>華富邨寶血小學</h3><p>PRECIOUS BLOOD PRIMARY SCHOOL (WAH FU ESTATE)</p><p style="font-size:11px;color:#a0aec0;">香港華富邨瀑布灣道27號</p></a><a href="schools/145.html" class="card"><h3>聖公會置富始南小學</h3><p>S.K.H. CHI FU CHI NAM PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港置富徑3號置富花園地下至6樓</p></a><a href="schools/164.html" class="card"><h3>聖公會田灣始南小學</h3><p>S.K.H. TIN WAN CHI NAM PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔田灣新街五號</p></a><a href="schools/173.html" class="card"><h3>聖伯多祿天主教小學</h3><p>ST. PETER'S CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨第二期</p></a><a href="schools/229.html" class="card"><h3>海怡寶血小學</h3><p>PRECIOUS BLOOD PRIMARY SCHOOL (SOUTH HORIZONS)</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲鴨脷洲橋道355號</p></a><a href="schools/257.html" class="card"><h3>香港仔聖伯多祿天主教小學</h3><p>ABERDEEN ST PETER'S CATHOLIC PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港石排灣邨</p></a><a href="schools/335.html" class="card"><h3>鴨脷洲街坊學校</h3><p>APLICHAU KAIFONG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨利東邨道9號</p></a><a href="schools/465.html" class="card"><h3>聖伯多祿中學</h3><p>ST. PETER'S SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔香港仔水塘道21號</p></a><a href="schools/519.html" class="card"><h3>嘉諾撒培德書院</h3><p>PUI TAK CANOSSIAN COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港香港仔貝璐道200號</p></a><a href="schools/530.html" class="card"><h3>培英中學</h3><p>PUI YING SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林華富道55號</p></a><a href="schools/579.html" class="card"><h3>嘉諾撒聖心書院</h3><p>SACRED HEART CANOSSIAN COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林置富花園置富徑2號地下下層至6樓(不包括小教堂及宿舍)</p></a><a href="schools/588.html" class="card"><h3>香港航海學校</h3><p>HONG KONG SEA SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱東頭灣道13-15號</p></a><a href="schools/618.html" class="card"><h3>聖公會呂明才中學</h3><p>SHENG KUNG HUI LUI MING CHOI SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林華富邨華富道57號地下二層至六樓</p></a><a href="schools/674.html" class="card"><h3>明愛莊月明中學</h3><p>CARITAS CHONG YUET MING SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林華富邨華富道53號</p></a><a href="schools/683.html" class="card"><h3>新會商會陳白沙紀念中學</h3><p>SAN WUI COMMERCIAL SOCIETY CHAN PAK SHA SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔深灣道1號</p></a><a href="schools/693.html" class="card"><h3>香港仔浸信會呂明才書院</h3><p>ABERDEEN BAPTIST LUI MING CHOI COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨道十八號</p></a><a href="schools/694.html" class="card"><h3>香港真光書院</h3><p>HONG KONG TRUE LIGHT COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨道一號</p></a><a href="schools/696.html" class="card"><h3>香港仔工業學校</h3><p>ABERDEEN TECHNICAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔黃竹坑道1號</p></a><a href="schools/738.html" class="card"><h3>余振強紀念第二中學</h3><p>YU CHUN KEUNG MEMORIAL COLLEGE NO. 2</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林置富徑1號</p></a><a href="schools/848.html" class="card"><h3>香港紅十字會甘迺迪中心(小學部)</h3><p>HONG KONG RED CROSS JOHN F. KENNEDY CENTRE (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港大口環大口環道15及17號</p></a><a href="schools/849.html" class="card"><h3>香港紅十字會甘迺迪中心(中學部)</h3><p>HONG KONG RED CROSS JOHN F. KENNEDY CENTRE (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港大口環大口環道15及17號</p></a><a href="schools/855.html" class="card"><h3>心光恩望學校(小學部)</h3><p>EBENEZER NEW HOPE SCHOOL (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道131號</p></a><a href="schools/871.html" class="card"><h3>東華三院徐展堂學校(小學部)</h3><p>TUNG WAH GROUP OF HOSPITALS TSUI TSIN TONG SCHOOL (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港華富邨瀑布灣道廿五號</p></a><a href="schools/872.html" class="card"><h3>瑪利灣學校(小學部)</h3><p>MARYCOVE SCHOOL (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道32號</p></a><a href="schools/875.html" class="card"><h3>東華三院徐展堂學校(中學部)</h3><p>TUNG WAH GROUP OF HOSPITALS TSUI TSIN TONG SCHOOL (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港華富邨瀑布灣道廿五號</p></a><a href="schools/879.html" class="card"><h3>心光恩望學校(中學部)</h3><p>EBENEZER NEW HOPE SCHOOL (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道131號</p></a><a href="schools/891.html" class="card"><h3>香港青少年培育會陳南昌紀念學校</h3><p>HONG KONG JUVENILE CARE CENTRE CHAN NAM CHEONG MEMORIAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道38號</p></a><a href="schools/892.html" class="card"><h3>瑪利灣學校(中學部)</h3><p>MARYCOVE SCHOOL (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道32號</p></a><a href="schools/897.html" class="card"><h3>心光學校(中學部)</h3><p>EBENEZER SCHOOL (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道131號(1樓及4樓幼兒中心專用範圍除外)</p></a><a href="schools/898.html" class="card"><h3>心光學校(小學部)</h3><p>EBENEZER SCHOOL (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道131號(1樓及4樓幼兒中心專用範圍除外)</p></a><a href="schools/935.html" class="card"><h3>香港紅十字會醫院學校(中學部)</h3><p>HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林大口環道12號大口環根德公爵夫人兒童醫院</p></a><a href="schools/939.html" class="card"><h3>香港紅十字會醫院學校(小學部)</h3><p>HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林大口環道12號大口環根德公爵夫人兒童醫院</p></a><a href="schools/945.html" class="card"><h3>香港紅十字會醫院學校(中學部)</h3><p>HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林道102號瑪麗醫院</p></a><a href="schools/946.html" class="card"><h3>香港紅十字會醫院學校(小學部)</h3><p>HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林道102號瑪麗醫院</p></a><a href="schools/958.html" class="card"><h3>聖保羅男女中學附屬小學</h3><p>ST. PAUL'S CO-EDUCATIONAL COLLEGE PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港黄竹坑南風徑11號</p></a><a href="schools/960.html" class="card"><h3>聖保羅書院小學</h3><p>ST. PAUL'S COLLEGE PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港域多利道777號</p></a><a href="schools/988.html" class="card"><h3>港大同學會書院</h3><p>HKUGA COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港黃竹坑南風道9號</p></a><a href="schools/1031.html" class="card"><h3>聖士提反書院</h3><p>ST. STEPHEN'S COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港赤柱東頭灣道22號</p></a><a href="schools/1042.html" class="card"><h3>KENNEDY SCHOOL</h3><p>KENNEDY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港大口環沙灣徑19號(第8635號地段)</p></a><a href="schools/1053.html" class="card"><h3>THE SOUTH ISLAND SCHOOL</h3><p>THE SOUTH ISLAND SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港南風道50號</p></a><a href="schools/1055.html" class="card"><h3>WEST ISLAND SCHOOL</h3><p>WEST ISLAND SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林域多利道250號</p></a><a href="schools/1063.html" class="card"><h3>香港南區官立小學</h3><p>HONG KONG SOUTHERN DISTRICT GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲鴨脷洲橋道325號</p></a><a href="schools/1120.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1123.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨第三期</p></a><a href="schools/1124.html" class="card"><h3>港灣學校</h3><p>THE HARBOUR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲邨鴨脷洲橋道332號校舍</p></a><a href="schools/1130.html" class="card"><h3>KELLETT SCHOOL</h3><p>KELLETT SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港華富華樂徑2號第1期第1階及第2階地下至3樓、4樓天台操場(包括平台II建築物)</p></a><a href="schools/1131.html" class="card"><h3>德瑞國際學校</h3><p>GERMAN SWISS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道162號</p></a><a href="schools/1139.html" class="card"><h3>新加坡國際學校</h3><p>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道23號(包括新增一層校舍及新增L7樓辦公室)</p></a><a href="schools/1141.html" class="card"><h3>HONG KONG INTERNATIONAL SCHOOL</h3><p>HONG KONG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港淺水灣南灣坊6及23號</p></a><a href="schools/1154.html" class="card"><h3>港灣學校</h3><p>THE HARBOUR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利枝道138號鴨脷洲中心地下低層A-D舖及地下高層D-E舖</p></a><a href="schools/1165.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1168.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨第三期</p></a><a href="schools/1170.html" class="card"><h3>港灣學校</h3><p>THE HARBOUR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利枝道138號鴨脷洲中心地下低層A-D舖及地下高層D-E舖</p></a><a href="schools/1174.html" class="card"><h3>新加坡國際學校</h3><p>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</p><p style="font-size:11px;color:#a0aec0;">香港黄竹坑警校道2號</p></a><a href="schools/1183.html" class="card"><h3>HONG KONG INTERNATIONAL SCHOOL</h3><p>HONG KONG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港大潭紅山道1號</p></a><a href="schools/1202.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1203.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1241.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨第三期</p></a><a href="schools/1305.html" class="card"><h3>嗇色園主辦可仁幼稚園</h3><p>HO YAN KINDERGARTEN (SPONSORED BY SIK SIK YUEN)</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲邨利添樓地下21-40號室</p></a><a href="schools/1306.html" class="card"><h3>嗇色園主辦可仁幼稚園</h3><p>HO YAN KINDERGARTEN (SPONSORED BY SIK SIK YUEN)</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲邨利添樓地下21-40號室</p></a><a href="schools/1307.html" class="card"><h3>嗇色園主辦可仁幼稚園</h3><p>HO YAN KINDERGARTEN (SPONSORED BY SIK SIK YUEN)</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲邨利添樓地下21-40號室</p></a><a href="schools/1321.html" class="card"><h3>香港仔浸信會白光幼稚園</h3><p>ABERDEEN BAPTIST CHURCH PAK KWONG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港香港仔水塘道十一號(擴建部份)</p></a><a href="schools/1322.html" class="card"><h3>香港仔浸信會白光幼稚園</h3><p>ABERDEEN BAPTIST CHURCH PAK KWONG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港香港仔水塘道十一號(擴建部份)</p></a><a href="schools/1323.html" class="card"><h3>香港仔浸信會白光幼稚園</h3><p>ABERDEEN BAPTIST CHURCH PAK KWONG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港香港仔水塘道十一號(擴建部份)</p></a><a href="schools/1356.html" class="card"><h3>MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE</h3><p>MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE</p><p style="font-size:11px;color:#a0aec0;">香港香港仔海傍道3號逸港居地下1及2號舖</p></a><a href="schools/1357.html" class="card"><h3>MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE</h3><p>MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE</p><p style="font-size:11px;color:#a0aec0;">香港香港仔海傍道3號逸港居地下1及2號舖</p></a><a href="schools/1646.html" class="card"><h3>新加坡國際學校</h3><p>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道23號(包括新增一層校舍及新增L7樓辦公室)</p></a><a href="schools/1647.html" class="card"><h3>新加坡國際學校</h3><p>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道23號(包括新增一層校舍及新增L7樓辦公室)</p></a><a href="schools/1736.html" class="card"><h3>聖德蘭幼稚園</h3><p>ST. TERESA'S KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港赤柱東頭灣道1號</p></a><a href="schools/1738.html" class="card"><h3>聖德蘭幼稚園</h3><p>ST. TERESA'S KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港赤柱東頭灣道1號</p></a><a href="schools/1824.html" class="card"><h3>聖德蘭幼稚園</h3><p>ST. TERESA'S KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港赤柱東頭灣道１號</p></a><a href="schools/1890.html" class="card"><h3>德瑞國際學校</h3><p>GERMAN SWISS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道１６２號</p></a><a href="schools/1961.html" class="card"><h3>天主教聖伯多祿幼稚園</h3><p>ST. PETER'S CATHOLIC KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港石排灣邨碧輝樓地下３號</p></a><a href="schools/2143.html" class="card"><h3>東華三院田灣(一九九六至一九九七總理)幼稚園</h3><p>TWGHS TIN WAN (1996 - 1997 DIRECTORS) KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港香港仔田灣邨田健樓地下１－１０室</p></a><a href="schools/2147.html" class="card"><h3>東華三院田灣(一九九六至一九九七總理)幼稚園</h3><p>TWGHS TIN WAN (1996 - 1997 DIRECTORS) KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港香港仔田灣邨田健樓地下１－１０室</p></a><a href="schools/2149.html" class="card"><h3>東華三院田灣(一九九六至一九九七總理)幼稚園</h3><p>TWGHS TIN WAN (1996 - 1997 DIRECTORS) KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港香港仔田灣邨田健樓地下１－１０室</p></a><a href="schools/2261.html" class="card"><h3>聖文嘉中英文幼稚園（華貴邨）</h3><p>ST. MONICA'S ANGLO-CHINESE KINDERGARTEN (WAH KWAI ESTATE)</p><p style="font-size:11px;color:#a0aec0;">香港奇力灣華貴邨第２期華賢樓地下</p></a><a href="schools/2262.html" class="card"><h3>聖文嘉中英文幼稚園（華貴邨）</h3><p>ST. MONICA'S ANGLO-CHINESE KINDERGARTEN (WAH KWAI ESTATE)</p><p style="font-size:11px;color:#a0aec0;">香港奇力灣華貴邨第２期華賢樓地下</p></a><a href="schools/2266.html" class="card"><h3>聖文嘉中英文幼稚園（華貴邨）</h3><p>ST. MONICA'S ANGLO-CHINESE KINDERGARTEN (WAH KWAI ESTATE)</p><p style="font-size:11px;color:#a0aec0;">香港奇力灣華貴邨第２期華賢樓地下</p></a><a href="schools/2319.html" class="card"><h3>天主教聖伯多祿幼稚園</h3><p>ST. PETER'S CATHOLIC KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港石排灣邨碧輝樓地下３號</p></a><a href="schools/2320.html" class="card"><h3>聖文嘉中英文幼稚園</h3><p>ST. MONICA'S ANGLO-CHINESE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨第２期東昇樓地下及１樓３１７至３２４及４１７至４２４號</p></a><a href="schools/2321.html" class="card"><h3>天主教聖伯多祿幼稚園</h3><p>ST. PETER'S CATHOLIC KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港石排灣邨碧輝樓地下３號</p></a><a href="schools/2326.html" class="card"><h3>聖文嘉中英文幼稚園</h3><p>ST. MONICA'S ANGLO-CHINESE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨第２期東昇樓地下及１樓３１７至３２４及４１７至４２４號</p></a><a href="schools/2327.html" class="card"><h3>聖文嘉中英文幼稚園</h3><p>ST. MONICA'S ANGLO-CHINESE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利東邨第２期東昇樓地下及１樓３１７至３２４及４１７至４２４號</p></a><a href="schools/2412.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港黃竹坑香葉道11號THE SOUTHSIDE地下G21—24號舖</p></a><a href="schools/2413.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港黃竹坑香葉道11號THE SOUTHSIDE地下G21—24號舖</p></a><a href="schools/2425.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲海怡半島海怡路17-23A號第3期二層平台幼稚園校舍</p></a><a href="schools/2426.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲海怡半島海怡路17-23A號第3期二層平台幼稚園校舍</p></a><a href="schools/2492.html" class="card"><h3>栢基國際幼稚園</h3><p>PARKVIEW INTERNATIONAL PRE-SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港大潭水塘道八十八號陽明山莊十八座地下(幼兒園專用部份除外)</p></a><a href="schools/2493.html" class="card"><h3>栢基國際幼稚園</h3><p>PARKVIEW INTERNATIONAL PRE-SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港大潭水塘道八十八號陽明山莊十八座地下(幼兒園專用部份除外)</p></a><a href="schools/2502.html" class="card"><h3>GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)</h3><p>GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林置富花園置富南區廣場101號舖(課室1除外)</p></a><a href="schools/2566.html" class="card"><h3>GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)</h3><p>GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)</p><p style="font-size:11px;color:#a0aec0;">香港淺水灣海灘道35號2樓A2-H舖</p></a><a href="schools/2578.html" class="card"><h3>救世軍華富幼兒學校</h3><p>THE SALVATION ARMY WAH FU NURSERY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港華富邨華生樓123-127及223-229室</p></a><a href="schools/2589.html" class="card"><h3>GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)</h3><p>GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)</p><p style="font-size:11px;color:#a0aec0;">香港淺水灣海灘道35號2樓A2-H舖</p></a><a href="schools/2709.html" class="card"><h3>GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)</h3><p>GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林置富花園置富南區廣場101號舖(課室1除外)</p></a><a href="schools/2724.html" class="card"><h3>聖公會聖彼得堂幼稚園（赤柱分校）</h3><p>ST. PETER'S CHURCH KINDERGARTEN (STANLEY)</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨健馬樓地下１號舖</p></a><a href="schools/2725.html" class="card"><h3>聖公會聖彼得堂幼稚園（赤柱分校）</h3><p>ST. PETER'S CHURCH KINDERGARTEN (STANLEY)</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨健馬樓地下１號舖</p></a><a href="schools/2727.html" class="card"><h3>聖公會聖彼得堂幼稚園（赤柱分校）</h3><p>ST. PETER'S CHURCH KINDERGARTEN (STANLEY)</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨健馬樓地下１號舖</p></a><a href="schools/2736.html" class="card"><h3>意大利國際幼稚園</h3><p>ITALIAN INTERNATIONAL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲海怡半島第1期第4座平台第1層</p></a></div></section></div><footer>
+<p style="margin-bottom: 12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
+</footer>
+</body>
+</html>

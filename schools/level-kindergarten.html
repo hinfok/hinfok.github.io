@@ -3,366 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KINDERGARTEN 學校一覽 | HKSchools</title>
-<meta name="description" content="全港KINDERGARTEN學校資訊，共1212間學校詳細資料。">
-<meta name="keywords" content="KINDERGARTEN,香港學校">
-<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
-<meta property="og:title" content="KINDERGARTEN 學校一覽 | HKSchools">
-<meta property="og:description" content="全港KINDERGARTEN學校資訊，共1212間學校詳細資料。">
-<meta property="og:image" content="https://schools.hkinfo.hk/images/og-default.svg">
-<meta property="og:url" content="https://schools.hkinfo.hk/level-kindergarten.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HKSchools 全港學校資訊網">
-<link rel="canonical" href="https://schools.hkinfo.hk/level-kindergarten.html">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<title>幼儿园学校列表 | 香港学校数据库</title>
+<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f0f4f8; color: #1a2332; line-height: 1.8; }
-header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; }
-.logo span { color: #ffc107; }
-.nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.12); }
-.hero { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; padding: 56px 24px; text-align: center; }
-.hero h1 { font-size: 32px; margin-bottom: 12px; }
-.hero p { font-size: 16px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-.stats { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
+.logo span { color: #ffd43b; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.15); }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
 .stat { text-align: center; }
-.stat .n { font-size: 36px; font-weight: 800; }
-.stat .l { font-size: 14px; opacity: 0.8; }
-.search-box { max-width: 600px; margin: 24px auto; }
-.search-box input { width: 100%; padding: 14px 20px; border: none; border-radius: 10px; font-size: 16px; outline: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 40px 0; }
-.section h2 { font-size: 24px; margin-bottom: 20px; color: #0d47a1; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
-.card:hover { transform: translateY(-3px); }
-.card h3 { font-size: 18px; color: #0d47a1; margin-bottom: 8px; }
-.card p { font-size: 14px; color: #666; margin-bottom: 12px; }
-.card .tag { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin: 2px 4px 2px 0; }
-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; text-align: center; margin-top: 48px; }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); }}
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; }}
+.stat .n { font-size: 32px; font-weight: 800; }
+.stat .l { font-size: 13px; opacity: 0.8; }
+.search-box { max-width: 550px; margin: 24px auto; position: relative; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
+.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
+.search-results a:hover { background: #f5f7fa; }
+.search-results .result-name { font-weight: 600; font-size: 14px; }
+.search-results .result-detail { font-size: 12px; color: #718096; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 32px 0; }
+.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
+.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
+.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
+.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
+.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
 </style>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
-</head><body><header><div class="hdr">
-<a href="./index.html" class="logo">HK<span>Schools</span> 全港學校資訊</a>
+</head>
+<body>
+<header><div class="hdr">
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
 <nav class="nav-links">
-<a href="./index.html#level">學校類別</a>
-<a href="./index.html#district">地區分類</a>
-<a href="./index.html#finance">資助類型</a>
-<a href="#session">授課時間</a>
-</nav></div></header><div class='container'><section class="section">
-<h1>📚 KINDERGARTEN 學校一覽</h1>
-<p>共 1212 間學校</p>
-<div class="grid"><div class="card">
-<h3>SUN ISLAND ENGLISH KINDERGARTEN</h3>
-<p>SHOP B & REAR SHOP A, G/F., CHEUNG WAN BUILDING, N...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>SUN ISLAND ENGLISH KINDERGARTEN</h3>
-<p>SHOP B & REAR SHOP A, G/F., CHEUNG WAN BUILDING, N...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>SUN ISLAND ENGLISH KINDERGARTEN</h3>
-<p>SHOP B & REAR SHOP A, G/F., CHEUNG WAN BUILDING, N...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>FIRST ASSEMBLY OF GOD KINDERGARTEN</h3>
-<p>123 ARGYLE STREET KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>PO LEUNG KUK KAM HING KINDERGARTEN</h3>
-<p>G/F FUNG CHUEN COURT FUNG TAK ESTATE DIAMOND HILL ...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</h3>
-<p>PODIUM FLOOR, WONG SHUN HOUSE, QUEENS HILL ESTATE,...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</h3>
-<p>PODIUM FLOOR, WONG SHUN HOUSE, QUEENS HILL ESTATE,...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>ST. THOMAS' CATHOLIC KINDERGARTEN</h3>
-<p>5 TSING LUK STREET, TSING YI, NEW TERRITORIES...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</h3>
-<p>G/F., CHING HAY HOUSE, CHING TIN ESTATE, TUEN MUN,...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</h3>
-<p>G/F., CHING HAY HOUSE, CHING TIN ESTATE, TUEN MUN,...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</h3>
-<p>G/F., CHING HAY HOUSE, CHING TIN ESTATE, TUEN MUN,...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</h3>
-<p>1ST FLOOR, ANCILLARY FACILITIES BLOCK, KO WANG COU...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</h3>
-<p>1ST FLOOR, ANCILLARY FACILITIES BLOCK, KO WANG COU...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</h3>
-<p>1ST FLOOR, ANCILLARY FACILITIES BLOCK, KO WANG COU...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>FANLING BAPTIST CHURCH LUI MING CHOI KINDERGARTEN</h3>
-<p>3 SHA TAU KOK ROAD - LUNG YEUK TAU FANLING NEW TER...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>FANLING BAPTIST CHURCH LUI MING CHOI KINDERGARTEN</h3>
-<p>3 SHA TAU KOK ROAD - LUNG YEUK TAU FANLING NEW TER...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>CANNAN KINDERGARTEN (TSUEN WAN)</h3>
-<p>SHOP NO 4 1/F COMMERCIAL COMPLEX CLAGUE GARDEN EST...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>CANNAN KINDERGARTEN (KOWLOON TONG)</h3>
-<p>PORTION OF G/F & 1/F 9 & 11 CUMBERLAND ROAD KOWLOO...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CANNAN KINDERGARTEN (KOWLOON TONG)</h3>
-<p>PORTION OF G/F & 1/F 9 & 11 CUMBERLAND ROAD KOWLOO...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>THE TRUE LIGHT SCHOOL OF HONG KONG, PRIMARY AND KINDERGARTEN SECTION</h3>
-<p>PRIMARY/KINDERGARTEN SECTION, PRIMARY SECTION AND ...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>THE TRUE LIGHT SCHOOL OF HONG KONG, PRIMARY AND KINDERGARTEN SECTION</h3>
-<p>PRIMARY/KINDERGARTEN SECTION, PRIMARY SECTION AND ...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>HARROW LITTLE LIONS KINDERGARTEN</h3>
-<p>SHOP NO. G-05 ON G/F., SHOP NOS. L1-05, L1-06 AND ...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>JADE KINDERGARTEN</h3>
-<p>G/F 153 SHUNG CHING SAN TSUEN TAI TONG ROAD YUEN L...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>JADE KINDERGARTEN</h3>
-<p>G/F 153 SHUNG CHING SAN TSUEN TAI TONG ROAD YUEN L...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>JADE KINDERGARTEN</h3>
-<p>G/F 153 SHUNG CHING SAN TSUEN TAI TONG ROAD YUEN L...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</h3>
-<p>KAM SHEK HOUSE, PING SHEK ESTATE, KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</h3>
-<p>KAM SHEK HOUSE, PING SHEK ESTATE, KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>ANCHORS KINDERGARTEN</h3>
-<p>SHOP NO G07B G/F- 2/F FULLER GARDENS 8 CHUI LOK ST...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>ANCHORS KINDERGARTEN</h3>
-<p>SHOP NO G07B G/F- 2/F FULLER GARDENS 8 CHUI LOK ST...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>ANCHORS KINDERGARTEN</h3>
-<p>SHOP NO G07B G/F- 2/F FULLER GARDENS 8 CHUI LOK ST...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>YEW CHUNG INTERNATIONAL SCHOOL</h3>
-<p>G/F & 1/F 3 & 3A SOMERSET ROAD G/F-1/F 22 SOMERSET...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>CREATIVE ANGLO-CHINESE KINDERGARTEN (MA ON SHAN)</h3>
-<p>SHOP A1-A & 2/F., MA ON SHAN CENTRE, MA ON SHAN, S...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CREATIVE ANGLO-CHINESE KINDERGARTEN (MA ON SHAN)</h3>
-<p>SHOP A1-A & 2/F., MA ON SHAN CENTRE, MA ON SHAN, S...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>CREATIVE ANGLO-CHINESE KINDERGARTEN (MA ON SHAN)</h3>
-<p>SHOP A1-A & 2/F., MA ON SHAN CENTRE, MA ON SHAN, S...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</h3>
-<p>KAM SHEK HOUSE, PING SHEK ESTATE, KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>FIRST ASSEMBLY OF GOD KINDERGARTEN</h3>
-<p>123 ARGYLE STREET KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>FIRST ASSEMBLY OF GOD KINDERGARTEN</h3>
-<p>123 ARGYLE STREET KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CARITAS ST. FRANCIS KINDERGARTEN</h3>
-<p>UNIT NO. KG01, 2/F., ANCILLARY FACILITIES BLOCK, P...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>CARITAS ST. FRANCIS KINDERGARTEN</h3>
-<p>UNIT NO. KG01, 2/F., ANCILLARY FACILITIES BLOCK, P...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>HONG KONG LING LIANG CHURCH SAU TAK KINDERGARTEN(CAMPUS 2)</h3>
-<p>SHOP 2-3, 5, 9-13, 15-19, 1/F., WEST KOWLOON PLACE...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>HONG KONG LING LIANG CHURCH SAU TAK KINDERGARTEN(CAMPUS 2)</h3>
-<p>SHOP 2-3, 5, 9-13, 15-19, 1/F., WEST KOWLOON PLACE...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>SHEUNG SHUI RHENISH CHURCH KINDERGARTEN</h3>
-<p>UNIT 101-107 & 109-111 G/F CHOI WAH HOUSE CHOI YUE...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>INVICTUS KINDERGARTEN</h3>
-<p>SHOPS G27-G28,G29, G/F., MONTEREY PLACE, 23 TONG C...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>TSUNG TSIN PRIMARY SCHOOL AND KINDERGARTEN</h3>
-<p>EAST WING ACADEMIC BUILDING, 58 TAI PO ROAD, KOWLO...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>TSUNG TSIN PRIMARY SCHOOL AND KINDERGARTEN</h3>
-<p>EAST WING ACADEMIC BUILDING, 58 TAI PO ROAD, KOWLO...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>TSUNG TSIN PRIMARY SCHOOL AND KINDERGARTEN</h3>
-<p>EAST WING ACADEMIC BUILDING, 58 TAI PO ROAD, KOWLO...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>PUI CHING PRIMARY SCHOOL</h3>
-<p>80 WATERLOO ROAD, B2-15/F. AND ROOF, BLOCK K, 5/F....</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>PUI CHING PRIMARY SCHOOL</h3>
-<p>80 WATERLOO ROAD, B2-15/F. AND ROOF, BLOCK K, 5/F....</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</h3>
-<p>MA HANG ESTATE PHASE III STANLEY HONG KONG...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>CHUEN YUEN CHURCH KINDERGARTEN</h3>
-<p>G/F., NOS. 2-4 TAI UK STREET, TSUEN WAN, NEW TERRI...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CHUEN YUEN CHURCH KINDERGARTEN</h3>
-<p>G/F., NOS. 2-4 TAI UK STREET, TSUEN WAN, NEW TERRI...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>TSUEN WAN TRADE ASSOCIATION CHUNG LOI KINDERGARTEN</h3>
-<p>UNIT 1 - 5 & 11 - 15, G/F., CHING NGA COURT, TSING...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>TSUEN WAN TRADE ASSOCIATION CHUNG LOI KINDERGARTEN</h3>
-<p>UNIT 1 - 5 & 11 - 15, G/F., CHING NGA COURT, TSING...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>TSUEN WAN TRADE ASSOCIATION CHUNG LOI KINDERGARTEN</h3>
-<p>UNIT 1 - 5 & 11 - 15, G/F., CHING NGA COURT, TSING...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>CHAN'S CREATIVE KINDERGARTEN</h3>
-<p>OLD WING, 71 BOUNDARY STREET, KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div><div class="card">
-<h3>CHAN'S CREATIVE KINDERGARTEN</h3>
-<p>OLD WING, 71 BOUNDARY STREET, KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">P.M.</span>
-</div><div class="card">
-<h3>CHAN'S CREATIVE KINDERGARTEN</h3>
-<p>OLD WING, 71 BOUNDARY STREET, KOWLOON...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">A.M.</span>
-</div><div class="card">
-<h3>THE CHRISTIAN & MISSIONARY ALLIANCE SCHOLARS' ANGLO-CHINESE KINDERGARTEN</h3>
-<p>100 SHING TAI ROAD HENG FA CHUEN HK...</p>
-<span class="tag">PRIVATE</span>
-<span class="tag">WHOLE DAY</span>
-</div></div></section></div><footer>
-<p style="margin-bottom: 12px;"><a href="./index.html">首頁</a> · <a href="/about.html">關於我們</a> · <a href="/privacy.html">私隱政策</a></p>
-<p style="margin-bottom: 12px;">數據來源：香港教育局 (EDB) 學校位置及資訊開放數據</p>
-<p>© 2026 HKSchools 全港學校資訊網</p>
-<p style="font-size: 12px; opacity: 0.7; max-width: 700px; margin: 8px auto;">本網站數據來自教育局公開資料，僅供參考。如有疑問請以教育局網站為準。</p>
-</footer></body></html>
+<a href="../index.html#level">学校类别</a>
+<a href="../index.html#district">地区分类</a>
+<a href="../index.html#finance">资助种类</a>
+</nav></div></header>
+<div class="container"><section class="section"><h1>幼儿园学校列表</h1><p>共 1212 所学校</p><div class="grid"><a href="schools/1191.html" class="card"><h3>太陽島英文幼稚園</h3><p>SUN ISLAND ENGLISH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣馬坑涌道8—10號祥雲大廈地下B號舖及A號舖後座</p></a><a href="schools/1192.html" class="card"><h3>太陽島英文幼稚園</h3><p>SUN ISLAND ENGLISH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣馬坑涌道8—10號祥雲大廈地下B號舖及A號舖後座</p></a><a href="schools/1193.html" class="card"><h3>太陽島英文幼稚園</h3><p>SUN ISLAND ENGLISH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣馬坑涌道8—10號祥雲大廈地下B號舖及A號舖後座</p></a><a href="schools/1194.html" class="card"><h3>神召第一幼稚園</h3><p>FIRST ASSEMBLY OF GOD KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍亞皆老街123號</p></a><a href="schools/1195.html" class="card"><h3>保良局金卿幼稚園</h3><p>PO LEUNG KUK KAM HING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍鑽石山鳳德邨鳳鑽苑地下</p></a><a href="schools/1196.html" class="card"><h3>保良局葉吳彬彬皇后山幼稚園</h3><p>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺皇后山邨皇順樓平台</p></a><a href="schools/1197.html" class="card"><h3>保良局葉吳彬彬皇后山幼稚園</h3><p>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺皇后山邨皇順樓平台</p></a><a href="schools/1198.html" class="card"><h3>天主教聖多默幼稚園</h3><p>ST. THOMAS' CATHOLIC KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界青衣青綠街5號</p></a><a href="schools/1199.html" class="card"><h3>保良局廖烈正幼稚園</h3><p>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界屯門菁田邨菁喜樓地下</p></a><a href="schools/1200.html" class="card"><h3>保良局廖烈正幼稚園</h3><p>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界屯門菁田邨菁喜樓地下</p></a><a href="schools/1201.html" class="card"><h3>保良局廖烈正幼稚園</h3><p>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界屯門菁田邨菁喜樓地下</p></a><a href="schools/1202.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1203.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1204.html" class="card"><h3>宣道會陳李詠貞幼稚園(油塘)</h3><p>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍油塘欣榮街131號高宏苑服務設施大樓一樓</p></a><a href="schools/1205.html" class="card"><h3>宣道會陳李詠貞幼稚園(油塘)</h3><p>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍油塘欣榮街131號高宏苑服務設施大樓一樓</p></a><a href="schools/1206.html" class="card"><h3>宣道會陳李詠貞幼稚園(油塘)</h3><p>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍油塘欣榮街131號高宏苑服務設施大樓一樓</p></a><a href="schools/1207.html" class="card"><h3>粉嶺浸信會呂明才幼稚園</h3><p>FANLING BAPTIST CHURCH LUI MING CHOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺沙頭角道 - 龍躍頭段3號(101課室及有蓋操場除外)</p></a><a href="schools/1208.html" class="card"><h3>粉嶺浸信會呂明才幼稚園</h3><p>FANLING BAPTIST CHURCH LUI MING CHOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺沙頭角道 - 龍躍頭段3號(101課室及有蓋操場除外)</p></a><a href="schools/1209.html" class="card"><h3>迦南幼稚園﹝荃灣﹞</h3><p>CANNAN KINDERGARTEN (TSUEN WAN)</p><p style="font-size:11px;color:#a0aec0;">新界荃灣海盛路28號祈德尊新邨商場一樓4號舖</p></a><a href="schools/1210.html" class="card"><h3>迦南幼稚園(九龍塘)</h3><p>CANNAN KINDERGARTEN (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘金巴倫道9及11號地下部分及1樓</p></a><a href="schools/1211.html" class="card"><h3>迦南幼稚園(九龍塘)</h3><p>CANNAN KINDERGARTEN (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘金巴倫道9及11號地下部分及1樓</p></a><a href="schools/1212.html" class="card"><h3>香港真光中學附屬小學暨幼稚園</h3><p>THE TRUE LIGHT SCHOOL OF HONG KONG, PRIMARY AND KINDERGARTEN SECTION</p><p style="font-size:11px;color:#a0aec0;">香港大坑道50號小學及幼稚園部，小學部和幼稚園操場、有蓋操場、游泳池、1座(6樓和7樓)、2座(G21-23及G23A室除外)、百齡堂 (小學課室)、福群道入口</p></a><a href="schools/1213.html" class="card"><h3>香港真光中學附屬小學暨幼稚園</h3><p>THE TRUE LIGHT SCHOOL OF HONG KONG, PRIMARY AND KINDERGARTEN SECTION</p><p style="font-size:11px;color:#a0aec0;">香港大坑道50號小學及幼稚園部，小學部和幼稚園操場、有蓋操場、游泳池、1座(6樓和7樓)、2座(G21-23及G23A室除外)、百齡堂 (小學課室)、福群道入口</p></a><a href="schools/1214.html" class="card"><h3>哈羅小獅幼稚園</h3><p>HARROW LITTLE LIONS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍觀塘道55號地下G—05號舖及一樓L1—05，L1—06及L1—07號舖及二樓L2—03及L2—04號舖</p></a><a href="schools/1215.html" class="card"><h3>殷翠幼稚園</h3><p>JADE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗大棠道崇正新村153號地下</p></a><a href="schools/1216.html" class="card"><h3>殷翠幼稚園</h3><p>JADE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗大棠道崇正新村153號地下</p></a><a href="schools/1217.html" class="card"><h3>殷翠幼稚園</h3><p>JADE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗大棠道崇正新村153號地下</p></a><a href="schools/1218.html" class="card"><h3>歡樂創意幼稚園(觀塘分校)</h3><p>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">坪石邨金石樓</p></a><a href="schools/1219.html" class="card"><h3>歡樂創意幼稚園(觀塘分校)</h3><p>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">坪石邨金石樓</p></a><a href="schools/1220.html" class="card"><h3>安基司幼稚園</h3><p>ANCHORS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔翠樂街８號富來花園Ｇ０７Ｂ舖地下至二樓（幼兒中心專用部份除外）</p></a><a href="schools/1221.html" class="card"><h3>安基司幼稚園</h3><p>ANCHORS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔翠樂街８號富來花園Ｇ０７Ｂ舖地下至二樓（幼兒中心專用部份除外）</p></a><a href="schools/1222.html" class="card"><h3>安基司幼稚園</h3><p>ANCHORS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔翠樂街８號富來花園Ｇ０７Ｂ舖地下至二樓（幼兒中心專用部份除外）</p></a><a href="schools/1223.html" class="card"><h3>耀中國際學校</h3><p>YEW CHUNG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘森麻實道３及３號Ａ地下及１樓及森麻實道２２號地下至１樓</p></a><a href="schools/1224.html" class="card"><h3>啟思中英文幼稚園(馬鞍山)</h3><p>CREATIVE ANGLO-CHINESE KINDERGARTEN (MA ON SHAN)</p><p style="font-size:11px;color:#a0aec0;">新界沙田馬鞍山馬鞍山中心A1—A舖及2樓</p></a><a href="schools/1225.html" class="card"><h3>啟思中英文幼稚園(馬鞍山)</h3><p>CREATIVE ANGLO-CHINESE KINDERGARTEN (MA ON SHAN)</p><p style="font-size:11px;color:#a0aec0;">新界沙田馬鞍山馬鞍山中心A1—A舖及2樓</p></a><a href="schools/1226.html" class="card"><h3>啟思中英文幼稚園(馬鞍山)</h3><p>CREATIVE ANGLO-CHINESE KINDERGARTEN (MA ON SHAN)</p><p style="font-size:11px;color:#a0aec0;">新界沙田馬鞍山馬鞍山中心A1—A舖及2樓</p></a><a href="schools/1227.html" class="card"><h3>歡樂創意幼稚園(觀塘分校)</h3><p>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">坪石邨金石樓</p></a><a href="schools/1228.html" class="card"><h3>神召第一幼稚園</h3><p>FIRST ASSEMBLY OF GOD KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍亞皆老街123號</p></a><a href="schools/1229.html" class="card"><h3>神召第一幼稚園</h3><p>FIRST ASSEMBLY OF GOD KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍亞皆老街123號</p></a><a href="schools/1230.html" class="card"><h3>明愛聖方濟各幼稚園</h3><p>CARITAS ST. FRANCIS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界上水寶石湖邨服務設施大樓二樓KG01室</p></a><a href="schools/1231.html" class="card"><h3>明愛聖方濟各幼稚園</h3><p>CARITAS ST. FRANCIS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界上水寶石湖邨服務設施大樓二樓KG01室</p></a><a href="schools/1232.html" class="card"><h3>香港靈糧堂秀德幼稚園(二校)</h3><p>HONG KONG LING LIANG CHURCH SAU TAK KINDERGARTEN(CAMPUS 2)</p><p style="font-size:11px;color:#a0aec0;">九龍荔枝角道873號一號．西九龍西九龍薈一樓2-3，5，9-13，15-19號舖</p></a><a href="schools/1233.html" class="card"><h3>香港靈糧堂秀德幼稚園(二校)</h3><p>HONG KONG LING LIANG CHURCH SAU TAK KINDERGARTEN(CAMPUS 2)</p><p style="font-size:11px;color:#a0aec0;">九龍荔枝角道873號一號．西九龍西九龍薈一樓2-3，5，9-13，15-19號舖</p></a><a href="schools/1234.html" class="card"><h3>上水禮賢會幼稚園</h3><p>SHEUNG SHUI RHENISH CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界上水彩園邨彩華樓地下101-107及109-111號</p></a><a href="schools/1235.html" class="card"><h3>INVICTUS KINDERGARTEN</h3><p>INVICTUS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界將軍澳唐俊街23號MONTEREY PLACE地下G27—G28號舖</p></a><a href="schools/1236.html" class="card"><h3>崇真小學暨幼稚園</h3><p>TSUNG TSIN PRIMARY SCHOOL AND KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍大埔道58號東翼教學大樓</p></a><a href="schools/1237.html" class="card"><h3>崇真小學暨幼稚園</h3><p>TSUNG TSIN PRIMARY SCHOOL AND KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍大埔道58號東翼教學大樓</p></a><a href="schools/1238.html" class="card"><h3>崇真小學暨幼稚園</h3><p>TSUNG TSIN PRIMARY SCHOOL AND KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍大埔道58號東翼教學大樓</p></a><a href="schools/1239.html" class="card"><h3>香港培正小學</h3><p>PUI CHING PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍窩打老道80號K座地庫2層至15樓及A座5樓至天台花園及培正道九龍內地段3056(不包括E座及G座)</p></a><a href="schools/1240.html" class="card"><h3>香港培正小學</h3><p>PUI CHING PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍窩打老道80號K座地庫2層至15樓及A座5樓至天台花園及培正道九龍內地段3056(不包括E座及G座)</p></a><a href="schools/1241.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨第三期</p></a><a href="schools/1242.html" class="card"><h3>全完堂幼稚園</h3><p>CHUEN YUEN CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界荃灣大屋街二至四號地下</p></a><a href="schools/1243.html" class="card"><h3>全完堂幼稚園</h3><p>CHUEN YUEN CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界荃灣大屋街二至四號地下</p></a><a href="schools/1244.html" class="card"><h3>荃灣商會鍾來幼稚園</h3><p>TSUEN WAN TRADE ASSOCIATION CHUNG LOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">青衣牙鷹洲街三號青雅苑地下</p></a><a href="schools/1245.html" class="card"><h3>荃灣商會鍾來幼稚園</h3><p>TSUEN WAN TRADE ASSOCIATION CHUNG LOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">青衣牙鷹洲街三號青雅苑地下</p></a><a href="schools/1246.html" class="card"><h3>荃灣商會鍾來幼稚園</h3><p>TSUEN WAN TRADE ASSOCIATION CHUNG LOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">青衣牙鷹洲街三號青雅苑地下</p></a><a href="schools/1247.html" class="card"><h3>啓基幼稚園</h3><p>CHAN'S CREATIVE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍界限街71號舊翼</p></a><a href="schools/1248.html" class="card"><h3>啓基幼稚園</h3><p>CHAN'S CREATIVE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍界限街71號舊翼</p></a><a href="schools/1249.html" class="card"><h3>啓基幼稚園</h3><p>CHAN'S CREATIVE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍界限街71號舊翼</p></a><a href="schools/1250.html" class="card"><h3>宣道會上書房中英文幼稚園</h3><p>THE CHRISTIAN & MISSIONARY ALLIANCE SCHOLARS' ANGLO-CHINESE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港杏花邨盛泰路100號</p></a><a href="schools/1251.html" class="card"><h3>大埔禮賢會幼稚園</h3><p>TAI PO RHENISH CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔富蝶邨鳳蝶樓地下1號幼稚園</p></a><a href="schools/1252.html" class="card"><h3>大埔禮賢會幼稚園</h3><p>TAI PO RHENISH CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔富蝶邨鳳蝶樓地下1號幼稚園</p></a><a href="schools/1253.html" class="card"><h3>大埔禮賢會幼稚園</h3><p>TAI PO RHENISH CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔富蝶邨鳳蝶樓地下1號幼稚園</p></a><a href="schools/1254.html" class="card"><h3>約克英文小學暨幼稚園(九龍塘)</h3><p>YORK ENGLISH PRIMARY SCHOOL & KINDERGARTEN (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘九龍內地段744號金巴倫道49號地下及1樓</p></a><a href="schools/1255.html" class="card"><h3>約克英文小學暨幼稚園(九龍塘)</h3><p>YORK ENGLISH PRIMARY SCHOOL & KINDERGARTEN (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘九龍內地段744號金巴倫道49號地下及1樓</p></a><a href="schools/1256.html" class="card"><h3>太平幼稚園</h3><p>TAI PING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界上水太平邨平易樓地下</p></a><a href="schools/1257.html" class="card"><h3>聖公會慈光堂聖匠幼稚園(分校)</h3><p>S.K.H. KINDLY LIGHT CHURCH HOLY CARPENTER KINDERGARTEN (BRANCH)</p><p style="font-size:11px;color:#a0aec0;">九龍藍田碧雲道139號康栢苑停車場大廈7樓2號</p></a><a href="schools/1258.html" class="card"><h3>聖公會慈光堂聖匠幼稚園(分校)</h3><p>S.K.H. KINDLY LIGHT CHURCH HOLY CARPENTER KINDERGARTEN (BRANCH)</p><p style="font-size:11px;color:#a0aec0;">九龍藍田碧雲道139號康栢苑停車場大廈7樓2號</p></a><a href="schools/1259.html" class="card"><h3>基督教香港崇真會安頌幼稚園</h3><p>TSUNG TSIN MISSION OF HONG KONG ON CHUNG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界沙田水泉澳邨修泉樓接鄰地下KG01號舖</p></a><a href="schools/1260.html" class="card"><h3>基督教香港崇真會安頌幼稚園</h3><p>TSUNG TSIN MISSION OF HONG KONG ON CHUNG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界沙田水泉澳邨修泉樓接鄰地下KG01號舖</p></a><a href="schools/1261.html" class="card"><h3>基督教宣道會香港區聯會將軍澳宣道幼稚園</h3><p>CHRISTIAN & MISSIONARY ALLIANCE CHURCH UNION TSEUNG KWAN O ALLIANCE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界西貢將軍澳裕明苑裕榮閣地下</p></a><a href="schools/1262.html" class="card"><h3>基督教宣道會香港區聯會將軍澳宣道幼稚園</h3><p>CHRISTIAN & MISSIONARY ALLIANCE CHURCH UNION TSEUNG KWAN O ALLIANCE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界西貢將軍澳裕明苑裕榮閣地下</p></a><a href="schools/1263.html" class="card"><h3>基督教宣道會香港區聯會將軍澳宣道幼稚園</h3><p>CHRISTIAN & MISSIONARY ALLIANCE CHURCH UNION TSEUNG KWAN O ALLIANCE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界西貢將軍澳裕明苑裕榮閣地下</p></a><a href="schools/1264.html" class="card"><h3>聖馬太堂幼稚園</h3><p>ST. MATTHEW'S CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港荷李活道232-234號及新街29-31號地下、1樓及4樓</p></a><a href="schools/1265.html" class="card"><h3>聖馬太堂幼稚園</h3><p>ST. MATTHEW'S CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港荷李活道232-234號及新街29-31號地下、1樓及4樓</p></a><a href="schools/1266.html" class="card"><h3>聖馬太堂幼稚園</h3><p>ST. MATTHEW'S CHURCH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港荷李活道232-234號及新街29-31號地下、1樓及4樓</p></a><a href="schools/1267.html" class="card"><h3>信生中英文幼稚園</h3><p>SHUN SANG ANGLO-CHINESE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">G/F, WINGS B & C, ON YAN HOUSE, TSZ ON COURT, TSZ WAN SHAN, KOWLOON.</p></a><a href="schools/1268.html" class="card"><h3>信生中英文幼稚園</h3><p>SHUN SANG ANGLO-CHINESE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">G/F, WINGS B & C, ON YAN HOUSE, TSZ ON COURT, TSZ WAN SHAN, KOWLOON.</p></a><a href="schools/1269.html" class="card"><h3>太陽島英文幼稚園(元朗分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (YUEN LONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">新界元朗朗日路8號形點IIL3樓號舖</p></a><a href="schools/1270.html" class="card"><h3>太陽島英文幼稚園(元朗分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (YUEN LONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">新界元朗朗日路8號形點IIL3樓號舖</p></a><a href="schools/1271.html" class="card"><h3>太陽島英文幼稚園(元朗分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (YUEN LONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">新界元朗朗日路8號形點IIL3樓號舖</p></a><a href="schools/1272.html" class="card"><h3>保良局葉吳彬彬皇后山幼稚園</h3><p>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺皇后山邨皇順樓平台</p></a><a href="schools/1273.html" class="card"><h3>銅鑼灣維多利亞國際幼稚園</h3><p>CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港銅鑼灣興發街32-36號三樓及天台</p></a><a href="schools/1274.html" class="card"><h3>銅鑼灣維多利亞國際幼稚園</h3><p>CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港銅鑼灣興發街32-36號三樓及天台</p></a><a href="schools/1275.html" class="card"><h3>銅鑼灣維多利亞國際幼稚園</h3><p>CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港銅鑼灣興發街32-36號三樓及天台</p></a><a href="schools/1276.html" class="card"><h3>迦南幼稚園(景峰花園)</h3><p>CANNAN KINDERGARTEN (PRIME VIEW GARDEN)</p><p style="font-size:11px;color:#a0aec0;">新界屯門景峰徑2號景峰花園第4座地下(部分)及第5座地下</p></a><a href="schools/1277.html" class="card"><h3>迦南幼稚園(景峰花園)</h3><p>CANNAN KINDERGARTEN (PRIME VIEW GARDEN)</p><p style="font-size:11px;color:#a0aec0;">新界屯門景峰徑2號景峰花園第4座地下(部分)及第5座地下</p></a><a href="schools/1278.html" class="card"><h3>嗇色園主辦可正幼稚園</h3><p>HO CHING KINDERGARTEN (SPONSORED BY SIK SIK YUEN)</p><p style="font-size:11px;color:#a0aec0;">新界將軍澳廣明苑廣寧閣(F座)地下</p></a><a href="schools/1279.html" class="card"><h3>嗇色園主辦可正幼稚園</h3><p>HO CHING KINDERGARTEN (SPONSORED BY SIK SIK YUEN)</p><p style="font-size:11px;color:#a0aec0;">新界將軍澳廣明苑廣寧閣(F座)地下</p></a><a href="schools/1280.html" class="card"><h3>太陽島英文幼稚園(西營盤分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (SAI YING PUN BRANCH)</p><p style="font-size:11px;color:#a0aec0;">香港皇后大道西323號安達中心1樓</p></a><a href="schools/1281.html" class="card"><h3>太陽島英文幼稚園(西營盤分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (SAI YING PUN BRANCH)</p><p style="font-size:11px;color:#a0aec0;">香港皇后大道西323號安達中心1樓</p></a><a href="schools/1282.html" class="card"><h3>太陽島英文幼稚園(西營盤分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (SAI YING PUN BRANCH)</p><p style="font-size:11px;color:#a0aec0;">香港皇后大道西323號安達中心1樓</p></a><a href="schools/1283.html" class="card"><h3>太陽島英文幼稚園(西營盤分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (SAI YING PUN BRANCH)</p><p style="font-size:11px;color:#a0aec0;">香港西環卑路乍街56號嘉明大廈地下入口及1至3樓</p></a><a href="schools/1284.html" class="card"><h3>太陽島英文幼稚園(西營盤分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (SAI YING PUN BRANCH)</p><p style="font-size:11px;color:#a0aec0;">香港西環卑路乍街56號嘉明大廈地下入口及1至3樓</p></a><a href="schools/1285.html" class="card"><h3>太陽島英文幼稚園(西營盤分校)</h3><p>SUN ISLAND ENGLISH KINDERGARTEN (SAI YING PUN BRANCH)</p><p style="font-size:11px;color:#a0aec0;">香港西環卑路乍街56號嘉明大廈地下入口及1至3樓</p></a><a href="schools/1286.html" class="card"><h3>嗇色園主辦可正幼稚園</h3><p>HO CHING KINDERGARTEN (SPONSORED BY SIK SIK YUEN)</p><p style="font-size:11px;color:#a0aec0;">新界將軍澳廣明苑廣寧閣(F座)地下</p></a><a href="schools/1287.html" class="card"><h3>元岡幼稚園</h3><p>YUEN KONG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗八鄉錦上路元崗村(丈量約份第106約地段)</p></a><a href="schools/1288.html" class="card"><h3>元岡幼稚園</h3><p>YUEN KONG KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗八鄉錦上路元崗村(丈量約份第106約地段)</p></a><a href="schools/1289.html" class="card"><h3>勵志會陳鄭潔雲幼稚園</h3><p>THE ENDEAVOURERS CHAN CHENG KIT WAN KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港柴灣翠灣邨翠壽樓地下</p></a><a href="schools/1290.html" class="card"><h3>勵志會陳鄭潔雲幼稚園</h3><p>THE ENDEAVOURERS CHAN CHENG KIT WAN KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港柴灣翠灣邨翠壽樓地下</p></a><a href="schools/1291.html" class="card"><h3>勵志會陳鄭潔雲幼稚園</h3><p>THE ENDEAVOURERS CHAN CHENG KIT WAN KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">香港柴灣翠灣邨翠壽樓地下</p></a></div></section></div><footer>
+<p style="margin-bottom: 12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
+</footer>
+</body>
+</html>

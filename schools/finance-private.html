@@ -3,366 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRIVATE 學校一覽 | HKSchools</title>
-<meta name="description" content="PRIVATE學校資訊，共2354間學校詳細資料。">
-<meta name="keywords" content="<_io.TextIOWrapper name='C:\\Users\\ckyeung\\OneDrive\\桌面\\賺錢\\hinfok\\hk-schools\\output\\finance-private.html' mode='w' encoding='utf-8'>,學校,資助類型">
-<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
-<meta property="og:title" content="PRIVATE 學校一覽 | HKSchools">
-<meta property="og:description" content="PRIVATE學校資訊，共2354間學校詳細資料。">
-<meta property="og:image" content="https://schools.hkinfo.hk/images/og-default.svg">
-<meta property="og:url" content="https://schools.hkinfo.hk/finance-private.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HKSchools 全港學校資訊網">
-<link rel="canonical" href="https://schools.hkinfo.hk/finance-private.html">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<title>私立学校列表 | 香港学校数据库</title>
+<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f0f4f8; color: #1a2332; line-height: 1.8; }
-header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; }
-.logo span { color: #ffc107; }
-.nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.12); }
-.hero { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; padding: 56px 24px; text-align: center; }
-.hero h1 { font-size: 32px; margin-bottom: 12px; }
-.hero p { font-size: 16px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-.stats { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
+.logo span { color: #ffd43b; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.15); }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
 .stat { text-align: center; }
-.stat .n { font-size: 36px; font-weight: 800; }
-.stat .l { font-size: 14px; opacity: 0.8; }
-.search-box { max-width: 600px; margin: 24px auto; }
-.search-box input { width: 100%; padding: 14px 20px; border: none; border-radius: 10px; font-size: 16px; outline: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 40px 0; }
-.section h2 { font-size: 24px; margin-bottom: 20px; color: #0d47a1; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
-.card:hover { transform: translateY(-3px); }
-.card h3 { font-size: 18px; color: #0d47a1; margin-bottom: 8px; }
-.card p { font-size: 14px; color: #666; margin-bottom: 12px; }
-.card .tag { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin: 2px 4px 2px 0; }
-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; text-align: center; margin-top: 48px; }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); }}
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; }}
+.stat .n { font-size: 32px; font-weight: 800; }
+.stat .l { font-size: 13px; opacity: 0.8; }
+.search-box { max-width: 550px; margin: 24px auto; position: relative; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
+.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
+.search-results a:hover { background: #f5f7fa; }
+.search-results .result-name { font-weight: 600; font-size: 14px; }
+.search-results .result-detail { font-size: 12px; color: #718096; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 32px 0; }
+.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
+.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
+.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
+.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
+.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
 </style>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
-</head><body><header><div class="hdr">
-<a href="./index.html" class="logo">HK<span>Schools</span> 全港學校資訊</a>
+</head>
+<body>
+<header><div class="hdr">
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
 <nav class="nav-links">
-<a href="./index.html#level">學校類別</a>
-<a href="./index.html#district">地區分類</a>
-<a href="./index.html#finance">資助類型</a>
-<a href="#session">授課時間</a>
-</nav></div></header><div class='container'><section class="section">
-<h1>💰 PRIVATE 學校一覽</h1>
-<p>共 2354 間學校</p>
-<div class="grid"><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>YK PAO SCHOOL HONG KONG</h3>
-<p>1/F., MAYA, NO.8 SHUNG SHAN STREET, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>SEAR ROGERS INTERNATIONAL SCHOOL</h3>
-<p>PORTION A 4/F PODIUM E RIVIERA GARDENS TSUEN WAN N...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TSUEN WAN</span>
-</div><div class="card">
-<h3>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</h3>
-<p>MA HANG ESTATE PHASE III STANLEY HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>THE HARBOUR SCHOOL</h3>
-<p>SCHOOL NO.332, AP LEI CHAU BRIDGE ROAD, AP LEI CHA...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>CARMEL SCHOOL</h3>
-<p>460 SHAU KEI WAN ROAD, HONG KONG (SHARE USE OF LG/...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>KELLETT SCHOOL</h3>
-<p>7 LAM HING STREET, KOWLOON BAY, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL</h3>
-<p>ACADEMIC BUILDING AND CARPARK, 33 KING LAM STREET,...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>YEW CHUNG INTERNATIONAL SCHOOL</h3>
-<p>G/F 2 KENT ROAD KOWLOON TONG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>DSC INTERNATIONAL SCHOOL</h3>
-<p>TAIKOO SHING, QUARRY BAY, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>KELLETT SCHOOL</h3>
-<p>2 WAH LOK PATH, PHASE 1, STAGE I & STAGE II, G/F -...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>GERMAN SWISS INTERNATIONAL SCHOOL</h3>
-<p>162 POK FU LAM ROAD, POK FU LAM, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>DISCOVERY BAY INTERNATIONAL SCHOOL</h3>
-<p>DISCOVERY BAY LANTAU ISLAND NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>LANTAU INTERNATIONAL SCHOOL</h3>
-<p>DD 328 TONG FUK VILLAGE TONG FUK LANTAU ISLAND NEW...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>AMERICAN INTERNATIONAL SCHOOL (PRIMARY BRANCH)</h3>
-<p>G/F & 1/F 131 WATERLOO ROAD KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>CARMEL SCHOOL</h3>
-<p>1/F & 2/F WEST WING, CLASSROOM 229&229A & PORTION ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>LANTAU INTERNATIONAL SCHOOL</h3>
-<p>G/F - 2/F AND GOVERNMENT LAND ADJOINING LOT 2852 D...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>HARROW INTERNATIONAL SCHOOL HONG KONG</h3>
-<p>38 TSING YING ROAD TUEN MUN NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>AMERICAN INTERNATIONAL SCHOOL</h3>
-<p>117 119 121 123 125 & 129 WATERLOO ROAD KOWLOON TO...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</h3>
-<p>23 NAM LONG SHAN ROAD, ABERDEEN, HONG KONG (INCLUD...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG</h3>
-<p>11 ON TIN STREET, LAM TIN, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>HONG KONG INTERNATIONAL SCHOOL</h3>
-<p>NO. 6 & 23 SOUTH BAY CLOSE REPULSE BAY HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>NORWEGIAN INTERNATIONAL SCHOOL</h3>
-<p>TAI PO BUNGALOW, KWONG FUK ROAD & 170 KAM SHAN ROA...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>CHRISTIAN ALLIANCE P.C. LAU MEMORIAL INTERNATIONAL SCHOOL</h3>
-<p>2 FU NING STREET, KOWLOON CITY, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>GERMAN SWISS INTERNATIONAL SCHOOL</h3>
-<p>11&22 GUILDFORD ROAD, THE PEAK, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG</h3>
-<p>3A NORFOLK ROAD KOWLOON TONG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>YEW CHUNG INTERNATIONAL SCHOOL</h3>
-<p>G/F & 1/F 3 & 3A SOMERSET ROAD G/F-1/F 22 SOMERSET...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>JAPANESE INTERNATIONAL SCHOOL</h3>
-<p>NO 4663 TAI PO ROAD TAI PO NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>HONG KONG ACADEMY</h3>
-<p>33 WAI MAN ROAD SAI KUNG NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>YEW CHUNG INTERNATIONAL SCHOOL</h3>
-<p>UPPER G/F-1/F 11-13 KENT ROAD KOWLOON TONG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>KOREAN INTERNATIONAL SCHOOL</h3>
-<p>55 LEI KING ROAD SAI WAN HO HONG KONG (IL 8802)...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>CHINESE INTERNATIONAL SCHOOL</h3>
-<p>1 HAU YUEN PATH, BRAEMAR HILL, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3>
-<p>1 CHEUNG MAN ROAD CHAI WAN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>KINGSTON INTERNATIONAL SCHOOL</h3>
-<p>105 WATERLOO ROAD AND G/F - 1/F 113 WATERLOO ROAD ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>THE HARBOUR SCHOOL</h3>
-<p>SHOP A-D ON LG/F. & SHOP D-E ON UG/F., AP LEI CHAU...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>GERMAN SWISS INTERNATIONAL SCHOOL</h3>
-<p>11&22 GUILDFORD ROAD, THE PEAK, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>LANTAU INTERNATIONAL SCHOOL</h3>
-<p>CHEUNG SHA UPPER VILLAGE, DD332L (CX2229), LANTAU ...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3>
-<p>34 PRICE ROAD HONG KONG (EXCLUDING STAFF QUARTER B...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>MALVERN COLLEGE HONG KONG</h3>
-<p>3 FO CHUN ROAD, TAI PO, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>AMERICAN SCHOOL HONG KONG</h3>
-<p>6 MA CHUNG ROAD, TAI PO, NEW TERRITORIES (EXCEPT 6...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>SHREWSBURY INTERNATIONAL SCHOOL HONG KONG</h3>
-<p>10 SHEK KOK ROAD, TSEUNG KWAN O, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3>
-<p>28 TONG YIN STREET, TSEUNG KWAN O, NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>KIANGSU & CHEKIANG PRIMARY SCHOOL</h3>
-<p>ROOMS 101-114 BOYS' AND GIRLS' TOILETS ON 1/F ROOM...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (PRIMARY SECTION)</h3>
-<p>3 & 3A TWENTIETH STREET HONG LOK YUEN TAI PO NEW T...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>JAPANESE INTERNATIONAL SCHOOL</h3>
-<p>NO 4663 TAI PO ROAD TAI PO NEW TERRITORIES...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</h3>
-<p>36 NAM LONG SHAN ROAD, (AND CANADIAN INTERNATIONAL...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>SEAR ROGERS INTERNATIONAL SCHOOL</h3>
-<p>PORTION A 4/F PODIUM E RIVIERA GARDENS TSUEN WAN N...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">TSUEN WAN</span>
-</div><div class="card">
-<h3>KELLETT SCHOOL</h3>
-<p>7 LAM HING STREET, KOWLOON BAY, KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</h3>
-<p>MA HANG ESTATE PHASE III STANLEY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>CARMEL SCHOOL</h3>
-<p>460 SHAU KEI WAN ROAD, HONG KONG (SHARE USE OF LG/...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>THE HARBOUR SCHOOL</h3>
-<p>SHOP A-D ON LG/F. & SHOP D-E ON UG/F., AP LEI CHAU...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG</h3>
-<p>19 YUET WAH STREET, KWUN TONG, KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL</h3>
-<p>ACADEMIC BUILDING AND CARPARK, 33 KING LAM STREET,...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>DSC INTERNATIONAL SCHOOL</h3>
-<p>TAIKOO SHING, QUARRY BAY, HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</h3>
-<p>2 POLICE SCHOOL ROAD WONG CHUK HANG HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>AMERICAN INTERNATIONAL SCHOOL</h3>
-<p>117 119 121 123 125 & 129 WATERLOO ROAD KOWLOON TO...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>DISCOVERY BAY INTERNATIONAL SCHOOL</h3>
-<p>SHOP NOS. G06, G07, 103A & 104B, 92 SIENA AVENUE, ...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>CONCORDIA INTERNATIONAL SCHOOL</h3>
-<p>G-3/F 68 BEGONIA ROAD YAU YAT CHUEN KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>HONG KONG ACADEMY</h3>
-<p>33 WAI MAN ROAD SAI KUNG NEW TERRITORIES...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>GERMAN SWISS INTERNATIONAL SCHOOL</h3>
-<p>11&22 GUILDFORD ROAD, THE PEAK, HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div></div></section></div><footer>
-<p style="margin-bottom: 12px;"><a href="./index.html">首頁</a> · <a href="/about.html">關於我們</a> · <a href="/privacy.html">私隱政策</a></p>
-<p style="margin-bottom: 12px;">數據來源：香港教育局 (EDB) 學校位置及資訊開放數據</p>
-<p>© 2026 HKSchools 全港學校資訊網</p>
-<p style="font-size: 12px; opacity: 0.7; max-width: 700px; margin: 8px auto;">本網站數據來自教育局公開資料，僅供參考。如有疑問請以教育局網站為準。</p>
-</footer></body></html>
+<a href="../index.html#level">学校类别</a>
+<a href="../index.html#district">地区分类</a>
+<a href="../index.html#finance">资助种类</a>
+</nav></div></header>
+<div class="container"><section class="section"><h1>私立学校列表</h1><p>共 2354 所学校</p><div class="grid"><a href="schools/1120.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1121.html" class="card"><h3>香港包玉剛學校</h3><p>YK PAO SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">九龍崇山街8號曦臺一樓</p></a><a href="schools/1122.html" class="card"><h3>弘爵國際學校</h3><p>SEAR ROGERS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界荃灣海濱花園E號平台4樓A部份</p></a><a href="schools/1123.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨第三期</p></a><a href="schools/1124.html" class="card"><h3>港灣學校</h3><p>THE HARBOUR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲邨鴨脷洲橋道332號校舍</p></a><a href="schools/1125.html" class="card"><h3>CARMEL SCHOOL</h3><p>CARMEL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣道460號(地下低層至地下高層與KELLETT SCHOOL共用)</p></a><a href="schools/1126.html" class="card"><h3>KELLETT SCHOOL</h3><p>KELLETT SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍灣臨興街7號</p></a><a href="schools/1127.html" class="card"><h3>宣道國際學校</h3><p>CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍長沙灣瓊林街33號教學大樓及停車場</p></a><a href="schools/1128.html" class="card"><h3>耀中國際學校</h3><p>YEW CHUNG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘根德道2號地下</p></a><a href="schools/1129.html" class="card"><h3>德思齊加拿大國際學校</h3><p>DSC INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鰂魚涌太古城</p></a><a href="schools/1130.html" class="card"><h3>KELLETT SCHOOL</h3><p>KELLETT SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港華富華樂徑2號第1期第1階及第2階地下至3樓、4樓天台操場(包括平台II建築物)</p></a><a href="schools/1131.html" class="card"><h3>德瑞國際學校</h3><p>GERMAN SWISS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港薄扶林薄扶林道162號</p></a><a href="schools/1132.html" class="card"><h3>DISCOVERY BAY INTERNATIONAL SCHOOL</h3><p>DISCOVERY BAY INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山愉景灣</p></a><a href="schools/1133.html" class="card"><h3>LANTAU INTERNATIONAL SCHOOL</h3><p>LANTAU INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山塘福塘福村丈量約份328號</p></a><a href="schools/1134.html" class="card"><h3>AMERICAN INTERNATIONAL SCHOOL (PRIMARY BRANCH)</h3><p>AMERICAN INTERNATIONAL SCHOOL (PRIMARY BRANCH)</p><p style="font-size:11px;color:#a0aec0;">九龍窩打老道131號地下及1樓</p></a><a href="schools/1135.html" class="card"><h3>CARMEL SCHOOL</h3><p>CARMEL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港波老道10至12號西翼1樓及2樓、東翼1樓及2樓部分及229＆229A</p></a><a href="schools/1136.html" class="card"><h3>LANTAU INTERNATIONAL SCHOOL</h3><p>LANTAU INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山貝澳丈量約份316號地段2852號地下至二樓及毗鄰的政府用地</p></a><a href="schools/1137.html" class="card"><h3>哈羅香港國際學校</h3><p>HARROW INTERNATIONAL SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界屯門青盈路38號</p></a><a href="schools/1138.html" class="card"><h3>美國國際學校</h3><p>AMERICAN INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘窩打老道117 119 121 123 125及129號</p></a><a href="schools/1139.html" class="card"><h3>新加坡國際學校</h3><p>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道23號(包括新增一層校舍及新增L7樓辦公室)</p></a><a href="schools/1140.html" class="card"><h3>NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG</h3><p>NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG</p><p style="font-size:11px;color:#a0aec0;">11 ON TIN STREET, LAM TIN, KOWLOON</p></a><a href="schools/1141.html" class="card"><h3>HONG KONG INTERNATIONAL SCHOOL</h3><p>HONG KONG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港淺水灣南灣坊6及23號</p></a><a href="schools/1142.html" class="card"><h3>NORWEGIAN INTERNATIONAL SCHOOL</h3><p>NORWEGIAN INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔廣福道大埔平房及錦山路170號</p></a><a href="schools/1143.html" class="card"><h3>宣道會劉平齋紀念國際學校</h3><p>CHRISTIAN ALLIANCE P.C. LAU MEMORIAL INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍城富寧街2號</p></a><a href="schools/1144.html" class="card"><h3>德瑞國際學校</h3><p>GERMAN SWISS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港山頂僑福道11及22號</p></a><a href="schools/1145.html" class="card"><h3>香港澳洲國際學校</h3><p>AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘羅福道3A號</p></a><a href="schools/1146.html" class="card"><h3>耀中國際學校</h3><p>YEW CHUNG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘森麻實道3及3號A地下及1樓及森麻實道22號地下至1樓</p></a><a href="schools/1147.html" class="card"><h3>JAPANESE INTERNATIONAL SCHOOL</h3><p>JAPANESE INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大埔公路4663號</p></a><a href="schools/1148.html" class="card"><h3>香港學堂國際學校</h3><p>HONG KONG ACADEMY</p><p style="font-size:11px;color:#a0aec0;">新界西貢惠民路33號</p></a><a href="schools/1149.html" class="card"><h3>耀中國際學校</h3><p>YEW CHUNG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘根德道11-13號地庫上層至1樓</p></a><a href="schools/1150.html" class="card"><h3>KOREAN INTERNATIONAL SCHOOL</h3><p>KOREAN INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港西灣河鯉景道55號(內地段8802)</p></a><a href="schools/1151.html" class="card"><h3>漢基國際學校</h3><p>CHINESE INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港北角寶馬山校園徑1號</p></a><a href="schools/1152.html" class="card"><h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3><p>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</p><p style="font-size:11px;color:#a0aec0;">1 CHEUNG MAN ROAD CHAI WAN HONG KONG</p></a><a href="schools/1153.html" class="card"><h3>京斯敦國際學校</h3><p>KINGSTON INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘窩打老道105號及窩打老道113號地下至1樓</p></a><a href="schools/1154.html" class="card"><h3>港灣學校</h3><p>THE HARBOUR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利枝道138號鴨脷洲中心地下低層A-D舖及地下高層D-E舖</p></a><a href="schools/1155.html" class="card"><h3>德瑞國際學校</h3><p>GERMAN SWISS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港山頂僑福道11及22號</p></a><a href="schools/1156.html" class="card"><h3>LANTAU INTERNATIONAL SCHOOL</h3><p>LANTAU INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山丈量約份332L號(租約2229)長沙上村</p></a><a href="schools/1157.html" class="card"><h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3><p>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</p><p style="font-size:11px;color:#a0aec0;">34 PRICE ROAD HONG KONG (EXCLUDING STAFF QUARTER BLOCK AND INCLUDING TOP FLOOR AT GYMNASIUM BLOCK)</p></a><a href="schools/1158.html" class="card"><h3>香港墨爾文國際學校</h3><p>MALVERN COLLEGE HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界大埔科進路3號</p></a><a href="schools/1159.html" class="card"><h3>AMERICAN SCHOOL HONG KONG</h3><p>AMERICAN SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界大埔馬聰路六號(6樓、天台除外)</p></a><a href="schools/1160.html" class="card"><h3>思貝禮國際學校</h3><p>SHREWSBURY INTERNATIONAL SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界將軍澳石角路10號</p></a><a href="schools/1161.html" class="card"><h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3><p>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</p><p style="font-size:11px;color:#a0aec0;">28 TONG YIN STREET, TSEUNG KWAN O, NEW TERRITORIES (EXCLUDING THE SWIMMING POOL ON 2ND FLOOR)</p></a><a href="schools/1162.html" class="card"><h3>蘇浙小學校</h3><p>KIANGSU & CHEKIANG PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港寶馬山道20號1樓101-114室、男女洗手間及2樓211-213室、男女洗手間</p></a><a href="schools/1163.html" class="card"><h3>INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (PRIMARY SECTION)</h3><p>INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (PRIMARY SECTION)</p><p style="font-size:11px;color:#a0aec0;">3 & 3A TWENTIETH STREET HONG LOK YUEN TAI PO NEW TERRITORIES (LOT NO. 1945 D.D. NO. 7)</p></a><a href="schools/1164.html" class="card"><h3>JAPANESE INTERNATIONAL SCHOOL</h3><p>JAPANESE INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大埔公路4663號</p></a><a href="schools/1165.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1166.html" class="card"><h3>弘爵國際學校</h3><p>SEAR ROGERS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界荃灣海濱花園E號平台4樓A部份</p></a><a href="schools/1167.html" class="card"><h3>KELLETT SCHOOL</h3><p>KELLETT SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍灣臨興街7號</p></a><a href="schools/1168.html" class="card"><h3>蒙特梭利國際學校</h3><p>THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港赤柱馬坑邨第三期</p></a><a href="schools/1169.html" class="card"><h3>CARMEL SCHOOL</h3><p>CARMEL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣道460號(地下低層至地下高層與KELLETT SCHOOL共用)</p></a><a href="schools/1170.html" class="card"><h3>港灣學校</h3><p>THE HARBOUR SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲利枝道138號鴨脷洲中心地下低層A-D舖及地下高層D-E舖</p></a><a href="schools/1171.html" class="card"><h3>NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG</h3><p>NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG</p><p style="font-size:11px;color:#a0aec0;">19 YUET WAH STREET, KWUN TONG, KOWLOON</p></a><a href="schools/1172.html" class="card"><h3>宣道國際學校</h3><p>CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍長沙灣瓊林街33號教學大樓及停車場</p></a><a href="schools/1173.html" class="card"><h3>德思齊加拿大國際學校</h3><p>DSC INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鰂魚涌太古城</p></a><a href="schools/1174.html" class="card"><h3>新加坡國際學校</h3><p>SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)</p><p style="font-size:11px;color:#a0aec0;">香港黄竹坑警校道2號</p></a><a href="schools/1175.html" class="card"><h3>美國國際學校</h3><p>AMERICAN INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘窩打老道117 119 121 123 125及129號</p></a><a href="schools/1176.html" class="card"><h3>DISCOVERY BAY INTERNATIONAL SCHOOL</h3><p>DISCOVERY BAY INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山愉景灣澄湖畔路92號G06，G07，103A＆104B號舖</p></a><a href="schools/1177.html" class="card"><h3>協同國際學校</h3><p>CONCORDIA INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍又一村海棠路68號</p></a><a href="schools/1178.html" class="card"><h3>香港學堂國際學校</h3><p>HONG KONG ACADEMY</p><p style="font-size:11px;color:#a0aec0;">新界西貢惠民路33號</p></a><a href="schools/1179.html" class="card"><h3>德瑞國際學校</h3><p>GERMAN SWISS INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港山頂僑福道11及22號</p></a><a href="schools/1180.html" class="card"><h3>漢基國際學校</h3><p>CHINESE INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港北角寶馬山校園徑1號</p></a><a href="schools/1181.html" class="card"><h3>香港澳洲國際學校</h3><p>AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘羅福道3A號</p></a><a href="schools/1182.html" class="card"><h3>KOREAN INTERNATIONAL SCHOOL</h3><p>KOREAN INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港西灣河鯉景道55號(內地段8802)</p></a><a href="schools/1183.html" class="card"><h3>HONG KONG INTERNATIONAL SCHOOL</h3><p>HONG KONG INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港大潭紅山道1號</p></a><a href="schools/1184.html" class="card"><h3>哈羅香港國際學校</h3><p>HARROW INTERNATIONAL SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界屯門青盈路38號</p></a><a href="schools/1185.html" class="card"><h3>DISCOVERY BAY INTERNATIONAL SCHOOL</h3><p>DISCOVERY BAY INTERNATIONAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大嶼山愉景灣</p></a><a href="schools/1186.html" class="card"><h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3><p>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</p><p style="font-size:11px;color:#a0aec0;">165 BLUE POOL ROAD HONG KONG</p></a><a href="schools/1187.html" class="card"><h3>INTERNATIONAL COLLEGE HONG KONG (NEW TERRITORIES)</h3><p>INTERNATIONAL COLLEGE HONG KONG (NEW TERRITORIES)</p><p style="font-size:11px;color:#a0aec0;">新界沙頭角沙頭角公路60號</p></a><a href="schools/1188.html" class="card"><h3>香港墨爾文國際學校</h3><p>MALVERN COLLEGE HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界大埔科進路3號</p></a><a href="schools/1189.html" class="card"><h3>AMERICAN SCHOOL HONG KONG</h3><p>AMERICAN SCHOOL HONG KONG</p><p style="font-size:11px;color:#a0aec0;">新界大埔馬聰路六號(6樓、天台除外)</p></a><a href="schools/1190.html" class="card"><h3>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</h3><p>LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)</p><p style="font-size:11px;color:#a0aec0;">28 TONG YIN STREET, TSEUNG KWAN O, NEW TERRITORIES (EXCLUDING THE SWIMMING POOL ON 2ND FLOOR)</p></a><a href="schools/1191.html" class="card"><h3>太陽島英文幼稚園</h3><p>SUN ISLAND ENGLISH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣馬坑涌道8—10號祥雲大廈地下B號舖及A號舖後座</p></a><a href="schools/1192.html" class="card"><h3>太陽島英文幼稚園</h3><p>SUN ISLAND ENGLISH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣馬坑涌道8—10號祥雲大廈地下B號舖及A號舖後座</p></a><a href="schools/1193.html" class="card"><h3>太陽島英文幼稚園</h3><p>SUN ISLAND ENGLISH KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣馬坑涌道8—10號祥雲大廈地下B號舖及A號舖後座</p></a><a href="schools/1194.html" class="card"><h3>神召第一幼稚園</h3><p>FIRST ASSEMBLY OF GOD KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍亞皆老街123號</p></a><a href="schools/1195.html" class="card"><h3>保良局金卿幼稚園</h3><p>PO LEUNG KUK KAM HING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍鑽石山鳳德邨鳳鑽苑地下</p></a><a href="schools/1196.html" class="card"><h3>保良局葉吳彬彬皇后山幼稚園</h3><p>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺皇后山邨皇順樓平台</p></a><a href="schools/1197.html" class="card"><h3>保良局葉吳彬彬皇后山幼稚園</h3><p>PO LEUNG KUK YIP NG BUN BUN QUEEN'S HILL KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺皇后山邨皇順樓平台</p></a><a href="schools/1198.html" class="card"><h3>天主教聖多默幼稚園</h3><p>ST. THOMAS' CATHOLIC KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界青衣青綠街5號</p></a><a href="schools/1199.html" class="card"><h3>保良局廖烈正幼稚園</h3><p>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界屯門菁田邨菁喜樓地下</p></a><a href="schools/1200.html" class="card"><h3>保良局廖烈正幼稚園</h3><p>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界屯門菁田邨菁喜樓地下</p></a><a href="schools/1201.html" class="card"><h3>保良局廖烈正幼稚園</h3><p>PO LEUNG KUK THOMAS LIU LIT CHING KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界屯門菁田邨菁喜樓地下</p></a><a href="schools/1202.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1203.html" class="card"><h3>香港加拿大國際學校</h3><p>CANADIAN INTERNATIONAL SCHOOL OF HONG KONG</p><p style="font-size:11px;color:#a0aec0;">香港香港仔南朗山道36號及加拿大國際學校第二期</p></a><a href="schools/1204.html" class="card"><h3>宣道會陳李詠貞幼稚園(油塘)</h3><p>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍油塘欣榮街131號高宏苑服務設施大樓一樓</p></a><a href="schools/1205.html" class="card"><h3>宣道會陳李詠貞幼稚園(油塘)</h3><p>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍油塘欣榮街131號高宏苑服務設施大樓一樓</p></a><a href="schools/1206.html" class="card"><h3>宣道會陳李詠貞幼稚園(油塘)</h3><p>CHRISTIAN ALLIANCE CHEN LEE WING TSING KINDERGARTEN (YAU TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍油塘欣榮街131號高宏苑服務設施大樓一樓</p></a><a href="schools/1207.html" class="card"><h3>粉嶺浸信會呂明才幼稚園</h3><p>FANLING BAPTIST CHURCH LUI MING CHOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺沙頭角道 - 龍躍頭段3號(101課室及有蓋操場除外)</p></a><a href="schools/1208.html" class="card"><h3>粉嶺浸信會呂明才幼稚園</h3><p>FANLING BAPTIST CHURCH LUI MING CHOI KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺沙頭角道 - 龍躍頭段3號(101課室及有蓋操場除外)</p></a><a href="schools/1209.html" class="card"><h3>迦南幼稚園﹝荃灣﹞</h3><p>CANNAN KINDERGARTEN (TSUEN WAN)</p><p style="font-size:11px;color:#a0aec0;">新界荃灣海盛路28號祈德尊新邨商場一樓4號舖</p></a><a href="schools/1210.html" class="card"><h3>迦南幼稚園(九龍塘)</h3><p>CANNAN KINDERGARTEN (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘金巴倫道9及11號地下部分及1樓</p></a><a href="schools/1211.html" class="card"><h3>迦南幼稚園(九龍塘)</h3><p>CANNAN KINDERGARTEN (KOWLOON TONG)</p><p style="font-size:11px;color:#a0aec0;">九龍九龍塘金巴倫道9及11號地下部分及1樓</p></a><a href="schools/1212.html" class="card"><h3>香港真光中學附屬小學暨幼稚園</h3><p>THE TRUE LIGHT SCHOOL OF HONG KONG, PRIMARY AND KINDERGARTEN SECTION</p><p style="font-size:11px;color:#a0aec0;">香港大坑道50號小學及幼稚園部，小學部和幼稚園操場、有蓋操場、游泳池、1座(6樓和7樓)、2座(G21-23及G23A室除外)、百齡堂 (小學課室)、福群道入口</p></a><a href="schools/1213.html" class="card"><h3>香港真光中學附屬小學暨幼稚園</h3><p>THE TRUE LIGHT SCHOOL OF HONG KONG, PRIMARY AND KINDERGARTEN SECTION</p><p style="font-size:11px;color:#a0aec0;">香港大坑道50號小學及幼稚園部，小學部和幼稚園操場、有蓋操場、游泳池、1座(6樓和7樓)、2座(G21-23及G23A室除外)、百齡堂 (小學課室)、福群道入口</p></a><a href="schools/1214.html" class="card"><h3>哈羅小獅幼稚園</h3><p>HARROW LITTLE LIONS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">九龍觀塘道55號地下G—05號舖及一樓L1—05，L1—06及L1—07號舖及二樓L2—03及L2—04號舖</p></a><a href="schools/1215.html" class="card"><h3>殷翠幼稚園</h3><p>JADE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗大棠道崇正新村153號地下</p></a><a href="schools/1216.html" class="card"><h3>殷翠幼稚園</h3><p>JADE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗大棠道崇正新村153號地下</p></a><a href="schools/1217.html" class="card"><h3>殷翠幼稚園</h3><p>JADE KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界元朗大棠道崇正新村153號地下</p></a><a href="schools/1218.html" class="card"><h3>歡樂創意幼稚園(觀塘分校)</h3><p>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">坪石邨金石樓</p></a><a href="schools/1219.html" class="card"><h3>歡樂創意幼稚園(觀塘分校)</h3><p>FUN CREATIVE KINDERGARTEN (KWUN TONG BRANCH)</p><p style="font-size:11px;color:#a0aec0;">坪石邨金石樓</p></a><a href="schools/1220.html" class="card"><h3>安基司幼稚園</h3><p>ANCHORS KINDERGARTEN</p><p style="font-size:11px;color:#a0aec0;">新界大埔翠樂街８號富來花園Ｇ０７Ｂ舖地下至二樓（幼兒中心專用部份除外）</p></a></div></section></div><footer>
+<p style="margin-bottom: 12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
+</footer>
+</body>
+</html>

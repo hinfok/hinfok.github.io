@@ -3,366 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOVERNMENT 學校一覽 | HKSchools</title>
-<meta name="description" content="GOVERNMENT學校資訊，共63間學校詳細資料。">
-<meta name="keywords" content="<_io.TextIOWrapper name='C:\\Users\\ckyeung\\OneDrive\\桌面\\賺錢\\hinfok\\hk-schools\\output\\finance-government.html' mode='w' encoding='utf-8'>,學校,資助類型">
-<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
-<meta property="og:title" content="GOVERNMENT 學校一覽 | HKSchools">
-<meta property="og:description" content="GOVERNMENT學校資訊，共63間學校詳細資料。">
-<meta property="og:image" content="https://schools.hkinfo.hk/images/og-default.svg">
-<meta property="og:url" content="https://schools.hkinfo.hk/finance-government.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HKSchools 全港學校資訊網">
-<link rel="canonical" href="https://schools.hkinfo.hk/finance-government.html">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<title>官立学校列表 | 香港学校数据库</title>
+<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f0f4f8; color: #1a2332; line-height: 1.8; }
-header { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; }
-.logo span { color: #ffc107; }
-.nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.12); }
-.hero { background: linear-gradient(135deg, #0d47a1, #1565c0); color: #fff; padding: 56px 24px; text-align: center; }
-.hero h1 { font-size: 32px; margin-bottom: 12px; }
-.hero p { font-size: 16px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-.stats { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
+.logo span { color: #ffd43b; }
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.15); }
+.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
 .stat { text-align: center; }
-.stat .n { font-size: 36px; font-weight: 800; }
-.stat .l { font-size: 14px; opacity: 0.8; }
-.search-box { max-width: 600px; margin: 24px auto; }
-.search-box input { width: 100%; padding: 14px 20px; border: none; border-radius: 10px; font-size: 16px; outline: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 40px 0; }
-.section h2 { font-size: 24px; margin-bottom: 20px; color: #0d47a1; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
-.card:hover { transform: translateY(-3px); }
-.card h3 { font-size: 18px; color: #0d47a1; margin-bottom: 8px; }
-.card p { font-size: 14px; color: #666; margin-bottom: 12px; }
-.card .tag { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin: 2px 4px 2px 0; }
-footer { background: #1a2332; color: rgba(255,255,255,0.7); padding: 40px 24px 24px; text-align: center; margin-top: 48px; }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); }}
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; }}
+.stat .n { font-size: 32px; font-weight: 800; }
+.stat .l { font-size: 13px; opacity: 0.8; }
+.search-box { max-width: 550px; margin: 24px auto; position: relative; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
+.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
+.search-results a:hover { background: #f5f7fa; }
+.search-results .result-name { font-weight: 600; font-size: 14px; }
+.search-results .result-detail { font-size: 12px; color: #718096; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 32px 0; }
+.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
+.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
+.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
+.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
+.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
 </style>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
-</head><body><header><div class="hdr">
-<a href="./index.html" class="logo">HK<span>Schools</span> 全港學校資訊</a>
+</head>
+<body>
+<header><div class="hdr">
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
 <nav class="nav-links">
-<a href="./index.html#level">學校類別</a>
-<a href="./index.html#district">地區分類</a>
-<a href="./index.html#finance">資助類型</a>
-<a href="#session">授課時間</a>
-</nav></div></header><div class='container'><section class="section">
-<h1>💰 GOVERNMENT 學校一覽</h1>
-<p>共 63 間學校</p>
-<div class="grid"><div class="card">
-<h3>KWUN TONG GOVERNMENT PRIMARY SCHOOL (SAU MING ROAD)</h3>
-<p>130 SAU MING RD SAU MAU PING KWUN TONG KLN...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>ERUDITE GOVERNMENT PRIMARY SCHOOL</h3>
-<p>8 ON HEI STREET, SAI KUNG, NT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>SOUTH YUEN LONG GOVERNMENT PRIMARY SCHOOL</h3>
-<p>NO 21, LAM HAU TSUEN RD, YUEN LONG NT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>SHAM SHUI PO GOVERNMENT PRIMARY SCHOOL</h3>
-<p>101 SHAM MONG ROAD, SHAM SHUI PO, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>JORDAN ROAD GOVERNMENT PRIMARY SCHOOL</h3>
-<p>1B NANKING STREET JORDAN ROAD KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YAU TSIM MONG</span>
-</div><div class="card">
-<h3>TAI PO GOVERNMENT PRIMARY SCHOOL</h3>
-<p>8 TAI PO TAI WO ROAD, TAI PO, NT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>HONG KONG SOUTHERN DISTRICT GOVERNMENT PRIMARY SCHOOL</h3>
-<p>325, APLEICHAU BRIDGE RD, APLEICHAU, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SOUTHERN</span>
-</div><div class="card">
-<h3>NORTH POINT GOVERNMENT PRIMARY SCHOOL</h3>
-<p>888 KING'S ROAD NORTH POINT HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>KWUN TONG GOVERNMENT PRIMARY SCHOOL</h3>
-<p>240 NGAU TAU KOK ROAD KWUN TONG KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>SIR ELLIS KADOORIE (SOOKUNPO) PRIMARY SCHOOL</h3>
-<p>9 EASTERN HOSPITAL ROAD SOOKUNPO HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>YUEN LONG GOVERNMENT PRIMARY SCHOOL</h3>
-<p>AU TAU YUEN LONG NT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>HENNESSY ROAD GOVERNMENT PRIMARY SCH</h3>
-<p>169 THOMSON ROAD WANCHAI HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>ALDRICH BAY GOVERNMENT PRIMARY SCHOOL</h3>
-<p>1 OI LAI STREET, SHAU KEI WAN, HK...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>NORTH POINT GOVERNMENT PRIMARY SCHOOL (CLOUD VIEW ROAD)</h3>
-<p>22 CLOUD VIEW ROAD...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>HOI PA STREET GOVERNMENT PRIMARY SCH</h3>
-<p>1 KAI CHI CLOSE TSUEN WAN NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TSUEN WAN</span>
-</div><div class="card">
-<h3>WONG TAI SIN GOVERNMENT PRIMARY SCH</h3>
-<p>100 CHING TAK STREET WONG TAI SIN KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WONG TAI SIN</span>
-</div><div class="card">
-<h3>LI CHENG UK GOVERNMENT PRIMARY SCHOOL</h3>
-<p>43 TONKIN STREET SHAMSHUIPO KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>TSUEN WAN GOVERNMENT PRIMARY SCHOOL</h3>
-<p>600 CASTLE PEAK ROAD, AREA 2, TSUEN WAN...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TSUEN WAN</span>
-</div><div class="card">
-<h3>BONHAM ROAD GOVERNMENT PRIMARY SCHOOL</h3>
-<p>9A BONHAM ROAD, HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>SHA TIN GOVERNMENT PRIMARY SCHOOL</h3>
-<p>SUN TIN WAI ESTATE SHATIN NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>TIN SHUI WAI GOVERNMENT PRIMARY SCHOOL</h3>
-<p>10 TIN SHUI ROAD, TIN SHUI WAI, YUEN LONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>TUEN MUN GOVERNMENT PRIMARY SCHOOL</h3>
-<p>SIU HONG COURT TUEN MUN NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>TSEUNG KWAN O GOVERNMENT PRI. SCHOOL</h3>
-<p>HAU TAK ESTATE PHASE II AREA 41 TSEUNG KWAN O NT...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>LI SING PRIMARY SCHOOL</h3>
-<p>119 HIGH STREET SAI YING PUN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>FARM ROAD GOVERNMENT PRIMARY SCHOOL</h3>
-<p>8 FARM ROAD TOKWAWAN KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>KOWLOON TONG GOVERNMENT PRIMARY SCHOOL</h3>
-<p>6 TIM FUK ROAD, KOWLOON TONG, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>SHAU KEI WAN GOVERNMENT PRIMARY SCHOOL</h3>
-<p>19 MAIN STREET EAST SHAUKEIWAN HONG KONG...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>FANLING GOVERNMENT PRIMARY SCHOOL</h3>
-<p>CHEUNG WAH ESTATE FANLING NEW TERRITORIES...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">NORTH</span>
-</div><div class="card">
-<h3>MA TAU CHUNG GOVERNMENT PRIMARY SCHOOL (HUNG HOM BAY)</h3>
-<p>3 OI KING STREET, HUNG HOM BAY, KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>HENNESSY ROAD GOVERNMENT PRIMARY SCHOOL (CAUSEWAY BAY)</h3>
-<p>3 EASTERN HOSPITAL ROAD CAUSEWAY BAY...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>FUK WING STREET GOVERNMENT PRIM SCH</h3>
-<p>231 FUK WING STREET SHAMSHUIPO KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div><div class="card">
-<h3>MA TAU CHUNG GOVERNMENT PRIMARY SCH</h3>
-<p>1 FUK CHEUNG STREET TOKWAWAN KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>TONG MEI ROAD GOVERNMENT PRIMARY SCHOOL</h3>
-<p>170 TONG MI ROAD KOWLOON...</p>
-<span class="tag">PRIMARY</span>
-<span class="tag">YAU TSIM MONG</span>
-</div><div class="card">
-<h3>QUEEN'S COLLEGE</h3>
-<p>120 CAUSEWAY ROAD CAUSEWAY BAY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>NTHYK TAI PO DISTRICT SECONDARY SCHOOL</h3>
-<p>TAI YUEN ESTATE TAI PO NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">TAI PO</span>
-</div><div class="card">
-<h3>SIR ELLIS KADOORIE SECONDARY SCHOOL (WEST KOWLOON)</h3>
-<p>22 HOI FAN ROAD , WEST KOWLOON, TAI KOK TSUI, KOWL...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">YAU TSIM MONG</span>
-</div><div class="card">
-<h3>SOUTH TUEN MUN GOVERNMENT SEC SCH</h3>
-<p>218 WU SHAN ROAD TUEN MUN NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>YUEN LONG PUBLIC SECONDARY SCHOOL</h3>
-<p>22 TOWN PARK ROAD SOUTH SHUI NGAU LENG YUEN LONG N...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>JOCKEY CLUB GOVERNMENT SECONDARY SCHOOL</h3>
-<p>2B OXFORD ROAD KOWLOON TONG KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>TSUEN WAN GOVERNMENT SECONDARY SCHOOL</h3>
-<p>70 HOI PA STREET TSUEN WAN NEW TERRITORIES...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">TSUEN WAN</span>
-</div><div class="card">
-<h3>SHAU KEI WAN GOVERNMENT SECONDARY SCHOOL</h3>
-<p>42 CHAI WAN ROAD SHAUKEIWAN HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>HOMANTIN GOVERNMENT SECONDARY SCHOOL</h3>
-<p>8 PERTH STREET HOMANTIN KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KOWLOON CITY</span>
-</div><div class="card">
-<h3>SHEUNG SHUI GOVERNMENT SECONDARY SCHOOL</h3>
-<p>21 PAK WO ROAD SHEUNG SHUI NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">NORTH</span>
-</div><div class="card">
-<h3>QUEEN ELIZABETH SCHOOL</h3>
-<p>152 SAI YEE STREET MONGKOK KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">YAU TSIM MONG</span>
-</div><div class="card">
-<h3>KING'S COLLEGE</h3>
-<p>63A BONHAM ROAD HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">CENTRAL AND WESTERN</span>
-</div><div class="card">
-<h3>NTHYK YUEN LONG DISTRICT SECONDARY SCH</h3>
-<p>123 KAU YUK ROAD YUEN LONG NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>TSEUNG KWAN O GOVERNMENT SEC SCHOOL</h3>
-<p>2 KING YIN LANE TSEUNG KWAN O NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SAI KUNG</span>
-</div><div class="card">
-<h3>TUEN MUN GOVERNMENT SECONDARY SCHOOL</h3>
-<p>393 CASTLE PEAK ROAD CASTLE PEAK BAY TUEN MUN NEW ...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">TUEN MUN</span>
-</div><div class="card">
-<h3>HELEN LIANG MEMORIAL SECONDARY SCHOOL (SHATIN)</h3>
-<p>2 HIN TIN STREET TAI WAI SHATIN NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>TANG SHIU KIN VICTORIA GOVERNMENT SECONDARY SCHOOL</h3>
-<p>5 OI KWAN ROAD WANCHAI HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>BELILIOS PUBLIC SCHOOL</h3>
-<p>51 TIN HAU TEMPLE ROAD HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>KWUN TONG GOVERNMENT SECONDARY SCHOOL</h3>
-<p>9 SHUN CHI STREET SHUN LEE ESTATE KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>KWUN TONG KUNG LOK GOVERNMENT SECONDARY SCHOOL</h3>
-<p>90 KUNG LOK ROAD KWUN TONG KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">KWUN TONG</span>
-</div><div class="card">
-<h3>CHEUNG CHAU GOVERNMENT SECONDARY SCHOOL</h3>
-<p>5B SCHOOL ROAD CHEUNG CHAU NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">ISLANDS</span>
-</div><div class="card">
-<h3>CLEMENTI SECONDARY SCHOOL</h3>
-<p>30 FORTRESS HILL ROAD NORTH POINT HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">EASTERN</span>
-</div><div class="card">
-<h3>FANLING GOVERNMENT SECONDARY SCHOOL</h3>
-<p>27 YAT MING ROAD FANLING NEW TERRITORIES...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">NORTH</span>
-</div><div class="card">
-<h3>HOTUNG SECONDARY SCHOOL</h3>
-<p>1 KA NING PATH CAUSEWAY BAY HONG KONG...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">WAN CHAI</span>
-</div><div class="card">
-<h3>SHA TIN GOVERNMENT SECONDARY SCHOOL</h3>
-<p>11-17 MAN LAI ROAD SHATIN NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SHA TIN</span>
-</div><div class="card">
-<h3>CHIU LUT SAU MEMORIAL SECONDARY SCHOOL</h3>
-<p>7 TAI YUK ROAD YUEN LONG NT...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">YUEN LONG</span>
-</div><div class="card">
-<h3>KOWLOON TECHNICAL SCHOOL</h3>
-<p>332-334 CHEUNG SHA WAN ROAD SHAMSHUIPO KOWLOON...</p>
-<span class="tag">SECONDARY</span>
-<span class="tag">SHAM SHUI PO</span>
-</div></div></section></div><footer>
-<p style="margin-bottom: 12px;"><a href="./index.html">首頁</a> · <a href="/about.html">關於我們</a> · <a href="/privacy.html">私隱政策</a></p>
-<p style="margin-bottom: 12px;">數據來源：香港教育局 (EDB) 學校位置及資訊開放數據</p>
-<p>© 2026 HKSchools 全港學校資訊網</p>
-<p style="font-size: 12px; opacity: 0.7; max-width: 700px; margin: 8px auto;">本網站數據來自教育局公開資料，僅供參考。如有疑問請以教育局網站為準。</p>
-</footer></body></html>
+<a href="../index.html#level">学校类别</a>
+<a href="../index.html#district">地区分类</a>
+<a href="../index.html#finance">资助种类</a>
+</nav></div></header>
+<div class="container"><section class="section"><h1>官立学校列表</h1><p>共 63 所学校</p><div class="grid"><a href="schools/1057.html" class="card"><h3>觀塘官立小學<秀明道></h3><p>KWUN TONG GOVERNMENT PRIMARY SCHOOL (SAU MING ROAD)</p><p style="font-size:11px;color:#a0aec0;">九龍官塘秀茂坪秀明道一百三十號</p></a><a href="schools/1058.html" class="card"><h3>安博官立小學</h3><p>ERUDITE GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界西貢安禧街8號</p></a><a href="schools/1059.html" class="card"><h3>南元朗官立小學</h3><p>SOUTH YUEN LONG GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">欖口村路二十一號</p></a><a href="schools/1060.html" class="card"><h3>深水埗官立小學</h3><p>SHAM SHUI PO GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍深水埗深旺道101號</p></a><a href="schools/1061.html" class="card"><h3>佐敦道官立小學</h3><p>JORDAN ROAD GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍佐敦道南京街1號B</p></a><a href="schools/1062.html" class="card"><h3>大埔官立小學</h3><p>TAI PO GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大埔太和路八號</p></a><a href="schools/1063.html" class="card"><h3>香港南區官立小學</h3><p>HONG KONG SOUTHERN DISTRICT GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港鴨脷洲鴨脷洲橋道325號</p></a><a href="schools/1064.html" class="card"><h3>北角官立小學</h3><p>NORTH POINT GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港北角英皇道888號</p></a><a href="schools/1065.html" class="card"><h3>觀塘官立小學</h3><p>KWUN TONG GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">牛頭角道240號</p></a><a href="schools/1066.html" class="card"><h3>官立嘉道理爵士小學</h3><p>SIR ELLIS KADOORIE (SOOKUNPO) PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港掃桿埔東院道9號</p></a><a href="schools/1067.html" class="card"><h3>元朗官立小學</h3><p>YUEN LONG GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">元朗坳頭</p></a><a href="schools/1068.html" class="card"><h3>軒尼詩道官立小學</h3><p>HENNESSY ROAD GOVERNMENT PRIMARY SCH</p><p style="font-size:11px;color:#a0aec0;">香港灣仔譚臣道169號</p></a><a href="schools/1069.html" class="card"><h3>愛秩序灣官立小學</h3><p>ALDRICH BAY GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣愛禮街1號</p></a><a href="schools/1070.html" class="card"><h3>北角官立小學(雲景道)</h3><p>NORTH POINT GOVERNMENT PRIMARY SCHOOL (CLOUD VIEW ROAD)</p><p style="font-size:11px;color:#a0aec0;">雲景道22號</p></a><a href="schools/1071.html" class="card"><h3>海壩街官立小學</h3><p>HOI PA STREET GOVERNMENT PRIMARY SCH</p><p style="font-size:11px;color:#a0aec0;">新界荃灣啓志街1號</p></a><a href="schools/1072.html" class="card"><h3>黃大仙官立小學</h3><p>WONG TAI SIN GOVERNMENT PRIMARY SCH</p><p style="font-size:11px;color:#a0aec0;">九龍黃大仙正德街100號</p></a><a href="schools/1073.html" class="card"><h3>李鄭屋官立小學</h3><p>LI CHENG UK GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍深水埗東京街43號</p></a><a href="schools/1074.html" class="card"><h3>荃灣官立小學</h3><p>TSUEN WAN GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">荃灣青山公路六佰號</p></a><a href="schools/1075.html" class="card"><h3>般咸道官立小學</h3><p>BONHAM ROAD GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港般咸道9號A</p></a><a href="schools/1076.html" class="card"><h3>沙田官立小學</h3><p>SHA TIN GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">沙田新田圍邨</p></a><a href="schools/1077.html" class="card"><h3>天水圍官立小學</h3><p>TIN SHUI WAI GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">元朗天水圍天瑞路10號</p></a><a href="schools/1078.html" class="card"><h3>屯門官立小學</h3><p>TUEN MUN GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界屯門兆康苑</p></a><a href="schools/1079.html" class="card"><h3>將軍澳官立小學</h3><p>TSEUNG KWAN O GOVERNMENT PRI. SCHOOL</p><p style="font-size:11px;color:#a0aec0;">將軍澳厚德邨</p></a><a href="schools/1080.html" class="card"><h3>李陞小學</h3><p>LI SING PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港西營盤高街119號</p></a><a href="schools/1081.html" class="card"><h3>農圃道官立小學</h3><p>FARM ROAD GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣農圃道8號</p></a><a href="schools/1082.html" class="card"><h3>九龍塘官立小學</h3><p>KOWLOON TONG GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍塘添福路六號</p></a><a href="schools/1083.html" class="card"><h3>筲箕灣官立小學</h3><p>SHAU KEI WAN GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣東大街19號</p></a><a href="schools/1084.html" class="card"><h3>粉嶺官立小學</h3><p>FANLING GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺祥華邨</p></a><a href="schools/1085.html" class="card"><h3>馬頭涌官立小學(紅磡灣)</h3><p>MA TAU CHUNG GOVERNMENT PRIMARY SCHOOL (HUNG HOM BAY)</p><p style="font-size:11px;color:#a0aec0;">九龍紅磡灣愛景街3號</p></a><a href="schools/1086.html" class="card"><h3>軒尼詩道官立小學(銅鑼灣)</h3><p>HENNESSY ROAD GOVERNMENT PRIMARY SCHOOL (CAUSEWAY BAY)</p><p style="font-size:11px;color:#a0aec0;">銅鑼灣東院道3號</p></a><a href="schools/1087.html" class="card"><h3>福榮街官立小學</h3><p>FUK WING STREET GOVERNMENT PRIM SCH</p><p style="font-size:11px;color:#a0aec0;">九龍深水埗福榮街231號</p></a><a href="schools/1088.html" class="card"><h3>馬頭涌官立小學</h3><p>MA TAU CHUNG GOVERNMENT PRIMARY SCH</p><p style="font-size:11px;color:#a0aec0;">九龍土瓜灣福祥街一號</p></a><a href="schools/1089.html" class="card"><h3>塘尾道官立小學</h3><p>TONG MEI ROAD GOVERNMENT PRIMARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍塘尾道170號</p></a><a href="schools/1090.html" class="card"><h3>皇仁書院</h3><p>QUEEN'S COLLEGE</p><p style="font-size:11px;color:#a0aec0;">銅鑼灣高士威道120號</p></a><a href="schools/1091.html" class="card"><h3>新界鄉議局大埔區中學</h3><p>NTHYK TAI PO DISTRICT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界大埔大元邨</p></a><a href="schools/1092.html" class="card"><h3>官立嘉道理爵士中學(西九龍)</h3><p>SIR ELLIS KADOORIE SECONDARY SCHOOL (WEST KOWLOON)</p><p style="font-size:11px;color:#a0aec0;">九龍大角咀西九龍海帆道二十二號</p></a><a href="schools/1093.html" class="card"><h3>南屯門官立中學</h3><p>SOUTH TUEN MUN GOVERNMENT SEC SCH</p><p style="font-size:11px;color:#a0aec0;">屯門湖山路218號</p></a><a href="schools/1094.html" class="card"><h3>元朗公立中學</h3><p>YUEN LONG PUBLIC SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">元朗水牛嶺公園南路二十二號</p></a><a href="schools/1095.html" class="card"><h3>賽馬會官立中學</h3><p>JOCKEY CLUB GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍塘牛津道2號B</p></a><a href="schools/1096.html" class="card"><h3>荃灣官立中學</h3><p>TSUEN WAN GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">荃灣海壩街70號</p></a><a href="schools/1097.html" class="card"><h3>筲箕灣官立中學</h3><p>SHAU KEI WAN GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣柴灣道四十二號</p></a><a href="schools/1098.html" class="card"><h3>何文田官立中學</h3><p>HOMANTIN GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍何文田巴富街8號</p></a><a href="schools/1099.html" class="card"><h3>上水官立中學</h3><p>SHEUNG SHUI GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界上水百和路21號</p></a><a href="schools/1100.html" class="card"><h3>伊利沙伯中學</h3><p>QUEEN ELIZABETH SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍洗衣街152號</p></a><a href="schools/1101.html" class="card"><h3>英皇書院</h3><p>KING'S COLLEGE</p><p style="font-size:11px;color:#a0aec0;">香港般咸道63號A</p></a><a href="schools/1102.html" class="card"><h3>新界鄉議局元朗區中學</h3><p>NTHYK YUEN LONG DISTRICT SECONDARY SCH</p><p style="font-size:11px;color:#a0aec0;">元朗教育路123號</p></a><a href="schools/1103.html" class="card"><h3>將軍澳官立中學</h3><p>TSEUNG KWAN O GOVERNMENT SEC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">將軍澳敬賢里二號</p></a><a href="schools/1104.html" class="card"><h3>屯門官立中學</h3><p>TUEN MUN GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">屯門青山公路393號青山灣段</p></a><a href="schools/1105.html" class="card"><h3>梁文燕紀念中學(沙田)</h3><p>HELEN LIANG MEMORIAL SECONDARY SCHOOL (SHATIN)</p><p style="font-size:11px;color:#a0aec0;">沙田大圍顯田街2號</p></a><a href="schools/1106.html" class="card"><h3>鄧肇堅維多利亞官立中學</h3><p>TANG SHIU KIN VICTORIA GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港愛群道5號</p></a><a href="schools/1107.html" class="card"><h3>庇理羅士女子中學</h3><p>BELILIOS PUBLIC SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港天后廟道五十一號</p></a><a href="schools/1108.html" class="card"><h3>觀塘官立中學</h3><p>KWUN TONG GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">順利邨順緻街九號</p></a><a href="schools/1109.html" class="card"><h3>觀塘功樂官立中學</h3><p>KWUN TONG KUNG LOK GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">功樂道90號</p></a><a href="schools/1110.html" class="card"><h3>長洲官立中學</h3><p>CHEUNG CHAU GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界長洲學校路5B</p></a><a href="schools/1111.html" class="card"><h3>金文泰中學</h3><p>CLEMENTI SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港炮台山道三十號</p></a><a href="schools/1112.html" class="card"><h3>粉嶺官立中學</h3><p>FANLING GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">新界粉嶺一鳴路27號</p></a><a href="schools/1113.html" class="card"><h3>何東中學</h3><p>HOTUNG SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">銅鑼灣嘉寧徑1號</p></a><a href="schools/1114.html" class="card"><h3>沙田官立中學</h3><p>SHA TIN GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">沙田文禮路11-17號</p></a><a href="schools/1115.html" class="card"><h3>趙聿修紀念中學</h3><p>CHIU LUT SAU MEMORIAL SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">元朗體育路七號</p></a><a href="schools/1116.html" class="card"><h3>九龍工業學校</h3><p>KOWLOON TECHNICAL SCHOOL</p><p style="font-size:11px;color:#a0aec0;">九龍長沙灣道332-334號</p></a><a href="schools/1117.html" class="card"><h3>天水圍官立中學</h3><p>TIN SHUI WAI GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">天水圍天耀邨第二期</p></a><a href="schools/1118.html" class="card"><h3>筲箕灣東官立中學</h3><p>SHAU KEI WAN EAST GOVERNMENT SECONDARY SCHOOL</p><p style="font-size:11px;color:#a0aec0;">香港筲箕灣柴灣道四十號</p></a><a href="schools/1119.html" class="card"><h3>藝術與科技教育中心</h3><p>ARTS & TECHNOLOGY EDUCATION CENTRE</p><p style="font-size:11px;color:#a0aec0;">九龍樂富聯合道145號</p></a></div></section></div><footer>
+<p style="margin-bottom: 12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
+</footer>
+</body>
+</html>
