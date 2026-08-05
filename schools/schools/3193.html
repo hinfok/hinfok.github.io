@@ -3,67 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>香港基督教女青年會趙靄華幼兒學校 | 香港学校数据库</title>
-<meta name="description" content="香港教育局学校数据，提供全港3489所学校信息，按地区、资助种类、学校类型分类查询。">
+<title>香港基督教女青年會趙靄華幼兒學校 HONG KONG YOUNG WOMEN'S CHRISTIAN ASSOCIATION CHIU OI WAH NURSERY SCHOOL | 香港學校資料庫</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
-header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; }
+.hdr { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
 .logo span { color: #ffd43b; }
 .nav-links { display: flex; gap: 4px; list-style: none; }
-.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.15); }
-.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 48px 20px; text-align: center; }
-.hero h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
-.hero p { font-size: 15px; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-.stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
-.stat { text-align: center; }
-.stat .n { font-size: 32px; font-weight: 800; }
-.stat .l { font-size: 13px; opacity: 0.8; }
-.search-box { max-width: 550px; margin: 24px auto; position: relative; }
-.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.search-results { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; display: none; z-index: 50; }
-.search-results a { display: block; padding: 12px 18px; text-decoration: none; color: #2d3748; border-bottom: 1px solid #eee; }
-.search-results a:hover { background: #f5f7fa; }
-.search-results .result-name { font-weight: 600; font-size: 14px; }
-.search-results .result-detail { font-size: 12px; color: #718096; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.section { padding: 32px 0; }
-.section h2 { font-size: 20px; margin-bottom: 16px; color: #1e3a5f; font-weight: 600; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
-.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
-.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
-.card p { font-size: 12px; color: #718096; margin-bottom: 10px; line-height: 1.5; }
-.detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
-.detail-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.detail-card h1 { font-size: 24px; color: #1e3a5f; margin-bottom: 4px; }
-.detail-card .sub { font-size: 16px; color: #718096; margin-bottom: 20px; }
-.detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
-.detail-row:last-child { border-bottom: none; }
-.detail-label { width: 100px; font-weight: 500; color: #4a5568; font-size: 13px; }
-.detail-value { flex: 1; font-size: 13px; color: #2d3748; }
-footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; }
+.container { max-width: 1000px; margin: 0 auto; padding: 24px 20px; }
+.breadcrumb { padding: 0 0 16px; font-size: 13px; color: #718096; }
+.breadcrumb a { color: #2b6cb0; text-decoration: none; }
+.school-header { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.school-header h1 { font-size: 28px; color: #1e3a5f; margin-bottom: 4px; font-weight: 700; }
+.school-header .en-name { font-size: 14px; color: #718096; margin-bottom: 16px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tag { display: inline-block; background: #e6f0fa; color: #2b6cb0; padding: 4px 12px; border-radius: 14px; font-size: 13px; font-weight: 500; }
+.tag.dist { background: #f0fff4; color: #2f855a; }
+.tag.fin { background: #fef5e7; color: #c05621; }
+.tag.sess { background: #faf5ff; color: #6b46c1; }
+.tag.gen { background: #fef2f2; color: #991b1b; }
+.tag.rel { background: #f0fdf4; color: #166534; }
+.info-card { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.info-card h2 { font-size: 16px; color: #1e3a5f; margin-bottom: 16px; font-weight: 600; border-bottom: 2px solid #e6f0fa; padding-bottom: 10px; }
+.info-row { display: flex; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+.info-row:last-child { border-bottom: none; }
+.info-label { width: 100px; font-weight: 600; color: #4a5568; font-size: 13px; flex-shrink: 0; }
+.info-value { flex: 1; font-size: 14px; color: #2d3748; }
+.back-btn { display: inline-block; background: #2d5a87; color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; margin-bottom: 20px; }
+.back-btn:hover { background: #1e3a5f; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 24px 20px; text-align: center; margin-top: 32px; font-size: 12px; }
 footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .detail-grid { grid-template-columns: 1fr; } }
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+@media (max-width: 768px) { .nav-links { display: none; } .info-label { width: 80px; } }
 </style>
 </head>
 <body>
 <header><div class="hdr">
-<a href="../index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
+<a href="../index.html" class="logo">HK<span>Schools</span> 全港學校資料</a>
 <nav class="nav-links">
-<a href="../index.html#level">学校类别</a>
-<a href="../index.html#district">地区分类</a>
-<a href="../index.html#finance">资助种类</a>
+<a href="../search.html">🔍 搜尋</a>
+<a href="../index.html#level">學校類別</a>
+<a href="../index.html#district">地區分類</a>
 </nav></div></header>
-<div class="container"><div class="section"><div class="detail-grid"><div class="detail-card"><h1>香港基督教女青年會趙靄華幼兒學校</h1><p class="sub">HONG KONG YOUNG WOMEN'S CHRISTIAN ASSOCIATION CHIU OI WAH NURSERY SCHOOL</p><div class="detail-row"><div class="detail-label">学校类别</div><div class="detail-value">幼儿园暨幼儿中心 / KINDERGARTEN-CUM-CHILD CARE CENTRES</div></div><div class="detail-row"><div class="detail-label">所属区域</div><div class="detail-value">深水埗区 / SHAM SHUI PO</div></div><div class="detail-row"><div class="detail-label">资助种类</div><div class="detail-value">私立 / PRIVATE</div></div><div class="detail-row"><div class="detail-label">授课时间</div><div class="detail-value">全日</div></div><div class="detail-row"><div class="detail-label">学生性别</div><div class="detail-value">男女</div></div><div class="detail-row"><div class="detail-label">中文地址</div><div class="detail-value">九龍深水埗元州邨元豐樓Ｂ及Ｃ翼地下</div></div><div class="detail-row"><div class="detail-label">英文地址</div><div class="detail-value">G/F WING B & C UN FUNG HOUSE UN CHAU ESTATE SHAM SHUI PO KOWLOON</div></div><div class="detail-row"><div class="detail-label">联系电话</div><div class="detail-value">23866339</div></div><div class="detail-row"><div class="detail-label">传真号码</div><div class="detail-value">21948892</div></div><div class="detail-row"><div class="detail-label">宗教</div><div class="detail-value">基督教</div></div><div class="detail-row"><div class="detail-label">网站</div><div class="detail-value">http://nscow.ywca.org.hk</div></div></div><div><div class="detail-card"><h3 style="margin-bottom:12px;color:#1e3a5f;">位置信息</h3><p style="font-size:12px;color:#718096;margin-bottom:12px;">纬度: 22.3376603<br>经度: 114.15522627</p><div style="height:300px;background:#e6f0fa;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#4a5568;font-size:13px;">学校位置地图</div></div></div></div></div></div><footer>
-<p style="margin-bottom: 12px;"><a href="../index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
-<p style="margin-bottom: 8px;">数据来源：香港教育局 (EDB) 学校位置及联络数据</p>
-<p>&copy; 2026 HK Schools 香港学校数据库</p>
+
+<div class="container">
+<a href="../search.html" class="back-btn">← 返回搜尋</a>
+
+<div class="school-header">
+<h1>香港基督教女青年會趙靄華幼兒學校</h1>
+<div class="en-name">HONG KONG YOUNG WOMEN'S CHRISTIAN ASSOCIATION CHIU OI WAH NURSERY SCHOOL</div>
+<div class="tags">
+<span class="tag dist">📍 深水埗區</span>
+<span class="tag">幼稚園暨幼兒中心</span>
+<span class="tag fin">💰 私立</span>
+<span class="tag sess">⏰ 全日制</span>
+
+<span class="tag gen">👤 男女校</span>
+<span class="tag rel">⛪ PROTESTANTISM / CHRISTIANITY</span>
+</div>
+</div>
+
+<div class="info-card">
+<h2>📋 學校資料</h2>
+<div class="info-row"><div class="info-label">學校名稱(中)</div><div class="info-value">香港基督教女青年會趙靄華幼兒學校</div></div>
+<div class="info-row"><div class="info-label">學校名稱(英)</div><div class="info-value">HONG KONG YOUNG WOMEN'S CHRISTIAN ASSOCIATION CHIU OI WAH NURSERY SCHOOL</div></div>
+<div class="info-row"><div class="info-label">學校類別</div><div class="info-value">幼稚園暨幼兒中心</div></div>
+<div class="info-row"><div class="info-label">所屬地區</div><div class="info-value">深水埗區</div></div>
+<div class="info-row"><div class="info-label">資助種類</div><div class="info-value">私立</div></div>
+<div class="info-row"><div class="info-label">授課時間</div><div class="info-value">全日制</div></div>
+<div class="info-row"><div class="info-label">學生性別</div><div class="info-value">男女校</div></div>
+<div class="info-row"><div class="info-label">宗教</div><div class="info-value">PROTESTANTISM / CHRISTIANITY</div></div>
+<div class="info-row"><div class="info-label">中文地址</div><div class="info-value">九龍深水埗元州邨元豐樓Ｂ及Ｃ翼地下</div></div>
+<div class="info-row"><div class="info-label">英文地址</div><div class="info-value">G/F WING B & C UN FUNG HOUSE UN CHAU ESTATE SHAM SHUI PO KOWLOON</div></div>
+<div class="info-row"><div class="info-label">聯絡電話</div><div class="info-value">23866339</div></div>
+<div class="info-row"><div class="info-label">傳真號碼</div><div class="info-value">21948892</div></div>
+<div class="info-row"><div class="info-label">經度</div><div class="info-value">114.15522627</div></div>
+<div class="info-row"><div class="info-label">緯度</div><div class="info-value">22.3376603</div></div>
+
+</div>
+</div>
+
+<footer>
+<p style="margin-bottom:12px;"><a href="../index.html">首頁</a> | <a href="../search.html">學校搜尋</a> | <a href="#">關於我們</a> | <a href="#">隱私政策</a></p>
+<p style="margin-bottom:8px;">資料來源：香港教育局 (EDB) 學校位置及聯絡資料</p>
+<p>&copy; 2026 HK Schools 香港學校數據庫</p>
 </footer>
 </body>
 </html>
