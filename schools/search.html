@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>學校搜尋 | 香港學校數據庫</title>
-<meta name="description" content="全港3489所學校資料，可按中文名、英文名、地區、類型快速搜尋">
+<title>学校搜寻 | 香港学校数据库</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
@@ -17,36 +16,26 @@ header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; pos
 .nav-links a:hover { background: rgba(255,255,255,0.15); }
 .hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 36px 20px; text-align: center; }
 .hero h1 { font-size: 24px; margin-bottom: 8px; font-weight: 700; }
-.stats { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
-.stat { text-align: center; }
-.stat .n { font-size: 28px; font-weight: 800; }
-.stat .l { font-size: 12px; opacity: 0.8; }
 .search-container { max-width: 800px; margin: 0 auto; }
-.search-box { position: relative; }
-.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; }
 .filters { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; justify-content: center; }
 .filters select { padding: 8px 12px; border-radius: 6px; border: none; font-size: 13px; min-width: 120px; }
 .view-toggle { display: flex; gap: 4px; background: rgba(255,255,255,0.2); border-radius: 6px; padding: 4px; }
 .view-btn { padding: 6px 12px; border: none; background: transparent; color: #fff; border-radius: 4px; cursor: pointer; font-size: 13px; opacity: 0.7; }
 .view-btn.active { background: rgba(255,255,255,0.3); opacity: 1; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.result-info { padding: 16px 0; font-size: 14px; color: #718096; display: flex; justify-content: space-between; align-items: center; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.result-info { padding: 10px 0 20px; font-size: 14px; color: #718096; display: flex; justify-content: space-between; }
 .result-count strong { color: #1e3a5f; }
-/* 表格样式 */
-.table-view { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: table; }
-.table-view.hidden { display: none; }
-.table-view th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 13px; }
-.table-view td { padding: 12px 16px; border-bottom: 1px solid #f0f4f8; font-size: 13px; }
-.table-view tr:hover td { background: #f8fafc; }
-.table-view a { color: #2b6cb0; text-decoration: none; font-weight: 500; }
-.table-view a:hover { text-decoration: underline; }
-.table-view .name-zh { font-weight: 600; color: #1e3a5f; }
-.table-view .name-en { font-size: 11px; color: #718096; }
-/* 卡片样式 */
-.card-view { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; display: grid; }
-.card-view.hidden { display: none; }
-.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: block; }
-.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.highlight { background: #fff3cd; padding: 0 2px; border-radius: 2px; }
+table.table-view { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+table.table-view th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 13px; }
+table.table-view td { padding: 12px 16px; border-bottom: 1px solid #f0f4f8; font-size: 13px; }
+table.table-view tr:hover td { background: #f8fafc; }
+table.table-view a { color: #2b6cb0; text-decoration: none; font-weight: 500; }
+table.table-view .name-zh { font-weight: 600; color: #1e3a5f; }
+table.table-view .name-en { font-size: 11px; color: #718096; }
+.card-view { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit; display: block; }
 .card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 4px; font-weight: 600; }
 .card .en-name { font-size: 11px; color: #718096; margin-bottom: 8px; }
 .card .addr { font-size: 11px; color: #a0aec0; margin-bottom: 8px; }
@@ -54,67 +43,42 @@ header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; pos
 .tag { display: inline-block; background: #e6f0fa; color: #2b6cb0; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500; }
 .tag.dist { background: #f0fff4; color: #2f855a; }
 .tag.fin { background: #fef5e7; color: #c05621; }
-.highlight { background: #fff3cd; padding: 0 2px; border-radius: 2px; }
 .no-result { text-align: center; padding: 60px 20px; color: #718096; background: #fff; border-radius: 10px; }
 footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
 footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
-@media (max-width: 900px) { .card-view { grid-template-columns: repeat(2, 1fr); } .table-view { font-size: 12px; } .table-view th, .table-view td { padding: 8px 10px; } }
-@media (max-width: 600px) { .card-view { grid-template-columns: 1fr; } .nav-links { display: none; } .table-view th:nth-child(4), .table-view td:nth-child(4) { display: none; } }
+@media (max-width: 900px) { .card-view { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .card-view { grid-template-columns: 1fr; } .nav-links { display: none; } }
 </style>
 </head>
 <body>
 <header><div class="hdr">
-<a href="index.html" class="logo">HK<span>Schools</span> 全港學校資料</a>
+<a href="index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
 <nav class="nav-links">
-<a href="index.html#level">學校類別</a>
-<a href="index.html#district">地區分類</a>
-<a href="search.html">🔍 搜尋</a>
+<a href="index.html#level">学校类别</a>
+<a href="index.html#district">地区分类</a>
+<a href="search.html">🔍 搜寻</a>
 </nav></div></header>
-
 <section class="hero">
-<h1>🏫 學校搜尋</h1>
-<div class="stats">
-<div class="stat"><div class="n" id="total-count">3489</div><div class="l">學校總數</div></div>
-</div>
+<h1>🏫 学校搜寻</h1>
 <div class="search-container">
-<div class="search-box">
-<input type="text" id="search-input" placeholder="輸入學校名稱（中/英文）或地址..." autocomplete="off">
-</div>
+<div class="search-box"><input type="text" id="search-input" placeholder="输入学校名称或地址..." autocomplete="off"></div>
 <div class="filters">
 <select id="filter-level">
-<option value="">所有類別</option>
-<option value="KINDERGARTEN">幼稚園</option>
-<option value="KINDERGARTEN-CUM-CHILD CARE CENTRES">幼稚園暨幼兒中心</option>
-<option value="PRIMARY">小學</option>
-<option value="SECONDARY">中學</option>
+<option value="">所有类别</option>
+<option value="KINDERGARTEN">幼稚园</option>
+<option value="PRIMARY">小学</option>
+<option value="SECONDARY">中学</option>
 </select>
 <select id="filter-district">
-<option value="">所有地區</option>
-<option value="CENTRAL AND WESTERN">中西區</option>
-<option value="EASTERN">東區</option>
-<option value="ISLANDS">離島區</option>
-<option value="KOWLOON CITY">九龍城區</option>
-<option value="KWAI TSING">葵青區</option>
-<option value="KWUN TONG">觀塘區</option>
-<option value="NORTH">北區</option>
-<option value="SAI KUNG">西貢區</option>
-<option value="SHAM SHUI PO">深水埗區</option>
-<option value="SHA TIN">沙田區</option>
-<option value="SOUTHERN">南區</option>
-<option value="TAI PO">大埔區</option>
-<option value="TSUEN WAN">荃灣區</option>
-<option value="TUEN MUN">屯門區</option>
-<option value="WAN CHAI">灣仔區</option>
-<option value="WONG TAI SIN">黃大仙區</option>
-<option value="YAU TSIM MONG">油尖旺區</option>
-<option value="YUEN LONG">元朗區</option>
-</select>
-<select id="filter-finance">
-<option value="">所有資助</option>
-<option value="AIDED">資助</option>
-<option value="DIRECT SUBSIDY SCHEME">直接資助計劃</option>
-<option value="GOVERNMENT">官立</option>
-<option value="PRIVATE">私立</option>
+<option value="">所有地区</option>
+<option value="CENTRAL AND WESTERN">中西区</option>
+<option value="EASTERN">东区</option>
+<option value="KOWLOON CITY">九龙城区</option>
+<option value="KWAI TSING">葵青区</option>
+<option value="KWUN TONG">观塘区</option>
+<option value="SHA TIN">沙田区</option>
+<option value="WAN CHAI">湾仔区</option>
+<option value="YAU TSIM MONG">油尖旺区</option>
 </select>
 <div class="view-toggle">
 <button class="view-btn active" data-view="table">📊 表格</button>
@@ -123,194 +87,19 @@ footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
 </div>
 </div>
 </section>
-
 <div class="container">
-<div class="result-info">
-<div class="result-count">找到 <strong id="result-count">3489</strong> 所學校</div>
-<div>輸入關鍵字開始搜尋，支援中/英文部分匹配</div>
+<div class="result-info"><div class="result-count">找到 <strong id="result-count">0</strong> 所学校</div></div>
+<table class="table-view" id="table-view">
+<thead><tr><th>学校名称</th><th>类别</th><th>地区</th><th>资助</th><th>地址</th></tr></thead>
+<tbody id="table-body"></tbody>
+</table>
+<div class="card-view" id="card-view" style="display:none;"></div>
+<div id="no-result" class="no-result" style="display:none;"><p>🔍 找不到符合条件的学校</p></div>
 </div>
-
-<div class="table-view" id="table-view">
-<thead>
-<tr>
-<th>學校名稱</th>
-<th>類別</th>
-<th>地區</th>
-<th>資助</th>
-<th>地址</th>
-</tr>
-</thead>
-<tbody id="table-body">
-</tbody>
-</div>
-
-<div class="card-view hidden" id="card-view">
-</div>
-
-<div id="no-result" class="no-result" style="display:none;">
-<p>🔍 找不到符合條件的學校</p>
-<p style="font-size:13px;margin-top:8px;">試試其他關鍵字或放寬篩選條件</p>
-</div>
-</div>
-
 <footer>
-<p style="margin-bottom:12px;"><a href="index.html">首頁</a> | <a href="#">關於我們</a> | <a href="#">隱私政策</a></p>
-<p style="margin-bottom:8px;">資料來源：香港教育局 (EDB) 學校位置及聯絡資料</p>
-<p>&copy; 2026 HK Schools 香港學校數據庫</p>
+<p style="margin-bottom:12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
+<p style="margin-bottom:8px;">资料来源：香港教育局 (EDB)</p>
+<p>&copy; 2026 HK Schools</p>
 </footer>
-
-<script src=search-data-full.js></script>
-<script>
-var levelNames = {
-    'KINDERGARTEN': '幼稚園',
-    'KINDERGARTEN-CUM-CHILD CARE CENTRES': '幼稚園暨幼兒中心',
-    'PRIMARY': '小學',
-    'SECONDARY': '中學'
-};
-var districtNames = {
-    'CENTRAL AND WESTERN': '中西區',
-    'EASTERN': '東區',
-    'ISLANDS': '離島區',
-    'KOWLOON CITY': '九龍城區',
-    'KWAI TSING': '葵青區',
-    'KWUN TONG': '觀塘區',
-    'NORTH': '北區',
-    'SAI KUNG': '西貢區',
-    'SHAM SHUI PO': '深水埗區',
-    'SHA TIN': '沙田區',
-    'SOUTHERN': '南區',
-    'TAI PO': '大埔區',
-    'TSUEN WAN': '荃灣區',
-    'TUEN MUN': '屯門區',
-    'WAN CHAI': '灣仔區',
-    'WONG TAI SIN': '黃大仙區',
-    'YAU TSIM MONG': '油尖旺區',
-    'YUEN LONG': '元朗區'
-};
-var financeNames = {
-    'AIDED': '資助',
-    'CAPUT': '按額津貼',
-    'DIRECT SUBSIDY SCHEME': '直接資助計劃',
-    'ENGLISH SCHOOLS FOUNDATION': '英基學校協會',
-    'GOVERNMENT': '官立',
-    'PRIVATE': '私立',
-    'PRIVATE INDEPENDENT SCH SCHEME': '私立獨立學校計劃'
-};
-var currentView = 'table';
-var searchTimeout = null;
-
-function highlight(text, query) {
-    if (!query) return text;
-    var lowerText = text.toLowerCase();
-    var lowerQuery = query.toLowerCase();
-    var idx = lowerText.indexOf(lowerQuery);
-    if (idx === -1) return text;
-    return text.substring(0, idx) + '<span class="highlight">' + text.substring(idx, idx + query.length) + '</span>' + text.substring(idx + query.length);
-}
-
-function renderTable(schools, query) {
-    var tbody = document.getElementById('table-body');
-    var html = '';
-    for (var i = 0; i < schools.length && i < 500; i++) {
-        var s = schools[i];
-        html += '<tr><td><a href="schools/' + s.id + '.html">';
-        html += '<div class="name-zh">' + highlight(s.name_zh, query) + '</div>';
-        html += '<div class="name-en">' + highlight(s.name_en, query) + '</div>';
-        html += '</a></td>';
-        html += '<td>' + levelNames[s.level] + '</td>';
-        html += '<td>' + districtNames[s.district] + '</td>';
-        html += '<td>' + financeNames[s.finance] + '</td>';
-        html += '<td>' + highlight(s.address_zh, query) + '</td></tr>';
-    }
-    if (schools.length > 500) {
-        html += '<tr><td colspan="5" style="text-align:center;color:#718096;font-size:12px;">顯示前 500 筆結果，請輸入更多關鍵字縮小範圍</td></tr>';
-    }
-    tbody.innerHTML = html;
-}
-
-function renderCards(schools, query) {
-    var container = document.getElementById('card-view');
-    var html = '';
-    for (var i = 0; i < schools.length && i < 200; i++) {
-        var s = schools[i];
-        html += '<a href="schools/' + s.id + '.html" class="card">';
-        html += '<h3>' + highlight(s.name_zh, query) + '</h3>';
-        html += '<div class="en-name">' + highlight(s.name_en, query) + '</div>';
-        html += '<div class="addr">' + highlight(s.address_zh, query) + '</div>';
-        html += '<div class="tags"><span class="tag dist">' + districtNames[s.district] + '</span>';
-        html += '<span class="tag">' + levelNames[s.level] + '</span>';
-        html += '<span class="tag fin">' + financeNames[s.finance] + '</span></div>';
-        html += '</a>';
-    }
-    if (schools.length > 200) {
-        html += '<div class="card" style="text-align:center;color:#718096;font-size:12px;">顯示前 200 筆結果，請輸入更多關鍵字縮小範圍</div>';
-    }
-    container.innerHTML = html;
-}
-
-function doSearch() {
-    var query = document.getElementById('search-input').value.trim();
-    var levelFilter = document.getElementById('filter-level').value;
-    var districtFilter = document.getElementById('filter-district').value;
-    var financeFilter = document.getElementById('filter-finance').value;
-    
-    var results = allSchools.filter(function(s) {
-        if (levelFilter && s.level !== levelFilter) return false;
-        if (districtFilter && s.district !== districtFilter) return false;
-        if (financeFilter && s.finance !== financeFilter) return false;
-        if (!query) return true;
-        var lowerQuery = query.toLowerCase();
-        return s.name_zh.indexOf(query) !== -1 ||
-               s.name_en.toLowerCase().indexOf(lowerQuery) !== -1 ||
-               s.address_zh.indexOf(query) !== -1 ||
-               s.address_en.toLowerCase().indexOf(lowerQuery) !== -1;
-    });
-    
-    document.getElementById('result-count').textContent = results.length;
-    
-    var noResult = document.getElementById('no-result');
-    var tableView = document.getElementById('table-view');
-    var cardView = document.getElementById('card-view');
-    
-    if (results.length === 0) {
-        noResult.style.display = 'block';
-        tableView.style.display = 'none';
-        cardView.style.display = 'none';
-    } else {
-        noResult.style.display = 'none';
-        if (currentView === 'table') {
-            tableView.style.display = 'table';
-            cardView.style.display = 'none';
-            renderTable(results, query);
-        } else {
-            tableView.style.display = 'none';
-            cardView.style.display = 'grid';
-            renderCards(results, query);
-        }
-    }
-}
-
-function setView(view) {
-    currentView = view;
-    document.querySelectorAll('.view-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.view === view);
-    });
-    doSearch();
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('search-input').addEventListener('input', function() {
-        clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(doSearch, 150);
-    });
-    document.getElementById('filter-level').addEventListener('change', doSearch);
-    document.getElementById('filter-district').addEventListener('change', doSearch);
-    document.getElementById('filter-finance').addEventListener('change', doSearch);
-    document.querySelectorAll('.view-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            setView(this.dataset.view);
-        });
-    });
-    doSearch();
-});
-</script>
+</body>
+</html>
