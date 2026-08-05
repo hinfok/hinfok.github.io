@@ -3,95 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>学校搜寻 | 香港学校数据库</title>
+<title>學校搜尋 | 香港學校資料庫</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.5; }
 header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; }
-.hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.hdr { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
 .logo span { color: #ffd43b; }
 .nav-links { display: flex; gap: 4px; list-style: none; }
 .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; }
-.search-bar { background: linear-gradient(135deg, #1e3a5f, #2d5a87); padding: 20px; text-align: center; }
-.search-bar input { width: 100%; max-width: 600px; padding: 12px 16px; border: none; border-radius: 8px; font-size: 15px; }
-.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-size: 13px; }
-td { padding: 12px 16px; border-bottom: 1px solid #f0f4f8; font-size: 13px; }
-tr:hover td { background: #f8fafc; }
+.search-section { background: linear-gradient(135deg, #1e3a5f, #2d5a87); padding: 20px; }
+.search-box { max-width: 800px; margin: 0 auto; }
+.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 8px; font-size: 16px; }
+.filters { max-width: 800px; margin: 12px auto 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.filters select { padding: 8px 12px; border-radius: 6px; border: none; font-size: 13px; min-width: 110px; }
+.count { color: rgba(255,255,255,0.8); font-size: 13px; margin-top: 8px; text-align: center; }
+.container { max-width: 1400px; margin: 0 auto; padding: 16px; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+th { background: #2d5a87; color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; }
+td { padding: 10px 12px; border-bottom: 1px solid #edf2f7; font-size: 13px; vertical-align: top; }
+tr:hover td { background: #f7fafc; }
 td a { color: #2b6cb0; text-decoration: none; font-weight: 500; }
-.name-zh { font-weight: 600; color: #1e3a5f; }
-.name-en { font-size: 11px; color: #718096; }
-footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
+.school-zh { font-weight: 600; color: #1e3a5f; }
+.school-en { font-size: 11px; color: #718096; margin-top: 2px; }
+.addr { font-size: 11px; color: #718096; }
+.tag { display: inline-block; background: #e6f0fa; color: #2b6cb0; padding: 2px 8px; border-radius: 10px; font-size: 10px; margin: 1px; }
+.tag.dist { background: #f0fff4; color: #2f855a; }
+.tag.fin { background: #fef5e7; color: #c05621; }
+.tag.sess { background: #faf5ff; color: #6b46c1; }
+.highlight { background: #fff3cd; padding: 0 2px; border-radius: 2px; }
+.empty { text-align: center; padding: 60px; color: #718096; background: #fff; border-radius: 8px; }
+footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 24px; text-align: center; margin-top: 32px; font-size: 12px; }
 footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
-@media (max-width: 768px) { .nav-links { display: none; } }
+@media (max-width: 768px) { .nav-links { display: none; } th:nth-child(7), td:nth-child(7) { display:none; } th:nth-child(8), td:nth-child(8) { display:none; } }
 </style>
 </head>
 <body>
 <header><div class="hdr">
-<a href="index.html" class="logo">HK<span>Schools</span> 全港学校资料</a>
+<a href="index.html" class="logo">HK<span>Schools</span> 全港學校資料</a>
 <nav class="nav-links">
-<a href="index.html#level">学校类别</a>
-<a href="index.html#district">地区分类</a>
+<a href="index.html#level">學校類別</a>
+<a href="index.html#district">地區分類</a>
 </nav></div></header>
 
-<div class="search-bar">
-<input type="text" id="search-input" placeholder="输入学校名称（中文或英文）开始搜索...">
+<div class="search-section">
+<div class="search-box">
+<input type="text" id="search-input" placeholder="🔍 輸入學校名稱、地址搜尋...">
+</div>
+<div class="filters">
+<select id="filter-level">
+<option value="">全部類別</option>
+<option value="KINDERGARTEN">幼稚園</option>
+<option value="PRIMARY">小學</option>
+<option value="SECONDARY">中學</option>
+</select>
+<select id="filter-district">
+<option value="">全部地區</option>
+<option value="CENTRAL AND WESTERN">中西區</option>
+<option value="EASTERN">東區</option>
+<option value="KOWLOON CITY">九龍城區</option>
+<option value="KWAI TSING">葵青區</option>
+<option value="KWUN TONG">觀塘區</option>
+<option value="SHA TIN">沙田區</option>
+<option value="WONG TAI SIN">黃大仙區</option>
+<option value="YAU TSIM MONG">油尖旺區</option>
+<option value="YUEN LONG">元朗區</option>
+</select>
+<select id="filter-finance">
+<option value="">全部資助</option>
+<option value="AIDED">資助</option>
+<option value="GOVERNMENT">官立</option>
+<option value="DIRECT SUBSIDY SCHEME">直資</option>
+<option value="PRIVATE">私立</option>
+</select>
+</div>
+<div class="count" id="result-count">共 3,489 所學校</div>
 </div>
 
 <div class="container">
-<table>
+<table id="result-table">
 <thead>
 <tr>
-<th>学校名称</th>
-<th>类别</th>
-<th>地区</th>
-<th>地址</th>
+<th style="width:22%;">學校名稱</th>
+<th style="width:8%;">類別</th>
+<th style="width:8%;">地區</th>
+<th style="width:8%;">資助</th>
+<th style="width:8%;">電話</th>
+<th style="width:8%;">傳真</th>
+<th style="width:10%;">授課時間</th>
+<th style="width:28%;">地址</th>
 </tr>
 </thead>
-<tbody id="school-list">
+<tbody id="tbody">
 </tbody>
 </table>
+<div id="empty-state" class="empty" style="display:none;">
+🔍 找不到符合條件的學校，請試試其他關鍵字
+</div>
 </div>
 
 <footer>
-<p style="margin-bottom:12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
-<p style="margin-bottom:8px;">资料来源：香港教育局 (EDB)</p>
-<p>&copy; 2026 HK Schools 香港学校数据库</p>
+<p style="margin-bottom:12px;"><a href="index.html">首頁</a> | <a href="#">關於我們</a> | <a href="#">隱私政策</a></p>
+<p style="margin-bottom:8px;">資料來源：香港教育局 (EDB)</p>
+<p>&copy; 2026 HK Schools 香港學校數據庫</p>
 </footer>
 
-<script src="search-data-full.js"></script>
+<script src="schooldata.js"></script>
 <script>
-var levelNames = { "KINDERGARTEN":"幼稚园", "KINDERGARTEN-CUM-CHILD CARE CENTRES":"幼稚园暨幼儿中心", "PRIMARY":"小学", "SECONDARY":"中学" };
-var districtNames = { "CENTRAL AND WESTERN":"中西区", "EASTERN":"东区", "ISLANDS":"离岛区", "KOWLOON CITY":"九龙城区", "KWAI TSING":"葵青区", "KWUN TONG":"观塘区", "NORTH":"北区", "SAI KUNG":"西贡区", "SHAM SHUI PO":"深水埗区", "SHA TIN":"沙田区", "SOUTHERN":"南区", "TAI PO":"大埔区", "TSUEN WAN":"荃湾区", "TUEN MUN":"屯门区", "WAN CHAI":"湾仔区", "WONG TAI SIN":"黄大仙区", "YAU TSIM MONG":"油尖旺区", "YUEN LONG":"元朗区" };
+var levelNames = { "KINDERGARTEN":"幼稚園", "KINDERGARTEN-CUM-CHILD CARE CENTRES":"幼稚園暨幼兒中心", "PRIMARY":"小學", "SECONDARY":"中學" };
+var districtNames = { "CENTRAL AND WESTERN":"中西區", "EASTERN":"東區", "ISLANDS":"離島區", "KOWLOON CITY":"九龍城區", "KWAI TSING":"葵青區", "KWUN TONG":"觀塘區", "NORTH":"北區", "SAI KUNG":"西貢區", "SHAM SHUI PO":"深水埗區", "SHA TIN":"沙田區", "SOUTHERN":"南區", "TAI PO":"大埔區", "TSUEN WAN":"荃灣區", "TUEN MUN":"屯門區", "WAN CHAI":"灣仔區", "WONG TAI SIN":"黃大仙區", "YAU TSIM MONG":"油尖旺區", "YUEN LONG":"元朗區" };
+var financeNames = { "AIDED":"資助", "CAPUT":"按額津貼", "DIRECT SUBSIDY SCHEME":"直資", "ENGLISH SCHOOLS FOUNDATION":"英基", "GOVERNMENT":"官立", "PRIVATE":"私立", "PRIVATE INDEPENDENT SCH SCHEME":"私立獨立" };
+var sessionNames = { "WHOLE DAY":"全日制", "AM":"上午班", "PM":"下午班", "AM & PM":"上下午班" };
 
 var searchTimeout = null;
 
-function render(schools, query) {
+function highlight(text, query) {
+    if (!query) return text;
+    var idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return text;
+    return text.substring(0, idx) + '<span class="highlight">' + text.substring(idx, idx + query.length) + '</span>' + text.substring(idx + query.length);
+}
+
+function render(results, query) {
     var html = "";
-    for (var i = 0; i < schools.length && i < 300; i++) {
-        var s = schools[i];
-        html += '<tr><td><a href="schools/' + s.id + '.html">' + 
-                '<div class="name-zh">' + s.name_zh + '</div>' +
-                '<div class="name-en">' + s.name_en + '</div></a></td>' +
-                '<td>' + levelNames[s.level] + '</td>' +
-                '<td>' + districtNames[s.district] + '</td>' +
-                '<td>' + s.address_zh + '</td></tr>';
+    for (var i = 0; i < results.length && i < 300; i++) {
+        var s = results[i];
+        html += '<tr>';
+        html += '<td><a href="schools/' + s.id + '.html"><div class="school-zh">' + highlight(s.name_zh, query) + '</div><div class="school-en">' + highlight(s.name_en, query) + '</div></a></td>';
+        html += '<td>' + levelNames[s.level] + '</td>';
+        html += '<td>' + districtNames[s.district] + '</td>';
+        html += '<td>' + (financeNames[s.finance] || s.finance) + '</td>';
+        html += '<td>' + (s.telephone && s.telephone !== "N.A." ? s.telephone : "") + '</td>';
+        html += '<td>' + (s.fax && s.fax !== "N.A." ? s.fax : "") + '</td>';
+        html += '<td>' + (sessionNames[s.session] || "") + '</td>';
+        html += '<td class="addr">' + highlight(s.address_zh, query) + '</td>';
+        html += '</tr>';
     }
-    document.getElementById("school-list").innerHTML = html;
+    document.getElementById("tbody").innerHTML = html;
+    document.getElementById("result-count").textContent = "共 " + results.length.toLocaleString() + " 所學校" + (results.length > 300 ? "（顯示前300筆，請輸入更多關鍵字縮小範圍）" : "");
+    document.getElementById("empty-state").style.display = results.length === 0 ? "block" : "none";
 }
 
 function doSearch() {
     var query = document.getElementById("search-input").value.trim();
-    if (!query) { render(allSchools.slice(0, 200), ""); return; }
+    var levelFilter = document.getElementById("filter-level").value;
+    var districtFilter = document.getElementById("filter-district").value;
+    var financeFilter = document.getElementById("filter-finance").value;
     
-    var q = query.toLowerCase();
-    var results = allSchools.filter(function(s) {
-        return s.name_zh.indexOf(query) !== -1 || 
-               s.name_en.toLowerCase().indexOf(q) !== -1 ||
-               s.address_zh.indexOf(query) !== -1;
-    });
+    var results = schools;
+    
+    if (levelFilter) results = results.filter(function(s) { return s.level === levelFilter; });
+    if (districtFilter) results = results.filter(function(s) { return s.district === districtFilter; });
+    if (financeFilter) results = results.filter(function(s) { return s.finance === financeFilter; });
+    
+    if (query) {
+        var q = query.toLowerCase();
+        results = results.filter(function(s) {
+            return s.name_zh.indexOf(query) !== -1 || 
+                   s.name_en.toLowerCase().indexOf(q) !== -1 ||
+                   s.address_zh.indexOf(query) !== -1 ||
+                   (s.telephone && s.telephone.indexOf(query) !== -1);
+        });
+    }
+    
     render(results, query);
 }
 
@@ -99,9 +174,12 @@ document.getElementById("search-input").addEventListener("input", function() {
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(doSearch, 200);
 });
+document.getElementById("filter-level").addEventListener("change", doSearch);
+document.getElementById("filter-district").addEventListener("change", doSearch);
+document.getElementById("filter-finance").addEventListener("change", doSearch);
 
-// 初始显示前200所
-render(allSchools.slice(0, 200), "");
+// 初始显示
+doSearch();
 </script>
 </body>
 </html>
