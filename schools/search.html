@@ -6,48 +6,26 @@
 <title>学校搜寻 | 香港学校数据库</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
-header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; }
 .hdr { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .logo { font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; }
 .logo span { color: #ffd43b; }
 .nav-links { display: flex; gap: 4px; list-style: none; }
-.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
-.nav-links a:hover { background: rgba(255,255,255,0.15); }
-.hero { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 36px 20px; text-align: center; }
-.hero h1 { font-size: 24px; margin-bottom: 8px; font-weight: 700; }
-.search-container { max-width: 800px; margin: 0 auto; }
-.search-box input { width: 100%; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; outline: none; }
-.filters { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; justify-content: center; }
-.filters select { padding: 8px 12px; border-radius: 6px; border: none; font-size: 13px; min-width: 120px; }
-.view-toggle { display: flex; gap: 4px; background: rgba(255,255,255,0.2); border-radius: 6px; padding: 4px; }
-.view-btn { padding: 6px 12px; border: none; background: transparent; color: #fff; border-radius: 4px; cursor: pointer; font-size: 13px; opacity: 0.7; }
-.view-btn.active { background: rgba(255,255,255,0.3); opacity: 1; }
+.nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 13px; }
+.search-bar { background: linear-gradient(135deg, #1e3a5f, #2d5a87); padding: 20px; text-align: center; }
+.search-bar input { width: 100%; max-width: 600px; padding: 12px 16px; border: none; border-radius: 8px; font-size: 15px; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-.result-info { padding: 10px 0 20px; font-size: 14px; color: #718096; display: flex; justify-content: space-between; }
-.result-count strong { color: #1e3a5f; }
-.highlight { background: #fff3cd; padding: 0 2px; border-radius: 2px; }
-table.table-view { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-table.table-view th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 13px; }
-table.table-view td { padding: 12px 16px; border-bottom: 1px solid #f0f4f8; font-size: 13px; }
-table.table-view tr:hover td { background: #f8fafc; }
-table.table-view a { color: #2b6cb0; text-decoration: none; font-weight: 500; }
-table.table-view .name-zh { font-weight: 600; color: #1e3a5f; }
-table.table-view .name-en { font-size: 11px; color: #718096; }
-.card-view { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit; display: block; }
-.card h3 { font-size: 15px; color: #1e3a5f; margin-bottom: 4px; font-weight: 600; }
-.card .en-name { font-size: 11px; color: #718096; margin-bottom: 8px; }
-.card .addr { font-size: 11px; color: #a0aec0; margin-bottom: 8px; }
-.tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.tag { display: inline-block; background: #e6f0fa; color: #2b6cb0; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500; }
-.tag.dist { background: #f0fff4; color: #2f855a; }
-.tag.fin { background: #fef5e7; color: #c05621; }
-.no-result { text-align: center; padding: 60px 20px; color: #718096; background: #fff; border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+th { background: #1e3a5f; color: #fff; padding: 12px 16px; text-align: left; font-size: 13px; }
+td { padding: 12px 16px; border-bottom: 1px solid #f0f4f8; font-size: 13px; }
+tr:hover td { background: #f8fafc; }
+td a { color: #2b6cb0; text-decoration: none; font-weight: 500; }
+.name-zh { font-weight: 600; color: #1e3a5f; }
+.name-en { font-size: 11px; color: #718096; }
 footer { background: #1a202c; color: rgba(255,255,255,0.6); padding: 32px 20px 20px; text-align: center; margin-top: 48px; font-size: 13px; }
 footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
-@media (max-width: 900px) { .card-view { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .card-view { grid-template-columns: 1fr; } .nav-links { display: none; } }
+@media (max-width: 768px) { .nav-links { display: none; } }
 </style>
 </head>
 <body>
@@ -56,50 +34,74 @@ footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 8px; }
 <nav class="nav-links">
 <a href="index.html#level">学校类别</a>
 <a href="index.html#district">地区分类</a>
-<a href="search.html">🔍 搜寻</a>
 </nav></div></header>
-<section class="hero">
-<h1>🏫 学校搜寻</h1>
-<div class="search-container">
-<div class="search-box"><input type="text" id="search-input" placeholder="输入学校名称或地址..." autocomplete="off"></div>
-<div class="filters">
-<select id="filter-level">
-<option value="">所有类别</option>
-<option value="KINDERGARTEN">幼稚园</option>
-<option value="PRIMARY">小学</option>
-<option value="SECONDARY">中学</option>
-</select>
-<select id="filter-district">
-<option value="">所有地区</option>
-<option value="CENTRAL AND WESTERN">中西区</option>
-<option value="EASTERN">东区</option>
-<option value="KOWLOON CITY">九龙城区</option>
-<option value="KWAI TSING">葵青区</option>
-<option value="KWUN TONG">观塘区</option>
-<option value="SHA TIN">沙田区</option>
-<option value="WAN CHAI">湾仔区</option>
-<option value="YAU TSIM MONG">油尖旺区</option>
-</select>
-<div class="view-toggle">
-<button class="view-btn active" data-view="table">📊 表格</button>
-<button class="view-btn" data-view="card">🗂️ 卡片</button>
+
+<div class="search-bar">
+<input type="text" id="search-input" placeholder="输入学校名称（中文或英文）开始搜索...">
 </div>
-</div>
-</div>
-</section>
+
 <div class="container">
-<div class="result-info"><div class="result-count">找到 <strong id="result-count">0</strong> 所学校</div></div>
-<table class="table-view" id="table-view">
-<thead><tr><th>学校名称</th><th>类别</th><th>地区</th><th>资助</th><th>地址</th></tr></thead>
-<tbody id="table-body"></tbody>
+<table>
+<thead>
+<tr>
+<th>学校名称</th>
+<th>类别</th>
+<th>地区</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody id="school-list">
+</tbody>
 </table>
-<div class="card-view" id="card-view" style="display:none;"></div>
-<div id="no-result" class="no-result" style="display:none;"><p>🔍 找不到符合条件的学校</p></div>
 </div>
+
 <footer>
 <p style="margin-bottom:12px;"><a href="index.html">首页</a> | <a href="#">关于我们</a> | <a href="#">隐私政策</a></p>
 <p style="margin-bottom:8px;">资料来源：香港教育局 (EDB)</p>
-<p>&copy; 2026 HK Schools</p>
+<p>&copy; 2026 HK Schools 香港学校数据库</p>
 </footer>
+
+<script src="search-data-full.js"></script>
+<script>
+var levelNames = { "KINDERGARTEN":"幼稚园", "KINDERGARTEN-CUM-CHILD CARE CENTRES":"幼稚园暨幼儿中心", "PRIMARY":"小学", "SECONDARY":"中学" };
+var districtNames = { "CENTRAL AND WESTERN":"中西区", "EASTERN":"东区", "ISLANDS":"离岛区", "KOWLOON CITY":"九龙城区", "KWAI TSING":"葵青区", "KWUN TONG":"观塘区", "NORTH":"北区", "SAI KUNG":"西贡区", "SHAM SHUI PO":"深水埗区", "SHA TIN":"沙田区", "SOUTHERN":"南区", "TAI PO":"大埔区", "TSUEN WAN":"荃湾区", "TUEN MUN":"屯门区", "WAN CHAI":"湾仔区", "WONG TAI SIN":"黄大仙区", "YAU TSIM MONG":"油尖旺区", "YUEN LONG":"元朗区" };
+
+var searchTimeout = null;
+
+function render(schools, query) {
+    var html = "";
+    for (var i = 0; i < schools.length && i < 300; i++) {
+        var s = schools[i];
+        html += '<tr><td><a href="schools/' + s.id + '.html">' + 
+                '<div class="name-zh">' + s.name_zh + '</div>' +
+                '<div class="name-en">' + s.name_en + '</div></a></td>' +
+                '<td>' + levelNames[s.level] + '</td>' +
+                '<td>' + districtNames[s.district] + '</td>' +
+                '<td>' + s.address_zh + '</td></tr>';
+    }
+    document.getElementById("school-list").innerHTML = html;
+}
+
+function doSearch() {
+    var query = document.getElementById("search-input").value.trim();
+    if (!query) { render(allSchools.slice(0, 200), ""); return; }
+    
+    var q = query.toLowerCase();
+    var results = allSchools.filter(function(s) {
+        return s.name_zh.indexOf(query) !== -1 || 
+               s.name_en.toLowerCase().indexOf(q) !== -1 ||
+               s.address_zh.indexOf(query) !== -1;
+    });
+    render(results, query);
+}
+
+document.getElementById("search-input").addEventListener("input", function() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(doSearch, 200);
+});
+
+// 初始显示前200所
+render(allSchools.slice(0, 200), "");
+</script>
 </body>
 </html>
