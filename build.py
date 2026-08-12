@@ -607,6 +607,24 @@ def build_sitemap(articles, pages):
             hc_data = json.load(f)
         for h in hc_data.get("hospitals", []):
             lines.append(f'  <url><loc>{base}/healthcare/hospitals/{h["id"]}.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>')
+    # Add school pages to sitemap
+    schools_dir = BASE_DIR / "schools"
+    if schools_dir.exists():
+        school_pages = []
+        for p in sorted(schools_dir.glob("*.html")):
+            try:
+                raw = p.read_text(encoding="utf-8")
+            except OSError:
+                continue
+            if "schools.hkinfo.hk" in raw:
+                continue
+            school_pages.append(p)
+        detail_dir = schools_dir / "schools"
+        if detail_dir.exists():
+            school_pages.extend(sorted(detail_dir.glob("*.html")))
+        for p in school_pages:
+            rel = p.relative_to(BASE_DIR).as_posix()
+            lines.append(f'  <url><loc>{base}/{rel}</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>')
     for p in pages:
         lines.append(f'  <url><loc>{base}/{p["slug"]}</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>{p.get("lastUpdated","")}</lastmod></url>')
     lines.append('</urlset>')
