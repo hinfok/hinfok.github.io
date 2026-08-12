@@ -1,0 +1,22 @@
+{
+  "districts": [
+    {"id": "central-and-western", "name": "中西區", "name_en": "Central & Western", "region": "Hong Kong Island"},
+    {"id": "eastern", "name": "東區", "name_en": "Eastern", "region": "Hong Kong Island"},
+    {"id": "southern", "name": "南區", "name_en": "Southern", "region": "Hong Kong Island"},
+    {"id": "wan-chai", "name": "灣仔區", "name_en": "Wan Chai", "region": "Hong Kong Island"},
+    {"id": "kowloon-city", "name": "九龍城區", "name_en": "Kowloon City", "region": "Kowloon"},
+    {"id": "kwun-tong", "name": "觀塘區", "name_en": "Kwun Tong", "region": "Kowloon"},
+    {"id": "sham-shui-po", "name": "深水埗區", "name_en": "Sham Shui Po", "region": "Kowloon"},
+    {"id": "wong-tai-sin", "name": "黃大仙區", "name_en": "Wong Tai Sin", "region": "Kowloon"},
+    {"id": "yau-tsim-mong", "name": "油尖旺區", "name_en": "Yau Tsim Mong", "region": "Kowloon"},
+    {"id": "islands", "name": "離島區", "name_en": "Islands", "region": "New Territories"},
+    {"id": "kwai-tsing", "name": "葵青區", "name_en": "Kwai Tsing", "region": "New Territories"},
+    {"id": "north", "name": "北區", "name_en": "North", "region": "New Territories"},
+    {"id": "sai-kung", "name": "西貢區", "name_en": "Sai Kung", "region": "New Territories"},
+    {"id": "sha-tin", "name": "沙田區", "name_en": "Sha Tin", "region": "New Territories"},
+    {"id": "tai-po", "name": "大埔區", "name_en": "Tai Po", "region": "New Territories"},
+    {"id": "tsuen-wan", "name": "荃灣區", "name_en": "Tsuen Wan", "region": "New Territories"},
+    {"id": "tuen-mun", "name": "屯門區", "name_en": "Tuen Mun", "region": "New Territories"},
+    {"id": "yuen-long", "name": "元朗區", "name_en": "Yuen Long", "region": "New Territories"}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "specialties": [
+    {"id": "cardiology", "name": "心臟科", "name_en": "Cardiology", "icon": "❤️", "estimated_doctors": 120},
+    {"id": "dermatology", "name": "皮膚科", "name_en": "Dermatology", "icon": "🔬", "estimated_doctors": 95},
+    {"id": "ent", "name": "耳鼻喉科", "name_en": "ENT", "icon": "👂", "estimated_doctors": 85},
+    {"id": "gastroenterology", "name": "腸胃肝臟科", "name_en": "Gastroenterology", "icon": "🫄", "estimated_doctors": 70},
+    {"id": "general-surgery", "name": "外科", "name_en": "General Surgery", "icon": "🔪", "estimated_doctors": 130},
+    {"id": "gynaecology", "name": "婦產科", "name_en": "O&G", "icon": "🤰", "estimated_doctors": 110},
+    {"id": "internal-medicine", "name": "內科", "name_en": "Internal Medicine", "icon": "💊", "estimated_doctors": 150},
+    {"id": "neurology", "name": "腦神經科", "name_en": "Neurology", "icon": "🧠", "estimated_doctors": 45},
+    {"id": "neurosurgery", "name": "神經外科", "name_en": "Neurosurgery", "icon": "🫀", "estimated_doctors": 30},
+    {"id": "obstetrics", "name": "產科", "name_en": "Obstetrics", "icon": "👶", "estimated_doctors": 60},
+    {"id": "oncology", "name": "腫瘤科", "name_en": "Oncology", "icon": "🎗️", "estimated_doctors": 55},
+    {"id": "ophthalmology", "name": "眼科", "name_en": "Ophthalmology", "icon": "👁️", "estimated_doctors": 100},
+    {"id": "orthopaedics", "name": "骨科", "name_en": "Orthopaedics", "icon": "🦴", "estimated_doctors": 130},
+    {"id": "paediatrics", "name": "兒科", "name_en": "Paediatrics", "icon": "👶", "estimated_doctors": 90},
+    {"id": "psychiatry", "name": "精神科", "name_en": "Psychiatry", "icon": "🧠", "estimated_doctors": 65},
+    {"id": "radiology", "name": "放射科", "name_en": "Radiology", "icon": "🩻", "estimated_doctors": 40},
+    {"id": "respiratory", "name": "呼吸系統科", "name_en": "Respiratory", "icon": "🫁", "estimated_doctors": 50},
+    {"id": "rheumatology", "name": "風濕科", "name_en": "Rheumatology", "icon": "🦵", "estimated_doctors": 30},
+    {"id": "urology", "name": "泌尿科", "name_en": "Urology", "icon": "🫗", "estimated_doctors": 45},
+    {"id": "tcm", "name": "中醫", "name_en": "Chinese Medicine", "icon": "🌿", "estimated_doctors": 200},
+    {"id": "dentistry", "name": "牙科", "name_en": "Dentistry", "icon": "🦷", "estimated_doctors": 300},
+    {"id": "family-medicine", "name": "家庭醫學", "name_en": "Family Medicine", "icon": "🩺", "estimated_doctors": 250},
+    {"id": "emergency", "name": "急症科", "name_en": "Emergency Medicine", "icon": "🚑", "estimated_doctors": 80},
+    {"id": "anaesthesiology", "name": "麻醉科", "name_en": "Anaesthesiology", "icon": "💉", "estimated_doctors": 100},
+    {"id": "pathology", "name": "病理科", "name_en": "Pathology", "icon": "🔬", "estimated_doctors": 60},
+    {"id": "geriatrics", "name": "老人科", "name_en": "Geriatrics", "icon": "👴", "estimated_doctors": 50}
+  ]
+}

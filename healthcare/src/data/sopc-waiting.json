@@ -1,0 +1,43 @@
+{
+  "source": "醫院管理局專科門診新症輪候時間",
+  "source_url": "https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=235509",
+  "note": "以下為按聯網及專科分類的參考輪候時間（以週數計）。實際輪候時間請到醫管局網站查看最新數據。",
+  "clusters": {
+    "HKW": {"name": "港島西聯網", "hospitals": ["瑪麗醫院", "東華醫院", "葛量洪醫院"]},
+    "HKE": {"name": "港島東聯網", "hospitals": ["東區醫院", "律敦治醫院"]},
+    "KCC": {"name": "九龍中聯網", "hospitals": ["伊利沙伯醫院", "廣華醫院"]},
+    "KEC": {"name": "九龍東聯網", "hospitals": ["聯合醫院", "將軍澳醫院"]},
+    "KWC": {"name": "九龍西聯網", "hospitals": ["瑪嘉烈醫院", "仁濟醫院", "明愛醫院"]},
+    "NTEC": {"name": "新界東聯網", "hospitals": ["威爾斯親王醫院", "北區醫院", "那打素醫院"]},
+    "NTWC": {"name": "新界西聯網", "hospitals": ["屯門醫院", "博愛醫院"]}
+  },
+  "waiting_times": [
+    {"specialty": "內科", "specialty_en": "Medicine", "urgent": "1-2週", "semi_urgent": "4-8週", "stable": "12-30週"},
+    {"specialty": "外科", "specialty_en": "Surgery", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "16-40週"},
+    {"specialty": "骨科", "specialty_en": "Orthopaedics", "urgent": "1-2週", "semi_urgent": "6-16週", "stable": "20-80週"},
+    {"specialty": "眼科", "specialty_en": "Ophthalmology", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "12-60週"},
+    {"specialty": "耳鼻喉科", "specialty_en": "ENT", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "16-50週"},
+    {"specialty": "婦科", "specialty_en": "Gynaecology", "urgent": "1-2週", "semi_urgent": "4-10週", "stable": "12-40週"},
+    {"specialty": "兒科", "specialty_en": "Paediatrics", "urgent": "1-2週", "semi_urgent": "2-8週", "stable": "8-24週"},
+    {"specialty": "精神科", "specialty_en": "Psychiatry", "urgent": "2-4週", "semi_urgent": "4-12週", "stable": "12-50週"},
+    {"specialty": "外科(神經)", "specialty_en": "Neurosurgery", "urgent": "1-2週", "semi_urgent": "4-16週", "stable": "20-60週"},
+    {"specialty": "內科(心臟)", "specialty_en": "Cardiology", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "16-50週"},
+    {"specialty": "內科(腸胃)", "specialty_en": "Gastroenterology", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "16-50週"},
+    {"specialty": "內科(腎科)", "specialty_en": "Nephrology", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "12-40週"},
+    {"specialty": "內科(呼吸)", "specialty_en": "Respiratory", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "12-40週"},
+    {"specialty": "內科(風濕)", "specialty_en": "Rheumatology", "urgent": "1-2週", "semi_urgent": "4-16週", "stable": "20-60週"},
+    {"specialty": "內科(腦神經)", "specialty_en": "Neurology", "urgent": "1-2週", "semi_urgent": "6-16週", "stable": "20-70週"},
+    {"specialty": "內科(內分泌)", "specialty_en": "Endocrinology", "urgent": "1-2週", "semi_urgent": "4-16週", "stable": "16-60週"},
+    {"specialty": "內科(血液)", "specialty_en": "Haematology", "urgent": "1-2週", "semi_urgent": "2-8週", "stable": "8-24週"},
+    {"specialty": "內科(腫瘤)", "specialty_en": "Oncology", "urgent": "1-2週", "semi_urgent": "2-6週", "stable": "4-16週"},
+    {"specialty": "內科(老人)", "specialty_en": "Geriatrics", "urgent": "1-2週", "semi_urgent": "4-10週", "stable": "12-40週"},
+    {"specialty": "外科(泌尿)", "specialty_en": "Urology", "urgent": "1-2週", "semi_urgent": "4-16週", "stable": "20-60週"},
+    {"specialty": "外科(整形)", "specialty_en": "Plastic Surgery", "urgent": "1-2週", "semi_urgent": "4-16週", "stable": "20-60週"},
+    {"specialty": "外科(心胸)", "specialty_en": "Cardiothoracic Surgery", "urgent": "1-2週", "semi_urgent": "4-12週", "stable": "12-40週"},
+    {"specialty": "麻醉科(痛症)", "specialty_en": "Pain Management", "urgent": "1-2週", "semi_urgent": "4-16週", "stable": "20-70週"}
+  ],
+  "fee": {
+    "eligible": {"consultation": 250, "drug_per_item": 20, "note": "每種藥物以四星期為收費單位"},
+    "non_eligible": {"consultation": 850, "drug_per_item": 90}
+  }
+}

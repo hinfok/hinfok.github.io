@@ -1,0 +1,43 @@
+{
+  "source": "衛生署長者醫療券計劃",
+  "source_url": "https://www.hcv.gov.hk",
+  "note": "長者醫療券計劃為65歲或以上合資格長者提供每年$2,000醫療券，累積上限$8,000。以下為各區主要醫療券適用機構類型及搜尋指引。",
+  "overview": {
+    "annual_amount": 2000,
+    "accumulation_cap": 8000,
+    "eligible_age": 65,
+    "use": "可用於私家西醫、中醫、牙醫、脊醫、註冊護士、物理治療師、職業治療師、放射技師、醫務化驗師、視光師等"
+  },
+  "provider_types": [
+    {"type": "私家西醫診所", "type_en": "Private GP/Specialist Clinics", "count_approx": "2,000+", "note": "大部分私家診所均接受醫療券"},
+    {"type": "中醫診所", "type_en": "Chinese Medicine Clinics", "count_approx": "1,500+", "note": "包括註冊中醫師及中醫診所"},
+    {"type": "牙科診所", "type_en": "Dental Clinics", "count_approx": "500+", "note": "接受醫療券的牙醫診所"},
+    {"type": "視光師", "type_en": "Optometrists", "count_approx": "300+", "note": "包括驗眼及配眼鏡服務"},
+    {"type": "物理治療中心", "type_en": "Physiotherapy Centres", "count_approx": "200+", "note": "接受醫療券的物理治療服務"},
+    {"type": "18區中醫教研中心", "type_en": "18 District TCM Centres", "count_approx": "18", "note": "每區一間，由醫管局、非政府機構及大學三方協作"}
+  ],
+  "search_guide": {
+    "official_search": "https://apps.hcv.gov.hk/public/tc/Search",
+    "note": "可於衛生署醫療券官方網站按地區、服務類型搜尋醫療券適用機構"
+  },
+  "district_centers": [
+    {"district": "中西區", "center": "東華醫院 - 中西區中醫教研中心", "address": "上環普仁街12號東華醫院"},
+    {"district": "東區", "center": "東區中醫教研中心", "address": "柴灣樂民道3號東區醫院"},
+    {"district": "南區", "center": "南區中醫教研中心", "address": "香港仔黃竹坑道125號葛量洪醫院"},
+    {"district": "灣仔區", "center": "灣仔區中醫教研中心", "address": "灣仔皇后大道東266號律敦治醫院"},
+    {"district": "油尖旺區", "center": "油尖旺區中醫教研中心", "address": "油麻地加士居道30號伊利沙伯醫院"},
+    {"district": "九龍城區", "center": "九龍城區中醫教研中心", "address": "九龍城亞皆老街222號播道醫院"},
+    {"district": "觀塘區", "center": "觀塘區中醫教研中心", "address": "觀塘協和街130號聯合醫院"},
+    {"district": "深水埗區", "center": "深水埗區中醫教研中心", "address": "長沙灣永康街111號明愛醫院"},
+    {"district": "黃大仙區", "center": "黃大仙區中醫教研中心", "address": "黃大仙沙田坳道118號聖母醫院"},
+    {"district": "葵青區", "center": "葵青區中醫教研中心", "address": "荔景瑪嘉烈醫院道2-10號瑪嘉烈醫院"},
+    {"district": "荃灣區", "center": "荃灣區中醫教研中心", "address": "荃灣仁濟街7-11號仁濟醫院"},
+    {"district": "屯門區", "center": "屯門區中醫教研中心", "address": "屯門青松觀路23號屯門醫院"},
+    {"district": "元朗區", "center": "元朗區中醫教研中心", "address": "元朗凹頭博愛醫院"},
+    {"district": "北區", "center": "北區中醫教研中心", "address": "上水保健路9號北區醫院"},
+    {"district": "大埔區", "center": "大埔區中醫教研中心", "address": "大埔全安路11號那打素醫院"},
+    {"district": "沙田區", "center": "沙田區中醫教研中心", "address": "沙田銀城街30-32號威爾斯親王醫院"},
+    {"district": "西貢區", "center": "西貢區中醫教研中心", "address": "將軍澳寶寧里2號將軍澳醫院"},
+    {"district": "離島區", "center": "離島區中醫教研中心", "address": "東涌逸東街8號逸東商場"}
+  ]
+}

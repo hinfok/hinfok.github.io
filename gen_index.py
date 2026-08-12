@@ -141,6 +141,7 @@ html.append('<a href="/#cat-economy">經濟與零售</a>')
 html.append('<a href="/#cat-labour">職場與教育</a>')
 html.append('<a href="/#cat-culture">文化與交通</a>')
 html.append('<a href="/#cat-medical">醫療與環境</a>')
+html.append('<a href="/healthcare/" style="color:#f4a261">🏥 醫療系統</a>')
 html.append('</nav>')
 # nav toggle
 html.append('<button class="nav-toggle" onclick="var n=document.querySelector(\'.nav-links\');if(n)n.classList.toggle(\'open\')">\u2630</button>')

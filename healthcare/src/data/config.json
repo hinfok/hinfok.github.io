@@ -1,0 +1,23 @@
+{
+  "site": {
+    "name": "香港醫療系統搜尋",
+    "shortName": "HKHealthcare",
+    "tagline": "搜尋公立及私家醫院、診所、專科醫生",
+    "description": "一站式搜尋香港醫療機構，包括公立醫院、私家醫院、診所、專科醫生。按地區、專科、收費篩選，查閱急症室輪候時間及專科門診排期。",
+    "baseUrl": "https://hinfok.com/healthcare/",
+    "lang": "zh-HK"
+  },
+  "categories": [
+    {"id": "hospital", "name": "醫院", "icon": "🏥"},
+    {"id": "clinic", "name": "診所", "icon": "🩺"},
+    {"id": "specialist", "name": "專科醫生", "icon": "👨‍⚕️"},
+    {"id": "pharmacy", "name": "藥房", "icon": "💊"},
+    {"id": "dental", "name": "牙科", "icon": "🦷"},
+    {"id": "tcm", "name": "中醫", "icon": "🌿"}
+  ],
+  "dataSources": [
+    {"name": "醫院管理局", "url": "https://www.ha.org.hk", "abbr": "HA"},
+    {"name": "衛生署", "url": "https://www.dh.gov.hk", "abbr": "DH"},
+    {"name": "香港醫務委員會", "url": "https://www.mchk.org.hk", "abbr": "MCHK"}
+  ]
+}

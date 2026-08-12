@@ -597,6 +597,16 @@ def build_sitemap(articles, pages):
     lines.append(f'  <url><loc>{base}/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>')
     for art in articles:
         lines.append(f'  <url><loc>{base}/{art["slug"]}</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>{art.get("lastUpdated","")}</lastmod></url>')
+    # Add healthcare pages to sitemap
+    lines.append(f'  <url><loc>{base}/healthcare/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>')
+    lines.append(f'  <url><loc>{base}/healthcare/hospitals/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>')
+    hc_hospitals = BASE_DIR / "healthcare" / "src" / "data" / "hospitals.json"
+    if hc_hospitals.exists():
+        import json
+        with open(hc_hospitals, "r", encoding="utf-8") as f:
+            hc_data = json.load(f)
+        for h in hc_data.get("hospitals", []):
+            lines.append(f'  <url><loc>{base}/healthcare/hospitals/{h["id"]}.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>')
     for p in pages:
         lines.append(f'  <url><loc>{base}/{p["slug"]}</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>{p.get("lastUpdated","")}</lastmod></url>')
     lines.append('</urlset>')
@@ -689,6 +699,15 @@ def main():
     if img_src.exists():
         shutil.copytree(img_src, img_dst)
         print(f"  Copied {len(list(img_src.glob('*')))} images")
+    # Copy healthcare output
+    hc_dir = BASE_DIR / "healthcare" / "output"
+    if hc_dir.exists():
+        hc_dst = OUTPUT_DIR / "healthcare"
+        if hc_dst.exists():
+            shutil.rmtree(hc_dst)
+        shutil.copytree(hc_dir, hc_dst)
+        print(f"  Copied healthcare pages ({len(list(hc_dir.rglob('*.html')))} files)")
+
     
     total = 2 + len(articles) + len(pages)
     print(f"\nDone! Generated {total} files to {OUTPUT_DIR}")

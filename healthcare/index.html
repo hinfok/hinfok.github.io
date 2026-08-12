@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="GgeGOetKECwe-jEZFjXPgZX1AMmV-ZlFTXDGkbLNiGs">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港醫療系統搜尋 | HKInfo 香港資訊數據圖鑑</title>
+<meta name="description" content="搜尋香港公立及私家醫院、診所、專科醫生。按地區、專科、收費篩選，查閱急症室輪候時間及專科門診排期。">
+<meta property="og:title" content="香港醫療系統搜尋 | HKInfo 香港資訊數據圖鑑">
+<meta property="og:description" content="一站式搜尋香港醫療機構：醫院、診所、專科醫生。地區篩選、即時輪候時間、收費比較。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hinfok.com/images/placeholder-medical.svg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0408433589148621" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-398765735-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "UA-398765735-1");
+</script>
+<link rel="canonical" href="https://hinfok.com/healthcare/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#f0f4f8;color:#1a2332;line-height:1.7}
+header{background:linear-gradient(135deg,#1e3a5f,#2d5a87);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.15)}
+.hdr{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:60px;gap:16px}
+.logo{font-size:20px;font-weight:800;color:#fff;text-decoration:none;white-space:nowrap}
+.logo span{color:#f4a261}
+.brd{font-size:12px;color:rgba(255,255,255,0.5);margin:0 8px;white-space:nowrap}
+.brd a{color:rgba(255,255,255,0.7);text-decoration:none}
+.brd a:hover{color:#f4a261}
+.hero{background:linear-gradient(135deg,#1e3a5f,#2d5a87 50%,#457b9d);color:#fff;padding:56px 24px 40px;text-align:center}
+.hero h1{font-size:32px;margin-bottom:8px;font-weight:800}
+.hero .sub{font-size:15px;opacity:.85;margin-bottom:28px}
+.hsb{max-width:560px;margin:0 auto;position:relative}
+.hsb input{width:100%;padding:14px 20px;border:none;border-radius:12px;font-size:16px;outline:none;box-shadow:0 4px 24px rgba(0,0,0,0.2);background:#fff;color:#1a2332}
+.hsb input::placeholder{color:#aaa}
+.hsr{position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:0 0 12px 12px;box-shadow:0 8px 32px rgba(0,0,0,0.15);max-height:360px;overflow-y:auto;display:none;text-align:left;z-index:50}
+.hsr a{display:flex;justify-content:space-between;padding:12px 20px;text-decoration:none;color:#333;border-bottom:1px solid #eee;font-size:14px;align-items:center}
+.hsr a:hover{background:#f0f4f8}
+.hsr .c{font-size:11px;color:#888;background:#f0f4f8;padding:2px 10px;border-radius:12px}
+.filters{max-width:900px;margin:20px auto 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.fbtn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px 16px;border-radius:20px;font-size:13px;cursor:pointer;transition:.2s;white-space:nowrap}
+.fbtn:hover,.fbtn.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.sc{max-width:1200px;margin:0 auto;padding:32px 24px}
+.sc h2{font-size:22px;color:#1e3a5f;margin-bottom:8px}
+.sc .desc{color:#888;font-size:14px;margin-bottom:20px}
+.qgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.qcard{background:#fff;border-radius:10px;padding:20px;text-decoration:none;color:inherit;box-shadow:0 2px 10px rgba(0,0,0,0.06);transition:.2s;display:flex;flex-direction:column;align-items:flex-start;gap:8px;border:1px solid #e8edf3;cursor:pointer}
+.qcard:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.1);border-color:#457b9d}
+.qcard .icon{font-size:28px}
+.qcard .ttl{font-size:15px;font-weight:600;color:#1e3a5f}
+.qcard .dsc{font-size:13px;color:#666;line-height:1.5}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{background:#fff;border:1px solid #e2e8f0;padding:8px 18px;border-radius:20px;font-size:13px;cursor:pointer;transition:.2s;color:#555}
+.tab:hover,.tab.active{background:#1e3a5f;color:#fff;border-color:#1e3a5f}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.rcard{background:#fff;border-radius:10px;padding:16px 20px;box-shadow:0 1px 8px rgba(0,0,0,0.05);display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;transition:.2s;margin-bottom:8px;border:1px solid #e8edf3;cursor:pointer}
+.rcard:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);border-color:#457b9d}
+.rcard .r-icon{font-size:24px;min-width:36px;text-align:center}
+.rcard .r-body{flex:1;min-width:0}
+.rcard .r-ttl{font-size:14px;font-weight:600;color:#1e3a5f}
+.rcard .r-meta{font-size:12px;color:#888;margin-top:2px}
+.rcard .r-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+.rtag{display:inline-block;background:#e8edf3;color:#1e3a5f;padding:2px 8px;border-radius:12px;font-size:11px}
+.stbar{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.st{background:rgba(255,255,255,0.08);border-radius:10px;padding:16px 24px;text-align:center;min-width:120px}
+.st .n{font-size:26px;font-weight:800}
+.st .l{font-size:12px;opacity:.7}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.bcard{background:#fff;border-radius:10px;padding:16px;text-decoration:none;color:inherit;box-shadow:0 1px 8px rgba(0,0,0,0.05);transition:.2s;border:1px solid #e8edf3;display:flex;align-items:center;gap:12px;cursor:pointer}
+.bcard:hover{border-color:#457b9d;transform:translateY(-2px)}
+.bcard .b-ic{font-size:22px;min-width:32px;text-align:center}
+.bcard .b-ttl{font-size:14px;font-weight:600;color:#1e3a5f}
+.bcard .b-cnt{font-size:11px;color:#888}
+
+.fee-tbl{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,0.05)}
+.fee-tbl th{background:#1e3a5f;color:#fff;padding:10px 16px;text-align:left;font-size:13px}
+.fee-tbl td{padding:10px 16px;border-bottom:1px solid #eee}
+.fee-tbl tr:nth-child(even){background:#f8fafc}
+.fee-tbl tr:hover{background:#f0f4f8}
+.fnum{font-weight:700;color:#1e3a5f;white-space:nowrap}
+footer{background:#1a2332;color:rgba(255,255,255,0.7);padding:28px 24px;text-align:center;font-size:13px;margin-top:48px}
+footer a{color:#f4a261;text-decoration:none}
+@media(max-width:900px){.qgrid{grid-template-columns:repeat(2,1fr)}.bgrid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:26px}}
+@media(max-width:650px){.qgrid{grid-template-columns:1fr}.bgrid{grid-template-columns:1fr}.hero h1{font-size:22px}.hdr{flex-wrap:wrap;height:auto;padding:10px 16px}.stbar{flex-direction:column;align-items:stretch}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"香港醫療系統搜尋","url":"https://hinfok.com/healthcare/","description":"一站式搜尋香港醫療機構：公立及私家醫院、診所、專科醫生。按地區、專科、收費篩選。","potentialAction":{"@type":"SearchAction","target":"https://hinfok.com/healthcare/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+</head>
+<body>
+<header><div class="hdr"><a href="/" class="logo">HK<span>Info</span> 香港資訊數據圖鑑</a><span class="brd"><a href="/">首頁</a> › 醫療系統</span></div></header>
+<section class="hero">
+<h1>🏥 香港醫療系統搜尋</h1>
+<p class="sub">一站式搜尋公立及私家醫院、診所、專科醫生 — 按地區、專科、收費即時篩選</p>
+<div class="hsb"><input type="text" id="hs" placeholder="搜尋醫院、診所、專科醫生... 例如「心臟科 旺角」或 English doctor Central" oninput="search(this.value)"><div id="hsr" class="hsr"></div></div>
+<div class="filters" id="filters">
+<button class="fbtn active" onclick="setFilter('all',this)">全部</button>
+<button class="fbtn" onclick="setFilter('public',this)">公立醫院</button>
+<button class="fbtn" onclick="setFilter('private',this)">私家醫院</button>
+<button class="fbtn" onclick="setFilter('clinic',this)">診所</button>
+<button class="fbtn" onclick="setFilter('ae',this)">急症室</button>
+<button class="fbtn" onclick="setFilter('sopc',this)">專科門診</button>
+<button class="fbtn" onclick="setFilter('gopc',this)">普通科門診</button>
+<button class="fbtn" onclick="setFilter('tcm',this)">中醫</button>
+<button class="fbtn" onclick="setFilter('dental',this)">牙科</button>
+</div>
+<div class="stbar">
+<div class="st"><div class="n">43</div><div class="l">公立醫院/機構</div></div>
+<div class="st"><div class="n">13</div><div class="l">私家醫院</div></div>
+<div class="st"><div class="n">73+</div><div class="l">普通科門診</div></div>
+<div class="st"><div class="n">49</div><div class="l">專科門診</div></div>
+<div class="st"><div class="n">18</div><div class="l">急症室</div></div>
+</div>
+</section>
+<section class="sc">
+<h2>🔍 快速搜尋</h2>
+<p class="desc">常見醫療需求，一鍵直達</p>
+<div class="qgrid">
+<div class="qcard" onclick="quickSearch('急症室')"><div class="icon">🚑</div><div class="ttl">急症室輪候時間</div><div class="dsc">全港18間急症室即時輪候狀況</div></div>
+<div class="qcard" onclick="quickSearch('專科門診輪候')"><div class="icon">📋</div><div class="ttl">專科門診排期</div><div class="dsc">公立專科門診新症輪候時間</div></div>
+<div class="qcard" onclick="quickSearch('普通科門診')"><div class="icon">🩺</div><div class="ttl">普通科門診預約</div><div class="dsc">醫管局普通科門診地址及電話</div></div>
+<div class="qcard" onclick="quickSearch('夜診')"><div class="icon">🌙</div><div class="ttl">夜診 / 假日診所</div><div class="dsc">夜晚及星期日應診的診所</div></div>
+<div class="qcard" onclick="quickSearch('醫療券')"><div class="icon">🎫</div><div class="ttl">醫療券適用診所</div><div class="dsc">接受長者醫療券的醫療機構</div></div>
+<div class="qcard" onclick="quickSearch('兒科')"><div class="icon">👶</div><div class="ttl">兒科醫生</div><div class="dsc">兒科專科醫生及兒童健康服務</div></div>
+<div class="qcard" onclick="quickSearch('牙科')"><div class="icon">🦷</div><div class="ttl">牙科服務</div><div class="dsc">政府牙科診所及私家牙醫</div></div>
+<div class="qcard" onclick="quickSearch('中醫')"><div class="icon">🌿</div><div class="ttl">中醫服務</div><div class="dsc">18區中醫教研中心及私家中醫</div></div>
+</div>
+</section>
+<section class="sc">
+<h2>👤 按需求搜尋</h2>
+<p class="desc">選擇你的身份，顯示相關醫療服務</p>
+<div class="tabs" id="tabs">
+<button class="tab active" onclick="switchPersona(this,'general')">一般市民</button>
+<button class="tab" onclick="switchPersona(this,'chronic')">長期病患者</button>
+<button class="tab" onclick="switchPersona(this,'parent')">家長</button>
+<button class="tab" onclick="switchPersona(this,'elderly')">長者</button>
+<button class="tab" onclick="switchPersona(this,'tourist')">遊客/新移民</button>
+</div>
+<div id="p-general" class="tab-content active">
+<div class="rcard" onclick="quickSearch('普通科')"><div class="r-icon">🏥</div><div class="r-body"><div class="r-ttl">普通科門診 — 全港各區</div><div class="r-meta">醫管局轄下73間普通科門診診所</div><div class="r-tags"><span class="rtag">公立</span><span class="rtag">$50</span><span class="rtag">電話預約</span></div></div></div>
+<div class="rcard" onclick="quickSearch('私家診所')"><div class="r-icon">👨‍⚕️</div><div class="r-body"><div class="r-ttl">私家診所 — 家庭醫生</div><div class="r-meta">全港各區私家診所，支援中英文搜尋</div><div class="r-tags"><span class="rtag">私家</span><span class="rtag">$200-$500</span><span class="rtag">即日睇症</span></div></div></div>
+<div class="rcard" onclick="quickSearch('身體檢查')"><div class="r-icon">🔬</div><div class="r-body"><div class="r-ttl">身體檢查 / 健康評估</div><div class="r-meta">政府及私家身體檢查計劃比較</div><div class="r-tags"><span class="rtag">體檢</span><span class="rtag">套餐比較</span></div></div></div>
+</div>
+<div id="p-chronic" class="tab-content">
+<div class="rcard" onclick="quickSearch('專科門診')"><div class="r-icon">📋</div><div class="r-body"><div class="r-ttl">專科門診 — 新症輪候時間</div><div class="r-meta">各聯網專科門診新症輪候時間（按專科分類）</div><div class="r-tags"><span class="rtag">公立</span><span class="rtag">輪候時間</span></div></div></div>
+<div class="rcard" onclick="quickSearch('藥物')"><div class="r-icon">💊</div><div class="r-body"><div class="r-ttl">醫管局藥物名冊</div><div class="r-meta">公立醫院自費藥物及安全網申請</div><div class="r-tags"><span class="rtag">藥物</span><span class="rtag">資助</span></div></div></div>
+<div class="rcard" onclick="quickSearch('覆診')"><div class="r-icon">🔄</div><div class="r-body"><div class="r-ttl">HA Go 覆診安排</div><div class="r-meta">醫管局手機應用程式，一站式管理覆診</div><div class="r-tags"><span class="rtag">APP</span><span class="rtag">電子病歷</span></div></div></div>
+</div>
+<div id="p-parent" class="tab-content">
+<div class="rcard" onclick="quickSearch('母嬰健康院')"><div class="r-icon">👶</div><div class="r-body"><div class="r-ttl">母嬰健康院 — 各區服務</div><div class="r-meta">衛生署轄下31間母嬰健康院</div><div class="r-tags"><span class="rtag">產前</span><span class="rtag">嬰兒</span><span class="rtag">免費</span></div></div></div>
+<div class="rcard" onclick="quickSearch('疫苗')"><div class="r-icon">💉</div><div class="r-body"><div class="r-ttl">兒童疫苗接種時間表</div><div class="r-meta">香港兒童免疫接種計劃</div><div class="r-tags"><span class="rtag">疫苗</span><span class="rtag">免費</span></div></div></div>
+<div class="rcard" onclick="quickSearch('兒科急症')"><div class="r-icon">🏥</div><div class="r-body"><div class="r-ttl">兒科急症服務</div><div class="r-meta">有兒科急症服務的公立醫院</div><div class="r-tags"><span class="rtag">24小時</span><span class="rtag">急症</span></div></div></div>
+</div>
+<div id="p-elderly" class="tab-content">
+<div class="rcard" onclick="quickSearch('醫療券')"><div class="r-icon">🎫</div><div class="r-body"><div class="r-ttl">長者醫療券適用機構</div><div class="r-meta">接受醫療券的私家醫生、診所及服務提供者</div><div class="r-tags"><span class="rtag">$2,000/年</span><span class="rtag">65歲+</span></div></div></div>
+<div class="rcard" onclick="quickSearch('長者健康中心')"><div class="r-icon">🏥</div><div class="r-body"><div class="r-ttl">長者健康中心</div><div class="r-meta">衛生署18間長者健康中心地址及服務</div><div class="r-tags"><span class="rtag">免費</span><span class="rtag">體檢</span></div></div></div>
+<div class="rcard" onclick="quickSearch('老人科')"><div class="r-icon">👴</div><div class="r-body"><div class="r-ttl">老人科專科服務</div><div class="r-meta">公立及私家老人科專科醫生</div><div class="r-tags"><span class="rtag">專科</span><span class="rtag">社區</span></div></div></div>
+</div>
+<div id="p-tourist" class="tab-content">
+<div class="rcard" onclick="quickSearch('English')"><div class="r-icon">🇬🇧</div><div class="r-body"><div class="r-ttl">English-speaking Doctors</div><div class="r-meta">Find English-speaking doctors and clinics across Hong Kong</div><div class="r-tags"><span class="rtag">English</span><span class="rtag">Private</span></div></div></div>
+<div class="rcard" onclick="quickSearch('private hospital')"><div class="r-icon">🏥</div><div class="r-body"><div class="r-ttl">Private Hospitals</div><div class="r-meta">All 13 private hospitals in Hong Kong</div><div class="r-tags"><span class="rtag">Private</span><span class="rtag">24hr</span></div></div></div>
+<div class="rcard" onclick="quickSearch('travel insurance')"><div class="r-icon">📄</div><div class="r-body"><div class="r-ttl">Insurance &amp; Direct Billing</div><div class="r-meta">Hospitals and clinics accepting international insurance</div><div class="r-tags"><span class="rtag">Insurance</span><span class="rtag">Direct Billing</span></div></div></div>
+</div>
+</section>
+<section class="sc">
+<section class="sc">
+<h2>💰 收費一覽（公立 - 2026年官方數據）</h2>
+<p class="desc">資料來源：醫院管理局官方收費表（2026年1月1日起生效） | <a href="https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=10045&Lang=CHIB5" target="_blank" style="color:#457b9d">查看官方網頁</a></p>
+<div class="tabs" id="feeTabs">
+<button class="tab active" onclick="switchFeeTab(this,'eligible')">符合資格人士 (香港身份證)</button>
+<button class="tab" onclick="switchFeeTab(this,'noneligible')">非符合資格人士</button>
+<button class="tab" onclick="switchFeeTab(this,'private')">私家參考</button>
+</div>
+<div id="fee-eligible" class="tab-content active">
+<table class="fee-tbl"><thead><tr><th>服務</th><th>收費 (HK$)</th><th>備註</th></tr></thead><tbody>
+<tr><td>急症室</td><td class="fnum"> / 次</td><td>危殆/危急病人豁免</td></tr>
+<tr><td>住院 (急症病床)</td><td class="fnum"> / 日</td><td>12歲以下減半</td></tr>
+<tr><td>住院 (療養/復康)</td><td class="fnum"> / 日</td><td></td></tr>
+<tr><td>專科門診</td><td class="fnum"> / 次 + 每種藥 </td><td>每種藥以4星期計</td></tr>
+<tr><td>家庭醫學/普通科</td><td class="fnum"> / 次 + 每種藥 </td><td>每種藥以4星期計</td></tr>
+<tr><td>注射/敷藥</td><td class="fnum"> / 次</td><td></td></tr>
+<tr><td>精神科日間醫院</td><td class="fnum">免費</td><td></td></tr>
+<tr><td>老人科日間醫院</td><td class="fnum"> / 次</td><td></td></tr>
+<tr><td>社康護理 (普通科)</td><td class="fnum"> / 次</td><td>精神科免費</td></tr>
+<tr><td>社區專職醫療</td><td class="fnum"> / 次</td><td></td></tr>
+<tr style="background:#f0fdf4"><td><strong>全年收費上限 (安全網)</strong></td><td class="fnum"><strong>,000 / 年</strong></td><td>2026年新增，無需經濟審查</td></tr>
+</tbody></table>
+</div>
+<div id="fee-noneligible" class="tab-content">
+<table class="fee-tbl"><thead><tr><th>服務</th><th>收費 (HK$)</th><th>備註</th></tr></thead><tbody>
+<tr><td>急症室</td><td class="fnum">,100 / 次</td><td></td></tr>
+<tr><td>住院 (普通科)</td><td class="fnum">,400 / 日</td><td></td></tr>
+<tr><td>深切治療</td><td class="fnum">,600 / 日</td><td></td></tr>
+<tr><td>專科門診</td><td class="fnum"> / 次 + 每種藥 </td><td></td></tr>
+<tr><td>家庭醫學/普通科</td><td class="fnum"> / 次 + 每種藥 </td><td></td></tr>
+<tr><td>產科分娩 (已預約)</td><td class="fnum">,000</td><td>包產檢+分娩+3日2晚住院</td></tr>
+<tr><td>產科分娩 (未預約)</td><td class="fnum">,000</td><td></td></tr>
+</tbody></table>
+</div>
+<div id="fee-private" class="tab-content">
+<p style="font-size:13px;color:#888;margin-bottom:12px">私家醫院收費差異極大，以下為參考範圍。實際收費請直接向各醫院查詢。</p>
+<table class="fee-tbl"><thead><tr><th>服務</th><th>參考收費範圍 (HK$)</th><th>單位</th></tr></thead><tbody>
+<tr><td>普通科門診診金</td><td class="fnum"> - </td><td>每次</td></tr>
+<tr><td>專科門診診金</td><td class="fnum"> - ,000</td><td>每次</td></tr>
+<tr><td>普通病房 (大房)</td><td class="fnum"> - ,200</td><td>每日</td></tr>
+<tr><td>半私家房</td><td class="fnum"> - ,500</td><td>每日</td></tr>
+<tr><td>私家房</td><td class="fnum">,500 - ,000</td><td>每日</td></tr>
+<tr><td>自然分娩套餐</td><td class="fnum">,000 - ,000</td><td>整個療程</td></tr>
+<tr><td>剖腹分娩套餐</td><td class="fnum">,000 - ,000</td><td>整個療程</td></tr>
+<tr><td>基本身體檢查</td><td class="fnum">,000 - ,000</td><td>每次</td></tr>
+<tr><td>全面身體檢查</td><td class="fnum">,000 - ,000</td><td>每次</td></tr>
+<tr><td>磁力共振 (MRI)</td><td class="fnum">,000 - ,000</td><td>每次</td></tr>
+<tr><td>胃鏡/腸鏡</td><td class="fnum">,000 - ,000</td><td>每次</td></tr>
+</tbody></table>
+</div>
+</section>
+
+
+<section class="sc">
+<h2>🚑 急症室輪候時間</h2>
+<p class="desc">全港18間公立醫院急症室及私家醫院急症服務。實時輪候時間請到<a href="https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=235505" target="_blank" style="color:#457b9d">醫管局網站</a>查看。</p>
+<div class="qgrid">
+<div class="qcard" onclick="quickSearch('急症室')"><div class="icon">🏥</div><div class="ttl">港島區急症室</div><div class="dsc">瑪麗、東區、律敦治、長洲</div></div>
+<div class="qcard" onclick="quickSearch('九龍急症')"><div class="icon">🏥</div><div class="ttl">九龍區急症室</div><div class="dsc">伊院、廣華、聯合、將軍澳、明愛、仁濟</div></div>
+<div class="qcard" onclick="quickSearch('新界急症')"><div class="icon">🏥</div><div class="ttl">新界區急症室</div><div class="dsc">威爾斯、北區、那打素、屯門、博愛、天水圍</div></div>
+<div class="qcard" onclick="quickSearch('私家急症')"><div class="icon">🏥</div><div class="ttl">私家醫院急症</div><div class="dsc">養和、港怡、仁安、浸會、聖德肋撒、聖保祿等</div></div>
+</div>
+<div style="font-size:13px;color:#888;margin-top:12px">分流類別：第I類(危殆)即時 | 第II類(危急)15分鐘內 | 第III類(緊急)30分鐘內 | 第IV/V類可等候。收費：符合資格，非符合,100。</div>
+</section>
+
+<section class="sc">
+<h2>📋 專科門診新症輪候時間</h2>
+<p class="desc">公立醫院專科門診新症輪候時間，按專科分類。實際輪候時間請到<a href="https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=235509" target="_blank" style="color:#457b9d">醫管局網站</a>查看最新數據。</p>
+<div class="bgrid" id="sopc-grid"></div>
+</section>
+
+<section class="sc">
+<h2>🏥 私家醫院收費比較</h2>
+<p class="desc">13間私家醫院病房收費及常見服務收費參考。實際費用請直接向各醫院查詢。</p>
+<div class="tabs" id="pvtTabs">
+<button class="tab active" onclick="switchPvtTab(this, 'ward')">病房收費</button>
+<button class="tab" onclick="switchPvtTab(this, 'maternity')">產科套餐</button>
+<button class="tab" onclick="switchPvtTab(this, 'procedure')">常見手術/檢查</button>
+</div>
+<div id="pvt-ward" class="tab-content active" style="overflow-x:auto">
+<table class="fee-tbl"><thead><tr><th>醫院</th><th>地區</th><th>大房</th><th>半私家</th><th>私家房</th><th>門診診金</th></tr></thead><tbody>
+<tr><td>養和醫院</td><td>跑馬地</td><td class="fnum">-,200</td><td class="fnum">,200-,500</td><td class="fnum">,500-,000</td><td class="fnum">-</td></tr>
+<tr><td>港怡醫院</td><td>黃竹坑</td><td class="fnum">-,000</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td><td class="fnum">-</td></tr>
+<tr><td>浸信會醫院</td><td>九龍塘</td><td class="fnum">-</td><td class="fnum">-,800</td><td class="fnum">,800-,000</td><td class="fnum">-</td></tr>
+<tr><td>聖德肋撒醫院</td><td>九龍城</td><td class="fnum">-</td><td class="fnum">-,600</td><td class="fnum">,600-,500</td><td class="fnum">-</td></tr>
+<tr><td>仁安醫院</td><td>大圍</td><td class="fnum">-</td><td class="fnum">-,800</td><td class="fnum">,800-,000</td><td class="fnum">-</td></tr>
+<tr><td>明德國際醫院</td><td>山頂</td><td class="fnum">-,200</td><td class="fnum">,500-,000</td><td class="fnum">,000-,000</td><td class="fnum">-</td></tr>
+<tr><td>中大醫院</td><td>沙田</td><td class="fnum">-,000</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td><td class="fnum">-</td></tr>
+<tr><td>港安醫院</td><td>跑馬地</td><td class="fnum">-,000</td><td class="fnum">,200-,500</td><td class="fnum">,500-,500</td><td class="fnum">-</td></tr>
+</tbody></table>
+</div>
+<div id="pvt-maternity" class="tab-content" style="overflow-x:auto">
+<table class="fee-tbl"><thead><tr><th>醫院</th><th>自然分娩</th><th>剖腹分娩</th></tr></thead><tbody>
+<tr><td>養和醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>港怡醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>浸信會醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>明德國際醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>仁安醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>嘉諾撒醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>聖保祿醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+<tr><td>港安醫院</td><td class="fnum">,000-,000</td><td class="fnum">,000-,000</td></tr>
+</tbody></table>
+</div>
+<div id="pvt-procedure" class="tab-content" style="overflow-x:auto">
+<table class="fee-tbl"><thead><tr><th>服務</th><th>參考收費範圍</th><th>備註</th></tr></thead><tbody>
+<tr><td>胃鏡檢查</td><td class="fnum">,000-,000</td><td>不包括醫生費及麻醉費</td></tr>
+<tr><td>大腸鏡檢查</td><td class="fnum">,000-,000</td><td>不包括醫生費及麻醉費</td></tr>
+<tr><td>白內障手術</td><td class="fnum">,000-,000</td><td>每隻眼</td></tr>
+<tr><td>磁力共振 (MRI)</td><td class="fnum">,000-,000</td><td>按部位收費</td></tr>
+<tr><td>電腦掃描 (CT)</td><td class="fnum">,000-,000</td><td>按部位收費</td></tr>
+<tr><td>全身體檢套餐</td><td class="fnum">,000-,000</td><td>按包括項目收費</td></tr>
+<tr><td>膝關節置換手術</td><td class="fnum">,000-,000</td><td>不包括醫生費</td></tr>
+<tr><td>冠狀動脈介入手術</td><td class="fnum">,000-,000</td><td>不包括醫生費及支架費</td></tr>
+</tbody></table>
+</div>
+</section>
+
+<section class="sc">
+<h2>💫 醫療券適用搜尋</h2>
+<p class="desc">65歲或以上長者每年,000醫療券（累積上限,000），可用於私家西醫、中醫、牙醫、視光師等。<a href="https://apps.hcv.gov.hk/public/tc/Search" target="_blank" style="color:#457b9d">官方搜尋 &rarr;</a></p>
+<div class="qgrid">
+<div class="qcard" onclick="quickSearch('醫療券 西醫')"><div class="icon">👨‍⚕️</div><div class="ttl">私家西醫</div><div class="dsc">2,000+間診所接受醫療券</div></div>
+<div class="qcard" onclick="quickSearch('醫療券 中醫')"><div class="icon">🌿</div><div class="ttl">中醫服務</div><div class="dsc">18區中醫教研中心及私家中醫</div></div>
+<div class="qcard" onclick="quickSearch('醫療券 牙科')"><div class="icon">🦷</div><div class="ttl">牙科服務</div><div class="dsc">500+間牙科診所接受醫療券</div></div>
+<div class="qcard" onclick="quickSearch('醫療券 視光')"><div class="icon">👓</div><div class="ttl">視光服務</div><div class="dsc">300+視光師接受醫療券</div></div>
+</div>
+</section>
+
+<section class="sc">
+<h2>🌙 夜診 / 假日診所</h2>
+<p class="desc">公立普通科門診夜診及假日服務（星期日及公眾假期）。</p>
+<div class="bgrid" id="evening-grid"></div>
+</section>
+
+<section class="sc">
+<h2>💊 藥物名冊</h2>
+<p class="desc">醫管局藥物分為通用、專用及自費三類。自費藥物可透過<a href="https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=10046" target="_blank" style="color:#457b9d">撒瑪利亞基金</a>或關愛基金申請資助。</p>
+<div class="tabs" id="drugTabs">
+<button class="tab active" onclick="switchDrugTab(this, 'general')">通用藥物</button>
+<button class="tab" onclick="switchDrugTab(this, 'special')">專用藥物</button>
+<button class="tab" onclick="switchDrugTab(this, 'self')">自費藥物</button>
+</div>
+<div id="drug-general" class="tab-content active">
+<table class="fee-tbl"><thead><tr><th>類別</th><th>收費</th><th>常見藥物舉例</th></tr></thead><tbody>
+<tr><td>通用藥物</td><td class="fnum">專科 /種/4週<br>普通科 /種/4週</td><td>抗生素、降血壓藥、降血糖藥、降膽固醇藥、止痛藥、胃藥</td></tr>
+</tbody></table>
+</div>
+<div id="drug-special" class="tab-content">
+<table class="fee-tbl"><thead><tr><th>類別</th><th>收費</th><th>常見藥物舉例</th></tr></thead><tbody>
+<tr><td>專用藥物</td><td class="fnum">與通用藥物相同</td><td>化療藥物、免疫抑制劑、生物製劑、特定心血管藥物（需專科醫生處方及審批）</td></tr>
+</tbody></table>
+</div>
+<div id="drug-self" class="tab-content" style="overflow-x:auto">
+<table class="fee-tbl"><thead><tr><th>自費藥物</th><th>每月參考費用</th><th>用途</th></tr></thead><tbody>
+<tr><td>標靶治療藥物</td><td class="fnum">,000-,000</td><td>多種癌症治療</td></tr>
+<tr><td>免疫治療藥物</td><td class="fnum">,000-,000</td><td>癌症免疫治療</td></tr>
+<tr><td>新一代口服抗凝血藥</td><td class="fnum">-,000</td><td>心房顫動、靜脈血栓</td></tr>
+<tr><td>PCSK9抑制劑</td><td class="fnum">,000-,000</td><td>高膽固醇</td></tr>
+<tr><td>生物製劑 (類風濕)</td><td class="fnum">,000-,000</td><td>類風濕關節炎</td></tr>
+<tr><td>黃斑病變眼內注射</td><td class="fnum">,000-,000/針</td><td>老年黃斑病變</td></tr>
+<tr><td>丙型肝炎口服藥</td><td class="fnum">,000-,000/療程</td><td>丙型肝炎根治</td></tr>
+</tbody></table>
+<p style="font-size:13px;color:#888;margin-top:12px">所有自費藥物另加行政費/項。經濟困難者可申請撒瑪利亞基金或關愛基金資助。2026年起設全年收費上限,000（無需經濟審查）。</p>
+</div>
+</section>
+
+<h2>📍 按地區瀏覽</h2>
+<p class="desc">選擇你所在的區域，查看附近的醫療機構</p>
+<div class="bgrid" id="district-grid"></div>
+</section>
+<section class="sc">
+<h2>🩺 按專科瀏覽</h2>
+<p class="desc">按醫療專科查找相關醫生及服務</p>
+<div class="bgrid" id="specialty-grid"></div>
+</section>
+<section class="sc">
+<h2>📊 資料來源</h2>
+<p class="desc">所有資料均來自香港政府官方公開數據，定期更新</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<a href="https://www.ha.org.hk" target="_blank" class="bcard" style="flex:1;min-width:200px;cursor:pointer"><div class="b-ic">🏥</div><div><div class="b-ttl">醫院管理局 (HA)</div><div class="b-cnt">公立醫院、輪候時間、藥物名冊</div></div></a>
+<a href="https://www.dh.gov.hk" target="_blank" class="bcard" style="flex:1;min-width:200px;cursor:pointer"><div class="b-ic">🏛️</div><div><div class="b-ttl">衛生署 (DH)</div><div class="b-cnt">母嬰健康、長者健康、醫療券</div></div></a>
+<a href="https://www.mchk.org.hk" target="_blank" class="bcard" style="flex:1;min-width:200px;cursor:pointer"><div class="b-ic">📋</div><div><div class="b-ttl">醫務委員會 (MCHK)</div><div class="b-cnt">註冊醫生名冊</div></div></a>
+</div>
+</section>
+<footer>
+<p><a href="/">返回 HKInfo 首頁</a> | <a href="/data-sources">數據來源總覽</a> | <a href="/about">關於我們</a></p>
+<p style="font-size:12px;opacity:0.7;margin-top:8px">本頁數據來自醫院管理局、衛生署及醫務委員會官方公開資料，僅供參考。</p>
+<p style="margin-top:8px">&copy; 2026 HKInformation 香港資訊數據圖鑑</p>
+</footer>
+<script>
+const districts=[{id:'central-and-western',name:'中西區',name_en:'Central & Western'},{id:'eastern',name:'東區',name_en:'Eastern'},{id:'southern',name:'南區',name_en:'Southern'},{id:'wan-chai',name:'灣仔區',name_en:'Wan Chai'},{id:'kowloon-city',name:'九龍城區',name_en:'Kowloon City'},{id:'kwun-tong',name:'觀塘區',name_en:'Kwun Tong'},{id:'sham-shui-po',name:'深水埗區',name_en:'Sham Shui Po'},{id:'wong-tai-sin',name:'黃大仙區',name_en:'Wong Tai Sin'},{id:'yau-tsim-mong',name:'油尖旺區',name_en:'Yau Tsim Mong'},{id:'islands',name:'離島區',name_en:'Islands'},{id:'kwai-tsing',name:'葵青區',name_en:'Kwai Tsing'},{id:'north',name:'北區',name_en:'North'},{id:'sai-kung',name:'西貢區',name_en:'Sai Kung'},{id:'sha-tin',name:'沙田區',name_en:'Sha Tin'},{id:'tai-po',name:'大埔區',name_en:'Tai Po'},{id:'tsuen-wan',name:'荃灣區',name_en:'Tsuen Wan'},{id:'tuen-mun',name:'屯門區',name_en:'Tuen Mun'},{id:'yuen-long',name:'元朗區',name_en:'Yuen Long'}];
+const specialties=[{id:'cardiology',name:'心臟科',icon:'❤️',cnt:120},{id:'dermatology',name:'皮膚科',icon:'🔬',cnt:95},{id:'ent',name:'耳鼻喉科',icon:'👂',cnt:85},{id:'gastroenterology',name:'腸胃肝臟科',icon:'🫄',cnt:70},{id:'general-surgery',name:'外科',icon:'🔪',cnt:130},{id:'gynaecology',name:'婦產科',icon:'🤰',cnt:110},{id:'internal-medicine',name:'內科',icon:'💊',cnt:150},{id:'neurology',name:'腦神經科',icon:'🧠',cnt:45},{id:'ophthalmology',name:'眼科',icon:'👁️',cnt:100},{id:'orthopaedics',name:'骨科',icon:'🦴',cnt:130},{id:'paediatrics',name:'兒科',icon:'👶',cnt:90},{id:'psychiatry',name:'精神科',icon:'🧠',cnt:65},{id:'respiratory',name:'呼吸系統科',icon:'🫁',cnt:50},{id:'urology',name:'泌尿科',icon:'🫗',cnt:45},{id:'oncology',name:'腫瘤科',icon:'🎗️',cnt:55},{id:'tcm',name:'中醫',icon:'🌿',cnt:200},{id:'dentistry',name:'牙科',icon:'🦷',cnt:300}];
+const searchIndex=[{slug:'ae-waiting',title:'急症室輪候時間',type:'ae',cat:'急症',keywords:'急症室,輪候時間,A&E'},{slug:'sopc-waiting',title:'專科門診新症輪候時間',type:'sopc',cat:'專科',keywords:'專科門診,輪候時間,排期'},{slug:'gopc-list',title:'普通科門診診所',type:'gopc',cat:'普通科',keywords:'普通科門診,電話預約'},{slug:'hospital-list',title:'公立醫院列表',type:'public',cat:'醫院',keywords:'公立醫院,醫管局'},{slug:'private-hospitals',title:'私家醫院列表',type:'private',cat:'醫院',keywords:'私家醫院,私人醫院'},{slug:'maternal-child',title:'母嬰健康院',type:'clinic',cat:'母嬰',keywords:'母嬰健康院,產前,嬰兒'},{slug:'elderly-health',title:'長者健康中心',type:'clinic',cat:'長者',keywords:'長者健康中心,老人'},{slug:'tcm-clinics',title:'中醫教研中心',type:'tcm',cat:'中醫',keywords:'中醫,18區'},{slug:'dental-clinics',title:'政府牙科診所',type:'dental',cat:'牙科',keywords:'牙科,政府'},{slug:'voucher-list',title:'醫療券適用機構',type:'clinic',cat:'長者',keywords:'醫療券,長者'},{slug:'vaccine-schedule',title:'兒童疫苗接種時間表',type:'clinic',cat:'疫苗',keywords:'疫苗,打針,兒童'},{slug:'drug-formulary',title:'醫管局藥物名冊',type:'public',cat:'藥物',keywords:'藥物名冊,自費藥物'},{slug:'english-doctors',title:'English-speaking Doctors',type:'private',cat:'English',keywords:'English,doctor,private'}];
+function renderDistricts(){var g=document.getElementById('district-grid');g.innerHTML=districts.map(function(d){return '<div class="bcard" onclick="quickSearch(\''+d.name+'\')"><div class="b-ic">📍</div><div><div class="b-ttl">'+d.name+'</div><div class="b-cnt">'+d.name_en+'</div></div></div>'}).join('')}
+function renderSpecialties(){var g=document.getElementById('specialty-grid');g.innerHTML=specialties.map(function(s){return '<div class="bcard" onclick="quickSearch(\''+s.name+'\')"><div class="b-ic">'+s.icon+'</div><div><div class="b-ttl">'+s.name+'</div><div class="b-cnt">約 '+s.cnt+' 位醫生</div></div></div>'}).join('')}
+function search(v){var e=document.getElementById('hsr');if(!v||v.length<2){e.style.display='none';e.innerHTML='';return}var q=v.toLowerCase();var results=searchIndex.filter(function(i){return i.title.toLowerCase().indexOf(q)>-1||i.keywords.toLowerCase().indexOf(q)>-1||i.cat.toLowerCase().indexOf(q)>-1}).slice(0,8);if(results.length===0){e.innerHTML='<a style="color:#999;cursor:default;justify-content:center">無結果</a>';e.style.display='block';return}e.innerHTML=results.map(function(r){return '<a href="#"><span>'+r.title+'</span><span class="c">'+r.cat+'</span></a>'}).join('');e.style.display='block'}
+var currentFilter='all';
+function setFilter(f,btn){currentFilter=f;document.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');document.getElementById('hs').value='';document.getElementById('hsr').style.display='none';if(f==='all'){document.getElementById('hs').placeholder='搜尋醫院、診所、專科醫生...';return}var labels={public:'公立醫院',private:'私家醫院',clinic:'診所',ae:'急症室',sopc:'專科門診',gopc:'普通科門診',tcm:'中醫',dental:'牙科'};document.getElementById('hs').placeholder='搜尋'+labels[f]+'...';quickSearch(labels[f])}
+function quickSearch(q){document.getElementById('hs').value=q;search(q)}
+function switchFeeTab(btn,pid){document.querySelectorAll('#feeTabs .tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.querySelectorAll('#fee-eligible,#fee-noneligible,#fee-private').forEach(function(t){t.classList.remove('active')});document.getElementById('fee-'+pid).classList.add('active')}
+var eveningClinics=[{name:'香港仔賽馬會普通科門診診所',district:'南區',eve:true,sun:true,hol:true},{name:'西營盤賽馬會普通科門診診所',district:'中西區',eve:true,sun:false,hol:false},{name:'筲箕灣賽馬會普通科門診診所',district:'東區',eve:true,sun:true,hol:false},{name:'觀塘社區健康中心',district:'觀塘區',eve:true,sun:true,hol:true},{name:'油麻地賽馬會普通科門診診所',district:'油尖旺區',eve:true,sun:true,hol:true},{name:'長沙灣賽馬會普通科門診診所',district:'深水埗區',eve:true,sun:true,hol:true},{name:'方逸華普通科門診診所',district:'西貢區',eve:true,sun:true,hol:true},{name:'大埔賽馬會普通科門診診所',district:'大埔區',eve:true,sun:true,hol:true},{name:'沙田(大圍)普通科門診診所',district:'沙田區',eve:true,sun:true,hol:true},{name:'屯門診所',district:'屯門區',eve:true,sun:true,hol:true},{name:'元朗賽馬會健康院',district:'元朗區',eve:true,sun:true,hol:true},{name:'荃灣診所',district:'荃灣區',eve:true,sun:true,hol:false},{name:'上水普通科門診診所',district:'北區',eve:true,sun:true,hol:false},{name:'東涌普通科門診診所',district:'離島區',eve:true,sun:false,hol:false},{name:'紅磡診所',district:'九龍城區',eve:true,sun:true,hol:false},{name:'青衣長康普通科門診診所',district:'葵青區',eve:true,sun:false,hol:false},{name:'石硤尾普通科門診診所',district:'深水埗區',eve:true,sun:false,hol:false},{name:'黃大仙普通科門診診所',district:'黃大仙區',eve:true,sun:false,hol:false}];
+function renderEvening(){var g=document.getElementById('evening-grid');g.innerHTML=eveningClinics.map(function(c){var tags=[];if(c.eve)tags.push('<span class=rtag>夜診</span>');if(c.sun)tags.push('<span class=rtag>星期日</span>');if(c.hol)tags.push('<span class=rtag>公眾假期</span>');return '<div class=bcard><div class=b-ic>\U0001f319</div><div><div class=b-ttl>'+c.name+'</div><div class=b-cnt>'+c.district+' '+tags.join(' ')+'</div></div></div>'}).join('')}
+renderEvening();
+
+var sopcData=[{name:'內科',urgent:'1-2週',semi:'4-8週',stable:'12-30週'},{name:'外科',urgent:'1-2週',semi:'4-12週',stable:'16-40週'},{name:'骨科',urgent:'1-2週',semi:'6-16週',stable:'20-80週'},{name:'眼科',urgent:'1-2週',semi:'4-12週',stable:'12-60週'},{name:'耳鼻喉科',urgent:'1-2週',semi:'4-12週',stable:'16-50週'},{name:'婦科',urgent:'1-2週',semi:'4-10週',stable:'12-40週'},{name:'兒科',urgent:'1-2週',semi:'2-8週',stable:'8-24週'},{name:'精神科',urgent:'2-4週',semi:'4-12週',stable:'12-50週'},{name:'心臟科',urgent:'1-2週',semi:'4-12週',stable:'16-50週'},{name:'腦神經科',urgent:'1-2週',semi:'6-16週',stable:'20-70週'},{name:'風濕科',urgent:'1-2週',semi:'4-16週',stable:'20-60週'},{name:'泌尿科',urgent:'1-2週',semi:'4-16週',stable:'20-60週'},{name:'老人科',urgent:'1-2週',semi:'4-10週',stable:'12-40週'},{name:'腫瘤科',urgent:'1-2週',semi:'2-6週',stable:'4-16週'},{name:'內分泌科',urgent:'1-2週',semi:'4-16週',stable:'16-60週'}];
+function renderSOPC(){var g=document.getElementById('sopc-grid');g.innerHTML=sopcData.map(function(s){return '<div class=bcard><div class=b-ic>\U0001f4cb</div><div><div class=b-ttl>'+s.name+'</div><div class=b-cnt>緊急: '+s.urgent+' | 半緊急: '+s.semi+' | 穩定: '+s.stable+'</div></div></div>'}).join('')}
+renderSOPC();
+
+function switchPvtTab(btn,pid){document.querySelectorAll('#pvtTabs .tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.querySelectorAll('#pvt-ward,#pvt-maternity,#pvt-procedure').forEach(function(t){t.classList.remove('active')});document.getElementById('pvt-'+pid).classList.add('active')}
+function switchDrugTab(btn,pid){document.querySelectorAll('#drugTabs .tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.querySelectorAll('#drug-general,#drug-special,#drug-self').forEach(function(t){t.classList.remove('active')});document.getElementById('drug-'+pid).classList.add('active')}
+function switchPersona(btn,pid){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.querySelectorAll('.tab-content').forEach(function(t){t.classList.remove('active')});document.getElementById('p-'+pid).classList.add('active')}
+document.addEventListener('click',function(e){if(!e.target.closest('.hsb')){document.getElementById('hsr').style.display='none'}});
+renderDistricts();renderSpecialties();
+</script>
+</body>
+</html>

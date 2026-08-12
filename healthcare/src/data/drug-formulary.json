@@ -1,0 +1,53 @@
+{
+  "source": "醫院管理局藥物名冊",
+  "source_url": "https://www.ha.org.hk/hadf/",
+  "note": "醫管局藥物名冊分為通用藥物、專用藥物、自費藥物及安全網藥物。以下為分類說明及常見自費藥物參考。",
+  "categories": [
+    {
+      "id": "general",
+      "name": "通用藥物",
+      "name_en": "General Drugs",
+      "description": "經證實對相關疾病有效且符合成本效益的藥物，所有公立醫院及診所均提供。",
+      "fee": "符合資格人士：專科 $20/種/4週，普通科 $5/種/4週",
+      "examples": ["常見抗生素", "降血壓藥", "降血糖藥", "降膽固醇藥", "止痛藥", "胃藥"]
+    },
+    {
+      "id": "special",
+      "name": "專用藥物",
+      "name_en": "Special Drugs",
+      "description": "需在特定臨床情況下由專科醫生處方，部分需經專家審批。",
+      "fee": "與通用藥物相同",
+      "examples": ["化療藥物", "免疫抑制劑", "生物製劑", "特定心血管藥物"]
+    },
+    {
+      "id": "self_financed",
+      "name": "自費藥物",
+      "name_en": "Self-financed Items",
+      "description": "超出標準服務範圍，病人需自費購買。可透過撒瑪利亞基金或關愛基金申請資助。",
+      "fee": "按成本收費，另加行政費 $130/項",
+      "examples": [
+        {"drug": "標靶治療藥物", "drug_en": "Targeted Therapy", "monthly_cost": "$10,000 - $50,000", "note": "多種癌症治療用"},
+        {"drug": "免疫治療藥物", "drug_en": "Immunotherapy", "monthly_cost": "$20,000 - $80,000", "note": "如 Pembrolizumab, Nivolumab"},
+        {"drug": "新一代口服抗凝血藥", "drug_en": "NOAC", "monthly_cost": "$500 - $1,000", "note": "如 Apixaban, Rivaroxaban"},
+        {"drug": "降膽固醇 PCSK9 抑制劑", "drug_en": "PCSK9 Inhibitor", "monthly_cost": "$3,000 - $5,000", "note": "如 Evolocumab"},
+        {"drug": "生物製劑 (類風濕)", "drug_en": "Biologics for RA", "monthly_cost": "$5,000 - $15,000", "note": "如 Adalimumab, Etanercept"},
+        {"drug": "生物製劑 (銀屑病)", "drug_en": "Biologics for Psoriasis", "monthly_cost": "$8,000 - $20,000", "note": "如 Secukinumab, Ustekinumab"},
+        {"drug": "新一代糖尿病藥物", "drug_en": "SGLT2/GLP-1", "monthly_cost": "$500 - $1,500", "note": "如 Dapagliflozin, Semaglutide"},
+        {"drug": "黃斑病變眼內注射", "drug_en": "Anti-VEGF Injection", "monthly_cost": "$5,000 - $10,000", "per_injection": true, "note": "如 Ranibizumab, Aflibercept"},
+        {"drug": "丙型肝炎口服藥", "drug_en": "Hepatitis C DAA", "monthly_cost": "$20,000 - $50,000", "course": true, "note": "療程約 8-12 週"},
+        {"drug": "多發性硬化症藥物", "drug_en": "MS Disease Modifying", "monthly_cost": "$10,000 - $30,000", "note": "如 Fingolimod, Ocrelizumab"}
+      ]
+    }
+  ],
+  "safety_net": {
+    "name": "安全網資助計劃",
+    "description": "經濟有困難的病人可通過以下途徑申請藥物資助：",
+    "schemes": [
+      {"name": "撒瑪利亞基金", "name_en": "Samaritan Fund", "url": "https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=10046", "note": "資助有經濟困難的病人購買自費藥物及醫療項目"},
+      {"name": "關愛基金醫療援助計劃", "name_en": "Community Care Fund Medical Assistance", "url": "https://www.communitycarefund.hk", "note": "資助特定疾病的藥物治療"},
+      {"name": "全年收費上限", "name_en": "Annual Fee Cap", "amount": 10000, "note": "2026年新增，無需經濟審查，每年自費上限$10,000"}
+    ]
+  },
+  "administrative_fee": 130,
+  "administrative_fee_note": "每項自費藥物處方收取$130行政費"
+}

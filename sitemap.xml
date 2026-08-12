@@ -31,6 +31,48 @@
   <url><loc>https://hinfok.com/hot-days</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/solid-waste</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/air-quality</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://hinfok.com/healthcare/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/qmh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/pyneh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/gh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/mwh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/fyksh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/tph.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/rh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/dgh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/sjs.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/qeh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/kh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/olh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/bh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/uh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/tko.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/pmh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/cph.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/ych.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/cch.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/pwh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/alice.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/ndh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/sh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/tphosp.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/tmh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/pmh2.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/tws.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/hh.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/sh2.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/matilda.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/canossa.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/stpaul.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/stteresa.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/baptist.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/evangel.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/precious.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/union.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/twsan.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/hkadventist.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://hinfok.com/healthcare/hospitals/twadventist.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://hinfok.com/privacy</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/about</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://hinfok.com/data-sources</loc><priority>0.6</priority><changefreq>monthly</changefreq><lastmod>2026-08-01</lastmod></url>

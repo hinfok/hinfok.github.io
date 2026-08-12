@@ -1,0 +1,44 @@
+{
+  "source": "醫院管理局急症室輪候時間",
+  "source_url": "https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=235505",
+  "note": "急症室輪候時間為實時數據，請直接到醫管局網站查看最新狀況。以下為各急症室基本資料及參考輪候時間範圍。",
+  "hospitals": [
+    {"name": "伊利沙伯醫院", "name_en": "Queen Elizabeth Hospital", "district": "油尖旺區", "cluster": "九龍中", "address": "油麻地加士居道30號", "phone": "3506 8888", "typical_wait": "2-6小時", "peak_wait": "6-10小時"},
+    {"name": "廣華醫院", "name_en": "Kwong Wah Hospital", "district": "油尖旺區", "cluster": "九龍中", "address": "旺角窩打老道25號", "phone": "2332 2311", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "瑪麗醫院", "name_en": "Queen Mary Hospital", "district": "南區", "cluster": "港島西", "address": "薄扶林道102號", "phone": "2255 3838", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "東區醫院", "name_en": "Pamela Youde Nethersole Eastern Hospital", "district": "東區", "cluster": "港島東", "address": "柴灣樂民道3號", "phone": "2595 6111", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "律敦治醫院", "name_en": "Ruttonjee Hospital", "district": "灣仔區", "cluster": "港島東", "address": "灣仔皇后大道東266號", "phone": "2291 2000", "typical_wait": "1-4小時", "peak_wait": "4-7小時"},
+    {"name": "瑪嘉烈醫院", "name_en": "Princess Margaret Hospital", "district": "葵青區", "cluster": "九龍西", "address": "荔景瑪嘉烈醫院道2-10號", "phone": "2990 1111", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "仁濟醫院", "name_en": "Yan Chai Hospital", "district": "荃灣區", "cluster": "九龍西", "address": "荃灣仁濟街7-11號", "phone": "2417 8383", "typical_wait": "1-3小時", "peak_wait": "3-6小時"},
+    {"name": "明愛醫院", "name_en": "Caritas Medical Centre", "district": "深水埗區", "cluster": "九龍西", "address": "長沙灣永康街111號", "phone": "3408 7911", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "聯合醫院", "name_en": "United Christian Hospital", "district": "觀塘區", "cluster": "九龍東", "address": "觀塘協和街130號", "phone": "2379 9611", "typical_wait": "3-7小時", "peak_wait": "7-10小時"},
+    {"name": "將軍澳醫院", "name_en": "Tseung Kwan O Hospital", "district": "西貢區", "cluster": "九龍東", "address": "將軍澳寶寧里2號", "phone": "2208 0111", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "威爾斯親王醫院", "name_en": "Prince of Wales Hospital", "district": "沙田區", "cluster": "新界東", "address": "沙田銀城街30-32號", "phone": "3505 2211", "typical_wait": "2-5小時", "peak_wait": "5-8小時"},
+    {"name": "北區醫院", "name_en": "North District Hospital", "district": "北區", "cluster": "新界東", "address": "上水保健路9號", "phone": "2683 8888", "typical_wait": "1-3小時", "peak_wait": "3-6小時"},
+    {"name": "那打素醫院", "name_en": "Alice Ho Miu Ling Nethersole Hospital", "district": "大埔區", "cluster": "新界東", "address": "大埔全安路11號", "phone": "2689 2000", "typical_wait": "1-3小時", "peak_wait": "3-6小時"},
+    {"name": "屯門醫院", "name_en": "Tuen Mun Hospital", "district": "屯門區", "cluster": "新界西", "address": "屯門青松觀路23號", "phone": "2468 5111", "typical_wait": "3-6小時", "peak_wait": "6-10小時"},
+    {"name": "博愛醫院", "name_en": "Pok Oi Hospital", "district": "元朗區", "cluster": "新界西", "address": "元朗凹頭", "phone": "2486 8000", "typical_wait": "1-4小時", "peak_wait": "4-7小時"},
+    {"name": "天水圍醫院", "name_en": "Tin Shui Wai Hospital", "district": "元朗區", "cluster": "新界西", "address": "天水圍天壇街11號", "phone": "3513 5000", "typical_wait": "1-3小時", "peak_wait": "3-6小時"},
+    {"name": "長洲醫院", "name_en": "St. John Hospital (Cheung Chau)", "district": "離島區", "cluster": "港島東", "address": "長洲長洲醫院路", "phone": "2981 9441", "typical_wait": "1-2小時", "peak_wait": "2-4小時"},
+    {"name": "港怡醫院", "name_en": "Gleneagles Hospital", "district": "南區", "cluster": "私家", "address": "黃竹坑南風徑1號", "phone": "3153 9000", "typical_wait": "30分鐘-1小時", "peak_wait": "1-3小時", "note": "私家醫院急症"},
+    {"name": "養和醫院", "name_en": "Hong Kong Sanatorium & Hospital", "district": "灣仔區", "cluster": "私家", "address": "跑馬地山村道2號", "phone": "2572 0211", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"},
+    {"name": "仁安醫院", "name_en": "Union Hospital", "district": "沙田區", "cluster": "私家", "address": "沙田大圍富健街18號", "phone": "2608 3388", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"},
+    {"name": "聖德肋撒醫院", "name_en": "St. Teresa's Hospital", "district": "九龍城區", "cluster": "私家", "address": "九龍城太子道西327號", "phone": "2200 3434", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"},
+    {"name": "浸信會醫院", "name_en": "Baptist Hospital", "district": "九龍城區", "cluster": "私家", "address": "九龍塘窩打老道222號", "phone": "2339 8888", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"},
+    {"name": "聖保祿醫院", "name_en": "St. Paul's Hospital", "district": "灣仔區", "cluster": "私家", "address": "銅鑼灣東院道2號", "phone": "2890 6008", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"},
+    {"name": "荃灣港安醫院", "name_en": "Tsuen Wan Adventist Hospital", "district": "荃灣區", "cluster": "私家", "address": "荃灣荃景圍199號", "phone": "2276 7676", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"},
+    {"name": "中大醫院", "name_en": "CUHK Medical Centre", "district": "沙田區", "cluster": "私家", "address": "沙田澤祥街9號", "phone": "3946 6888", "typical_wait": "30分鐘-1小時", "peak_wait": "1-2小時", "note": "私家醫院急症"}
+  ],
+  "triage_categories": [
+    {"level": 1, "name": "危殆", "name_en": "Critical", "target_time": "即時診治", "description": "有即時生命危險"},
+    {"level": 2, "name": "危急", "name_en": "Emergency", "target_time": "15分鐘內", "description": "有潛在生命危險"},
+    {"level": 3, "name": "緊急", "name_en": "Urgent", "target_time": "30分鐘內", "description": "情況穩定但需盡快處理"},
+    {"level": 4, "name": "次緊急", "name_en": "Semi-urgent", "target_time": "可等候", "description": "情況穩定，可等候一段時間"},
+    {"level": 5, "name": "非緊急", "name_en": "Non-urgent", "target_time": "可等候較長時間", "description": "情況輕微，可等候較長時間"}
+  ],
+  "fee": {
+    "eligible": 400,
+    "non_eligible": 2100,
+    "note": "分流為第I類(危殆)及第II類(危急)的病人可獲豁免繳費。"
+  }
+}

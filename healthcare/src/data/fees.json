@@ -1,0 +1,131 @@
+{
+  "source": "醫院管理局官方收費表 (2026年1月1日起生效)",
+  "source_url": "https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=10045&Lang=CHIB5",
+  "last_updated": "2026-01-01",
+  "public_eligible": {
+    "description": "公眾收費 - 符合資格人士 (持有香港身份證人士)",
+    "emergency": {"name": "急症室", "fee": 400, "note": "分流第I類(危殆)及第II類(危急)病人豁免繳費。病人如在接受醫生診症前離開，可申請退回350元。"},
+    "inpatient_acute": {"name": "住院 (急症病床)", "fee": 300, "unit": "每日", "note": "不足一日亦以一日計。12歲以下兒童及未能與母親同時出院的嬰兒繳付一半。"},
+    "inpatient_convalescent": {"name": "住院 (療養/復康/護養及精神科病床)", "fee": 200, "unit": "每日"},
+    "specialist_clinic": {"name": "專科診所", "fee": 250, "unit": "每次診症", "drug_per_item": 20, "drug_note": "每種藥物以四星期為收費單位"},
+    "family_medicine": {"name": "家庭醫學診所", "fee": 150, "unit": "每次診症", "drug_per_item": 5, "drug_note": "每種藥物以四星期為收費單位"},
+    "injection_dressing": {"name": "接受注射或敷藥", "fee": 50, "unit": "每次服務"},
+    "psychiatric_day": {"name": "精神科日間醫院", "fee": 0, "note": "免費"},
+    "geriatric_day": {"name": "老人科日間醫院", "fee": 100, "unit": "每次診症"},
+    "rehab_day": {"name": "復康日間醫院", "fee": 100, "unit": "每次診症"},
+    "oncology_day": {"name": "腫瘤科診所或腎科診所日間程序", "fee": 250, "unit": "每次診症"},
+    "day_procedure": {"name": "日間醫療設施日間程序及治理", "fee": 250, "unit": "每次診症"},
+    "community_geriatric": {"name": "社區老人評估小組", "fee": 100, "unit": "每次診症", "drug_per_item": 20},
+    "community_nursing": {"name": "社康護理服務 (普通科)", "fee": 100, "unit": "每次", "note": "精神科免費"},
+    "community_allied_health": {"name": "社區專職醫療服務", "fee": 100, "unit": "每次"},
+    "pathology": {
+      "name": "病理學檢驗服務",
+      "basic": {"name": "基礎項目", "fee": 0, "note": "免費"},
+      "advanced": {"name": "進階項目", "fee": 50, "unit": "每種服務"},
+      "high_end": {"name": "高端項目", "fee": 200, "unit": "每種服務"}
+    },
+    "radiology": {
+      "name": "非緊急放射科服務",
+      "basic": {"name": "基礎項目", "fee": 0, "note": "免費"},
+      "advanced": {"name": "進階項目", "fee": 250, "unit": "每種服務"},
+      "high_end": {"name": "高端項目", "fee": 500, "unit": "每種服務"}
+    }
+  },
+  "public_non_eligible": {
+    "description": "公眾收費 - 非符合資格人士 (沒有香港身份證人士)",
+    "emergency": {"name": "急症室", "fee": 2100, "unit": "每次診症", "note": "病人如在接受醫生診症前離開，可申請退回1,850元。"},
+    "inpatient_general": {"name": "住院 (普通科醫院)", "fee": 7400, "unit": "每日"},
+    "inpatient_psychiatric": {"name": "住院 (精神科醫院)", "fee": 3100, "unit": "每日"},
+    "icu": {"name": "深切治療病房", "fee": 35600, "unit": "每日"},
+    "hdu": {"name": "加護病房", "fee": 21000, "unit": "每日"},
+    "nursery": {"name": "嬰兒護理室", "fee": 3100, "unit": "每日"},
+    "maternity_confirmed": {"name": "產科分娩 (已確認預約)", "fee": 74000, "note": "包括一次產前檢查、分娩服務及三日兩晚普通病房住院"},
+    "maternity_unconfirmed": {"name": "產科分娩 (未確認預約)", "fee": 130000, "note": "未經確認預約或沒有接受醫管局產前檢查"},
+    "specialist_clinic": {"name": "專科診所", "fee": 850, "unit": "每次診症", "drug_per_item": 90},
+    "family_medicine": {"name": "家庭醫學診所", "fee": 500, "unit": "每次診症", "drug_per_item": 40},
+    "injection_dressing": {"name": "接受注射或敷藥", "fee": 250, "unit": "每次"},
+    "dialysis_long_term": {"name": "血液透析 (長期)", "fee": 3000, "unit": "每次診症"},
+    "dialysis_acute": {"name": "血液透析 (急性)", "fee": 6000, "unit": "每次診症"},
+    "oncology_day": {"name": "腫瘤科診所日間程序", "fee": 1300, "unit": "每次診症"},
+    "ophthalmology_day": {"name": "眼科診所日間程序", "fee": 950, "unit": "每次診症"},
+    "day_procedure": {"name": "日間醫療設施日間程序及治理", "fee": 7400, "unit": "每次診症"},
+    "psychiatric_day": {"name": "精神科日間醫院", "fee": 1800, "unit": "每次診症"},
+    "geriatric_day": {"name": "老人科日間醫院", "fee": 2700, "unit": "每次診症"},
+    "rehab_day": {"name": "復康日間醫院", "fee": 1900, "unit": "每次診症"},
+    "community_geriatric": {"name": "社區老人評估小組", "fee": 850, "unit": "每次診症", "drug_per_item": 90},
+    "community_nursing_general": {"name": "社康護理 (普通科)", "fee": 800, "unit": "每次"},
+    "community_nursing_psych": {"name": "社康護理 (精神科)", "fee": 2000, "unit": "每次"},
+    "community_allied": {"name": "社區專職醫療服務", "fee": 2000, "unit": "每次"},
+    "pathology": {
+      "name": "病理學檢驗服務",
+      "basic": {"name": "基礎項目", "fee": 400, "unit": "每種服務"},
+      "advanced": {"name": "進階項目", "fee": 800, "unit": "每種服務"},
+      "high_end": {"name": "高端項目", "fee": 16100, "unit": "每種服務"}
+    },
+    "radiology": {
+      "name": "非緊急放射科服務",
+      "basic": {"name": "基礎項目", "fee": 400, "unit": "每種服務"},
+      "advanced": {"name": "進階項目", "fee": 1600, "unit": "每種服務"},
+      "high_end": {"name": "高端項目", "fee": 4700, "unit": "每種服務"}
+    }
+  },
+  "private_ward": {
+    "description": "非資助服務收費 (頭等/二等病房，俗稱私家房)",
+    "inpatient_acute_head": {"name": "住院 (急症醫院 - 頭等)", "fee": 6960, "unit": "每日", "note": "不包括醫生費用、藥物、義製人體器官"},
+    "inpatient_acute_second": {"name": "住院 (急症醫院 - 二等)", "fee": 4640, "unit": "每日"},
+    "inpatient_other_head": {"name": "住院 (其他醫院 - 頭等)", "fee": 5810, "unit": "每日"},
+    "inpatient_other_second": {"name": "住院 (其他醫院 - 二等)", "fee": 3870, "unit": "每日"},
+    "icu": {"name": "深切治療病房", "fee": 22450, "unit": "每日"},
+    "hdu": {"name": "加護病房", "fee": 12650, "unit": "每日"},
+    "nursery": {"name": "嬰兒護理室", "fee": 2630, "unit": "每日"},
+    "doctor_ward_visit": {"name": "醫生巡房/診治 (每個專科)", "fee": "680 - 2,780", "unit": "每次診症"},
+    "outpatient_first": {"name": "門診首次診治", "fee": "1,090 - 2,580", "unit": "每次診症"},
+    "outpatient_followup": {"name": "門診覆診", "fee": "950 - 2,350", "unit": "每次診症"},
+    "minor_procedure": {"name": "小型護理程序 (如敷藥或注射)", "fee": 450, "unit": "每次"}
+  },
+  "administrative": {
+    "description": "公立醫院行政項目收費",
+    "data_access": {"name": "查閱資料要求 (個人資料影印本)", "fee": 100, "unit": "每次申請", "includes": "已包括10頁費用及郵費"},
+    "photocopy_extra": {"name": "每頁影印費 (10頁以後)", "fee": 1.5, "unit": "每頁"},
+    "cd": {"name": "光碟或底片", "fee": 300, "unit": "每張"},
+    "medical_report": {"name": "證明書及醫療報告", "fee": 1100, "unit": "每份報告", "note": "最多收取4份報告收費"},
+    "autopsy_report": {"name": "驗屍報告", "fee": 2300, "unit": "每份報告"},
+    "childcare_check": {"name": "幼兒中心/特殊教育體格檢查證明書", "fee": 1100, "unit": "每份"},
+    "medical_assessment": {"name": "醫療評估 (如殘疾評估)", "fee": 1400, "unit": "每次評估"},
+    "record_reissue": {"name": "重發紀錄/紀錄副本", "fee": 300, "unit": "每項紀錄"},
+    "drug_delivery": {"name": "藥物送遞服務", "fee": 65, "unit": "每張處方"},
+    "self_financed_drug_admin": {"name": "自費藥物行政費", "fee": 130, "unit": "每項處方藥物"},
+    "mortuary_day29": {"name": "殮房 (第29日起)", "fee": 200, "unit": "每日"},
+    "mortuary_day36": {"name": "殮房 (第36日起)", "fee": 550, "unit": "每日"}
+  },
+  "late_payment": {
+    "description": "拖欠醫療費用行政費",
+    "stage1": {"name": "第一期行政費 (60天後)", "fee": "欠款額的5%", "unit": "每張賬單", "cap": 1000},
+    "stage2": {"name": "第二期行政費 (90天後)", "fee": "欠款額的10%", "unit": "每張賬單", "cap": 10000},
+    "total_cap": "欠款的15%，最高$11,000"
+  },
+  "safety_net": {
+    "description": "醫療費用減免及安全網",
+    "fee_cap": {"name": "全年收費上限", "amount": 10000, "unit": "每年", "note": "2026年1月1日起設立，無需經濟審查，減輕重病或長期病患者費用負擔"},
+    "waiver": {"name": "醫療費用減免機制", "note": "有經濟困難人士可申請，詳情請瀏覽醫管局網頁"}
+  },
+  "private_hospitals_note": "私家醫院收費因應醫院、病房等級、手術複雜程度而有極大差異。以下為2026年參考收費範圍，實際收費請直接向各醫院查詢。資料來源：各私家醫院官方網站。",
+  "private_hospital_fee_range": {
+    "description": "私家醫院收費參考範圍 (2026年)",
+    "gp_consultation": {"name": "普通科門診診金", "range": "$200 - $500", "unit": "每次"},
+    "specialist_consultation": {"name": "專科門診診金", "range": "$500 - $2,000", "unit": "每次"},
+    "ward_general": {"name": "普通病房 (大房)", "range": "$500 - $1,200", "unit": "每日"},
+    "ward_semi_private": {"name": "半私家房", "range": "$800 - $2,500", "unit": "每日"},
+    "ward_private": {"name": "私家房", "range": "$1,500 - $6,000", "unit": "每日"},
+    "ward_deluxe": {"name": "豪華套房", "range": "$3,000 - $15,000", "unit": "每日"},
+    "icu": {"name": "深切治療病房", "range": "$10,000 - $35,000", "unit": "每日"},
+    "maternity_natural": {"name": "自然分娩套餐", "range": "$20,000 - $50,000", "unit": "整個療程"},
+    "maternity_c_section": {"name": "剖腹分娩套餐", "range": "$30,000 - $80,000", "unit": "整個療程"},
+    "health_check_basic": {"name": "基本身體檢查", "range": "$1,000 - $5,000", "unit": "每次"},
+    "health_check_comprehensive": {"name": "全面身體檢查", "range": "$5,000 - $20,000", "unit": "每次"},
+    "mri": {"name": "磁力共振 (MRI)", "range": "$3,000 - $10,000", "unit": "每次"},
+    "ct_scan": {"name": "電腦掃描 (CT)", "range": "$2,000 - $6,000", "unit": "每次"},
+    "endoscopy": {"name": "胃鏡/腸鏡", "range": "$5,000 - $15,000", "unit": "每次"},
+    "cataract": {"name": "白內障手術", "range": "$15,000 - $35,000", "unit": "每隻眼"}
+  }
+}

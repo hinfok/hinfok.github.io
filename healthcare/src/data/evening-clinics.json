@@ -1,0 +1,35 @@
+{
+  "source": "醫院管理局普通科門診診所資料",
+  "source_url": "https://www.ha.org.hk/visitor/ha_visitor_index.asp?Content_ID=10051",
+  "note": "以下為各區提供夜診及假日服務的公立普通科門診診所。私家診所夜診服務請直接向各診所查詢。",
+  "public_clinics": [
+    {"name": "香港仔賽馬會普通科門診診所", "district": "南區", "evening": true, "sunday": true, "holiday": true, "phone": "2555 0381", "address": "香港仔水塘道10號"},
+    {"name": "西營盤賽馬會普通科門診診所", "district": "中西區", "evening": true, "sunday": false, "holiday": false, "phone": "2853 4444", "address": "西營盤皇后大道西134號"},
+    {"name": "筲箕灣賽馬會普通科門診診所", "district": "東區", "evening": true, "sunday": true, "holiday": false, "phone": "2560 0211", "address": "筲箕灣柴灣道8號"},
+    {"name": "觀塘社區健康中心", "district": "觀塘區", "evening": true, "sunday": true, "holiday": true, "phone": "2389 0331", "address": "觀塘協和街60號"},
+    {"name": "油麻地賽馬會普通科門診診所", "district": "油尖旺區", "evening": true, "sunday": true, "holiday": true, "phone": "2388 5142", "address": "油麻地炮台街145號"},
+    {"name": "長沙灣賽馬會普通科門診診所", "district": "深水埗區", "evening": true, "sunday": true, "holiday": true, "phone": "2387 8211", "address": "長沙灣廣利道2號"},
+    {"name": "石硤尾普通科門診診所", "district": "深水埗區", "evening": true, "sunday": false, "holiday": false, "phone": "2788 3023", "address": "石硤尾巴域街71號"},
+    {"name": "紅磡診所", "district": "九龍城區", "evening": true, "sunday": true, "holiday": false, "phone": "2356 9850", "address": "紅磡差館里22號"},
+    {"name": "方逸華普通科門診診所", "district": "西貢區", "evening": true, "sunday": true, "holiday": true, "phone": "2191 1088", "address": "將軍澳寶寧里2號"},
+    {"name": "大埔賽馬會普通科門診診所", "district": "大埔區", "evening": true, "sunday": true, "holiday": true, "phone": "2664 2039", "address": "大埔汀角路37號"},
+    {"name": "沙田（大圍）普通科門診診所", "district": "沙田區", "evening": true, "sunday": true, "holiday": true, "phone": "2605 2922", "address": "沙田大圍文禮路2號"},
+    {"name": "上水普通科門診診所", "district": "北區", "evening": true, "sunday": true, "holiday": false, "phone": "2670 0211", "address": "上水石湖墟馬會道108號"},
+    {"name": "屯門診所", "district": "屯門區", "evening": true, "sunday": true, "holiday": true, "phone": "2452 6733", "address": "屯門新墟青賢街11號"},
+    {"name": "元朗賽馬會健康院", "district": "元朗區", "evening": true, "sunday": true, "holiday": true, "phone": "2443 8511", "address": "元朗青山公路269號"},
+    {"name": "荃灣診所", "district": "荃灣區", "evening": true, "sunday": true, "holiday": false, "phone": "2414 1245", "address": "荃灣沙咀道213號"},
+    {"name": "青衣長康普通科門診診所", "district": "葵青區", "evening": true, "sunday": false, "holiday": false, "phone": "2434 6201", "address": "青衣長康邨長康商場二期"},
+    {"name": "東涌普通科門診診所", "district": "離島區", "evening": true, "sunday": false, "holiday": false, "phone": "2109 6411", "address": "東涌逸東街8號逸東商場"},
+    {"name": "灣仔普通科門診診所", "district": "灣仔區", "evening": false, "sunday": false, "holiday": false, "phone": "2572 6021", "address": "灣仔皇后大道東284號"},
+    {"name": "黃大仙普通科門診診所", "district": "黃大仙區", "evening": true, "sunday": false, "holiday": false, "phone": "2320 4232", "address": "黃大仙正德街104號"}
+  ],
+  "private_clinics_note": "私家診所夜診/假日服務需個別查詢。部分大型醫療集團（如卓健、聯合醫務）提供夜診及假日服務。",
+  "fee": {
+    "public_eligible": 150,
+    "public_eligible_drug": 5,
+    "public_non_eligible": 500,
+    "public_non_eligible_drug": 40,
+    "private_range": "$200 - $500",
+    "note": "公立夜診收費與日間相同"
+  }
+}
