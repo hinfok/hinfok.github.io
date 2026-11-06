@@ -595,6 +595,7 @@ def build_sitemap(articles, pages):
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
     lines.append(f'  <url><loc>{base}/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>')
+    lines.append(f'  <url><loc>{base}/earning</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>')
     for art in articles:
         lines.append(f'  <url><loc>{base}/{art["slug"]}</loc><priority>0.9</priority><changefreq>monthly</changefreq><lastmod>{art.get("lastUpdated","")}</lastmod></url>')
     # Add healthcare pages to sitemap

@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0f14">
+<title>帶薪生存遊戲 | HKInfo Earning</title>
+<meta name="description" content="將上班變成帶薪生存遊戲：即時薪水跳動、摸魚 ROI、窩囊費、購買力換算，仲有一鍵老闆來了模式。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hinfok.com/earning">
+<meta property="og:type" content="website">
+<meta property="og:title" content="帶薪生存遊戲 | HKInfo Earning">
+<meta property="og:description" content="每一秒勞動都變成即時回饋。睇住薪水跳動，計下今日摸魚賺咗幾多。">
+<meta property="og:url" content="https://hinfok.com/earning">
+<meta property="og:image" content="https://hinfok.com/images/og-default.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root {
+  --ink: #0b0f14;
+  --ink-2: #111820;
+  --panel: #17212b;
+  --panel-2: #1d2a35;
+  --panel-3: #20313d;
+  --paper: #f4f1e8;
+  --muted: #8fa3b3;
+  --muted-2: #607483;
+  --line: rgba(244, 241, 232, 0.12);
+  --line-strong: rgba(244, 241, 232, 0.22);
+  --lime: #d8ff5f;
+  --orange: #ff7b3d;
+  --mint: #72e3c2;
+  --pink: #ff6ea9;
+  --blue: #78b8ff;
+  --danger: #ff5b5b;
+  --accent: var(--mint);
+  --accent-soft: rgba(114, 227, 194, 0.14);
+  --radius: 8px;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-ui);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(244, 241, 232, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 241, 232, 0.025) 1px, transparent 1px);
+  background-size: 28px 28px;
+  z-index: -1;
+}
+button, input { font: inherit; }
+button { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 3px;
+}
+a { color: inherit; }
+[hidden] { display: none !important; }
+
+.site-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 72px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+.brand strong {
+  color: var(--lime);
+  font-size: 21px;
+}
+.brand .brand-sub {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ghost-btn, .primary-action, .danger-action, .chip-btn, .mini-btn, .tab-btn {
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  border-radius: 6px;
+  min-height: 40px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+.ghost-btn {
+  color: var(--muted);
+  font-size: 12px;
+}
+.ghost-btn:hover, .chip-btn:hover, .mini-btn:hover, .tab-btn:hover {
+  color: var(--paper);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.ghost-btn:active, .primary-action:active, .danger-action:active, .chip-btn:active {
+  transform: translateY(1px);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.72fr) minmax(280px, 0.78fr);
+  gap: 18px;
+  padding-top: 18px;
+  align-items: start;
+}
+.main-column, .side-column { display: grid; gap: 18px; min-width: 0; }
+
+.status-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  background: var(--ink-2);
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+.status-strip strong { color: var(--accent); font-weight: 700; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  min-width: 0;
+}
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  background: var(--panel-2);
+  border-color: var(--line-strong);
+}
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  opacity: 0.45;
+  pointer-events: none;
+}
+.hero-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.eyebrow, .kicker {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.mode-switch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--ink-2);
+}
+.mode-switch button {
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.mode-switch button.active {
+  color: var(--ink);
+  background: var(--lime);
+  font-weight: 800;
+}
+
+.salary-wrap {
+  position: relative;
+  z-index: 1;
+  margin: 26px 0 8px;
+}
+.salary-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+.salary-value {
+  margin: 2px 0 0;
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 68px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 24px rgba(216, 255, 95, 0.22);
+  overflow-wrap: anywhere;
+}
+.salary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.salary-meta strong { color: var(--accent); font-weight: 700; }
+.phase-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 5px 8px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+.phase-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+}
+.phase-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+.chip-btn {
+  min-height: 32px;
+  padding: 5px 9px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.chip-btn.active {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: rgba(255, 123, 61, 0.1);
+}
+
+.progress-block {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+}
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.progress-labels span:nth-child(2) { color: var(--accent); }
+.progress-track {
+  position: relative;
+  height: 18px;
+  margin: 12px 0 4px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: #0c1218;
+  overflow: visible;
+}
+.progress-track::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--line-strong) 0 8px, transparent 8px 14px);
+}
+.progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  border-radius: 3px;
+  background: var(--accent);
+  opacity: 0.72;
+  transition: width 240ms linear, background 240ms ease;
+}
+.progress-worker {
+  position: absolute;
+  left: 1%;
+  bottom: 13px;
+  width: 32px;
+  height: 38px;
+  transform: translateX(-50%);
+  transition: left 240ms linear;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.3));
+}
+.worker-sprite {
+  width: 100%;
+  height: 100%;
+  animation: worker-bob 1.1s steps(2, end) infinite;
+}
+.worker-sprite svg { display: block; width: 100%; height: 100%; shape-rendering: crispEdges; }
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.progress-meta span:last-child { color: var(--accent); }
+.progress-meta span:last-child { text-align: right; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+.primary-action {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  padding-inline: 16px;
+}
+.primary-action:hover { background: #e7ff90; }
+.danger-action {
+  border-color: rgba(255, 123, 61, 0.55);
+  background: rgba(255, 123, 61, 0.08);
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 700;
+}
+.danger-action:hover { background: rgba(255, 123, 61, 0.18); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.stat {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--ink-2);
+}
+.stat-label {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.stat-value {
+  margin-top: 3px;
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow-wrap: anywhere;
+}
+.stat-value.accent { color: var(--accent); }
+.stat-note {
+  margin-top: 2px;
+  color: var(--muted-2);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.panel-title {
+  margin: 0;
+  color: var(--paper);
+  font-size: 19px;
+  line-height: 1.2;
+}
+.panel-subtitle {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.status-pill {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 5px 7px;
+}
+.status-pill.live { color: var(--orange); border-color: var(--orange); }
+
+.roi-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.7fr);
+  gap: 18px;
+  align-items: stretch;
+}
+.roi-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.roi-type {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--ink-2);
+  color: var(--muted);
+  padding: 7px 9px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.roi-type.active { color: var(--lime); border-color: var(--lime); background: rgba(216, 255, 95, 0.08); }
+.roi-number {
+  margin-top: 18px;
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.roi-caption {
+  color: var(--muted);
+  font-size: 12px;
+}
+.roi-message {
+  min-height: 66px;
+  margin-top: 12px;
+  padding: 12px;
+  border-left: 2px solid var(--lime);
+  background: var(--ink-2);
+  color: var(--paper);
+  font-size: 12px;
+}
+.roi-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+}
+.roi-side .mini-stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+.roi-side .mini-stat strong { color: var(--paper); font-family: var(--font-mono); font-size: 12px; }
+.roi-start { width: 100%; }
+
+.buying-summary {
+  margin: -4px 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.buying-summary strong { color: var(--lime); }
+.buying-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.buying-card {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--ink-2);
+}
+.buying-icon { font-size: 23px; line-height: 1; }
+.buying-name { margin-top: 9px; font-size: 12px; font-weight: 700; }
+.buying-value { margin-top: 2px; color: var(--lime); font-family: var(--font-mono); font-size: 11px; }
+.buying-next { margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.4; }
+.buying-bar { height: 4px; margin-top: 9px; background: var(--line); }
+.buying-bar span { display: block; width: 0%; height: 100%; background: var(--accent); transition: width 240ms linear; }
+
+.settings-panel { padding: 20px; }
+.field-grid { display: grid; gap: 12px; }
+.field { display: grid; gap: 5px; }
+.field label { color: var(--muted); font-size: 11px; }
+.field input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: var(--ink-2);
+  color: var(--paper);
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.field input:focus { border-color: var(--lime); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.form-note { margin: 12px 0 0; color: var(--muted-2); font-size: 10px; }
+.settings-summary {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+.settings-summary div { display: flex; justify-content: space-between; gap: 10px; }
+.settings-summary strong { color: var(--paper); font-family: var(--font-mono); font-size: 11px; }
+.settings-actions { display: flex; gap: 8px; margin-top: 14px; }
+.settings-actions .ghost-btn { flex: 1; }
+
+.mood-panel { overflow: hidden; }
+.mood-top { display: flex; align-items: center; gap: 12px; }
+.pixel-cat { flex: 0 0 auto; width: 76px; height: 76px; }
+.pixel-cat svg { display: block; width: 100%; height: 100%; shape-rendering: crispEdges; }
+.mood-title { margin: 0; font-size: 16px; line-height: 1.3; }
+.mood-copy { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+.mood-line {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.escape-panel { background: var(--ink-2); }
+.escape-title { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 15px; }
+.escape-copy { margin: 8px 0 14px; color: var(--muted); font-size: 12px; }
+.escape-trigger {
+  width: 100%;
+  border-color: rgba(255, 91, 91, 0.6);
+  background: rgba(255, 91, 91, 0.08);
+  color: #ff9b9b;
+  font-weight: 800;
+}
+.escape-trigger:hover { background: rgba(255, 91, 91, 0.17); }
+.key-hint {
+  display: inline-block;
+  margin-left: 4px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 0 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 20px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-size: 11px;
+}
+.footer a { color: var(--muted); text-decoration: none; }
+.footer a:hover { color: var(--lime); }
+
+.floating-boss {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 91, 91, 0.55);
+  border-radius: 5px;
+  background: #261317;
+  color: #ff9b9b;
+  padding: 10px 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+}
+.floating-boss:hover { background: #3a1a20; border-color: #ff5b5b; }
+.floating-boss .boss-shortcut { color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
+
+.toast-stack {
+  position: fixed;
+  right: 18px;
+  bottom: 74px;
+  z-index: 120;
+  display: grid;
+  gap: 8px;
+  width: min(330px, calc(100vw - 36px));
+  pointer-events: none;
+}
+.toast {
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--lime);
+  border-radius: 4px;
+  background: #18242d;
+  color: var(--paper);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  animation: toast-in 180ms ease-out both;
+}
+.toast.danger { border-left-color: var(--danger); }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.floating-money {
+  position: fixed;
+  z-index: 140;
+  pointer-events: none;
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 900;
+  text-shadow: 0 2px 0 #000;
+  animation: money-float 1000ms ease-out both;
+}
+@keyframes money-float {
+  from { opacity: 1; transform: translate(-50%, 0) scale(0.85); }
+  to { opacity: 0; transform: translate(-50%, -72px) scale(1.05); }
+}
+@keyframes worker-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+.shake { animation: shake 280ms ease-in-out; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+}
+
+.boss-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #f3f4f6;
+  color: #1f2937;
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow: auto;
+}
+.fake-app { min-width: 760px; min-height: 100vh; background: #fff; }
+.fake-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 10px;
+  background: #217346;
+  color: #fff;
+  font-size: 12px;
+}
+.fake-excel-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  color: #217346;
+  font-weight: 900;
+  font-size: 13px;
+}
+.fake-titlebar-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fake-window-controls { display: flex; align-items: center; gap: 8px; }
+.safe-return {
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 3px;
+  background: rgba(0,0,0,0.12);
+  color: #fff;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 10px;
+}
+.safe-return:hover { background: rgba(0,0,0,0.28); }
+.fake-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 36px;
+  padding: 0 14px;
+  border-bottom: 1px solid #d1d5db;
+  background: #f8fafc;
+  color: #374151;
+  font-size: 11px;
+}
+.fake-ribbon strong { color: #217346; }
+.fake-formula {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  padding: 0 10px;
+  border-bottom: 1px solid #d1d5db;
+  color: #6b7280;
+  font-size: 11px;
+  font-family: Consolas, monospace;
+}
+.fake-formula span:first-child { color: #217346; font-weight: 800; }
+.fake-sheet { padding: 0 0 24px; overflow: auto; }
+.sheet-grid {
+  display: grid;
+  grid-template-columns: 42px repeat(8, minmax(108px, 1fr));
+  border-collapse: collapse;
+  min-width: 920px;
+  font-size: 11px;
+}
+.sheet-cell {
+  min-height: 26px;
+  padding: 5px 7px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sheet-head { background: #e5e7eb; color: #374151; font-weight: 700; text-align: center; }
+.sheet-rowhead { background: #f3f4f6; color: #6b7280; text-align: center; font-weight: 700; }
+.sheet-cell.selected { outline: 2px solid #217346; outline-offset: -2px; }
+.sheet-cell.good { color: #15803d; font-weight: 700; }
+.sheet-cell.warn { color: #b45309; font-weight: 700; }
+.fake-code-wrap {
+  display: none;
+  min-height: calc(100vh - 98px);
+  padding: 22px;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  overflow: auto;
+}
+.fake-code-wrap.active { display: block; }
+.fake-sheet.active { display: block; }
+.fake-sheet { display: none; }
+.code-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #8b949e;
+  font-size: 11px;
+}
+.code-dot-row { display: flex; gap: 6px; }
+.code-dot { width: 9px; height: 9px; border-radius: 50%; background: #30363d; }
+.code-dot:nth-child(1) { background: #ff5f56; }
+.code-dot:nth-child(2) { background: #ffbd2e; }
+.code-dot:nth-child(3) { background: #27c93f; }
+.fake-code { margin: 0; white-space: pre-wrap; line-height: 1.8; }
+.code-green { color: #7ee787; }
+.code-blue { color: #79c0ff; }
+.code-yellow { color: #d2a8ff; }
+.build-ok { color: #3fb950; font-weight: 700; }
+
+.report-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(4, 8, 12, 0.78);
+  backdrop-filter: blur(5px);
+}
+.report-modal {
+  width: min(560px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--panel-2);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  padding: 24px;
+}
+.report-modal-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.report-modal h2 { margin: 4px 0 0; font-size: 24px; }
+.report-close {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.report-score {
+  margin: 22px 0 3px;
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+.report-score-label { color: var(--muted); font-size: 11px; }
+.report-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 22px;
+}
+.report-stat {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--ink-2);
+}
+.report-stat span { display: block; color: var(--muted); font-size: 10px; }
+.report-stat strong { display: block; margin-top: 2px; font-family: var(--font-mono); font-size: 15px; }
+.report-quote {
+  margin-top: 18px;
+  padding: 13px;
+  border-left: 3px solid var(--orange);
+  background: rgba(255, 123, 61, 0.08);
+  color: var(--paper);
+  font-size: 12px;
+}
+.report-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.report-actions .primary-action, .report-actions .ghost-btn { flex: 1; }
+
+#confettiCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  pointer-events: none;
+}
+
+body.phase-working { --accent: var(--mint); }
+body.phase-sunset { --accent: var(--orange); }
+body.phase-after { --accent: var(--lime); }
+body.phase-offday { --accent: var(--pink); }
+body.phase-before { --accent: var(--blue); }
+body.phase-sunset .salary-value { color: var(--orange); text-shadow: 0 0 24px rgba(255, 123, 61, 0.28); }
+body.phase-after .salary-value { color: var(--lime); }
+body.phase-offday .salary-value { color: var(--pink); text-shadow: 0 0 24px rgba(255, 110, 169, 0.25); }
+body.phase-sunset .hero-panel { border-color: rgba(255, 123, 61, 0.45); }
+body.phase-after .hero-panel { border-color: rgba(216, 255, 95, 0.55); }
+
+body.mini .site-shell { width: min(440px, calc(100% - 16px)); padding-bottom: 18px; }
+body.mini .topbar { min-height: 54px; }
+body.mini .brand .brand-sub { display: none; }
+body.mini .layout { display: block; padding-top: 10px; }
+body.mini .side-column, body.mini .buying-panel { display: none; }
+body.mini .hero-panel { padding: 16px; }
+body.mini .salary-value { font-size: 48px; }
+body.mini .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.mini .roi-body { grid-template-columns: 1fr; }
+body.mini .roi-side { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 12px; }
+body.mini .footer { font-size: 9px; }
+body.mini .floating-boss { right: 8px; bottom: 8px; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .side-column { grid-template-columns: 1fr 1fr; }
+  .settings-panel { grid-column: span 2; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .buying-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 650px) {
+  .site-shell { width: min(100% - 20px, 540px); }
+  .topbar { min-height: 64px; align-items: flex-start; padding: 12px 0; }
+  .brand { align-items: flex-start; flex-direction: column; gap: 0; }
+  .brand strong { font-size: 19px; }
+  .brand .brand-sub { font-size: 9px; }
+  .topbar-actions { gap: 5px; }
+  .ghost-btn { min-height: 34px; padding: 6px 8px; font-size: 10px; }
+  .panel, .hero-panel { padding: 16px; }
+  .hero-topline { align-items: flex-start; flex-direction: column; }
+  .mode-switch { width: 100%; }
+  .mode-switch button { flex: 1; }
+  .salary-value { font-size: 46px; letter-spacing: -0.05em; }
+  .salary-meta { font-size: 10px; }
+  .phase-row { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .roi-body { grid-template-columns: 1fr; }
+  .roi-side { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 12px; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .side-column { grid-template-columns: 1fr; }
+  .settings-panel { grid-column: auto; }
+  .buying-grid { grid-template-columns: 1fr 1fr; }
+  .panel-head { flex-direction: column; gap: 8px; }
+  .progress-meta { font-size: 9px; }
+  .hero-actions .primary-action, .hero-actions .danger-action { flex: 1 1 100%; }
+  .floating-boss { right: 10px; bottom: 10px; font-size: 10px; }
+  .toast-stack { right: 10px; bottom: 62px; width: calc(100vw - 20px); }
+  .report-stats { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body class="phase-working">
+<div class="site-shell" id="siteShell">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="返回 HKInfo 首頁">
+      <strong>HKInfo</strong>
+      <span class="brand-sub">EARNING / 帶薪生存遊戲</span>
+    </a>
+    <div class="topbar-actions">
+      <button class="ghost-btn" id="popoutBtn" type="button">⧉ <span>彈出小視窗</span></button>
+      <button class="ghost-btn" id="reportBtn" type="button">▣ 收工結算</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <div class="main-column">
+      <div class="status-strip" id="statusStrip" aria-live="polite">
+        <span><strong>LIVE</strong> · 今日工時 <span id="workWindowLabel">09:00 → 18:00</span></span>
+        <span id="statusDateLabel"></span>
+      </div>
+
+      <section class="hero-panel" aria-labelledby="salaryHeading">
+        <div class="hero-topline">
+          <span class="eyebrow" id="salaryHeading">即時出糧 / REAL-TIME PAY</span>
+          <div class="mode-switch" role="group" aria-label="時間模式">
+            <button type="button" data-mode="live" class="active">真實時間</button>
+            <button type="button" data-mode="demo">示範模式</button>
+          </div>
+        </div>
+        <div class="salary-wrap">
+          <div class="salary-label">今日已賺</div>
+          <div class="salary-value" id="salaryValue">HK$0.00</div>
+          <div class="salary-meta">
+            <span>每秒 <strong id="rateValue">HK$0.025</strong></span>
+            <span>每日 <strong id="dailyValue">HK$818.18</strong></span>
+            <span id="remainingMeta">尚餘 09:00:00</span>
+          </div>
+        </div>
+        <div class="phase-row">
+          <span class="phase-badge" id="phaseBadge">工作中</span>
+          <span class="phase-note" id="phaseNote">齒輪轉緊，錢就嚟。</span>
+        </div>
+        <div class="demo-controls" id="demoControls" hidden>
+          <button class="chip-btn" type="button" data-demo="10:30">上班中 · 10:30</button>
+          <button class="chip-btn" type="button" data-demo="17:45">曙光 · 17:45</button>
+          <button class="chip-btn" type="button" data-demo="18:01">狂歡 · 18:01</button>
+        </div>
+        <div class="progress-block">
+          <div class="progress-labels">
+            <span>公司門口</span>
+            <span id="progressPct">0%</span>
+            <span>家裡的大床</span>
+          </div>
+          <div class="progress-track" id="progressTrack">
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="progress-worker" id="progressWorker" aria-hidden="true">
+              <div class="worker-sprite">
+                <svg viewBox="0 0 18 22" aria-hidden="true">
+                  <rect x="5" y="1" width="8" height="2" fill="#f4f1e8"/>
+                  <rect x="4" y="3" width="10" height="5" fill="#f4a261"/>
+                  <rect x="4" y="3" width="2" height="5" fill="#d28242"/>
+                  <rect x="12" y="3" width="2" height="5" fill="#d28242"/>
+                  <rect x="6" y="5" width="2" height="1" fill="#0b0f14"/>
+                  <rect x="10" y="5" width="2" height="1" fill="#0b0f14"/>
+                  <rect x="7" y="9" width="4" height="5" fill="#72e3c2"/>
+                  <rect x="3" y="10" width="4" height="2" fill="#72e3c2"/>
+                  <rect x="11" y="10" width="4" height="2" fill="#72e3c2"/>
+                  <rect x="5" y="14" width="3" height="5" fill="#1d2a35"/>
+                  <rect x="10" y="14" width="3" height="5" fill="#1d2a35"/>
+                  <rect x="4" y="19" width="4" height="2" fill="#f4f1e8"/>
+                  <rect x="10" y="19" width="4" height="2" fill="#f4f1e8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="progress-meta">
+            <span id="clockLabel">09:00 → 18:00</span>
+            <span id="progressHint">終點：家裡的大床</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="primary-action" id="slackBtn" type="button">開啟摸魚 ROI</button>
+          <button class="danger-action" id="insultBtn" type="button">血壓 +1 / 窩囊費 +$50</button>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="今日戰績">
+        <div class="stat">
+          <div class="stat-label">今日帶薪摸魚</div>
+          <div class="stat-value accent" id="slackStat">00:00:00</div>
+          <div class="stat-note" id="slackStatNote">尚未開始</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">抗壓次數</div>
+          <div class="stat-value" id="insultStat">0 次</div>
+          <div class="stat-note">心理帳面 +HK$0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">今日擊敗</div>
+          <div class="stat-value" id="rankStat">72%</div>
+          <div class="stat-note">全港打工人（自稱）</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">下班倒數</div>
+          <div class="stat-value" id="countdownStat">09:00:00</div>
+          <div class="stat-note" id="countdownNote">下班前唔好放棄</div>
+        </div>
+      </section>
+
+      <section class="panel roi-panel" aria-labelledby="roiHeading">
+        <div class="panel-head">
+          <div>
+            <h2 class="panel-title" id="roiHeading">摸魚性價比計算機</h2>
+            <p class="panel-subtitle">公司仍然出糧，你只係暫時將靈魂切換到省電模式。</p>
+          </div>
+          <span class="status-pill" id="slackStatus">IDLE</span>
+        </div>
+        <div class="roi-body">
+          <div>
+            <div class="roi-types" role="group" aria-label="摸魚類型">
+              <button class="roi-type active" type="button" data-slack-type="toilet">🚻 去廁所</button>
+              <button class="roi-type" type="button" data-slack-type="coffee">☕ 沖咖啡</button>
+              <button class="roi-type" type="button" data-slack-type="meeting">🫠 開會發呆</button>
+              <button class="roi-type" type="button" data-slack-type="daze">😶‍🌫️ 純粹放空</button>
+            </div>
+            <div class="roi-number" id="slackEarned">HK$0.00</div>
+            <div class="roi-caption">本次摸魚已賺取</div>
+            <div class="roi-message" id="slackMessage">仲未開始。你嘅生產力正在待機。</div>
+          </div>
+          <div class="roi-side">
+            <div>
+              <div class="mini-stat"><span>今日累計</span><strong id="slackTotal">00:00:00</strong></div>
+              <div class="mini-stat"><span>摸魚收入</span><strong id="slackMoney">HK$0.00</strong></div>
+              <div class="mini-stat"><span>每分鐘值</span><strong id="slackPerMinute">HK$0.00</strong></div>
+            </div>
+            <button class="primary-action roi-start" id="slackStartBtn" type="button">開始摸魚</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel buying-panel" aria-labelledby="buyingHeading">
+        <div class="panel-head">
+          <div>
+            <h2 class="panel-title" id="buyingHeading">今日購買力</h2>
+            <p class="panel-subtitle" id="buyingSummary">你今日嘅時間，暫時兌換成以下物品。</p>
+          </div>
+          <span class="status-pill">HKD</span>
+        </div>
+        <div class="buying-grid" id="buyingGrid"></div>
+      </section>
+    </div>
+
+    <aside class="side-column">
+      <section class="panel settings-panel" aria-labelledby="settingsHeading">
+        <div class="panel-head">
+          <div>
+            <h2 class="panel-title" id="settingsHeading">你的出糧設定</h2>
+            <p class="panel-subtitle">只存在你部機，唔會上傳。</p>
+          </div>
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <label for="salaryInput">月薪（HK$）</label>
+            <input id="salaryInput" type="number" min="0" step="100" inputmode="numeric" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="daysInput">每月工作日</label>
+              <input id="daysInput" type="number" min="1" max="31" step="1" inputmode="numeric" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="startInput">上班時間</label>
+              <input id="startInput" type="time">
+            </div>
+          </div>
+          <div class="field">
+            <label for="endInput">下班時間</label>
+            <input id="endInput" type="time">
+          </div>
+        </div>
+        <div class="settings-summary">
+          <div><span>每小時</span><strong id="hourlyValue">HK$0.00</strong></div>
+          <div><span>每秒</span><strong id="secondlyValue">HK$0.000</strong></div>
+          <div><span>工時長度</span><strong id="workLengthValue">9 小時</strong></div>
+        </div>
+        <p class="form-note">設定會自動儲存在瀏覽器，重新打開仍然記得。</p>
+        <div class="settings-actions">
+          <button class="ghost-btn" id="resetSettingsBtn" type="button">重設預設值</button>
+        </div>
+      </section>
+
+      <section class="panel mood-panel" aria-labelledby="moodHeading">
+        <div class="mood-top">
+          <div class="pixel-cat" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <rect x="4" y="9" width="24" height="14" fill="#f4a261"/>
+              <rect x="6" y="6" width="4" height="5" fill="#f4a261"/>
+              <rect x="19" y="6" width="4" height="5" fill="#f4a261"/>
+              <rect x="6" y="3" width="2" height="4" fill="#f4a261"/>
+              <rect x="22" y="3" width="2" height="4" fill="#f4a261"/>
+              <rect x="9" y="13" width="3" height="3" fill="#0b0f14"/>
+              <rect x="19" y="13" width="3" height="3" fill="#0b0f14"/>
+              <rect x="10" y="16" width="1" height="3" fill="#78b8ff"/>
+              <rect x="14" y="18" width="4" height="2" fill="#d28242"/>
+              <rect x="15" y="20" width="2" height="2" fill="#d28242"/>
+              <rect x="26" y="19" width="4" height="2" fill="#f4a261"/>
+              <rect x="28" y="16" width="2" height="4" fill="#f4a261"/>
+              <rect x="11" y="10" width="1" height="2" fill="#72e3c2"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="mood-title" id="moodHeading">今日社畜天氣</h2>
+            <p class="mood-copy" id="moodCopy">你嘅靈魂正在換算成即時收入。</p>
+          </div>
+        </div>
+        <div class="mood-line" id="moodLine">下班前，飲多一杯水。</div>
+      </section>
+
+      <section class="panel escape-panel" aria-labelledby="escapeHeading">
+        <h2 class="escape-title" id="escapeHeading">🚨 逃生艙</h2>
+        <p class="escape-copy">老闆一出現，全頁瞬間切換成業績報表。</p>
+        <button class="ghost-btn escape-trigger" id="bossBtn" type="button">老闆來了 <span class="key-hint">Space</span></button>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <span>HKInfo / EARNING · 帶薪生存遊戲</span>
+    <span>唔係財務建議，係一份精神工資。</span>
+    <a href="/">返回 HKInfo 首頁</a>
+  </footer>
+</div>
+
+<button class="floating-boss" id="floatingBossBtn" type="button" aria-label="老闆來了，切換到業績報表">
+  <span>🚨 老闆來了</span><span class="boss-shortcut">SPACE</span>
+</button>
+
+<div class="toast-stack" id="toastStack" aria-live="polite"></div>
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<div class="boss-overlay" id="bossOverlay" hidden>
+  <div class="fake-app">
+    <div class="fake-titlebar">
+      <span class="fake-excel-icon">X</span>
+      <span class="fake-titlebar-name" id="bossWindowTitle">2026_Q3_業績報表.xlsx - Excel</span>
+      <div class="fake-window-controls">
+        <button class="safe-return" id="exitBossBtn" type="button">安全返回</button>
+        <span>—</span><span>□</span><span>×</span>
+      </div>
+    </div>
+    <div class="fake-ribbon">
+      <strong>檔案</strong><span>常用</span><span>插入</span><span>版面配置</span><span>公式</span><span>資料</span><span>檢視</span>
+      <button class="safe-return" id="toggleCodeBtn" type="button" style="margin-left:auto; color:#374151; border-color:#9ca3af;">切換編譯畫面</button>
+    </div>
+    <div class="fake-formula"><span>fx</span><span id="bossFormula">=SUM(D4:D18)</span></div>
+    <div class="fake-sheet active" id="bossSheet"></div>
+    <div class="fake-code-wrap" id="bossCode">
+      <div class="code-toolbar">
+        <div class="code-dot-row"><span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span></div>
+        <span>terminal — production build</span>
+        <span>UTF-8</span>
+      </div>
+      <pre class="fake-code"><span class="code-blue">$</span> npm run build
+
+<span class="code-yellow">✦</span> Building production bundle...
+<span class="code-green">✓</span> 147 modules transformed.
+<span class="code-green">✓</span> Type checking passed.
+<span class="code-green">✓</span> Assets optimized.
+
+<span class="code-blue">$</span> deploy --env production
+<span class="code-green">✓</span> Build completed successfully.
+<span class="code-green">✓</span> No blocking errors found.
+
+<span class="build-ok">ready in 3.42s</span>
+<span style="color:#8b949e">────────────────────────────</span>
+<span style="color:#8b949e">Press Enter to continue...</span></pre>
+    </div>
+  </div>
+</div>
+
+<div class="report-overlay" id="reportOverlay" hidden>
+  <div class="report-modal" role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+    <div class="report-modal-head">
+      <div>
+        <div class="kicker">SHIFT COMPLETE / 今日結算</div>
+        <h2 id="reportTitle">你今日贏咗一份人工</h2>
+      </div>
+      <button class="report-close" id="closeReportBtn" type="button" aria-label="關閉結算">×</button>
+    </div>
+    <div class="report-score" id="reportScore">HK$0.00</div>
+    <div class="report-score-label">今日已賺</div>
+    <div class="report-stats">
+      <div class="report-stat"><span>帶薪摸魚</span><strong id="reportSlack">00:00:00</strong></div>
+      <div class="report-stat"><span>抗壓次數</span><strong id="reportInsults">0 次</strong></div>
+      <div class="report-stat"><span>擊敗全港</span><strong id="reportRank">72%</strong></div>
+    </div>
+    <div class="report-quote" id="reportQuote">今日你成功用 9 小時，換取了一個可以好好睡覺的晚上。</div>
+    <div class="report-actions">
+      <button class="primary-action" id="copyReportBtn" type="button">一鍵複製分享</button>
+      <button class="ghost-btn" id="finishReportBtn" type="button">收工，返屋企</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  const STORAGE_KEY = "hkinfo-earning-v1";
+  const DEFAULT_CONFIG = { monthlySalary: 18000, workDays: 22, start: "09:00", end: "18:00" };
+  const SLACK_LABELS = { toilet: "去廁所", coffee: "沖咖啡", meeting: "開會發呆", daze: "純粹放空" };
+  const SLACK_MESSAGES = {
+    toilet: [
+      "已消耗公司一張衛生紙與 3 公升水，幹得漂亮。",
+      "呢幾分鐘，公司仍然準時出糧。",
+      "你在進行必要的生理維護，並非逃避工作。"
+    ],
+    coffee: [
+      "你正在為公司補充人力，順便補充咖啡因。",
+      "一杯咖啡的時間，足夠讓靈魂重新開機。",
+      "咖啡因已到帳，生產力稍後再算。"
+    ],
+    meeting: [
+      "眼睛望住 PPT，靈魂已返到床上。",
+      "你正在參與會議，但冇任何人需要你嘅意見。",
+      "會議室空氣每分鐘都在為你增加收入。"
+    ],
+    daze: [
+      "你正在進行高階背景思考，表面完全空白。",
+      "放空不是偷懶，是大腦在清理暫存檔。",
+      "你嘅眼神已經離線，薪水仍然在線。"
+    ]
+  };
+  const BUYING_ITEMS = [
+    { icon: "🥤", name: "凍檸茶", price: 22, unit: "杯" },
+    { icon: "🧋", name: "珍珠奶茶", price: 32, unit: "杯" },
+    { icon: "🥩", name: "神戶和牛燒肉", price: 880, unit: "餐" },
+    { icon: "📱", name: "新 iPhone", price: 8999, unit: "部" }
+  ];
+
+  const $ = (selector, root) => (root || document).querySelector(selector);
+  const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
+  const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
+  const pad = (n) => String(n).padStart(2, "0");
+  const money = (n) => "HK$" + Math.max(0, n || 0).toLocaleString("en-HK", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const money3 = (n) => "HK$" + Math.max(0, n || 0).toLocaleString("en-HK", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+  const duration = (seconds) => {
+    const s = Math.max(0, Math.floor(seconds || 0));
+    return [Math.floor(s / 3600), Math.floor((s % 3600) / 60), s % 60].map(pad).join(":");
+  };
+  const minutesDuration = (minutes) => {
+    const m = Math.max(0, Math.round(minutes || 0));
+    return m >= 60 ? Math.floor(m / 60) + " 小時 " + (m % 60) + " 分鐘" : m + " 分鐘";
+  };
+  const parseClock = (value) => {
+    const bits = String(value || "00:00").split(":").map(Number);
+    return clamp((bits[0] || 0) * 60 + (bits[1] || 0), 0, 1439);
+  };
+  const dateKey = () => {
+    const d = new Date();
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  };
+  const readStorage = () => {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "null") || {};
+    } catch (error) {
+      return {};
+    }
+  };
+  const saveStorage = (data) => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (error) {}
+  };
+
+  const saved = readStorage();
+  const config = Object.assign({}, DEFAULT_CONFIG, saved.config || {});
+  const state = {
+    mode: new URLSearchParams(location.search).get("mode") === "demo" ? "demo" : "live",
+    demoMinutes: 10 * 60 + 30,
+    lastTick: Date.now(),
+    slackActive: false,
+    slackType: "toilet",
+    slackSessionStart: 0,
+    slackTotalSeconds: 0,
+    insultCount: 0,
+    partyShown: false,
+    bossOpen: false,
+    bossCodeMode: false,
+    reportOpen: false,
+    mini: new URLSearchParams(location.search).get("mini") === "1"
+  };
+  if (saved.day === dateKey()) {
+    state.slackTotalSeconds = Number(saved.slackTotalSeconds) || 0;
+    state.insultCount = Number(saved.insultCount) || 0;
+  }
+  saveSession();
+
+  function saveSession() {
+    saveStorage({
+      config: config,
+      day: dateKey(),
+      slackTotalSeconds: state.slackTotalSeconds,
+      insultCount: state.insultCount
+    });
+  }
+
+  function workMinutes() {
+    let diff = parseClock(config.end) - parseClock(config.start);
+    if (diff <= 0) diff += 1440;
+    return diff;
+  }
+  function dailySalary() {
+    return Number(config.monthlySalary || 0) / Math.max(1, Number(config.workDays || 1));
+  }
+  function perSecond() {
+    return dailySalary() / Math.max(1, workMinutes() * 60);
+  }
+  function isWeekend() {
+    const day = new Date().getDay();
+    return day === 0 || day === 6;
+  }
+  function clockMinutes() {
+    if (state.mode === "demo") return state.demoMinutes;
+    const now = new Date();
+    return now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
+  }
+  function phaseInfo() {
+    const start = parseClock(config.start);
+    const end = parseClock(config.end);
+    const now = clockMinutes();
+    const total = workMinutes();
+    const elapsed = Math.max(0, Math.min(total, now - start));
+    const remaining = Math.max(0, total - elapsed);
+    if (state.mode === "live" && isWeekend()) {
+      return { key: "offday", label: "週末休市中", note: "別看了，現在看也不會加錢。", elapsed: 0, remaining: total, percent: 0 };
+    }
+    if (now < start) {
+      return { key: "before", label: "未開工", note: "公司未開門，靈魂仍然屬於你。", elapsed: 0, remaining: total, percent: 0 };
+    }
+    if (now >= end) {
+      return { key: "after", label: "下班狂歡", note: "你自由了。今日嘅人工已經入帳。", elapsed: total, remaining: 0, percent: 100 };
+    }
+    if (remaining <= 30) {
+      return { key: "sunset", label: "曙光模式", note: "最後 30 分鐘，唔好俾佢跑掉。", elapsed, remaining, percent: elapsed / total * 100 };
+    }
+    return { key: "working", label: "工作中", note: "齒輪轉緊，錢就嚟。", elapsed, remaining, percent: elapsed / total * 100 };
+  }
+
+  function todayEarned(phase) {
+    const info = phase || phaseInfo();
+    if (info.key === "offday" || info.key === "before") return 0;
+    if (info.key === "after") return dailySalary();
+    return perSecond() * info.elapsed * 60;
+  }
+  function activeSlackSeconds() {
+    if (!state.slackActive) return 0;
+    return Math.max(0, (Date.now() - state.slackSessionStart) / 1000);
+  }
+  function totalSlackSeconds() {
+    return state.slackTotalSeconds + activeSlackSeconds();
+  }
+  function rankPercent() {
+    return Math.min(99, 72 + state.insultCount * 3 + Math.floor(totalSlackSeconds() / 180));
+  }
+
+  const els = {
+    salary: $("#salaryValue"),
+    rate: $("#rateValue"),
+    daily: $("#dailyValue"),
+    remainingMeta: $("#remainingMeta"),
+    phaseBadge: $("#phaseBadge"),
+    phaseNote: $("#phaseNote"),
+    progressFill: $("#progressFill"),
+    progressWorker: $("#progressWorker"),
+    progressPct: $("#progressPct"),
+    clockLabel: $("#clockLabel"),
+    progressHint: $("#progressHint"),
+    salaryInput: $("#salaryInput"),
+    daysInput: $("#daysInput"),
+    startInput: $("#startInput"),
+    endInput: $("#endInput"),
+    hourly: $("#hourlyValue"),
+    secondly: $("#secondlyValue"),
+    workLength: $("#workLengthValue"),
+    slackBtn: $("#slackBtn"),
+    insultBtn: $("#insultBtn"),
+    slackStatus: $("#slackStatus"),
+    slackEarned: $("#slackEarned"),
+    slackMessage: $("#slackMessage"),
+    slackTotal: $("#slackTotal"),
+    slackMoney: $("#slackMoney"),
+    slackPerMinute: $("#slackPerMinute"),
+    slackStartBtn: $("#slackStartBtn"),
+    slackStat: $("#slackStat"),
+    slackStatNote: $("#slackStatNote"),
+    insultStat: $("#insultStat"),
+    rankStat: $("#rankStat"),
+    countdownStat: $("#countdownStat"),
+    countdownNote: $("#countdownNote"),
+    buyingSummary: $("#buyingSummary"),
+    buyingGrid: $("#buyingGrid"),
+    moodCopy: $("#moodCopy"),
+    moodLine: $("#moodLine"),
+    workWindowLabel: $("#workWindowLabel"),
+    statusDateLabel: $("#statusDateLabel"),
+    demoControls: $("#demoControls"),
+    bossOverlay: $("#bossOverlay"),
+    bossSheet: $("#bossSheet"),
+    bossCode: $("#bossCode"),
+    bossFormula: $("#bossFormula"),
+    bossWindowTitle: $("#bossWindowTitle"),
+    reportOverlay: $("#reportOverlay"),
+    reportScore: $("#reportScore"),
+    reportSlack: $("#reportSlack"),
+    reportInsults: $("#reportInsults"),
+    reportRank: $("#reportRank"),
+    reportQuote: $("#reportQuote"),
+    toastStack: $("#toastStack"),
+    confettiCanvas: $("#confettiCanvas")
+  };
+
+  function renderBuyingCards() {
+    els.buyingGrid.innerHTML = BUYING_ITEMS.map((item) => (
+      `<div class="buying-card">
+        <div class="buying-icon">${item.icon}</div>
+        <div class="buying-name">${item.name}</div>
+        <div class="buying-value" data-buying-value="${item.name}">HK$0.00</div>
+        <div class="buying-next" data-buying-next="${item.name}">等待出糧</div>
+        <div class="buying-bar"><span data-buying-bar="${item.name}"></span></div>
+      </div>`
+    )).join("");
+  }
+
+  function updateBuying(earned) {
+    const perMinute = perSecond() * 60;
+    BUYING_ITEMS.forEach((item) => {
+      const value = earned / item.price;
+      const valueEl = document.querySelector(`[data-buying-value="${item.name}"]`);
+      const nextEl = document.querySelector(`[data-buying-next="${item.name}"]`);
+      const barEl = document.querySelector(`[data-buying-bar="${item.name}"]`);
+      if (!valueEl || !nextEl || !barEl) return;
+      valueEl.textContent = value >= 1 ? Math.floor(value) + " " + item.unit : "HK$" + Math.max(0, item.price - earned).toFixed(0) + " 差額";
+      if (value >= 1) {
+        nextEl.textContent = "已解鎖 · 今日賺到 " + Math.floor(value) + " " + item.unit;
+        barEl.style.width = "100%";
+      } else {
+        const remaining = Math.max(0, item.price - earned);
+        const minutes = perMinute > 0 ? remaining / perMinute : 0;
+        nextEl.textContent = "再坐 " + minutesDuration(minutes);
+        barEl.style.width = clamp((earned / item.price) * 100, 0, 100) + "%";
+      }
+    });
+    const tea = perMinute > 0 ? perMinute / BUYING_ITEMS[1].price : 0;
+    els.buyingSummary.innerHTML = "你而家每小時嘅時間，大約值 <strong>" + tea.toFixed(2) + " 杯珍珠奶茶</strong>。";
+  }
+
+  function updateSettingsSummary() {
+    const hours = workMinutes() / 60;
+    els.hourly.textContent = money(perSecond() * 3600);
+    els.secondly.textContent = money3(perSecond());
+    els.workLength.textContent = (hours % 1 === 0 ? hours : hours.toFixed(1)) + " 小時";
+    els.workWindowLabel.textContent = config.start + " → " + config.end;
+    els.clockLabel.textContent = config.start + " → " + config.end;
+  }
+
+  function updateMood(phase) {
+    const moods = {
+      before: ["未開工，先飲杯水。", "你嘅靈魂仍然完整。"],
+      working: ["你嘅靈魂正在換算成即時收入。", "今日仲有 " + minutesDuration(phase.remaining) + "。"],
+      sunset: ["曙光模式啟動。", "終點已經見到，唔好停。"],
+      after: ["今日已經收工。", "你嘅時間終於返嚟。"],
+      offday: ["別看了，現在看也不會加錢。", "快去享受你珍貴嘅週末。"]
+    };
+    const mood = moods[phase.key] || moods.working;
+    els.moodCopy.textContent = mood[0];
+    els.moodLine.textContent = mood[1];
+  }
+
+  function updateUI() {
+    const phase = phaseInfo();
+    const earned = todayEarned(phase);
+    const slackTotal = totalSlackSeconds();
+    const slackMoney = slackTotal * perSecond();
+    const sessionEarned = activeSlackSeconds() * perSecond();
+    const rank = rankPercent();
+    document.body.classList.remove("phase-working", "phase-sunset", "phase-after", "phase-offday", "phase-before");
+    document.body.classList.add("phase-" + phase.key);
+    els.salary.textContent = money(earned);
+    els.rate.textContent = money3(perSecond()) + " / 秒";
+    els.daily.textContent = money(dailySalary());
+    els.remainingMeta.textContent = "尚餘 " + duration(phase.remaining * 60);
+    els.phaseBadge.textContent = phase.label;
+    els.phaseNote.textContent = phase.note;
+    els.progressFill.style.width = clamp(phase.percent, 0, 100) + "%";
+    els.progressWorker.style.left = clamp(phase.percent, 1, 99) + "%";
+    els.progressPct.textContent = Math.floor(phase.percent) + "%";
+    els.progressHint.textContent = phase.key === "after" ? "已到達：家裡的大床" : "終點：家裡的大床";
+    els.countdownStat.textContent = duration(phase.remaining * 60);
+    els.countdownNote.textContent = phase.key === "after" ? "你自由了" : phase.key === "offday" ? "週末唔計錢" : "下班前唔好放棄";
+    els.slackStat.textContent = duration(slackTotal);
+    els.slackStatNote.textContent = slackTotal > 0 ? money(slackMoney) + " 帶薪收入" : "尚未開始";
+    els.insultStat.textContent = state.insultCount + " 次";
+    els.insultStat.nextElementSibling.textContent = "心理帳面 +" + money(state.insultCount * 50);
+    els.rankStat.textContent = rank + "%";
+    els.slackTotal.textContent = duration(slackTotal);
+    els.slackMoney.textContent = money(slackMoney);
+    els.slackPerMinute.textContent = money(perSecond() * 60);
+    els.slackEarned.textContent = money(state.slackActive ? sessionEarned : 0);
+    els.slackStatus.textContent = state.slackActive ? "ON AIR" : "IDLE";
+    els.slackStatus.classList.toggle("live", state.slackActive);
+    els.slackBtn.textContent = state.slackActive ? "結束摸魚" : "開啟摸魚 ROI";
+    els.slackStartBtn.textContent = state.slackActive ? "結束摸魚" : "開始摸魚";
+    if (state.slackActive) {
+      const messages = SLACK_MESSAGES[state.slackType] || SLACK_MESSAGES.toilet;
+      els.slackMessage.textContent = messages[Math.floor(Date.now() / 7000) % messages.length];
+      els.slackStatNote.textContent = "正在摸魚 · " + money(sessionEarned);
+    }
+    updateBuying(earned);
+    updateMood(phase);
+    updateSettingsSummary();
+    if (phase.key === "after" && !state.partyShown) {
+      state.partyShown = true;
+      launchConfetti();
+    }
+  }
+
+  function openBoss() {
+    if (state.bossOpen) return;
+    state.bossOpen = true;
+    renderBossSheet();
+    els.bossOverlay.hidden = false;
+    els.bossOverlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    showToast("業績報表已開啟。深呼吸，唔好望老闆。", "danger");
+  }
+  function closeBoss() {
+    state.bossOpen = false;
+    els.bossOverlay.hidden = true;
+    els.bossOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+  function renderBossSheet() {
+    const cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
+    const rows = 18;
+    const labels = ["部門", "Q1", "Q2", "Q3", "Q4", "預算", "差異", "狀態"];
+    const depts = ["市場部", "產品部", "營運部", "客戶成功", "財務部", "人力資源", "技術部", "設計部", "法務部", "行政部", "採購部", "業務部", "區域發展", "數據部", "策略部", "客服中心", "內部審計", "管理層"];
+    let html = '<div class="sheet-grid">';
+    html += '<div class="sheet-cell sheet-head"></div>';
+    cols.forEach((col) => { html += '<div class="sheet-cell sheet-head">' + col + "</div>"; });
+    for (let r = 1; r <= rows; r += 1) {
+      html += '<div class="sheet-cell sheet-rowhead">' + r + "</div>";
+      const dept = depts[r - 1];
+      const q1 = 120000 + r * 17500;
+      const q2 = 132000 + r * 16800;
+      const q3 = 145000 + r * 15400;
+      const q4 = 151000 + r * 14900;
+      const budget = 560000 + r * 61000;
+      const actual = q1 + q2 + q3 + q4;
+      const variance = actual - budget;
+      const status = variance >= 0 ? "達標" : "檢視";
+      const statusClass = variance >= 0 ? "good" : "warn";
+      const row = r === 1 ? labels : [dept, q1, q2, q3, q4, budget, variance, status];
+      row.forEach((value, index) => {
+        const selected = r === 4 && index === 3 ? " selected" : "";
+        const cellClass = index === 7 ? " " + statusClass : index === 6 ? " " + (variance >= 0 ? "good" : "warn") : "";
+        const display = typeof value === "number" ? value.toLocaleString("en-HK") : value;
+        html += '<div class="sheet-cell' + selected + cellClass + '">' + display + "</div>";
+      });
+    }
+    html += "</div>";
+    els.bossSheet.innerHTML = html;
+    els.bossFormula.textContent = "=SUM(D4:D18)";
+  }
+  function toggleBossMode() {
+    state.bossCodeMode = !state.bossCodeMode;
+    els.bossSheet.classList.toggle("active", !state.bossCodeMode);
+    els.bossCode.classList.toggle("active", state.bossCodeMode);
+    els.bossWindowTitle.textContent = state.bossCodeMode ? "production-build — Visual Studio Code" : "2026_Q3_業績報表.xlsx - Excel";
+    $("#toggleCodeBtn").textContent = state.bossCodeMode ? "切換業績報表" : "切換編譯畫面";
+  }
+
+  function openReport() {
+    state.reportOpen = true;
+    const earned = todayEarned();
+    const slack = totalSlackSeconds();
+    const rank = rankPercent();
+    els.reportScore.textContent = money(earned);
+    els.reportSlack.textContent = duration(slack);
+    els.reportInsults.textContent = state.insultCount + " 次";
+    els.reportRank.textContent = rank + "%";
+    const quote = slack > 1800
+      ? "你今日成功將 " + duration(slack) + " 嘅工作時間，轉化為精神康復療程。"
+      : state.insultCount > 0
+        ? "今日你吞咗 " + state.insultCount + " 次情緒，仍然準時交出一份人工。"
+        : "今日你成功用 " + workMinutes() / 60 + " 小時，換取了一個可以好好睡覺的晚上。";
+    els.reportQuote.textContent = quote;
+    els.reportOverlay.hidden = false;
+    els.reportOverlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+  function closeReport() {
+    state.reportOpen = false;
+    els.reportOverlay.hidden = true;
+    els.reportOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+  function reportText() {
+    return [
+      "【HKInfo 帶薪生存遊戲 · 今日結算】",
+      "今日已賺：" + money(todayEarned()),
+      "帶薪摸魚：" + duration(totalSlackSeconds()),
+      "抗壓次數：" + state.insultCount + " 次",
+      "擊敗全港：" + rankPercent() + "% 打工人",
+      "明日繼續，準時下班。"
+    ].join("\n");
+  }
+  function copyReport() {
+    const text = reportText();
+    const done = () => showToast("已複製，去同同事取暖。");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+  function fallbackCopy(text, done) {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand("copy"); } catch (error) {}
+    area.remove();
+    done();
+  }
+  function showToast(message, kind) {
+    const toast = document.createElement("div");
+    toast.className = "toast" + (kind === "danger" ? " danger" : "");
+    toast.textContent = message;
+    els.toastStack.appendChild(toast);
+    setTimeout(() => toast.remove(), 3600);
+  }
+  function startSlack() {
+    if (state.slackActive) {
+      state.slackTotalSeconds += activeSlackSeconds();
+      state.slackActive = false;
+      state.slackSessionStart = 0;
+      saveSession();
+      showToast("摸魚已結束。公司多謝你嘅沉默付出。");
+      updateUI();
+      return;
+    }
+    state.slackActive = true;
+    state.slackSessionStart = Date.now();
+    showToast("摸魚開始。你嘅時間已經開始計錢。");
+    updateUI();
+  }
+  function addInsult(event) {
+    state.insultCount += 1;
+    saveSession();
+    const button = event ? event.currentTarget : els.insultBtn;
+    const rect = button.getBoundingClientRect();
+    const pop = document.createElement("span");
+    pop.className = "floating-money";
+    pop.textContent = "+HK$50 精神損失費";
+    pop.style.left = (rect.left + rect.width / 2) + "px";
+    pop.style.top = (rect.top + window.scrollY - 8) + "px";
+    document.body.appendChild(pop);
+    setTimeout(() => pop.remove(), 1100);
+    const shell = $("#siteShell");
+    shell.classList.remove("shake");
+    void shell.offsetWidth;
+    shell.classList.add("shake");
+    setTimeout(() => shell.classList.remove("shake"), 320);
+    showToast("已記錄一次情緒勞動。總數不變，心理帳面 +HK$50。", "danger");
+    updateUI();
+  }
+  function setMode(mode) {
+    state.mode = mode;
+    state.lastTick = Date.now();
+    state.partyShown = false;
+    if (mode === "demo") {
+      state.demoMinutes = 10 * 60 + 30;
+      showToast("示範模式：你可以跳去上班、曙光或下班狀態。");
+    }
+    $$(".mode-switch button").forEach((button) => button.classList.toggle("active", button.dataset.mode === mode));
+    els.demoControls.hidden = mode !== "demo";
+    updateUI();
+  }
+  function setDemoTime(value) {
+    state.demoMinutes = parseClock(value);
+    state.lastTick = Date.now();
+    state.partyShown = false;
+    $$("[data-demo]").forEach((button) => button.classList.toggle("active", button.dataset.demo === value));
+    updateUI();
+  }
+  function applyConfig() {
+    config.monthlySalary = Math.max(0, Number(els.salaryInput.value) || 0);
+    config.workDays = clamp(Math.round(Number(els.daysInput.value) || 1), 1, 31);
+    config.start = els.startInput.value || DEFAULT_CONFIG.start;
+    config.end = els.endInput.value || DEFAULT_CONFIG.end;
+    saveSession();
+    updateUI();
+    showToast("出糧設定已更新。");
+  }
+  function fillConfigInputs() {
+    els.salaryInput.value = config.monthlySalary;
+    els.daysInput.value = config.workDays;
+    els.startInput.value = config.start;
+    els.endInput.value = config.end;
+  }
+  function launchConfetti() {
+    const canvas = els.confettiCanvas;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const colors = ["#d8ff5f", "#ff7b3d", "#72e3c2", "#ff6ea9", "#78b8ff", "#f4f1e8"];
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = innerWidth * dpr;
+    canvas.height = innerHeight * dpr;
+    ctx.scale(dpr, dpr);
+    const pieces = Array.from({ length: 140 }, () => ({
+      x: innerWidth / 2 + (Math.random() - 0.5) * 120,
+      y: innerHeight * 0.28 + (Math.random() - 0.5) * 30,
+      vx: (Math.random() - 0.5) * 8,
+      vy: -Math.random() * 8 - 2,
+      size: 3 + Math.random() * 6,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rotation: Math.random() * Math.PI,
+      vr: (Math.random() - 0.5) * 0.3,
+      gravity: 0.16 + Math.random() * 0.1
+    }));
+    let start = 0;
+    function frame(timestamp) {
+      if (!start) start = timestamp;
+      const elapsed = timestamp - start;
+      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      pieces.forEach((p) => {
+        p.vy += p.gravity;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rotation += p.vr;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      });
+      if (elapsed < 5000) requestAnimationFrame(frame);
+      else ctx.clearRect(0, 0, innerWidth, innerHeight);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  $$(".mode-switch button").forEach((button) => button.addEventListener("click", () => setMode(button.dataset.mode)));
+  $$("[data-demo]").forEach((button) => button.addEventListener("click", () => setDemoTime(button.dataset.demo)));
+  $$(".roi-type").forEach((button) => button.addEventListener("click", () => {
+    state.slackType = button.dataset.slackType;
+    $$(".roi-type").forEach((item) => item.classList.toggle("active", item === button));
+    updateUI();
+  }));
+  els.slackBtn.addEventListener("click", startSlack);
+  els.slackStartBtn.addEventListener("click", startSlack);
+  els.insultBtn.addEventListener("click", addInsult);
+  $("#bossBtn").addEventListener("click", openBoss);
+  $("#floatingBossBtn").addEventListener("click", openBoss);
+  $("#exitBossBtn").addEventListener("click", closeBoss);
+  $("#toggleCodeBtn").addEventListener("click", toggleBossMode);
+  $("#reportBtn").addEventListener("click", openReport);
+  $("#closeReportBtn").addEventListener("click", closeReport);
+  $("#finishReportBtn").addEventListener("click", closeReport);
+  $("#copyReportBtn").addEventListener("click", copyReport);
+  $("#resetSettingsBtn").addEventListener("click", () => {
+    Object.assign(config, DEFAULT_CONFIG);
+    fillConfigInputs();
+    saveSession();
+    updateUI();
+    showToast("已重設為預設出糧設定。");
+  });
+  [els.salaryInput, els.daysInput, els.startInput, els.endInput].forEach((input) => {
+    input.addEventListener("change", applyConfig);
+  });
+  $("#popoutBtn").addEventListener("click", () => {
+    if (state.mini) {
+      window.location.href = "/earning";
+      return;
+    }
+    const popup = window.open("/earning?mini=1", "hinfok-earning-mini", "popup=yes,width=430,height=720");
+    if (popup) popup.focus();
+    else showToast("瀏覽器阻擋咗小視窗，請允許彈出視窗。", "danger");
+  });
+  $("#reportOverlay").addEventListener("click", (event) => {
+    if (event.target === $("#reportOverlay")) closeReport();
+  });
+  document.addEventListener("keydown", (event) => {
+    const tag = (event.target && event.target.tagName) || "";
+    const typing = /INPUT|TEXTAREA|SELECT/.test(tag) || (event.target && event.target.isContentEditable);
+    if (event.code === "Space" && !typing) {
+      event.preventDefault();
+      if (state.bossOpen) closeBoss();
+      else openBoss();
+    }
+    if (event.key === "Escape") {
+      if (state.bossOpen) closeBoss();
+      else if (state.reportOpen) closeReport();
+    }
+  });
+  window.addEventListener("resize", () => {
+    if (state.bossOpen) renderBossSheet();
+  });
+
+  if (state.mini) {
+    document.body.classList.add("mini");
+    $("#popoutBtn").innerHTML = "↗ <span>完整版</span>";
+  }
+  const now = new Date();
+  els.statusDateLabel.textContent = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+  renderBuyingCards();
+  fillConfigInputs();
+  updateSettingsSummary();
+  updateUI();
+  setInterval(() => {
+    if (state.mode === "demo") {
+      const delta = Math.max(0, (Date.now() - state.lastTick) / 60000);
+      state.demoMinutes = Math.min(24 * 60, state.demoMinutes + delta);
+    }
+    state.lastTick = Date.now();
+    updateUI();
+  }, 100);
+})();
+</script>
+</body>
+</html>
